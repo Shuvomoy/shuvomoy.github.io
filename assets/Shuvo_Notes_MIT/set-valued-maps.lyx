@@ -1,0 +1,510 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%% In case fonts are not rendered properly, please do the following:
+%% 1. In Document > Settings..., under Language > Encoding, choose "Other" 
+%% and select "Language Default (no inputenc)".
+%% 2. Simply uncheck "Use LaTeX font encoding" and no fontenc line will be added.
+
+% Make sections heading bold sans serif
+\usepackage{fullpage,graphicx,psfrag,amsfonts,verbatim, url}
+
+\usepackage{abstract} % Make abstract
+
+% using parskip for nice paragraph spacing 
+\usepackage{parskip}
+% these are to fix the paragraph spacing for theorems, only used if parskip package is used
+\begingroup
+\makeatletter
+   \@for\theoremstyle:=definition,remark,plain\do{%
+     \expandafter\g@addto@macro\csname th@\theoremstyle\endcsname{%
+        \addtolength\thm@preskip\parskip
+     }%
+   }
+\endgroup
+%\usepackage{parskip}
+\usepackage{thmtools}
+
+\declaretheoremstyle[
+headfont = \sffamily\bfseries,
+notefont=\normalfont, notebraces={(}{)},
+bodyfont=\normalfont\itshape,
+%headpunct={},
+headformat=\NAME~\NUMBER\NOTE
+]{plain}
+\declaretheoremstyle[
+headfont = \sffamily\bfseries,
+notefont=\normalfont, notebraces={(}{)},
+bodyfont=\normalfont\itshape,
+headpunct={},
+headformat=\NAME~\NUMBER\NOTE
+]{notnum}
+
+\declaretheorem[numberwithin=section,style=plain]{theorem}
+\declaretheorem[numberwithin=section,style=plain]{corollary}
+\declaretheorem[numberwithin=section,style=plain]{lemma}
+\declaretheorem[numberwithin=section,style=plain]{definition}
+\declaretheorem[numberwithin=section,style=plain]{assumption}
+\declaretheorem[numbered=no,style=notnum]{remark}
+\declaretheorem[numberwithin=section,style=plain]{proposition}
+\declaretheorem[numbered=no,style=notnum]{example}
+
+% Make section titles bold
+\renewcommand\abstractnamefont{\bfseries\sffamily}
+% section title fonts
+\usepackage{titlesec}
+\def\sectionfont{\sffamily\Large\bfseries\boldmath}
+\def\subsectionfont{\sffamily\large\bfseries\boldmath}
+\def\paragraphfont{\sffamily\normalsize\bfseries\boldmath}
+\titleformat*{\section}{\sectionfont}
+\titleformat*{\subsection}{\subsectionfont}
+\titleformat*{\subsubsection}{\paragraphfont}
+\titleformat*{\paragraph}{\paragraphfont}
+\titleformat*{\subparagraph}{\paragraphfont}
+\usepackage[small,labelfont={bf,sf}]{caption}  % Change captions
+\setlength{\abovecaptionskip}{0em}
+
+
+
+\usepackage{multirow}
+\setlength{\captionmargin}{20pt}
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+% Tables
+\usepackage{booktabs}           % Nicer Tables
+\usepackage{adjustbox} % To adjust table length
+
+
+\usepackage{titling}
+\pretitle{\begin{center}\LARGE \bfseries\sffamily}
+\posttitle{\par\end{center}\vskip 0.5em}
+\preauthor{\begin{center}
+\large \lineskip 0.5em%
+\begin{tabular}[t]{c}}
+\postauthor{\end{tabular}\par\end{center}}
+\predate{\begin{center}\large}
+\postdate{\par\end{center}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Semicontinuity of set-valued maps
+\end_layout
+
+\begin_layout Author
+Shuvomoy Das Gupta
+\end_layout
+
+\begin_layout Standard
+Consider a set-valued map 
+\begin_inset Formula $F:X\rightrightarrows Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Notation.
+\end_layout
+
+\begin_layout Standard
+For the map 
+\begin_inset Formula $F$
+\end_inset
+
+ and set 
+\begin_inset Formula $V$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+F(V)=\bigcup_{x\in V}F(x),
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $F(V)_{\bullet}\subseteq W$
+\end_inset
+
+ means for all 
+\begin_inset Formula $x\in V$
+\end_inset
+
+, the set 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ lies in 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ The notation 
+\begin_inset Formula $\mathcal{V}\left(F(x)\right)$
+\end_inset
+
+ means collection of all the open sets that contain the set 
+\begin_inset Formula $F(x).$
+\end_inset
+
+ One arbitrary element of the set 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $\widetilde{F(x)}.$
+\end_inset
+
+ The set of all open neighborhoods of a point 
+\begin_inset Formula $x$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $\mathcal{V}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Recap on continuity of a function 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A function 
+\begin_inset Formula $f$
+\end_inset
+
+ is continuous at 
+\begin_inset Formula $x$
+\end_inset
+
+, if 
+\begin_inset Formula 
+\[
+\forall_{W\in\mathcal{V}(f(x))}\exists_{V\in\mathcal{V}(x)}\quad F(V)\subseteq W.
+\]
+
+\end_inset
+
+ Another definition is through sequence convergence: 
+\begin_inset Formula $f$
+\end_inset
+
+ is continuous at 
+\begin_inset Formula $x$
+\end_inset
+
+, if 
+\begin_inset Formula 
+\[
+\forall_{x_{n}\to x}\quad f(x_{n})\to f(x).
+\]
+
+\end_inset
+
+When we are talking about a set-valued map, these two definitions lead to
+ two different notions of continuity.
+ 
+\end_layout
+
+\begin_layout Standard
+Now let's go back to 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename upper_semicont_lower_semicont_map.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The figure shows different notions of continuity for set-valued maps.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:semi-cont"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Upper semicontinuous map.
+\end_layout
+
+\begin_layout Standard
+The map 
+\begin_inset Formula $F$
+\end_inset
+
+ is upper semicontinuous at 
+\begin_inset Formula $x\in\mathop{{\bf dom}}F$
+\end_inset
+
+ if 
+\begin_inset Formula 
+\[
+\forall_{W\in\mathcal{V}(F(x))}\exists_{V\in\mathcal{V}(x)}\quad F(V){}_{\bullet}\subseteq W.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Roughly speaking, upper semicontinuity at a point 
+\begin_inset Formula $x$
+\end_inset
+
+ means that a small perturbation in 
+\begin_inset Formula $x$
+\end_inset
+
+ does not make the set 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ to suddenly expand violently (it is allowed to shrink abruptly however).
+\end_layout
+
+\begin_layout Paragraph
+Lower semicontinuous map.
+\end_layout
+
+\begin_layout Standard
+The map 
+\begin_inset Formula $F$
+\end_inset
+
+ is lower semicontinuous at 
+\begin_inset Formula $x\in\mathop{{\bf dom}}F$
+\end_inset
+
+ if 
+\begin_inset Formula 
+\[
+\forall_{\widetilde{F(x)}}\forall_{x_{n}\to x}\exists_{\widetilde{F(x_{n})}}\quad\widetilde{F(x_{n})}\to\widetilde{F(x)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Roughly speaking, lower semicontinuity at a point 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\emph on
+\color red
+eliminates
+\emph default
+\color inherit
+ the following situation: there is some 
+\begin_inset Formula $x_{\textrm{almost}}\approx x$
+\end_inset
+
+ such that 
+\begin_inset Formula $F(x_{\textrm{almost}})$
+\end_inset
+
+ is not 
+\emph on
+close 
+\emph default
+to some of the points in 
+\begin_inset Formula $F(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Figure showing the differences.
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:semi-cont"
+
+\end_inset
+
+ shows different notions of continuity for set-valued maps.
+ The picture is taken from 
+\begin_inset Quotes eld
+\end_inset
+
+Real Analysis with Economic Applications
+\begin_inset Quotes erd
+\end_inset
+
+ by Efe A.
+ Ok, page 288.
+ In the figure, 
+\emph on
+hemicontinuity
+\emph default
+ is an equivalent term for semicontinuity, and the black circles correspond
+ to values taken by the maps, where the white circles correspond to the
+ values 
+\emph on
+not 
+\emph default
+taken by the maps.
+\end_layout
+
+\begin_layout Paragraph
+Some results.
+\end_layout
+
+\begin_layout Itemize
+A set-valued map is continuous at 
+\begin_inset Formula $x$
+\end_inset
+
+, if it is both upper semicontinuous and lower semicontinuous at 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Set-valued maps with closed graphs with their values in a compact set are
+ upper semicontinuous.
+\end_layout
+
+\end_body
+\end_document

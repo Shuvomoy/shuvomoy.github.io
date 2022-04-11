@@ -1,0 +1,463 @@
+% Encoding: UTF-8
+
+@InCollection{Yan2016,
+  author    = {Yan, Ming and Yin, Wotao},
+  title     = {Self equivalence of the alternating direction method of multipliers},
+  booktitle = {Splitting Methods in Communication, Imaging, Science, and Engineering},
+  publisher = {Springer},
+  year      = {2016},
+  pages     = {165--194},
+}
+
+@Book{Bertsimas1997,
+  Title                    = {Introduction to linear optimization},
+  Author                   = {Bertsimas, Dimitris and Tsitsiklis, John N},
+  Publisher                = {Athena Scientific Belmont, MA},
+  Year                     = {1997},
+  Volume                   = {6},
+
+  Owner                    = {Shuvomoy},
+  Timestamp                = {2015.11.19}
+}
+
+@Book{Bertsimas2005,
+  Title                    = {Optimization over integers},
+  Author                   = {Bertsimas, Dimitris and Weismantel, Robert},
+  Publisher                = {Dynamic Ideas Belmont},
+  Year                     = {2005},
+  Volume                   = {13},
+
+  Owner                    = {Shuvomoy},
+  Timestamp                = {2015.11.19}
+}
+
+@Book{Williams2013,
+  Title                    = {Model building in mathematical programming},
+  Author                   = {Williams, H Paul},
+  Publisher                = {John Wiley \& Sons},
+  Year                     = {2013}
+}
+
+@Article{Fougner2015,
+  author  = {Fougner, Christopher and Boyd, Stephen},
+  title   = {Parameter selection and pre-conditioning for a graph form solver},
+  journal = {Emerging Applications of Control and System Theory},
+  year    = {2017},
+}
+
+@Article{Takapoui2017,
+  author    = {Takapoui, Reza and Moehle, Nicholas and Boyd, Stephen and Bemporad, Alberto},
+  title     = {A simple effective heuristic for embedded mixed-integer quadratic programming},
+  journal   = {International Journal of Control},
+  year      = {2017},
+  pages     = {1--11},
+  publisher = {Taylor \& Francis},
+}
+
+@Book{Conforti2014,
+  title     = {Integer Programming},
+  publisher = {Springer Publishing Company, Incorporated},
+  year      = {2014},
+  author    = {Conforti, Michele and Cornuejols, Gerard and Zambelli, Giacomo},
+  isbn      = {3319110071, 9783319110073},
+}
+
+@Article{hassibi1998integer,
+  author    = {Hassibi, Arash and Boyd, Stephen},
+  title     = {Integer parameter estimation in linear models with applications to GPS},
+  journal   = {IEEE Transactions on signal processing},
+  year      = {1998},
+  volume    = {46},
+  number    = {11},
+  pages     = {2938--2952},
+  publisher = {IEEE},
+}
+
+@Article{park2017semidefinite,
+  author    = {Park, Jaehyun and Boyd, Stephen},
+  title     = {A semidefinite programming method for integer convex quadratic minimization},
+  journal   = {Optimization Letters},
+  year      = {2017},
+  pages     = {1--20},
+  publisher = {Springer},
+}
+
+@Article{kailath2005mimo,
+  author  = {Kailath, Thomas and Vikalo, Haris and Hassibi, Babak},
+  title   = {Mimo receive algorithms},
+  journal = {Space-Time Wireless Systems: From Array Processing to MIMO Communications},
+  year    = {2005},
+}
+
+@Book{Schrijver1998,
+  title     = {Theory of linear and integer programming},
+  publisher = {John Wiley \& Sons},
+  year      = {1998},
+  author    = {Schrijver, Alexander},
+}
+
+@Article{Votyakov1976,
+  author  = {Votyakov, AA and Frumkin, MA},
+  title   = {An algorithm for finding the general integer solution of a system of linear equations},
+  journal = {Studies in discrete optimization (Russian)},
+  year    = {1976},
+  pages   = {128--140},
+}
+
+@Article{Gathen76,
+  author  = {von zur Gathen, J. and Sieveking, M},
+  title   = {Weitere zum Erfullungsproblem polynomial aquivalente kombinatorische Aufgaben},
+  journal = {Lecture Notes in Computer Science 43, Springer, Heidelberg},
+  year    = {1976},
+  pages   = {49-71},
+}
+
+@Book{Bremner2011,
+  title     = {Lattice basis reduction: an introduction to the LLL algorithm and its applications},
+  publisher = {CRC Press},
+  year      = {2011},
+  author    = {Bremner, Murray R},
+}
+
+@Misc{Chang2011,
+  author       = {Chang, Xiao-Wen and Xie, Xiaohu and Zhou, Tianyang},
+  title        = {MILES: MATLAB package for solving Mixed Integer LEast Squares problems, Version 2.0},
+  howpublished = {\url{http://www.cs.mcgill.ca/~chang/MILES_routine1.php}},
+  year         = {2011},
+  publisher    = {Scientific Computing Laboratory, School of Computer Science, McGill University},
+}
+
+@Electronic{hnfLLL,
+  author       = {Wilberd van der Kallen},
+  year         = {2001},
+  title        = {Implementations of extended LLL},
+  howpublished = {\url{https://www.staff.science.uu.nl/~kalle101/lllimplementations.html}},
+}
+
+@Article{Boyd2011,
+  author    = {Boyd, Stephen and Parikh, Neal and Chu, Eric and Peleato, Borja and Eckstein, Jonathan and others},
+  title     = {Distributed optimization and statistical learning via the alternating direction method of multipliers},
+  journal   = {Foundations and Trends{\textregistered} in Machine learning},
+  year      = {2011},
+  volume    = {3},
+  number    = {1},
+  pages     = {1--122},
+  publisher = {Now Publishers, Inc.},
+}
+
+@Article{Eckstein2015,
+  author  = {Eckstein, Jonathan and Yao, Wang},
+  title   = {Understanding the convergence of the alternating direction method of multipliers: Theoretical and computational perspectives},
+  journal = {Pac. J. Optim. To appear},
+  year    = {2015},
+}
+
+@PhdThesis{Takapoui2017a,
+  author = {Takapoui, Reza},
+  title  = {The Alternating Direction Method of Multipliers for Mixed-integer Optimization Applications},
+  school = {Stanford University},
+  year   = {2017},
+}
+
+@Article{Huang2016,
+  author    = {Huang, Kejun and Sidiropoulos, Nicholas D},
+  title     = {Consensus-ADMM for general quadratically constrained quadratic programming},
+  journal   = {IEEE Transactions on Signal Processing},
+  year      = {2016},
+  volume    = {64},
+  number    = {20},
+  pages     = {5297--5310},
+  publisher = {IEEE},
+}
+
+@Article{Jiang2014,
+  author    = {Jiang, Bo and Ma, Shiqian and Zhang, Shuzhong},
+  title     = {Alternating direction method of multipliers for real and complex polynomial optimization models},
+  journal   = {Optimization},
+  year      = {2014},
+  volume    = {63},
+  number    = {6},
+  pages     = {883--898},
+  publisher = {Taylor \& Francis},
+}
+
+@Article{Erseghe2014,
+  author    = {Erseghe, Tomaso},
+  title     = {Distributed optimal power flow using ADMM},
+  journal   = {IEEE transactions on power systems},
+  year      = {2014},
+  volume    = {29},
+  number    = {5},
+  pages     = {2370--2380},
+  publisher = {IEEE},
+}
+
+@Article{Diamond2018,
+  author    = {Diamond, S and Takapoui, R and Boyd, S},
+  title     = {A general system for heuristic minimization of convex functions over non-convex sets},
+  journal   = {Optimization Methods and Software},
+  year      = {2018},
+  volume    = {33},
+  number    = {1},
+  pages     = {165--193},
+  publisher = {Taylor \& Francis},
+}
+
+@Book{Bauschke2017,
+  author    = {Bauschke, Heinz H and Combettes, Patrick L},
+  title     = {Convex analysis and monotone operator theory in Hilbert spaces},
+  year      = {2011},
+  volume    = {408},
+  publisher = {Springer},
+}
+
+@Book{Rockafellar2009,
+  title     = {Variational analysis},
+  publisher = {Springer Science \& Business Media},
+  year      = {2009},
+  author    = {Rockafellar, R Tyrrell and Wets, Roger J-B},
+  volume    = {317},
+}
+
+@Article{Gabay1983,
+  author    = {Gabay, Daniel},
+  title     = {Applications of the method of multipliers to variational inequalities},
+  journal   = {Augmented Lagrangian Methods: Applications to the Solution of Boundary-Value Problems,},
+  year      = {1983},
+  publisher = {(M. Fortin and R. Glowinski, eds.), North-Holland: Amsterdam,},
+}
+
+@Article{Combettes1990,
+  author    = {Combettes, PL and Trussell, Henry J},
+  title     = {Method of successive projections for finding a common point of sets in metric spaces},
+  journal   = {Journal of optimization theory and applications},
+  year      = {1990},
+  volume    = {67},
+  number    = {3},
+  pages     = {487--507},
+  publisher = {Springer},
+}
+
+@Article{Polyak1987,
+  author  = {Polyak, Boris T},
+  title   = {Introduction to optimization. Translations series in mathematics and engineering},
+  journal = {Optimization Software},
+  year    = {1987},
+}
+
+@Article{Schnorr1994,
+  author        = {Schnorr, Claus-Peter and Euchner, Martin},
+  title         = {Lattice basis reduction: Improved practical algorithms and solving subset sum problems},
+  journal       = {Mathematical programming},
+  year          = {1994},
+  volume        = {66},
+  number        = {1-3},
+  pages         = {181--199},
+  __markedentry = {[Shuvomoy_Das_Gupta:]},
+  publisher     = {Springer},
+}
+
+@Misc{bworld,
+  author       = {Horia Cornean},
+  title        = {{Basic properties of limsup and liminf}},
+  year         = {2014},
+  howpublished = {\url{http://people.math.aau.dk/~cornean/analyse2\_F14/limsup-liminf.pdf}},
+  note         = {[Online; accessed 19-July-2008]},
+}
+
+@Book{Ahuja1988,
+  author    = {Ahuja, Ravindra K and Magnanti, Thomas L and Orlin, James B},
+  title     = {Network Flows: Theory, Algorithms, and Applications},
+  year      = {1993},
+  publisher = {Prentice Hall},
+  owner     = {Shuvomoy},
+  timestamp = {2016.01.04},
+}
+
+@InProceedings{DasGuptaACC15,
+  author    = {Das Gupta, Shuvomoy and Pavel, Lacra and Kevin Tobin, James},
+  title     = {An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network},
+  booktitle = {Proceedings of American Control Conference (ACC)},
+  year      = {2015},
+  owner     = {sdg},
+  timestamp = {2014.09.20},
+}
+
+@InProceedings{hooker1994logic,
+  author       = {Hooker, John N},
+  title        = {Logic-based methods for optimization},
+  booktitle    = {Principles and Practice of Constraint Programming},
+  year         = {1994},
+  organization = {Springer},
+  pages        = {336--349},
+}
+
+@Misc{subgradBoyd,
+  author       = {Boyd, Stephen and Duchi, John and Vandenberghe, Lieven},
+  title        = {Notes for EE364b, Stanford University, Spring 2014-15},
+  howpublished = {\url{http://web.stanford.edu/class/ee364b/lectures/subgradients\_notes.pdf}},
+}
+
+@Book{beck2017first,
+  author    = {Beck, Amir},
+  title     = {First-Order Methods in Optimization},
+  year      = {2017},
+  volume    = {25},
+  publisher = {SIAM},
+}
+
+@Article{ryu2016primer,
+  author  = {Ryu, Ernest K and Boyd, Stephen},
+  title   = {Primer on monotone operator methods},
+  journal = {Appl. Comput. Math},
+  year    = {2016},
+  volume  = {15},
+  number  = {1},
+  pages   = {3--43},
+}
+
+@Book{boyd2004convex,
+  author    = {Boyd, Stephen and Vandenberghe, Lieven},
+  title     = {Convex optimization},
+  year      = {2004},
+  publisher = {Cambridge university press},
+}
+
+@Article{li2015global,
+  author    = {Li, Guoyin and Pong, Ting Kei},
+  title     = {Global convergence of splitting methods for nonconvex composite optimization},
+  journal   = {SIAM Journal on Optimization},
+  year      = {2015},
+  volume    = {25},
+  number    = {4},
+  pages     = {2434--2460},
+  publisher = {SIAM},
+}
+
+@Article{diamond2016cvxpy,
+  author    = {Diamond, Steven and Boyd, Stephen},
+  title     = {CVXPY: A Python-embedded modeling language for convex optimization},
+  journal   = {The Journal of Machine Learning Research},
+  year      = {2016},
+  volume    = {17},
+  number    = {1},
+  pages     = {2909--2913},
+  publisher = {JMLR. org},
+}
+
+@InProceedings{takapoui2016simple,
+  author       = {Takapoui, Reza and Moehle, Nicholas and Boyd, Stephen and Bemporad, Alberto},
+  title        = {A simple effective heuristic for embedded mixed-integer quadratic programming},
+  booktitle    = {American Control Conference (ACC), 2016},
+  year         = {2016},
+  organization = {IEEE},
+  pages        = {5619--5625},
+}
+
+@Article{wang2015global,
+  author    = {Wang, Yu and Yin, Wotao and Zeng, Jinshan},
+  title     = {Global convergence of ADMM in nonconvex nonsmooth optimization},
+  journal   = {Journal of Scientific Computing},
+  year      = {2015},
+  pages     = {1--35},
+  publisher = {Springer},
+}
+
+@Article{Giselsson17,
+  author   = {P. Giselsson and S. Boyd},
+  title    = {Linear Convergence and Metric Selection for Douglas-Rachford Splitting and ADMM},
+  journal  = {IEEE Transactions on Automatic Control},
+  year     = {2017},
+  volume   = {62},
+  number   = {2},
+  month    = {Feb},
+  pages    = {532-544},
+  issn     = {0018-9286},
+  doi      = {10.1109/TAC.2016.2564160},
+  keywords = {optimisation;linear convergence;metric selection;Douglas-Rachford splitting;alternating direction method of multipliers;ADMM;convergence rate bound optimization;Convergence;Measurement;Convex functions;Compressed sensing;Estimation;Predictive control;Biomedical imaging;Alternating direction method of multipliers (ADMM);Douglas-Rachford splitting;linear convergence;optimization algorithms},
+}
+
+@Article{Makhdoumi,
+  author   = {A. Makhdoumi and A. Ozdaglar},
+  title    = {Convergence Rate of Distributed ADMM Over Networks},
+  journal  = {IEEE Transactions on Automatic Control},
+  year     = {2017},
+  volume   = {62},
+  number   = {10},
+  month    = {Oct},
+  pages    = {5082-5095},
+  issn     = {0018-9286},
+  doi      = {10.1109/TAC.2017.2677879},
+  keywords = {convergence of numerical methods;convex programming;data handling;eigenvalues and eigenfunctions;gradient methods;learning (artificial intelligence);statistical analysis;convergence rate;distributed ADMM;alternating direction method of multipliers;convex functions;distributed machine learning;statistical estimation;communication weight matrix;Lipschitz continuous gradients;nonzero eigenvalue;Convergence;Optimization;Algorithm design and analysis;Linear programming;Distributed algorithms;Convex functions;Distributed databases;Alternating direction method of multipliers (ADMM);condition number and network effects;convergence rate;distributed;optimization},
+}
+
+@Article{Aybat,
+  author   = {N. S. Aybat and Z. Wang and T. Lin and S. Ma},
+  title    = {Distributed Linearized Alternating Direction Method of Multipliers for Composite Convex Consensus Optimization},
+  journal  = {IEEE Transactions on Automatic Control},
+  year     = {2018},
+  volume   = {63},
+  number   = {1},
+  month    = {Jan},
+  pages    = {5-20},
+  issn     = {0018-9286},
+  doi      = {10.1109/TAC.2017.2713046},
+  keywords = {convergence;convex programming;distributed algorithms;gradient methods;graph theory;learning (artificial intelligence);multi-agent systems;network theory (graphs);composite convex consensus optimization;optimal decision;distributed proximal gradient algorithm;DPGA;local communication;neighboring agents;stochastic gradient variant;distributed sensing;undirected graph;distributed linearized alternating direction method of multipliers;agent-specific private convex composite function;unweighted static communication networks;weighted static communication networks;prox map;ergodic convergence;suboptimality error;consensus violation;sum minimization;Convex functions;Distributed algorithms;Convergence;Optimization;Distributed databases;Memory management;Network topology;Alternating direction method of multipliers (ADMM);composite convex function;distributed optimization;first-order method;linearized ADMM},
+}
+
+@InProceedings{Nishihara2015,
+  author    = {Nishihara, Robert and Lessard, Laurent and Recht, Benjamin and Packard, Andrew and Jordan, Michael I.},
+  title     = {A General Analysis of the Convergence of ADMM},
+  booktitle = {Proceedings of the 32Nd International Conference on International Conference on Machine Learning - Volume 37},
+  year      = {2015},
+  series    = {ICML'15},
+  publisher = {JMLR.org},
+  location  = {Lille, France},
+  pages     = {343--352},
+  url       = {http://dl.acm.org/citation.cfm?id=3045118.3045156},
+  acmid     = {3045156},
+  numpages  = {10},
+}
+
+@Article{Iutzeler16,
+  author   = {F. Iutzeler and P. Bianchi and P. Ciblat and W. Hachem},
+  title    = {Explicit Convergence Rate of a Distributed Alternating Direction Method of Multipliers},
+  journal  = {IEEE Transactions on Automatic Control},
+  year     = {2016},
+  volume   = {61},
+  number   = {4},
+  month    = {April},
+  pages    = {892-904},
+  issn     = {0018-9286},
+  doi      = {10.1109/TAC.2015.2448011},
+  keywords = {convergence;convex programming;distributed algorithms;mathematics computing;minimisation;ADMM free parameter;symmetric matrices;convergence rate;network architecture;distributed algorithm;distributed alternating direction method;convex function;alternating direction method-of-multiplier;distributed optimization problem;Convergence;Clustering algorithms;Optimization;Communication networks;Algorithm design and analysis;Minimization;Convex functions;Distributed optimization;Consensus algorithms;Alternating Direction Method of Multipliers;Linear convergence;Convergence rate;Alternating direction method of multipliers (ADMM);consensus algorithms;convergence rate;distributed optimization;linear convergence},
+}
+
+@InCollection{Davis2016,
+  author        = {Davis, Damek and Yin, Wotao},
+  title         = {Convergence rate analysis of several splitting schemes},
+  booktitle     = {Splitting Methods in Communication, Imaging, Science, and Engineering},
+  year          = {2016},
+  publisher     = {Springer},
+  pages         = {115--163},
+  __markedentry = {[Shuvomoy_Das_Gupta:6]},
+}
+
+@InProceedings{Iyer2014,
+  author        = {Iyer, Rishabh and Jegelka, Stefanie and Bilmes, Jeff},
+  title         = {Monotone Closure of Relaxed Constraints in Submodular Optimization: Connections Between Minimization and Maximization},
+  booktitle     = {Proceedings of the Thirtieth Conference on Uncertainty in Artificial Intelligence},
+  year          = {2914},
+  series        = {UAI'14},
+  publisher     = {AUAI Press},
+  location      = {Quebec City, Quebec, Canada},
+  isbn          = {978-0-9749039-1-0},
+  pages         = {360--369},
+  url           = {http://dl.acm.org/citation.cfm?id=3020751.3020789},
+  __markedentry = {[Shuvomoy_Das_Gupta:]},
+  acmid         = {3020789},
+  address       = {Arlington, Virginia, United States},
+  numpages      = {10},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}

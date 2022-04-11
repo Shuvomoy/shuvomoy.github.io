@@ -1,0 +1,472 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%% In case fonts are not rendered properly, please do the following:
+%% 1. In Document > Settings..., under Language > Encoding, choose "Other" 
+%% and select "Language Default (no inputenc)".
+%% 2. Simply uncheck "Use LaTeX font encoding" and no fontenc line will be added.
+
+% Make sections heading bold sans serif
+\usepackage{fullpage,graphicx,psfrag,amsfonts,verbatim, url}
+
+\usepackage{abstract} % Make abstract
+
+% using parskip for nice paragraph spacing 
+\usepackage{parskip}
+% these are to fix the paragraph spacing for theorems, only used if parskip package is used
+\begingroup
+\makeatletter
+   \@for\theoremstyle:=definition,remark,plain\do{%
+     \expandafter\g@addto@macro\csname th@\theoremstyle\endcsname{%
+        \addtolength\thm@preskip\parskip
+     }%
+   }
+\endgroup
+%\usepackage{parskip}
+\usepackage{thmtools}
+
+\declaretheoremstyle[
+headfont = \sffamily\bfseries,
+notefont=\normalfont, notebraces={(}{)},
+bodyfont=\normalfont\itshape,
+%headpunct={},
+headformat=\NAME~\NUMBER\NOTE
+]{plain}
+\declaretheoremstyle[
+headfont = \sffamily\bfseries,
+notefont=\normalfont, notebraces={(}{)},
+bodyfont=\normalfont\itshape,
+headpunct={},
+headformat=\NAME~\NUMBER\NOTE
+]{notnum}
+
+\declaretheorem[numberwithin=section,style=plain]{theorem}
+\declaretheorem[numberwithin=section,style=plain]{corollary}
+\declaretheorem[numberwithin=section,style=plain]{lemma}
+\declaretheorem[numberwithin=section,style=plain]{definition}
+\declaretheorem[numberwithin=section,style=plain]{assumption}
+\declaretheorem[numbered=no,style=notnum]{remark}
+\declaretheorem[numberwithin=section,style=plain]{proposition}
+\declaretheorem[numbered=no,style=notnum]{example}
+
+% Make section titles bold
+\renewcommand\abstractnamefont{\bfseries\sffamily}
+% section title fonts
+\usepackage{titlesec}
+\def\sectionfont{\sffamily\Large\bfseries\boldmath}
+\def\subsectionfont{\sffamily\large\bfseries\boldmath}
+\def\paragraphfont{\sffamily\normalsize\bfseries\boldmath}
+\titleformat*{\section}{\sectionfont}
+\titleformat*{\subsection}{\subsectionfont}
+\titleformat*{\subsubsection}{\paragraphfont}
+\titleformat*{\paragraph}{\paragraphfont}
+\titleformat*{\subparagraph}{\paragraphfont}
+\usepackage[small,labelfont={bf,sf}]{caption}  % Change captions
+\setlength{\abovecaptionskip}{0em}
+
+
+
+\usepackage{multirow}
+\setlength{\captionmargin}{20pt}
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+% Tables
+\usepackage{booktabs}           % Nicer Tables
+\usepackage{adjustbox} % To adjust table length
+
+
+\usepackage{titling}
+\pretitle{\begin{center}\LARGE \bfseries\sffamily}
+\posttitle{\par\end{center}\vskip 0.5em}
+\preauthor{\begin{center}
+\large \lineskip 0.5em%
+\begin{tabular}[t]{c}}
+\postauthor{\end{tabular}\par\end{center}}
+\predate{\begin{center}\large}
+\postdate{\par\end{center}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Different notions of subdifferentials for nonconvex functions
+\end_layout
+
+\begin_layout Author
+Shuvomoy Das Gupta
+\end_layout
+
+\begin_layout Standard
+Consider a function 
+\begin_inset Formula $f:\mathbf{R}^{n}\to\mathbf{R}\cup\{\infty\}$
+\end_inset
+
+, which is proper and closed.
+ The functions we consider here are nonconvex.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Regular subdifferential 
+\begin_inset Formula $\partial^{\textrm{reg}}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+u & \in\partial^{\textrm{reg}}f(x)\Leftrightarrow\liminf_{y\to x,y\neq x}\frac{f(y)-f(x)-\left\langle u\mid y-x\right\rangle }{\|y-x\|}\geq0\\
+ & \Leftrightarrow\left(\forall y\in\mathbf{R}^{n}\right)\quad f(y)\ge f(x)+\left\langle u\mid y-x\right\rangle +o(\left\Vert y-x\right\Vert )
+\end{align*}
+
+\end_inset
+
+ Another characterization is as follows.
+ We say 
+\begin_inset Formula $u\in\partial^{\textrm{reg}}f(x)$
+\end_inset
+
+, if on some neighborhood of 
+\begin_inset Formula $x$
+\end_inset
+
+, there is an underestimator function 
+\begin_inset Formula $h\leq f$
+\end_inset
+
+ with 
+\begin_inset Formula $h(x)=f(x)$
+\end_inset
+
+, and 
+\begin_inset Formula $h$
+\end_inset
+
+ is differentiable at 
+\begin_inset Formula $x$
+\end_inset
+
+ with 
+\begin_inset Formula $\nabla h(x)=u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Limiting subdifferential 
+\begin_inset Formula $\partial^{{\rm lim}}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u\in\partial^{{\rm lim}}f(x)\Leftrightarrow\exists_{u_{n}\in\partial^{\textrm{reg}}f(x_{n})}\left(\begin{bmatrix}x_{n}\\
+f(x_{n})\\
+u_{n}
+\end{bmatrix}\to\begin{bmatrix}x\\
+f(x)\\
+u
+\end{bmatrix}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Horizon subdifferential 
+\begin_inset Formula $\partial^{\textrm{hor}}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u\in\partial f^{\textrm{hor}}(z)\Leftrightarrow\exists_{u_{n}\in\partial^{\textrm{reg}}f(x_{n})}\exists_{\lambda_{n}\downarrow0}\left(\begin{bmatrix}x_{n}\\
+f(x_{n})\\
+\lambda_{n}u_{n}
+\end{bmatrix}\to\begin{bmatrix}x\\
+f(x)\\
+u
+\end{bmatrix}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the third row, the interpretation is as follows.
+ If there is a positive scalar sequence 
+\begin_inset Formula $\lambda_{n}\to0$
+\end_inset
+
+ that satisfies 
+\begin_inset Formula $\lambda_{n}u_{n}\to u,$
+\end_inset
+
+ then we say 
+\begin_inset Formula $u_{n}\to\mathbf{dir}(u)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Bouligand subdifferential 
+\begin_inset Formula $\partial^{\textrm{bou}}f.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u\in\partial f^{\textrm{bou}}(x)\Leftrightarrow\exists_{(x_{n}):x_{n}\to x,\;f\textrm{ differentiable at all }x_{n}}\left(\nabla f(x_{n})\to u\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Characterization of minimizer.
+ 
+\end_layout
+
+\begin_layout Standard
+Consider the aforementioned function 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Then, if 
+\begin_inset Formula $x$
+\end_inset
+
+ is a local minimizer of 
+\begin_inset Formula $f,$
+\end_inset
+
+ then it satisfies 
+\begin_inset Formula $0\in\partial^{{\rm reg}}f(x).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Paragraph
+Basic subdifferential rules.
+\end_layout
+
+\begin_layout Itemize
+For any 
+\begin_inset Formula $t>0,$
+\end_inset
+
+ we have 
+\begin_inset Formula $\partial^{{\rm lim}}(tf)(x)=t\partial^{{\rm lim}}f(x),$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial^{\textrm{reg}}(tf)(x)=t\partial^{\textrm{reg}}f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The function 
+\begin_inset Formula $f$
+\end_inset
+
+ is strictly continuous at 
+\begin_inset Formula $x$
+\end_inset
+
+, if and only if 
+\begin_inset Formula $x\in\mathop{{\bf dom}}f$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial^{{\rm hor}}f(x)=\{0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+If the function 
+\begin_inset Formula $f$
+\end_inset
+
+ is strictly continuous at 
+\begin_inset Formula $x$
+\end_inset
+
+, then 
+\begin_inset Formula $\partial^{{\rm lim}}(f+g)(x)\subseteq\partial^{{\rm lim}}f(x)+\partial^{{\rm lim}}g(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is strictly continuous at 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial^{{\rm lim}}f(x)$
+\end_inset
+
+ has at most one element, then 
+\begin_inset Formula $f$
+\end_inset
+
+ is strictly differentiable at 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is differentiable at 
+\begin_inset Formula $x$
+\end_inset
+
+, then 
+\begin_inset Formula $\partial^{{\rm reg}}f(x)=\{\nabla f(x)\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is continuously differentiable around 
+\begin_inset Formula $x$
+\end_inset
+
+, and 
+\begin_inset Formula $g$
+\end_inset
+
+ is a proper function, then we have 
+\begin_inset Formula 
+\begin{align*}
+\partial^{{\rm lim}}f(x) & =\partial^{{\rm reg}}f(x)=\{\nabla f(x)\},\\
+\partial^{{\rm lim}}(f+g)(x) & =\nabla f(x)+\partial^{{\rm lim}}g(x),\\
+\partial^{{\rm reg}}(f+g)(x) & =\nabla f(x)+\partial^{{\rm reg}}g(x).
+\end{align*}
+
+\end_inset
+
+, 
+\end_layout
+
+\end_body
+\end_document

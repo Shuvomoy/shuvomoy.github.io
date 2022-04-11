@@ -1,0 +1,3220 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{CambridgeUS}
+% or ...
+\mode<presentation>
+{
+\usetheme{default}
+}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[rgb={0.13,0.28,0.59}]{structure}
+\setbeamertemplate{itemize subitem}{--}
+\setbeamertemplate{frametitle} {
+	\begin{center}
+	  {\large\bf \insertframetitle}
+	\end{center}
+}
+
+\newcommand\footlineon{
+  \setbeamertemplate{footline} {
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.8cm,rightskip=.6cm]{structure}
+      \footnotesize \insertsection
+      \hfill
+      {\insertframenumber}
+    \end{beamercolorbox}
+    \vskip 0.45cm
+  }
+}
+\footlineon
+
+\AtBeginSection[] 
+{ 
+	\begin{frame}<beamer> 
+		\frametitle{Outline} 
+		\tableofcontents[currentsection,currentsubsection] 
+	\end{frame} 
+} 
+\setbeamercovered{transparent}
+\usepackage{amsmath,amssymb, lmodern, upgreek}
+\usefonttheme[onlymath]{serif}
+% or whatever (possibly just delete it)
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 2
+\use_package mathdots 2
+\use_package mathtools 2
+\use_package mhchem 2
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This file is a solution template for:
+\end_layout
+
+\begin_layout Itemize
+Talk at a conference/colloquium.
+ 
+\end_layout
+
+\begin_layout Itemize
+Talk length is about 20min.
+ 
+\end_layout
+
+\begin_layout Itemize
+Style is ornate.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+In principle, this file can be redistributed and/or modified under the terms
+ of the GNU Public License, version 2.
+ However, this file is supposed to be a template to be modified for your
+ own needs.
+ For this reason, if you use this file as a template and not specifically
+ distribute it as part of a another package/program, the author grants the
+ extra permission to freely copy and modify this file as you see fit and
+ even to delete this copyright notice.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Convergence of Nonconvex Douglas-Rachford Splitting and Nonconvex ADMM 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+NC-DRS & NC-ADMM
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+optional, use only with long paper titles
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Shuvomoy Das Gupta
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+S.
+ Das Gupta
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+- optional, use only with lots of authors
+\end_layout
+
+\begin_layout Plain Layout
+- if there are really lots of authors, use 
+\begin_inset Quotes eld
+\end_inset
+
+Author et al.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Institute
+Thales Canada
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Use the 
+\begin_inset Quotes eld
+\end_inset
+
+Institute mark
+\begin_inset Quotes erd
+\end_inset
+
+ inset (
+\family sans
+Insert\SpecialChar menuseparator
+Custom Insets\SpecialChar menuseparator
+InstituteMark
+\family default
+) only if there are several affiliations.
+\end_layout
+
+\begin_layout Itemize
+Keep it simple, no one is interested in your street address.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Thales Canada
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+optional, but mostly needed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+56th Allerton Conference on Communication, Control and Computing, 2018
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Either use conference name or its abbreviation.
+ 
+\end_layout
+
+\begin_layout Itemize
+Not really informative to the audience, more for people (including yourself)
+ who are reading the slides online
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Allerton 2018
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+optional, should be abbreviation of conference name
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If you have a file called "institution-logo-filename.xxx", where xxx is a
+ graphic format that can be processed by latex or pdflatex, resp., then you
+ can add a logo by uncommenting the following:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The following causes the table of contents to be shown at the beginning
+ of every subsection.
+ Delete this, if you do not want it.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSubsection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If you wish to uncover everything in a step-wise fashion, uncomment the
+ following command:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What is this talk about?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+this talk is about ADMM and Douglas-Rachford splitting for nonconvex problems
+\end_layout
+
+\begin_layout Itemize
+the alternating direction method of multipliers (ADMM)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+originally designed to solve convex optimization problem
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Douglas-Rachford splitting algorithm
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ADMM is its special case in a convex setup
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+both guaranteed to converge for convex problems
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+nonconvex ADMM (
+\series bold
+NC-ADMM
+\series default
+) has become a popular heuristic to tackle nonconvex problems
+\end_layout
+
+\begin_layout Itemize
+recently, NC-ADMM heuristic has been applied to 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Erseghe2014"
+literal "false"
+
+\end_inset
+
+ optimal power flow problem, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Takapoui2017"
+literal "false"
+
+\end_inset
+
+ mixed integer quadratic optimization, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Iyer2014"
+literal "false"
+
+\end_inset
+
+ submodular minimization with nonconvex constraints ...
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Diamond2018"
+literal "false"
+
+\end_inset
+
+ Python package 
+\family typewriter
+NCVX
+\family default
+ (extension of 
+\family typewriter
+CVXPY
+\family default
+) implements ADMM heuristic (NC-ADMM)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+often produces lower objective values compared with exact solvers within
+ a time limit
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+nonconvex Douglas-Rachford splitting (
+\series bold
+NC-DRS
+\series default
+): analogous nonconvex heuristic based on Douglas-Rachford splitting
+\end_layout
+
+\begin_layout Itemize
+not much has been done to improve the theoretical understanding of such
+ heuristics
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary of the results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+NC-DRS
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+attacks the original problem directly
+\end_layout
+
+\begin_layout Itemize
+optimal solutions can be characterized via the NC-DRS operator
+\end_layout
+
+\begin_layout Itemize
+if deviation from a convex setup is bounded 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ it will converge or oscillate in a compact connected set 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+NC-ADMM
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+works on a modified dual problem, not the original nonconvex problem
+\end_layout
+
+\begin_layout Itemize
+not equivalent to NC-DRS, but there is a relationship between them
+\end_layout
+
+\begin_layout Itemize
+likely to produce a lower objective value
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem in consideration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+minimize a convex cost function with nonconvex constraint set
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\textrm{minimize}_{x} & f\left(x\right)\\
+\textrm{subject to} & x\in\mathcal{C}
+\end{array}\tag{OPT}\label{eq:original_problem}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ is closed, proper, and convex
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is compact, but not necessarily convex
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Reformulation through indicator function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+indicator function of set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\delta_{\mathcal{C}}(x)=\begin{cases}
+0, & \textrm{if}\;x\in\mathcal{C}\\
+\infty, & \textrm{if}\;x\notin\mathcal{C}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\delta_{\mathcal{C}}$
+\end_inset
+
+ is closed and proper, but not necessarily convex
+\end_layout
+
+\begin_layout Itemize
+we can write
+\begin_inset Formula 
+\[
+\left(\begin{array}{ll}
+\textrm{minimize}_{x} & f\left(x\right)\\
+\textrm{subject to} & x\in\mathcal{C}
+\end{array}\right)=\textrm{minimize}_{x}\;f(x)+\delta_{\mathcal{C}}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Proximal operator of 
+\begin_inset Formula $f$
+\end_inset
+
+ and projection onto 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+both NC-DRS and NC-ADMM have same subroutines: first 
+\begin_inset Formula $\mathbf{prox}_{\gamma f},$
+\end_inset
+
+ then 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ and finally 
+\begin_inset Formula $\sum$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+proximal operator of 
+\begin_inset Formula $f$
+\end_inset
+
+ evaluated at point 
+\begin_inset Formula $x$
+\end_inset
+
+ with parameter 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\mathbf{prox}_{\gamma f}\left(x\right)=\textrm{argmin}_{y}\big(f(y)+\frac{1}{2\gamma}\|y-x\|^{2}\big)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+single-valued, continuous 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+projection onto 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\mathbf{prox}_{\gamma\delta_{\mathcal{C}}}\left(x\right)=\mathbf{\Pi}_{\mathcal{C}}(x)=\textrm{argmin}_{y\in\mathcal{C}}\big(\|y-x\|^{2}\big)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+there can be multiple projections
+\end_layout
+
+\begin_layout Itemize
+one such projection is denoted by 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}(\cdot)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+NC-ADMM and NC-DRS:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+NC-ADMM: 
+\begin_inset Formula 
+\[
+\begin{aligned}x_{n+1} & =\mathbf{prox}_{\gamma f}\left(y_{n}-z_{n}\right)\\
+y_{n+1} & =\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(x_{n+1}+z_{n}\right)\\
+z_{n+1} & =z_{n}-y_{n+1}+x_{n+1}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+NC-DRS: 
+\begin_inset Formula 
+\[
+\begin{aligned}x_{n+1} & =\mathbf{prox}_{\gamma f}\left(z_{n}\right)\\
+y_{n+1} & =\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(2x_{n+1}-z_{n}\right)\\
+z_{n+1} & =z_{n}+y_{n+1}-x_{n+1}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+both have same subroutines, but different inputs 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pretend 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is convex
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ is closed, proper, convex
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NC-ADMM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NC-DRS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{aligned}x_{n+1} & =\mathbf{prox}_{\gamma f}\left(y_{n}-z_{n}\right)\\
+y_{n+1} & =\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(x_{n+1}+z_{n}\right)\\
+z_{n+1} & =z_{n}-y_{n+1}+x_{n+1}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{aligned}x_{n+1} & =\mathbf{prox}_{\gamma f}\left(z_{n}\right)\\
+y_{n+1} & =\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(2x_{n+1}-z_{n}\right)\\
+z_{n+1} & =z_{n}+y_{n+1}-x_{n+1}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+pretend 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is convex 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $x_{n},y_{n}$
+\end_inset
+
+ converge to an optimal solution for any initial condition
+\end_layout
+
+\begin_layout Itemize
+but 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is not necessarily convex in our setup
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+convergence conditions are messy
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Why convergence conditions are messy?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+the convergence conditions are messy because:
+\end_layout
+
+\begin_layout Itemize
+subdifferential operator of 
+\begin_inset Formula $\delta_{\mathcal{C}}$
+\end_inset
+
+ is 
+\emph on
+\color blue
+monotone
+\series bold
+\emph default
+\color inherit
+, 
+\series default
+but 
+\series bold
+\emph on
+\color blue
+not
+\series default
+ maximally monotone
+\emph default
+\color inherit
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $g$
+\end_inset
+
+: closed, proper, but not necessarily convex 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\partial g$
+\end_inset
+
+: montone,
+\begin_inset Formula $g$
+\end_inset
+
+ is closed, proper and convex 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\partial g$
+\end_inset
+
+: maximally monotone
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\partial g$
+\end_inset
+
+: subdifferential of 
+\begin_inset Formula $g$
+\end_inset
+
+ is monotone, but not maximally monotone 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+: is 
+\emph on
+\color blue
+expansive i.e., 
+\series bold
+not 
+\series default
+nonexpansive
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ the underlying 
+\emph on
+reflection operator
+\emph default
+ is 
+\emph on
+\color blue
+expansive
+\end_layout
+
+\begin_layout Standard
+Little bit of review...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Monotone and maximally monotone operators
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ is monotone if for every 
+\begin_inset Formula $(x,u),(y,v)\in\mathop{{\bf gra}T}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left\langle x-y\mid u-v\right\rangle \geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ is maximally monotone if 
+\begin_inset Formula $\mathop{{\bf gra}}T$
+\end_inset
+
+ is not properly contained by any other monotone operator's graph
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Background
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+monotone and maximally monotone operators
+\end_layout
+
+\begin_layout Itemize
+firmly nonexpansive, nonexpansive and expansive operators
+\end_layout
+
+\begin_layout Itemize
+subdifferential, resolvent and proximal operators
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename monotone_operators.eps
+	lyxscale 150
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Subdifferential operator for a nonconvex function 
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $g$
+\end_inset
+
+: closed, proper, but not necessarily convex 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\partial g$
+\end_inset
+
+: montone,
+\begin_inset Formula $g$
+\end_inset
+
+ is closed, proper and convex 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\partial g$
+\end_inset
+
+: maximally monotone
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+the convergence conditions are messy because 
+\color blue
+subdifferential operator of a nonconvex function is monotone
+\series bold
+, but not
+\series default
+ maximally monotone
+\color inherit
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $g$
+\end_inset
+
+: closed, proper, but not necessarily convex 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $\partial g$
+\end_inset
+
+: montone,
+\begin_inset Formula $g$
+\end_inset
+
+ is closed, proper and convex 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\partial g$
+\end_inset
+
+: maximally monotone
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\partial g$
+\end_inset
+
+: subdifferential of 
+\begin_inset Formula $g$
+\end_inset
+
+ is monotone, but not maximally monotone 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\partial g$
+\end_inset
+
+: subdifferential of 
+\begin_inset Formula $g$
+\end_inset
+
+ is monotone, but not maximally monotone 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial g\left(x\right)=\left\{ u\in\mathbf{R}^{n}\mid\left(\forall y\in\mathbf{R}^{n}\right)\,g\left(y\right)\geq g\left(x\right)+\left\langle u\mid y-x\right\rangle \right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename nonconvex_subdifferential.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Why convergence conditions are messy?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+our problem: 
+\begin_inset Formula $\textrm{minimize}_{x}\;f(x)+\delta_{\mathcal{C}}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\partial f$
+\end_inset
+
+: maximally monotone
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\partial\delta_{\mathcal{C}}$
+\end_inset
+
+: monotone, but 
+\series bold
+not
+\series default
+ maximally monotone 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+
+\color blue
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ is 
+\emph on
+expansive (
+\series bold
+not
+\series default
+ nonexpansive)
+\emph default
+\color inherit
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Our problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+our problem: 
+\begin_inset Formula 
+\[
+\textrm{minimize}_{x}\;f(x)+\delta_{\mathcal{C}}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+: closed proper convex 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\partial f$
+\end_inset
+
+: maximally monotone
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\delta_{\mathcal{C}}$
+\end_inset
+
+: closed proper 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\partial\delta_{\mathcal{C}}$
+\end_inset
+
+: monotone, but not maximally monotone 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+the monotonicity of 
+\begin_inset Formula $\partial f$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial\delta_{\mathcal{C}}$
+\end_inset
+
+ influences the subroutines of NC-ADMM and NC-DRS
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{\mathbf{prox}}}_{\gamma f}$
+\end_inset
+
+: nonexpansive
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+: expansive 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+What is a nonexpansive operator?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What is a nonexpansive operator?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $T$
+\end_inset
+
+ : single-valued operator on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ is nonexpansive on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+ if for every 
+\begin_inset Formula $x,y$
+\end_inset
+
+ we have 
+\begin_inset Formula $\|T(x)-T(y)\|\leq\|x-y\|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename nonexpansive_operator.eps
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+\begin_inset Formula $\mathbf{prox}_{\gamma f}$
+\end_inset
+
+ is nonexpansive
+\color inherit
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Firmly nonexpansive operator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula $T$
+\end_inset
+
+ : single-valued operator on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ is firmly nonexpansive on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+ if 
+\begin_inset Formula $(2T-I_{n})$
+\end_inset
+
+ is nonexpansive
+\end_layout
+
+\begin_layout Itemize
+a firmly nonexpansive operator is also nonexpansive
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+\begin_inset Formula $\mathbf{prox}_{\gamma f}$
+\end_inset
+
+ is firmly nonexpansive
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+\begin_inset Formula $\left(2\mathbf{prox}_{\gamma f}-I_{n}\right)$
+\end_inset
+
+ is nonexpansive 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Operators that are expansive
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $T$
+\end_inset
+
+ is a single-valued operator on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Expansiveness of an operator
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\texttt{/*optional?*/}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+expansiveness of 
+\begin_inset Formula $T$
+\end_inset
+
+ at 
+\begin_inset Formula $x,y$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\varepsilon_{xy}^{(T)}$
+\end_inset
+
+, is defined as
+\begin_inset Formula 
+\[
+\varepsilon_{xy}^{(T)}=\begin{cases}
+\|T(x)-T(y)\|-\|x-y\|, & \textrm{if }\|x-y\|<\|T(x)-T(y)\|\\
+0, & \textrm{else}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ is nonexpansive on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\varepsilon_{xy}^{(T)}=0$
+\end_inset
+
+ for every 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ is expansive on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\varepsilon_{xy}^{(T)}>0$
+\end_inset
+
+ for some 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ is expansive if there exist 
+\begin_inset Formula $x,y$
+\end_inset
+
+ such that
+\begin_inset Formula 
+\[
+\|T(x)-T(y)\|>\|x-y\|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename expansive_operator.eps
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ is expansive 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Our problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+our problem: 
+\begin_inset Formula 
+\[
+\textrm{minimize}_{x}\;f(x)+\delta_{\mathcal{C}}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+: closed, proper, convex
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\partial f$
+\end_inset
+
+: subdifferential is maximally monotone
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{\mathbf{prox}}}_{\gamma f}$
+\end_inset
+
+ is firmly nonexpansive (and nonexpansive)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\delta_{\mathcal{C}}$
+\end_inset
+
+ is closed, proper 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\partial\delta_{\mathcal{C}}$
+\end_inset
+
+: monotone, but not maximally monotone 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Characterization of minimizers: NC-DRS operator and its reflection
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\tilde{T}$
+\end_inset
+
+ : NC-DRS operator
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+NC-DRS:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\begin{aligned}x_{n+1} & =\mathbf{prox}_{\gamma f}\left(z_{n}\right)\\
+y_{n+1} & =\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(2x_{n+1}-z_{n}\right)\\
+z_{n+1} & =z_{n}+y_{n+1}-x_{n+1}.
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\tilde{T}=\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(2\mathbf{prox}_{\gamma f}-I_{n}\right)+I_{n}-\mathbf{prox}_{\gamma f}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+: reflection operator of 
+\begin_inset Formula $\tilde{T}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\tilde{R}=2\tilde{T}-I_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+NC-DRS in compact form: 
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+z_{n+1}=\tilde{T}z_{n}=\frac{1}{2}\left(\tilde{R}+I_{n}\right)z_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+: expansive 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\color blue
+
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+: expansive
+\color inherit
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ root of all convergence issues
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Characterization of minimizers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\textrm{argmin}\left(f+\delta_{\mathcal{C}}\right)$
+\end_inset
+
+ is the set of minimizers of 
+\begin_inset Formula $\textrm{min.}_{x}\;f(x)+\delta_{\mathcal{C}}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}\tilde{T}\big)\subseteq\textrm{argmin}\left(f+\delta_{\mathcal{C}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+underlying assumptions:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)$
+\end_inset
+
+ is nonempty
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+ is nonempty
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathop{\mathop{{\bf fix}}\left\{ \big(2\mathbf{\Pi}_{\mathcal{C}}-I_{n}\big)\big(2\mathbf{prox}_{\gamma f}-I_{n}\big)\right\} }$
+\end_inset
+
+ is nonempty
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Convergence of NC-DRS: setup 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\varepsilon_{xy}^{\tilde{R}}$
+\end_inset
+
+ : expansiveness of 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ at 
+\begin_inset Formula $x,y$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\varepsilon_{xy}^{\tilde{R}}=\begin{cases}
+\|\tilde{R}(x)-\tilde{R}(y)\|-\|x-y\|, & \textrm{if }\|x-y\|<\|\tilde{R}(x)-\tilde{R}(y)\|\\
+0, & \textrm{else}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename expansiveness_of_Cayley.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{xy}^{\tilde{R}}=\sqrt{\varepsilon{}_{xy}^{\tilde{R}}}\sqrt{\|\tilde{R}(x)-\tilde{R}(y)\|+\|x-y\|}$
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Setup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+define:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $ $
+\end_inset
+
+: expansiveness of 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ at 
+\begin_inset Formula $x,y$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sigma_{xy}=\sqrt{\varepsilon{}_{xy}}\sqrt{\|\tilde{R}(x)-\tilde{R}(y)\|+\|x-y\|}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Convergence of NC-DRS: conditions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+: sequence of vectors generated for some chosen initial point 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if the following holds:
+\end_layout
+
+\begin_layout Itemize
+there exists a 
+\begin_inset Formula $z\in\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+, such that 
+\begin_inset Formula $\sum_{n=0}^{\infty}\left(\sigma_{z_{n}z}^{\tilde{R}}\right)^{2}$
+\end_inset
+
+ is bounded above, and 
+\begin_inset Formula $\|z_{0}-z\|^{2}$
+\end_inset
+
+ is finite
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+define 
+\begin_inset Formula $r:=\sqrt{\|z_{0}-z\|^{2}+\sum_{n=0}^{\infty}\left(\sigma_{z_{n}z}^{\tilde{R}}\right)^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B(z;r)$
+\end_inset
+
+: compact ball with center 
+\begin_inset Formula $z$
+\end_inset
+
+ and radius 
+\begin_inset Formula $r$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+then...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Convergence of NC-DRS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+then one of the following will happen:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+convergence to a point:
+\series default
+ the sequence 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ converges to a point 
+\begin_inset Formula $z^{\star}\in B(z;r)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+cluster points form a continuum:
+\series default
+ the set of cluster points of 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ forms a nonempty compact connected set in 
+\begin_inset Formula $B(z;r)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if situation 1 occurs and 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\left(\sigma_{z_{n}z^{\star}}^{\tilde{R}}\right)^{2}=0$
+\end_inset
+
+, then 
+\begin_inset Formula $x_{n}=\mathbf{prox}_{\gamma f}\left(z_{n-1}\right)$
+\end_inset
+
+ converges to an optimal solution
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Some comments on convergence
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+for convergence total deviation of 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ from being a nonexpansive operator over the sequence 
+\begin_inset Formula $\left\{ \left(z_{n},z\right)\right\} _{n\in\mathbf{N}}$
+\end_inset
+
+ is bounded
+\end_layout
+
+\begin_layout Itemize
+depends on the initial point
+\end_layout
+
+\begin_layout Itemize
+in our case 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is not necessarily convex
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+sanity check:
+\series default
+ pretend 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is convex 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+total deviation of 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ from being a nonexpansive operator over the sequence 
+\begin_inset Formula $\left\{ \left(z_{n},z\right)\right\} _{n\in\mathbf{N}}$
+\end_inset
+
+ is zero
+\end_layout
+
+\begin_layout Itemize
+our convergence proof coincides with known convergence results for convex
+ setup
+\begin_inset Note Note
+status collapsed
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Constructing NC-ADMM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+original problem: 
+\begin_inset Formula $\textrm{minimize}_{x\in\mathcal{C}}\;f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+take dual and apply NC-DRS to the dual
+\end_layout
+
+\begin_layout Itemize
+resultant algorithm is relaxed NC-ADMM
+\begin_inset Formula 
+\begin{align*}
+x_{n+1} & =\mathbf{prox}_{\gamma f}\left(y_{n}-z_{n}\right)\\
+y_{n+1} & =\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\left(z_{n}+x_{n+1}\right)\\
+z_{n+1} & =z_{n}-y_{n+1}+x_{n+1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+relaxed NC-ADMM solves 
+\begin_inset Formula $\textrm{minimize}_{x\in\mathop{{\bf conv}C}}\;f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Constructing NC-ADMM (continued)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+relaxed NC-ADMM 
+\begin_inset Formula 
+\begin{align*}
+x_{n+1} & =\mathbf{prox}_{\gamma f}\left(y_{n}-z_{n}\right)\\
+y_{n+1} & =\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\left(z_{n}+x_{n+1}\right)\\
+z_{n+1} & =z_{n}-y_{n+1}+x_{n+1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+solves 
+\begin_inset Formula $\textrm{minimize}_{x\in\mathop{{\bf conv}C}}\;f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+replace 
+\begin_inset Formula $\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}$
+\end_inset
+
+ with 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ to solve 
+\begin_inset Formula $\textrm{minimize}_{x\in\mathcal{C}}\;f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+resultant algorithm is NC-ADMM:
+\begin_inset Formula 
+\[
+\begin{aligned}x_{n+1} & =\mathbf{prox}_{\gamma f}\left(y_{n}-z_{n}\right)\\
+y_{n+1} & =\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(x_{n+1}+z_{n}\right)\\
+z_{n+1} & =z_{n}-y_{n+1}+x_{n+1}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Constructing NC-ADMM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+original problem: 
+\begin_inset Formula $\textrm{minimize}_{x\in\mathcal{C}}\;f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+take dual and apply NC-DRS to the dual
+\end_layout
+
+\begin_layout Itemize
+resultant algorithm is relaxed NC-ADMM
+\begin_inset Formula 
+\begin{align*}
+x_{n+1} & =\mathbf{prox}_{\gamma f}\left(y_{n}-z_{n}\right)\\
+y_{n+1} & =\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\left(z_{n}+x_{n+1}\right)\\
+z_{n+1} & =z_{n}-y_{n+1}+x_{n+1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+relaxed NC-ADMM solves 
+\begin_inset Formula $\textrm{minimize}_{x\in\mathop{{\bf conv}C}}\;f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Constructing NC-ADMM (continued)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+relaxed NC-ADMM 
+\begin_inset Formula 
+\begin{align*}
+x_{n+1} & =\mathbf{prox}_{\gamma f}\left(y_{n}-z_{n}\right)\\
+y_{n+1} & =\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\left(z_{n}+x_{n+1}\right)\\
+z_{n+1} & =z_{n}-y_{n+1}+x_{n+1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+solves 
+\begin_inset Formula $\textrm{minimize}_{x\in\mathop{{\bf conv}C}}\;f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+replace 
+\begin_inset Formula $\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}$
+\end_inset
+
+ with 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ to solve 
+\begin_inset Formula $\textrm{minimize}_{x\in\mathcal{C}}\;f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+resultant algorithm is NC-ADMM:
+\begin_inset Formula 
+\[
+\begin{aligned}x_{n+1} & =\mathbf{prox}_{\gamma f}\left(y_{n}-z_{n}\right)\\
+y_{n+1} & =\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(x_{n+1}+z_{n}\right)\\
+z_{n+1} & =z_{n}-y_{n+1}+x_{n+1}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Constructing NC-ADMM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename constructing_NC_ADMM_high_resolution.png
+	lyxscale 30
+	special width=\textwidth
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pretend 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is convex
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+pretend 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is convex
+\end_layout
+
+\begin_layout Itemize
+strong duality holds
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}=\mathbf{\tilde{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Moreau's decomposition can be applied to 
+\begin_inset Formula $\delta_{\mathcal{C}}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\mathbf{prox}_{\delta_{\mathcal{C}}}+\mathbf{prox}_{\delta_{\mathcal{C}}^{\star}}=I_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then: 
+\end_layout
+
+\begin_layout Itemize
+no information loss in constructing NC-ADMM from NC-DRS
+\end_layout
+
+\begin_layout Itemize
+NC-ADMM and NC-DRS are equivalent to each other
+\end_layout
+
+\end_deeper
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+However...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is nonconvex 
+\end_layout
+
+\begin_layout Itemize
+NC-ADMM and NC-DRS are not equivalent 
+\end_layout
+
+\begin_layout Itemize
+reasons for the loss of equivalency:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+strict duality gap
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\neq\mathbf{\tilde{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Moreau's decomposition does not hold
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+NC-ADMM in 
+\family typewriter
+NCVX-CVXPY
+\family default
+ works on a modified dual, hence produces a lower objective value
+\end_layout
+
+\begin_layout Itemize
+relationship between minimizers of the original problem and the NC-ADMM
+ operator breaks down
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+What if?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+is it possible to establish convergence NC-ADMM ignoring NC-DRS?
+\end_layout
+
+\begin_layout Itemize
+our convergence analysis is established for 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+nonempty, compact, but not necessarily convex constraint sets
+\end_layout
+
+\begin_layout Itemize
+it is equally applicable to the smaller subclass of problems with convex
+ constraint sets
+\end_layout
+
+\begin_layout Itemize
+in this smaller subclass of convex problems NC-ADMM and NC-DRS have the
+ same convergence properties
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+NC-DRS and NC-ADMM are very similar looking, but very different heuristics
+\end_layout
+
+\begin_layout Itemize
+the theoretical rationale to use NC-DRS could be stronger than NC-ADMM...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+
+\series bold
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Limitations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+strong assumptions in minimizer characterization
+\end_layout
+
+\begin_layout Itemize
+step size is 1, does not consider adaptive step sizes 
+\end_layout
+
+\begin_layout Itemize
+no numerical experiments in the paper
+\end_layout
+
+\end_deeper
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+End of talk
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+if you are working on nonconvex problems using ADMM/DRS, please talk to
+ me!
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size larger
+Thank you!
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size larger
+Questions?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "source_for_the_presentation"
+options "authordate1"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
