@@ -1,0 +1,12 @@
+Here is a side note~~~<label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle"/><span class="sidenote">
+This is a sidenote.
+</span>~~~. 
+
+Here is a margin-note.
+~~~
+<label for="mn-demo" class="margin-toggle">&#8853;</label>
+<input type="checkbox" id="mn-demo" class="margin-toggle"/>
+<span class="marginnote">
+  This is a margin note. Notice there isn’t a number preceding the note.
+</span>
+~~~

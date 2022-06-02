@@ -1,0 +1,8006 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\begin_preamble
+% for subfigures/subtables
+\IEEEoverridecommandlockouts
+%\usepackage[%showframe,
+%top=1in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{tikz} 
+\allowdisplaybreaks
+%\setlength{\abovedisplayskip}{2.3pt}
+%\setlength{\belowdisplayskip}{2.3pt}
+%\setlength{\abovedisplayshortskip}{2.3pt}
+%\setlength{\belowdisplayshortskip}{2.3pt}
+
+\makeatletter
+\def\@IEEEsectpunct{.\ \,}
+\def\paragraph{\@startsection{paragraph}{4}{\z@}{1ex plus 1ex minus 0.5ex}%
+{0ex}{\normalfont\normalsize\bfseries}}
+\makeatother
+\end_preamble
+\options journal
+\use_default_options false
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement tbh
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Your Title"
+\pdf_author "Your Name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 2
+\use_package mathdots 2
+\use_package mathtools 2
+\use_package mhchem 2
+\use_package stackrel 2
+\use_package stmaryrd 2
+\use_package undertilde 2
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM
+ to Minimize Convex Functions over Nonconvex Sets
+\end_layout
+
+\begin_layout Author
+Shuvomoy Das Gupta 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+S.
+ Das Gupta is with the Research & Technology Department, Thales Canada,
+ 105 Moatfield Drive, Toronto, ON, Canada.
+ Email: 
+\family typewriter
+
+\begin_inset CommandInset href
+LatexCommand href
+name "shuvomoy.dasgupta@thalesgroup.com"
+target "shuvomoy.dasgupta@thalesgroup.com"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Recently, heuristics based on the Douglas-Rachford splitting algorithm and
+ the alternating direction method of multipliers (ADMM) have found empirical
+ success in minimizing convex functions over nonconvex sets, but not much
+ has been done to improve the theoretical understanding of such heuristics.
+ In this paper, we investigate convergence of these heuristics under realistic
+ conditions.
+ First, we characterize optimal solutions of minimization problems involving
+ convex cost functions over nonconvex constraint sets.
+ We show that these optimal solutions are related to the fixed point set
+ of the underlying nonconvex Douglas-Rachford operator.
+ Next, we establish sufficient conditions under which the Douglas-Rachford
+ splitting heuristic either converges to a point or its cluster points form
+ a nonempty compact and connected set.
+ In the case where the heuristic converges to a point, we establish sufficient
+ conditions for that point to be an optimal solution.
+ Then, we discuss how the ADMM heuristic can be constructed from the Douglas-Rac
+hford splitting algorithm.
+ We show that, unlike in the convex case, the algorithms in our nonconvex
+ setup are not equivalent to each other and have a rather involved relationship
+ between them.
+ Finally, we comment on convergence of the ADMM heuristic and compare it
+ with the Douglas-Rachford splitting heuristic.
+ Our study indicates that the theoretical rationale to use the Douglas-Rachford
+ splitting heuristic is stronger than that of the ADMM heuristic.
+\end_layout
+
+\begin_layout Keywords
+Alternating direction method of multipliers (ADMM), Douglas-Rachford splitting,
+ optimization algorithms, nonconvex optimization problems.
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+In this paper, we study convergence of heuristics based on the Douglas-Rachford
+ splitting algorithm and the alternating direction method of multipliers
+ (ADMM) for minimization of convex functions over nonconvex sets.
+ Such optimization problems can be described as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[overlay, remember picture] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+path (current page.north east) ++(-2,-0.2) node[below left] 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize This paper has been accepted for publication in the proceedings
+ of the 56th Allerton Conference on Communication, Control and Computing,
+ 2018.}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[overlay, remember picture] 
+\backslash
+path (current page.north east) ++(-2,-0.6) node[below left] 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize Please cite the paper as: Shuvomoy Das Gupta, 
+\begin_inset Quotes eld
+\end_inset
+
+On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM
+ to Minimize Convex}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[overlay, remember picture] 
+\backslash
+path (current page.north east) ++(-6.75,-1) node[below left] 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize Functions over Nonconvex Sets
+\begin_inset Quotes erd
+\end_inset
+
+, 56th Allerton Conference on Communication, Control and Computing, 2018.
+ }; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[overlay, remember picture] 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+path (current page.north east) ++(-2,-0.2) node[below left] 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize This paper has been accepted for publication in the proceedings
+ of the 56th Allerton Conference on Communication, Control and Computing,
+ 2018.}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[overlay, remember picture] 
+\backslash
+path (current page.north east) ++(-2,-0.6) node[below left] 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize Please cite the paper as: Shuvomoy Das Gupta, 
+\begin_inset Quotes eld
+\end_inset
+
+On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM
+ to Minimize Convex}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[overlay, remember picture] 
+\backslash
+path (current page.north east) ++(-6.75,-1) node[below left] 
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+footnotesize Functions over Nonconvex Sets
+\begin_inset Quotes erd
+\end_inset
+
+, 56th Allerton Conference on Communication, Control and Computing, 2018.
+ }; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\textup{minimize} & f\left(x\right)\\
+\textup{subject to} & x\in\mathcal{C},
+\end{array}\tag{OPT}\label{eq:original_problem}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+ is the decision variable.
+ The constraint set 
+\begin_inset Formula $\mathcal{C}\subseteq\mathbf{R}^{n}$
+\end_inset
+
+ is nonempty and compact (closed and bounded), but it is not necessarily
+ convex.
+ The cost function 
+\begin_inset Formula $f:\mathbf{R}^{n}\to\mathbf{R}\cup\left\{ +\infty\right\} $
+\end_inset
+
+ is CPC.
+ This means that 
+\begin_inset Formula $f$
+\end_inset
+
+ is (i) 
+\bar under
+c
+\bar default
+onvex, (ii) 
+\bar under
+p
+\bar default
+roper, 
+\emph on
+i.e.,
+\emph default
+ its domain 
+\begin_inset Formula $\mathop{{\bf dom}}f=\{x\in\mathbf{R}^{n}\mid f(x)<\infty\}$
+\end_inset
+
+ is nonempty, and (iii) 
+\bar under
+c
+\bar default
+losed (or lower-semicontinuous), 
+\emph on
+i.e.,
+\emph default
+ its epigraph 
+\begin_inset Formula $\mathop{{\bf epi}}f=\left\{ (x,\xi)\in\mathbf{R}^{n}\times\mathbf{R}\mid f(x)\leq\xi\right\} $
+\end_inset
+
+ is a closed set.
+ The constraint set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is assumed to be closed so that projection onto 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is well-defined, and it is assumed to be bounded to avoid the possibility
+ of an unbounded optimal solution.
+\end_layout
+
+\begin_layout Standard
+We consider the following 
+\series bold
+heuristic based on the Douglas-Rachford splitting algorithm 
+\series default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "\\S 27.2"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+ to solve 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}x_{n+1} & =\mathbf{prox}_{\gamma f}\left(z_{n}\right)\\
+y_{n+1} & =\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(2x_{n+1}-z_{n}\right)\\
+z_{n+1} & =z_{n}+y_{n+1}-x_{n+1},
+\end{aligned}
+\tag{NC-DRS}\label{eq:DR_splitting_orig}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+ is an iteration counter, 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}(x)$
+\end_inset
+
+ is a 
+\series bold
+Euclidean projection
+\series default
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ onto 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ (as 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is not necessarily convex, there can be multiple projections onto it from
+ a point outside 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+), and 
+\begin_inset Formula 
+\[
+\mathbf{prox}_{\gamma f}\left(x\right)=\textrm{argmin}_{y\in\mathop{{\bf dom}}f}\big(f(y)+\frac{1}{2\gamma}\|y-x\|^{2}\big)
+\]
+
+\end_inset
+
+is the 
+\series bold
+proximal operator
+\series default
+ of 
+\begin_inset Formula $f$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+ with parameter 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+.
+ We also investigate the following 
+\series bold
+heuristic based on ADMM
+\series default
+ (also known as NC-ADMM 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "\\S 3.1"
+key "Diamond2018"
+literal "true"
+
+\end_inset
+
+) to solve 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}x_{n+1} & =\mathbf{prox}_{\gamma f}\left(y_{n}-z_{n}\right)\\
+y_{n+1} & =\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(x_{n+1}+z_{n}\right)\\
+z_{n+1} & =z_{n}-y_{n+1}+x_{n+1},
+\end{aligned}
+\tag{NC-ADMM}\label{eq:ADMM_orig-1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+ is an iteration counter, and 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+.
+ Note that both heuristics consist of the same subroutines, but different
+ inputs are fed into them.
+ So, any software package that implements one of the heuristics can be easily
+ modified to implement the other.
+ 
+\end_layout
+
+\begin_layout Standard
+If the set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is convex, then the iterates 
+\begin_inset Formula $x_{n},y_{n}$
+\end_inset
+
+ in both 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ converge to an optimal solution for any initial point 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Corollary 27.4"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Boyd2011"
+literal "true"
+
+\end_inset
+
+.
+ The convergence conditions for the nonconvex case, studied in this paper,
+ are far more complicated.
+\end_layout
+
+\begin_layout Paragraph*
+Motivation
+\end_layout
+
+\begin_layout Standard
+This paper is motivated by the recent success of ADMM in solving nonconvex
+ problems.
+ ADMM, which is a special case of the Douglas-Rachford splitting algorithm
+ in a convex setup, was originally designed to solve convex optimization
+ problems 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Boyd2011"
+literal "true"
+
+\end_inset
+
+.
+ However, since the idea of implementing this algorithm as a general purpose
+ heuristics to solve nonconvex optimization problems was introduced in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Boyd2011"
+literal "true"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ has been applied successfully to minimization of convex functions over
+ nonconvex sets 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Diamond2018,Takapoui2017a,Takapoui2017,takapoui2016simple"
+literal "true"
+
+\end_inset
+
+, and it has been implemented recently in the Python package NCVX—an extension
+ of CVXPY—to formulate and solve problems of the form 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "diamond2016cvxpy"
+literal "true"
+
+\end_inset
+
+.
+ In these works, the nonconvex projection step of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+, if computationally too costly, is replaced with a tractable 
+\begin_inset Quotes eld
+\end_inset
+
+approximate
+\begin_inset Quotes erd
+\end_inset
+
+ projection onto the nonconvex set, 
+\emph on
+e.g.,
+\emph default
+ rounding for Boolean variables; yet it finds approximate solutions to a
+ wide variety of nonconvex problems effectively.
+ In spite of the empirical success, not much has been done to improve the
+ theoretical understanding of such heuristics.
+ Some recent progress has been made on understanding convergence of ADMM
+ for specialized nonconvex setups, such as (i) minimizing a nonconvex function
+ over an affine set 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wang2015global"
+literal "true"
+
+\end_inset
+
+, and (ii) minimizing the sum of a smooth function with a bounded Hessian
+ and a nonsmooth function with an easy to compute proximal mapping 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "li2015global"
+literal "true"
+
+\end_inset
+
+.
+ However, these works are
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{top=0.75in, bottom=0.75in, left=0.75in, right=0.75in}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ not applicable to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+, which has motivated us to investigate the convergence properties of these
+ heuristics.
+ 
+\end_layout
+
+\begin_layout Paragraph*
+Contributions
+\end_layout
+
+\begin_layout Standard
+Our contributions in this paper are as follows.
+ First, we characterize global minimizers of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ and show that they are related to the fixed point set of the underlying
+ Douglas-Rachford operator constructed from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+.
+ Then, we establish conditions under which 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ either converges to a point (not necessarily an optimal solution) or its
+ cluster points form a nonempty compact and connected set.
+ In the case where the heuristic converges to a point, we provide sufficient
+ conditions for that point to be an optimal solution.
+ Then, we investigate the relationship between 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+.
+ For a convex optimization problem, ADMM is the Douglas-Rachford algorithm
+ splitting applied to the dual problem 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Gabay1983"
+literal "true"
+
+\end_inset
+
+, but their relationship is more involved in our nonconvex setup.
+ Applying the Douglas-Rachford splitting algorithm to the convex dual of
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ results in a relaxed version of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+, where the projection is onto the convex hull of 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ We show that this relaxed algorithm finds a minimizer of 
+\begin_inset Formula $f$
+\end_inset
+
+ over the convex hull of 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, and by restricting its projection step onto the original constraint set
+ 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, we arrive at 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+.
+ The construction procedure also explains why, when compared with exact
+ solvers, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ often achieves lower objective values in many numerical experiments performed
+ in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Diamond2018,Takapoui2017a,Takapoui2017,takapoui2016simple"
+literal "true"
+
+\end_inset
+
+.
+ We comment on the convergence properties of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ and compare it with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+.
+ Our study indicates that the theoretical rationale to use 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ is stronger than that of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+.
+ To the best of our knowledge, we are not aware of similar results in the
+ existing literature.
+\end_layout
+
+\begin_layout Paragraph*
+Notation and notions
+\end_layout
+
+\begin_layout Standard
+We denote the sets of real numbers and natural numbers by 
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{N}$
+\end_inset
+
+, respectively.
+ Furthermore, 
+\begin_inset Formula $\overline{\mathbf{R}}=\mathbf{R}\cup\{\infty\}$
+\end_inset
+
+ denotes the extended real line.
+ The set of real column vectors of length 
+\begin_inset Formula $n$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+.
+ Depending on the context, 
+\begin_inset Formula $0$
+\end_inset
+
+ may be a scalar or a column vector of zeros.
+ The 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ identity matrix is denoted by 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+.
+ The standard Euclidean norm is denoted by 
+\begin_inset Formula $\|\cdot\|$
+\end_inset
+
+.
+ We use 
+\begin_inset Formula $\left\langle \cdot\mid\cdot\right\rangle $
+\end_inset
+
+ as the inner product in the Euclidean space.
+ Let 
+\begin_inset Formula $\mathcal{X},\mathcal{Y}$
+\end_inset
+
+ be two nonempty subsets of 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+, and let 
+\begin_inset Formula $z\in\mathbf{R}^{n}$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\mathcal{X}+\mathcal{Y}=\{x+y\mid x\in\mathcal{X},y\in\mathcal{Y}\}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{X}-\mathcal{Y}=\{x-y\mid x\in\mathcal{X},y\in\mathcal{Y}\}$
+\end_inset
+
+, 
+\begin_inset Formula $z+\mathcal{X}=\{z\}+\mathcal{X}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathcal{X}-z=\mathcal{X}-\{z\}$
+\end_inset
+
+.
+ If one of the sets is empty, then the resultant addition or subtraction
+ is an empty set, 
+\emph on
+i.e.,
+\emph default
+ 
+\begin_inset Formula $\mathcal{X}+\emptyset=\emptyset$
+\end_inset
+
+.
+ Finally, the
+\series bold
+ indicator function
+\series default
+ of a nonempty set 
+\begin_inset Formula $\mathcal{X}\subseteq\mathbf{R}^{n}$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\delta_{\mathcal{X}}$
+\end_inset
+
+, is defined as
+\begin_inset Formula 
+\[
+\delta_{\mathcal{X}}(x)=\begin{cases}
+0, & \textrm{if}\;x\in\mathcal{X}\\
+\infty, & \textrm{if}\;x\notin\mathcal{X}.
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using indicator function, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ can be expressed as 
+\begin_inset Formula $\textrm{minimize}\;f(x)+\delta_{\mathcal{C}}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Background on monotone operator theory
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Background-and-preliminaries"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section, we present some definitions and preliminary results on
+ monotone operator theory and relate them to our setup.
+ First, in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Operator-theoretic-notion"
+
+\end_inset
+
+, we briefly review the essential operator theoretic notions and provide
+ examples that relate these concepts to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+.
+ In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Nonexpansive,-firmly-nonexpansiv"
+
+\end_inset
+
+, we review nonexpansiveness and its several variants for an operator.
+ These concepts are essential for characterizing (i) the operators 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{prox}_{\gamma f}$
+\end_inset
+
+ and (ii) the fixed point sets of the underlying operators of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+.
+ Finally, in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Resolvent-and-reflected"
+
+\end_inset
+
+, we introduce resolvent and reflected resolvent of an operator to provide
+ additional characterizations of 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{prox}_{\gamma f}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Operator theoretic notions 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Operator-theoretic-notion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A
+\series bold
+ set-valued operator
+\series default
+\emph on
+ 
+\emph default
+
+\begin_inset Formula $T:\mathbf{R}^{n}\rightrightarrows\mathbf{R}^{n}$
+\end_inset
+
+ maps each element in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+ to a set in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+; its
+\emph on
+ 
+\series bold
+\emph default
+domain
+\series default
+ is defined as 
+\begin_inset Formula $\mathop{{\bf dom}}T=\left\{ x\in\mathbf{R}^{n}\mid T(x)\neq\emptyset\right\} $
+\end_inset
+
+, its 
+\series bold
+range
+\series default
+ is defined as 
+\begin_inset Formula $\mathop{{\bf ran}}T=\bigcup_{x\in\mathbf{R}^{n}}T(x)$
+\end_inset
+
+, and it is completely completely characterized by its 
+\series bold
+graph
+\series default
+: 
+\begin_inset Formula $\mathop{{\bf gra}}T=\{(x,u)\mid u\in Tx\}.$
+\end_inset
+
+ Furthermore, the 
+\series bold
+zero set
+\series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
+ is defined as 
+\begin_inset Formula $\mathop{{\bf zer}}T=\left\{ x\mid0\in A\left(x\right)\right\} $
+\end_inset
+
+, and the
+\series bold
+ fixed point set
+\series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
+ is defined as 
+\begin_inset Formula $\mathop{{\bf fix}}T=\left\{ x\mid Tx\ni x\right\} $
+\end_inset
+
+.
+ The operator 
+\begin_inset Formula $2T-I_{n}$
+\end_inset
+
+ is called the 
+\series bold
+reflection of
+\series default
+ 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\series bold
+Inverse
+\series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+, is defined through its graph: 
+\begin_inset Formula $\mathop{{\bf gra}}T^{-1}=\left\{ (u,x)\mid(x,u)\in\mathop{{\bf gra}}T\right\} $
+\end_inset
+
+, so 
+\begin_inset Formula $x\in T(u)\Leftrightarrow u\in T^{-1}(x)$
+\end_inset
+
+.
+ For every 
+\begin_inset Formula $x,$
+\end_inset
+
+ 
+\series bold
+addition of two operators
+\series default
+ 
+\begin_inset Formula $T_{1},T_{2}:\mathbf{R}^{n}\rightrightarrows\mathbf{R}^{n}$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $T_{1}+T_{2}$
+\end_inset
+
+, is defined as 
+\begin_inset Formula $\left(T_{1}+T_{2}\right)\left(x\right)=T_{1}\left(x\right)+T_{2}\left(x\right)$
+\end_inset
+
+ (subtraction is defined analogously), and 
+\series bold
+composition
+\series default
+ of these operators, denoted by 
+\begin_inset Formula $T_{1}T_{2},$
+\end_inset
+
+ is defined as 
+\begin_inset Formula $T_{1}T_{2}\left(x\right)=T_{1}\left(T_{2}\left(x\right)\right)$
+\end_inset
+
+; note that order matters for composition.
+ Also, if 
+\begin_inset Formula $\mathcal{X}\subseteq\mathbf{R}^{n}$
+\end_inset
+
+ is a nonempty set, then 
+\begin_inset Formula $T(\mathcal{X})=\bigcup_{x\in\mathcal{X}}T(x)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A set-valued operator 
+\begin_inset Formula $T:\mathbf{R}^{n}\rightrightarrows\mathbf{R}^{n}$
+\end_inset
+
+ is 
+\series bold
+monotone
+\series default
+ if, for every 
+\begin_inset Formula $\left(x,u\right),(y,v)\in\mathop{{\bf gra}}T$
+\end_inset
+
+, it satisfies 
+\begin_inset Formula $\left\langle x-y\mid u-v\right\rangle \geq0$
+\end_inset
+
+.
+ A monotone operator 
+\begin_inset Formula $T$
+\end_inset
+
+ is 
+\series bold
+maximally monotone
+\series default
+ if 
+\begin_inset Formula $\mathop{{\bf gra}}T$
+\end_inset
+
+ is not properly contained by the graph of any other monotone operator.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, a
+\series bold
+ single-valued operator
+\series default
+ 
+\begin_inset Formula $T:\mathcal{D}\to\mathbf{R}^{n}$
+\end_inset
+
+ is a special type of set-valued operator, which maps every 
+\begin_inset Formula $x$
+\end_inset
+
+ in its domain 
+\begin_inset Formula $\mathcal{D}\subseteq\mathbf{R}^{n}$
+\end_inset
+
+ to a singleton 
+\begin_inset Formula $T\left(x\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+projection operator
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:(Projection-operator)"
+
+\end_inset
+
+Recall that 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}(x)$
+\end_inset
+
+ is a
+\series bold
+ 
+\series default
+Euclidean projection of 
+\begin_inset Formula $x$
+\end_inset
+
+ onto the constraint set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ The operator 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ is single-valued.
+ The set of all projections onto 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\mathbf{\Pi}_{\mathcal{C}}$
+\end_inset
+
+, is the 
+\series bold
+set-valued projection operator
+\series default
+ onto 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, and it is defined as 
+\begin_inset Formula $\mathbf{\Pi}_{\mathcal{C}}\left(x\right)=\textrm{argmin}_{y\in\mathcal{C}}\|x-y\|^{2}$
+\end_inset
+
+.
+ Clearly, 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(x\right)\subseteq\mathbf{\Pi}_{\mathcal{C}}\left(x\right)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Both 
+\begin_inset Formula $\mathbf{\Pi}_{\mathcal{C}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ are monotone operators, but not necessarily maximally monotone 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Example 20.12"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ The projection operator onto a nonempty closed convex set, however, is
+ maximally monotone 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Example 20.12, Corollary 20.27, and Proposition 4.8"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\series bold
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+subdifferential operator
+\end_layout
+
+\end_inset
+
+ 
+\series default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "exa:Subdifferential-operator"
+
+\end_inset
+
+For every proper function 
+\begin_inset Formula $g:\mathbf{R}^{n}\to\overline{\mathbf{R}}$
+\end_inset
+
+, its subdifferential operator is the set-valued operator 
+\begin_inset Formula $\partial g:\mathbf{R}^{n}\rightrightarrows\mathbf{R}^{n}$
+\end_inset
+
+, which is defined as
+\begin_inset Formula 
+\begin{equation}
+\partial g\left(x\right)=\left\{ u\in\mathbf{R}^{n}\mid\left(\forall y\in\mathbf{R}^{n}\right)\,g\left(y\right)\geq g\left(x\right)+\left\langle u\mid y-x\right\rangle \right\} .\label{eq:subdifferential}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+A vector 
+\begin_inset Formula $u\in\partial g\left(x\right)$
+\end_inset
+
+ is called a 
+\series bold
+subgradient
+\series default
+ of 
+\begin_inset Formula $g$
+\end_inset
+
+ at 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The function 
+\begin_inset Formula $g$
+\end_inset
+
+ is subdifferentiable at 
+\begin_inset Formula $x$
+\end_inset
+
+ if 
+\begin_inset Formula $\partial g\left(x\right)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ The subdifferential operator of a proper function is monotone, hence 
+\begin_inset Formula $\partial\delta_{\mathcal{C}}$
+\end_inset
+
+ is monotone 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Example 20.3"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ On the other hand, the subdifferential operator of a CPC function is maximally
+ monotone, thus 
+\begin_inset Formula $\partial f$
+\end_inset
+
+ is maximally monotone 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 20.40"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ The following result regarding the subdifferential operator plays a key
+ role in characterizing global minimizers of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ in 
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Convergence-analysis-for-NCDR"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\shape up
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\shape up
+Fermat's rule 
+\series default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "page 223"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+
+\emph on
+,
+\shape default
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "\\S 2.3"
+key "subgradBoyd"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:(Fermat's-rule)"
+
+\end_inset
+
+
+\series default
+\shape default
+ The set of all global minimizers of a proper function 
+\begin_inset Formula $g:\mathbf{R}^{n}\to\overline{\mathbf{R}}$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\mathop{{\rm argmin}}g$
+\end_inset
+
+, is equal to the zero set of its subdifferential operator 
+\begin_inset Formula $\partial g$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\mathop{\textup{argmin}}g=\mathop{{\bf zer}}\partial g=\left\{ x\in\mathbf{R}^{n}\mid0\in\partial g(x)\right\} .$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Take 
+\begin_inset Formula $x\in\mathop{{\rm argmin}}g$
+\end_inset
+
+ which is equivalent to the statement 
+\begin_inset Formula $\left(\forall y\in\mathbf{R}^{n}\right)\;g(y)\geq g(x)+\left\langle 0\mid y-x\right\rangle \Leftrightarrow\partial g(x)\ni0\Leftrightarrow x\in\mathop{{\bf zer}}\partial g.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Note that the second line of the proof suggests that a proper function is
+ always subdifferentiable at its global minimizer, with 
+\begin_inset Formula $0$
+\end_inset
+
+ being a subgradient there.
+ 
+\end_layout
+
+\end_inset
+
+While this simple characterization of optimality via the subdifferential
+ holds for every nonconvex functions, it may not be particularly useful
+ in practice if we cannot compute the subdifferential in an algorithmic
+ manner 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "page 4"
+key "subgradBoyd"
+literal "true"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We now present a lemma regarding the subdifferential operator of the sum
+ of two proper functions, which is used later in 
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Convergence-analysis-for-NCDR"
+
+\end_inset
+
+.
+ Recall that 
+\begin_inset Formula $\partial\left(g+h\right)\left(x\right)=\partial\left(g(x)+h(x)\right)$
+\end_inset
+
+ according to our notation.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+subdifferential of sum of proper functions
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:subdifferential-monotone"
+
+\end_inset
+
+ Let 
+\begin_inset Formula $g:\mathbf{R}^{n}\to\overline{\mathbf{R}}$
+\end_inset
+
+ and 
+\begin_inset Formula $h:\mathbf{R}^{n}\to\overline{\mathbf{R}}$
+\end_inset
+
+ be proper functions such that 
+\begin_inset Formula $\mathop{{\bf dom}}g\cap\mathop{{\bf dom}}h\neq\emptyset$
+\end_inset
+
+.
+ Then,
+\end_layout
+
+\begin_layout Lemma
+
+\emph on
+(i)
+\emph default
+ the function 
+\begin_inset Formula $g+h$
+\end_inset
+
+ is proper,
+\end_layout
+
+\begin_layout Lemma
+
+\emph on
+(ii)
+\emph default
+ for every 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\partial g\left(x\right)+\partial h\left(x\right)\subseteq\partial(g+h)(x)$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Lemma
+
+\emph on
+(iii)
+\emph default
+ both 
+\begin_inset Formula $\partial(g+h)$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial g+\partial h$
+\end_inset
+
+ are monotone operators.
+\end_layout
+
+\begin_layout Proof
+(i): By definition, 
+\begin_inset Formula $\mathop{{\bf dom}}\left(g+h\right)=\left\{ x\mid g(x)+h(x)<\infty\right\} =\mathop{{\bf dom}}g\cap\mathop{{\bf dom}}h\neq\emptyset.$
+\end_inset
+
+ Thus, 
+\begin_inset Formula $g+h$
+\end_inset
+
+ is proper.
+\end_layout
+
+\begin_layout Proof
+(ii): Take 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+, and denote 
+\begin_inset Formula $u\in\partial g\left(x\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $v\in\partial h\left(x\right)$
+\end_inset
+
+.
+ We want to prove that 
+\begin_inset Formula $u+v\in\partial\left(g+h\right)\left(x\right)=\partial\left(g(x)+h(x)\right)$
+\end_inset
+
+.
+ Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:subdifferential"
+
+\end_inset
+
+, we have 
+\begin_inset Formula $g\left(y\right)\geq g\left(x\right)+\left\langle u\mid y-x\right\rangle $
+\end_inset
+
+ and 
+\begin_inset Formula $h\left(y\right)\geq h\left(x\right)+\left\langle v\mid y-x\right\rangle $
+\end_inset
+
+ for every 
+\begin_inset Formula $y\in\mathbf{R}^{n}$
+\end_inset
+
+.
+ Adding the last two inequalities we get 
+\begin_inset Formula $\left(g\left(y\right)+h\left(y\right)\right)\geq\left(g\left(x\right)+h\left(x\right)\right)+\left\langle u+v\mid y-x\right\rangle $
+\end_inset
+
+ for every 
+\begin_inset Formula $y\in\mathbf{R}^{n}$
+\end_inset
+
+, 
+\emph on
+i.e.,
+\emph default
+ 
+\begin_inset Formula $u+v\in\partial\left(g\left(x\right)+h\left(x\right)\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+(iii): Denote 
+\begin_inset Formula $\phi:=g+h$
+\end_inset
+
+, which is proper due to (i).
+ Now take 
+\begin_inset Formula $(x,u),(y,v)$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathop{{\bf gra}}\partial\phi$
+\end_inset
+
+, so we have 
+\begin_inset Formula $\phi\left(y\right)\geq\phi\left(x\right)+\left\langle u\mid y-x\right\rangle $
+\end_inset
+
+ and 
+\begin_inset Formula $\phi(x)\geq\phi(y)+\left\langle v\mid x-y\right\rangle $
+\end_inset
+
+ using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:subdifferential"
+
+\end_inset
+
+; adding these inequalities we have 
+\begin_inset Formula $0\geq\left\langle u\mid y-x\right\rangle +\left\langle v\mid x-y\right\rangle $
+\end_inset
+
+ 
+\emph on
+i.e.,
+\emph default
+ 
+\begin_inset Formula $\left\langle u-v\mid x-y\right\rangle \geq0$
+\end_inset
+
+, so 
+\begin_inset Formula $\partial\phi=\partial\left(g+h\right)$
+\end_inset
+
+ is a monotone operator by definition.
+ Furthermore, both 
+\begin_inset Formula $\partial g$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial h$
+\end_inset
+
+ are monotone, as the subdifferential operator of a proper function is monotone
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Example 20.3"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ Using also the fact that sum of two monotone operators is a monotone operator
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "page 351"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, we conclude that 
+\begin_inset Formula $\partial g+\partial h$
+\end_inset
+
+ is monotone.
+ 
+\end_layout
+
+\begin_layout Subsection
+Nonexpansive and firmly nonexpansive operator
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Nonexpansive,-firmly-nonexpansiv"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $T:\mathcal{D}\to\mathbf{R}^{n}$
+\end_inset
+
+ be a single-valued operator, where 
+\begin_inset Formula $\mathcal{D}\subseteq\mathbf{R}^{n}$
+\end_inset
+
+ is nonempty.
+ Then, 
+\begin_inset Formula $T$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+nonexpansive
+\series default
+\emph on
+ 
+\emph default
+on 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ if for every 
+\begin_inset Formula $x,y\in\mathcal{D}$
+\end_inset
+
+ it satisfies 
+\begin_inset Formula $\left\Vert T\left(x\right)-T\left(y\right)\right\Vert \leq\|x-y\|$
+\end_inset
+
+, and
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+firmly nonexpansive
+\series default
+ on 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ if for every 
+\begin_inset Formula $x,y\in\mathcal{D}$
+\end_inset
+
+ it satisfies 
+\begin_inset Formula $\|T\left(x\right)-T\left(y\right)\|^{2}+\left\Vert (I_{n}-T)(x)-(I_{n}-T)(y)\right\Vert ^{2}\leq\|x-y\|^{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An operator 
+\begin_inset Formula $T:\mathcal{D}\to\mathbf{R}^{n}$
+\end_inset
+
+ is firmly nonexpansive on 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ if and only if its reflection operator 
+\begin_inset Formula $2T-I_{n}$
+\end_inset
+
+ is nonexpansive 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 4.2"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ Furthermore, a firmly nonexpansive operator is also nonexpansive 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "page 59"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+
+\series bold
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+proximal operator
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "(proximal-operator)-The"
+
+\end_inset
+
+The proximal operator of a CPC function is both firmly nonexpansive and
+ nonexpansive 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 12.27, Example 23.3"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, hence 
+\begin_inset Formula $\mathbf{prox}_{\gamma f}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ is both firmly nonexpansive and nonexpansive.
+ Furthermore, its reflection 
+\begin_inset Formula $2\,\mathbf{prox}_{\gamma f}-I_{n}$
+\end_inset
+
+ is nonexpansive 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 4.2"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\series bold
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+projection operator
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "expansiveness_projection_operator"
+
+\end_inset
+
+We remind the reader that, a set is called 
+\series bold
+proximinal
+\series default
+ if every point has at least one projection onto it, whereas it is called
+ a 
+\series bold
+Chebyshev
+\series default
+ set if every point has exactly one projection onto it.
+ A nonempty subset in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+ is Chebyshev if and only if it is closed and convex 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Remark 3.15"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, and the projection operator onto such a set is single-valued and firmly
+ nonexpansive on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 4.8"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ However, for the constraint set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+, which is possibly nonconvex, the projection operator 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ is not, in general, nonexpansive, hence not firmly nonexpansive.
+ For example, consider the set 
+\begin_inset Formula $\{0,1\}$
+\end_inset
+
+; the projections of 
+\begin_inset Formula $0.4$
+\end_inset
+
+ and 
+\begin_inset Formula $0.6$
+\end_inset
+
+ onto this set are 0 and 1, respectively, so 
+\begin_inset Formula $|0.6-0.4|=0.2<1$
+\end_inset
+
+, which violates the definition of nonexpansiveness.
+ In such a case, 
+\begin_inset Formula $2\tilde{\mathbf{\Pi}}_{\mathcal{C}}-I_{n}$
+\end_inset
+
+ is also not nonexpansive, because an operator is firmly nonexpansive if
+ and only if its reflection operator is nonexpansive 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 4.2"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+We now introduce the following definitions to (i) characterize an operator
+ that is not necessarily nonexpansive (
+\emph on
+e.g.,
+\emph default
+ 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+ and 
+\begin_inset Formula $2\tilde{\mathbf{\Pi}}_{\mathcal{C}}-I_{n}$
+\end_inset
+
+) and (ii) measure the deviation of such an operator from being nonexpansive.
+\end_layout
+
+\begin_layout Paragraph*
+Expansiveness of an operator
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Expansiveness-of-an-op"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $T:\mathcal{D}\to\mathbf{R}^{n}$
+\end_inset
+
+ be a single-valued operator.
+ The
+\series bold
+ expansiveness
+\series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
+ at 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\varepsilon_{xy}^{(T)}$
+\end_inset
+
+, is defined as
+\begin_inset Formula 
+\[
+\varepsilon_{xy}^{(T)}=\begin{cases}
+\|T(x)-T(y)\|-\|x-y\|,\\
+\qquad\qquad\qquad\qquad\textrm{if }\|x-y\|<\|T(x)-T(y)\|\\
+0,\qquad\qquad\qquad\quad{\rm else}.
+\end{cases}
+\]
+
+\end_inset
+
+where it is nonnegative and symmetric, 
+\emph on
+i.e.,
+\emph default
+ 
+\begin_inset Formula $\varepsilon_{xy}^{(T)}=\varepsilon_{yx}^{(T)}\geq0$
+\end_inset
+
+.
+ It follows that for every 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+\|T(x)-T(y)\|\leq\|x-y\|+\varepsilon_{xy}^{(T)}.\label{eq:N_x_y-1}
+\end{equation}
+
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Next, we define the 
+\series bold
+squared expansiveness bias 
+\series default
+of 
+\begin_inset Formula $T$
+\end_inset
+
+ at 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\sigma_{xy}^{(T)}$
+\end_inset
+
+, as:
+\size footnotesize
+
+\begin_inset Formula 
+\[
+\sigma_{xy}^{(T)}=\begin{cases}
+\sqrt{\|T(x)-T(y)\|^{2}-\|x-y\|^{2}}, & \textrm{if }\|x-y\|<\|T(x)-T(y)\|\\
+0, & \textrm{else.}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\size default
+Furthermore, define, 
+\series bold
+squared expansiveness
+\series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
+ at 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+\sigma_{xy}^{(T)}=\begin{cases}
+\sqrt{\|T(x)-T(y)\|^{2}-\|x-y\|^{2}},\\
+\qquad\qquad\qquad\qquad\textrm{if }\|x-y\|<\|T(x)-T(y)\|\\
+0,\qquad\qquad\qquad\quad{\rm else}.
+\end{cases}
+\]
+
+\end_inset
+
+ Clearly, 
+\begin_inset Formula $\sigma_{xy}^{(T)}$
+\end_inset
+
+ can be defined through 
+\begin_inset Formula $\varepsilon{}_{xy}^{(T)}$
+\end_inset
+
+ as
+\begin_inset Formula 
+\[
+\sigma_{xy}^{(T)}=\sqrt{\varepsilon{}_{xy}^{(T)}}\sqrt{\|T(x)-T(y)\|+\|x-y\|}.
+\]
+
+\end_inset
+
+It follows that for every 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+\|T(x)-T(y)\|^{2}\leq\|x-y\|^{2}+\big(\sigma_{xy}^{(T)}\big)^{2}.\label{eq:M_x_y-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+further characterization of nonexpansive operators
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "(further-characterization-of"
+
+\end_inset
+
+An operator 
+\begin_inset Formula $T$
+\end_inset
+
+ is nonexpansive on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\varepsilon_{xy}^{(T)}=\sigma_{xy}^{(T)}=0$
+\end_inset
+
+ for every 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+.
+ On the other hand, an operator 
+\begin_inset Formula $T$
+\end_inset
+
+ is not nonexpansive if and only if there exist 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in its domain such that 
+\begin_inset Formula $\varepsilon_{xy}^{(T)}$
+\end_inset
+
+ is positive.
+ Thus, 
+\begin_inset Formula $\varepsilon_{xy}^{(T)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{xy}^{(T)}$
+\end_inset
+
+ measure the deviation of 
+\begin_inset Formula $T$
+\end_inset
+
+ from being a nonexpansive operator at 
+\begin_inset Formula $x,y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Resolvent and reflected resolvent of an operator
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Resolvent-and-reflected"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $T:\mathbf{R}^{n}\rightrightarrows\mathbf{R}^{n}$
+\end_inset
+
+ be a set-valued operator and let 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+.
+ The 
+\series bold
+resolvent
+\series default
+ of 
+\begin_inset Formula $T$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $J_{\gamma T}$
+\end_inset
+
+, is defined as 
+\begin_inset Formula $J_{\gamma T}=(I_{n}+\gamma T)^{-1}$
+\end_inset
+
+, and its 
+\series bold
+reflected resolvent,
+\series default
+ denoted by 
+\begin_inset Formula $R_{\gamma T}$
+\end_inset
+
+, is defined as 
+\begin_inset Formula $R_{\gamma T}=2J_{\gamma T}-I_{n}$
+\end_inset
+
+.
+ The proximal operator of a function is intimately connected to the resolvent
+ of that function's subdifferential operator as follows.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+resolvent characterization of proximal operator
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:singtonness"
+
+\end_inset
+
+Let 
+\begin_inset Formula $g:\mathbf{R}^{n}\to\overline{\mathbf{R}}$
+\end_inset
+
+ be proper, let 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+, and let 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+.
+ Then, both 
+\begin_inset Formula $\mathbf{prox}_{\gamma g}$
+\end_inset
+
+ and 
+\begin_inset Formula $J_{\gamma\partial g}$
+\end_inset
+
+ are set-valued, and 
+\begin_inset Formula $\mathbf{prox}_{\gamma g}(x)\subseteq J_{\gamma\partial g}(x)$
+\end_inset
+
+.
+ Moreover, if 
+\begin_inset Formula $g$
+\end_inset
+
+ is CPC, then both 
+\begin_inset Formula $\mathbf{prox}_{\gamma g}$
+\end_inset
+
+ and 
+\begin_inset Formula $J_{\gamma\partial g}$
+\end_inset
+
+ are single-valued, firmly nonexpansive and continuous on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{prox}_{\gamma g}(x)=J_{\gamma\partial g}(x)$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Proof
+When 
+\begin_inset Formula $g$
+\end_inset
+
+ is proper, the claim follows from 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Example 10.2"
+key "Rockafellar2009"
+literal "true"
+
+\end_inset
+
+.
+ When, 
+\begin_inset Formula $g$
+\end_inset
+
+ is CPC, the claim follows from 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 12.27"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "pages 59-60"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Example 23.3"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The following corollary applies Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:singtonness"
+
+\end_inset
+
+ to the constraint set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+
+\emph on
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\emph off
+resolvent characterization of projection
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:Proximal-operator-of"
+
+\end_inset
+
+
+\emph default
+ For the constraint set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(x\right)\subseteq\mathbf{prox}_{\gamma\delta_{\mathcal{C}}}\left(x\right)=\mathbf{\Pi}_{\mathcal{C}}\left(x\right)\subseteq J_{\gamma\partial\delta_{C}}\left(x\right)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+.
+ For a convex set, all these operators are single-valued, firmly nonexpansive,
+ and equal to each other.
+\end_layout
+
+\begin_layout Proof
+Follows directly from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:singtonness"
+
+\end_inset
+
+ and the definitions of the proximal operator and the projection operator.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We end this section by recording a result on how to represent of zeros of
+ two monotone operators by the fixed points of their resolvents.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 25.1 (ii)"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+
+\series bold
+\emph on
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:Zeros-of"
+
+\end_inset
+
+ (zeros of two monotone operators' sum)
+\series default
+\emph default
+ Suppose 
+\begin_inset Formula $T_{1},T_{2}:\mathbf{R}^{n}\rightrightarrows\mathbf{R}^{n}$
+\end_inset
+
+ are two monotone operators with 
+\begin_inset Formula $\mathop{{\bf zer}}\left(T_{1}+T_{2}\right)\neq\emptyset$
+\end_inset
+
+.
+ Then, for every 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+, we have 
+\begin_inset Formula $\mathop{{\bf zer}}\left(T_{1}+T_{2}\right)=J_{\gamma T_{1}}\left(\mathop{{\bf fix}}\left(R_{\gamma T_{2}}R_{\gamma T_{1}}\right)\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Convergence of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Convergence-analysis-for-NCDR"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This section is organized as follows.
+ First, in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Supporting-lemmas-on"
+
+\end_inset
+
+, we present some supporting lemmas on convergence of sequences.
+ Then, in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Nonconvex-Douglas-Rachford"
+
+\end_inset
+
+, we describe three interrelated operators to develop the machinery for
+ the convergence analysis of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+, and in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Characterization-of-global"
+
+\end_inset
+
+, we characterize global minimizers of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ using these operators.
+ In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Main-convergence-result"
+
+\end_inset
+
+, we present our main convergence result.
+\end_layout
+
+\begin_layout Subsection
+Supporting lemmas on sequences
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Supporting-lemmas-on"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this subsection, we present some supporting lemmas on sequences to be
+ used later; the first three results concern convergence of a sequence of
+ scalars, and the fourth result is about convergence of a sequence of vectors
+ in a compact set.
+ 
+\end_layout
+
+\begin_layout Standard
+First, we briefly review the definitions and basic properties of limit inferior
+ and limit superior of a sequence.
+
+\series bold
+ Limit inferior
+\series default
+ and 
+\series bold
+limit superior
+\series default
+ of a scalar sequence 
+\begin_inset Formula $\left(\alpha_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ are defined as
+\begin_inset Formula 
+\begin{align*}
+\underset{n\to\infty}{\underline{\lim}}\alpha_{n} & =\lim_{n\to\infty}\big(\inf_{m\geq n}\alpha_{m}\big),\textrm{and}\\
+\underset{n\to\infty}{\overline{\lim}}\alpha_{n} & =\lim_{n\to\infty}\big(\sup_{m\geq n}\alpha_{m}\big),
+\end{align*}
+
+\end_inset
+
+respectively, where they can be extended real-valued.
+ For a bounded sequence, both 
+\begin_inset Formula $\underline{\lim}_{n\to\infty}\alpha_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{\lim}_{n\to\infty}\alpha_{n}$
+\end_inset
+
+ exist, and they are finite.
+ Clearly, 
+\begin_inset Formula $\underline{\lim}_{n\to\infty}\alpha_{n}\leq\overline{\lim}_{n\to\infty}\alpha_{n}$
+\end_inset
+
+.
+ The sequence converges if and only if 
+\begin_inset Formula $\underline{\lim}_{n\to\infty}\alpha_{n}=\overline{\lim}_{n\to\infty}\alpha_{n}=\lim_{n\to\infty}\alpha_{n}\in\mathbf{R}.$
+\end_inset
+
+ Furthermore, limit inferior satisfies 
+\series bold
+superadditivity
+\series default
+, 
+\emph on
+i.e.,
+\emph default
+ for every two sequences of real numbers, 
+\begin_inset Formula $\left(\alpha_{n}\right)_{n\in\mathbf{N}},\left(\beta_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ we have 
+\begin_inset Formula $\underline{\lim}_{n\to\infty}\left(\alpha_{n}+\beta_{n}\right)\geq\underline{\lim}_{n\to\infty}\alpha_{n}+\underline{\lim}_{n\to\infty}\beta_{n}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+limit inferior of a nonnegative scalar sequence
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:(a-lemma-on"
+
+\end_inset
+
+ Let 
+\begin_inset Formula $\left(\alpha_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ be a sequence of nonnegative scalars such that 
+\begin_inset Formula $\sum_{n\in\mathbf{N}}\alpha_{n}$
+\end_inset
+
+ is bounded above.
+ Then, 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\alpha_{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+As 
+\begin_inset Formula $\sum_{n\in\mathbf{N}}\alpha_{n}$
+\end_inset
+
+ is bounded above, there exists a nonnegative real number 
+\begin_inset Formula $M$
+\end_inset
+
+ such that 
+\begin_inset Formula $0\leq\sum_{n\in\mathbf{N}}\alpha_{n}\leq M$
+\end_inset
+
+.
+ Define the sequence of partial sums 
+\begin_inset Formula $\left(\beta_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\beta_{n}=\sum_{k=0}^{n}\alpha_{k}$
+\end_inset
+
+.
+ As 
+\begin_inset Formula $\left(\beta_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ is a bounded sequence in 
+\begin_inset Formula $[0,M]$
+\end_inset
+
+, its limit inferior, denoted by 
+\begin_inset Formula $L=\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\beta_{n}$
+\end_inset
+
+, is finite.
+ But, 
+\begin_inset Formula 
+\begin{align*}
+L & =\underset{n\to\infty}{\underline{\lim}}\beta_{n}\\
+ & =\underset{n\to\infty}{\underline{\lim}}\big(\beta_{n-1}+\alpha_{n}\big)\\
+ & \overset{a)}{\geq}\underset{n\to\infty}{\underline{\lim}}\beta_{n-1}+\underset{n\to\infty}{\underline{\lim}}\alpha_{n}\\
+ & \overset{b)}{=}L+\underset{n\to\infty}{\underline{\lim}}\alpha_{n},
+\end{align*}
+
+\end_inset
+
+ where 
+\begin_inset Formula $a)$
+\end_inset
+
+ uses the superadditivity property of limit inferior, and 
+\begin_inset Formula $b)$
+\end_inset
+
+ uses 
+\begin_inset Formula $L=\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\beta_{n-1}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\alpha_{n}\leq0$
+\end_inset
+
+.
+ As 
+\begin_inset Formula $\left(\alpha_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ is a sequence of nonnegative terms, 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\alpha_{n}\geq0$
+\end_inset
+
+.
+ Combining the last two statements, 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\alpha_{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+
+\emph on
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\emph off
+convergence of a nonnegative scalar sequence
+\emph default
+ 
+\series default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "page 44, Lemma 2"
+key "Polyak1987"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:Polyak Lemma"
+
+\end_inset
+
+
+\emph default
+ Let 
+\begin_inset Formula $\left(u_{n}\right)_{n\in\mathbf{N}},\left(\alpha_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+, and 
+\begin_inset Formula $\left(\beta_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ be sequences of nonnegative scalars such that for every 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+, we have 
+\begin_inset Formula $u_{n+1}\leq(1+\alpha_{n})u_{n}+\beta_{n},$
+\end_inset
+
+ 
+\begin_inset Formula $\sum_{n\in\mathbf{N}}\alpha_{n}<\infty,$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{n\in\mathbf{N}}\beta_{n}<\infty.$
+\end_inset
+
+ Then, there is a nonnegative scalar 
+\begin_inset Formula $u$
+\end_inset
+
+ such that 
+\begin_inset Formula $u_{n}$
+\end_inset
+
+ converges to 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+limit inferior of addition of two sequences 
+\series default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 2.3"
+key "bworld"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:-Let-df"
+
+\end_inset
+
+ Let 
+\begin_inset Formula $\left(\alpha_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\beta_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ be two bounded scalar sequences.
+ If 
+\begin_inset Formula $\lim_{n\to\infty}\alpha_{n}=\alpha$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\left(\alpha_{n}+\beta_{n}\right)=\alpha+\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\beta_{n}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we record a result about convergence of a sequence of vectors in a compact
+ set.
+ We remind the reader that, a set is 
+\series bold
+connected
+\series default
+ if it is not the union of two disjoint nonempty closed sets.
+ A compact and connected set is called a 
+\series bold
+continuum
+\series default
+.
+ Moreover, a set is called a 
+\series bold
+nontrivial continuum
+\series default
+, if it is a continuum, and it does not reduce to 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ or a singleton 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Combettes1990"
+literal "true"
+
+\end_inset
+
+.
+ Finally, 
+\begin_inset Formula $x$
+\end_inset
+
+ is a 
+\series bold
+cluster point
+\series default
+ of a sequence 
+\begin_inset Formula $\left(x_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ if the sequence has a subsequence that converges to 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Lemma
+
+\emph on
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\emph off
+convergence of a sequence of vectors in a compact set
+\emph default
+ 
+\series default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 4.2"
+key "Combettes1990"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:Combettes_Proof"
+
+\end_inset
+
+ Let 
+\begin_inset Formula $\left(x_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ be a sequence of vectors in a compact set 
+\begin_inset Formula $\mathcal{S}\subseteq\mathbf{R}^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\|x_{n+1}-x_{n}\|$
+\end_inset
+
+ converges to zero.
+ Then, either 
+\begin_inset Formula $\left(x_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ converges to a point in 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+, or its set of cluster points is a nontrivial continuum in 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Nonconvex Douglas-Rachford, Cayley and Peaceman-Rachford operators
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Nonconvex-Douglas-Rachford"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To facilitate our convergence analysis, we define the following operators
+ for 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+nonconvex Douglas-Rachford operator
+\series default
+ with parameter 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\tilde{T}$
+\end_inset
+
+, is defined as 
+\begin_inset Formula 
+\begin{equation}
+\tilde{T}=\tilde{\mathbf{\Pi}}_{\mathcal{\mathcal{C}}}\left(2\mathbf{prox}_{\gamma f}-I_{n}\right)+I_{n}-\mathbf{prox}_{\gamma f}.\label{eq:NC-DRS-operator}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+nonconvex Cayley operator
+\series default
+ of 
+\begin_inset Formula $\tilde{T}$
+\end_inset
+
+ (also known as the reflection operator of 
+\begin_inset Formula $\tilde{T}$
+\end_inset
+
+) with parameter 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+, is defined as 
+\begin_inset Formula 
+\begin{equation}
+\tilde{R}=2\tilde{T}-I_{n}.\label{eq:NC-Cayley-operator}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+nonconvex Peaceman-Rachford operator
+\series default
+ with parameter 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\tilde{S}$
+\end_inset
+
+, is defined as 
+\begin_inset Formula 
+\begin{equation}
+\tilde{S}=(2\mathbf{\tilde{\Pi}}_{\mathcal{C}}-I_{n})(2\mathbf{prox}_{\gamma f}-I_{n}).\label{eq:NC-PR-operator}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+nonconvex Peaceman-Rachford operator 
+\begin_inset Formula $\tilde{S}$
+\end_inset
+
+ is not nonexpansive
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tilde_S_nonexpansive"
+
+\end_inset
+
+ Note that 
+\begin_inset Formula $\tilde{S}$
+\end_inset
+
+ is a composition of 
+\begin_inset Formula $2\mathbf{\tilde{\Pi}}_{\mathcal{C}}-I_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $2\mathbf{prox}_{\gamma f}-I_{n}$
+\end_inset
+
+, where the latter is nonexpansive (see Example 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "(proximal-operator)-The"
+
+\end_inset
+
+), but the former is not nonexpansive in general (see Example 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "expansiveness_projection_operator"
+
+\end_inset
+
+).
+ Hence 
+\begin_inset Formula $\tilde{S}$
+\end_inset
+
+ is not a nonexpansive operator in general.
+\end_layout
+
+\begin_layout Standard
+These operators allow us to write 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ in the following compact form:
+\begin_inset Formula 
+\begin{align}
+z_{n+1}=\tilde{T}z_{n} & =\frac{1}{2}\tilde{R}z_{n}+\frac{1}{2}z_{n}.\tag{Compact-NC-DRS}\label{eq:convenient-form-1}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following lemma will be used later to characterize global minimizers
+ of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+characterization of nonconvex Peaceman-Rachford operator
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tilde_S_in_R_R"
+
+\end_inset
+
+ For 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+, let 
+\begin_inset Formula $\tilde{S}$
+\end_inset
+
+ be the nonconvex Peaceman-Rachford operator with parameter 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ defined in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:NC-PR-operator"
+
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\tilde{S}\left(x\right)\subseteq R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\left(x\right)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+As 
+\begin_inset Formula $f$
+\end_inset
+
+ is CPC, we have 
+\begin_inset Formula 
+\begin{equation}
+R_{\gamma\partial f}=2\mathbf{prox}_{\gamma f}-I_{n},\label{eq:asgard}
+\end{equation}
+
+\end_inset
+
+using Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:singtonness"
+
+\end_inset
+
+ and the definition of the reflected resolvent in 
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Resolvent-and-reflected"
+
+\end_inset
+
+.
+ Now for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align}
+\big(2\tilde{\mathbf{\Pi}}_{\mathcal{C}}-I_{n}\big)\left(x\right) & =2\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(x\right)-x\nonumber \\
+ & \overset{a)}{\subseteq}2\mathbf{\Pi}_{\mathcal{C}}\left(x\right)-x\nonumber \\
+ & \overset{b)}{\subseteq}2J_{\gamma\delta_{\mathcal{C}}}(x)-x\nonumber \\
+ & =\big(2J_{\gamma\delta_{\mathcal{C}}}-I_{n}\big)x\nonumber \\
+ & \overset{c)}{=}R_{\gamma\delta_{\mathcal{C}}}\left(x\right),\label{eq:midgard}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $a)$
+\end_inset
+
+ follows from 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}\left(x\right)\subseteq\mathbf{\Pi}_{\mathcal{C}}\left(x\right)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+ (Example 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:(Projection-operator)"
+
+\end_inset
+
+), 
+\begin_inset Formula $b)$
+\end_inset
+
+ follows from Corollary 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Proximal-operator-of"
+
+\end_inset
+
+, and 
+\begin_inset Formula $c)$
+\end_inset
+
+ follows from the definition of reflected resolvent in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Resolvent-and-reflected"
+
+\end_inset
+
+.
+ Thus, for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\tilde{S}\left(x\right) & =\big(2\mathbf{\tilde{\Pi}}_{\mathcal{C}}-I_{n}\big)\big(2\mathbf{prox}_{\gamma f}-I_{n}\big)\left(x\right)\\
+ & \overset{a)}{=}\big(2\mathbf{\tilde{\Pi}}_{\mathcal{C}}-I_{n}\big)R_{\gamma\partial f}\left(x\right)\\
+ & \overset{b)}{\subseteq}R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\left(x\right),
+\end{align*}
+
+\end_inset
+
+ where 
+\begin_inset Formula $a)$
+\end_inset
+
+ and 
+\begin_inset Formula $b)$
+\end_inset
+
+ use 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:asgard"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:midgard"
+
+\end_inset
+
+, respectively.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+relationship between 
+\begin_inset Formula $\tilde{T}$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+, and 
+\begin_inset Formula $\tilde{S}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:(Relationship-between-the"
+
+\end_inset
+
+ For 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+, let 
+\begin_inset Formula $\tilde{T}$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+, and 
+\begin_inset Formula $\tilde{S}$
+\end_inset
+
+ be the operators with parameter 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ defined in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:NC-DRS-operator"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:NC-Cayley-operator"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:NC-PR-operator"
+
+\end_inset
+
+, respectively.
+ Then, 
+\end_layout
+
+\begin_layout Proposition
+
+\emph on
+(i)
+\emph default
+ the operators 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{S}$
+\end_inset
+
+ are equal, i.e., 
+\begin_inset Formula $\tilde{R}\left(x\right)=\tilde{S}\left(x\right)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+, and 
+\end_layout
+
+\begin_layout Proposition
+
+\emph on
+(ii)
+\emph default
+ the fixed point sets of 
+\begin_inset Formula $\tilde{T}$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+, and 
+\begin_inset Formula $\tilde{S}$
+\end_inset
+
+ are equal, i.e., 
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{R}=\mathop{{\bf fix}}\tilde{S}=\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+(i): For every 
+\begin_inset Formula $x\in\mathbf{R}^{n},$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align}
+\tilde{T}\left(x\right) & =\big(\mathbf{\tilde{\Pi}}_{\mathcal{C}}\big(2\mathbf{prox}_{\gamma f}-I_{n}\big)+I_{n}-\mathbf{prox}_{\gamma f}\big)\left(x\right)\nonumber \\
+ & =\mathbf{\tilde{\Pi}}_{\mathcal{C}}\big(2\mathbf{prox}_{\gamma f}-I_{n}\big)\left(x\right)+x-\mathbf{prox}_{\gamma f}\left(x\right)\nonumber \\
+ & =\mathbf{\tilde{\Pi}}_{\mathcal{C}}\big(2\mathbf{prox}_{\gamma f}\left(x\right)-x\big)+x-\mathbf{prox}_{\gamma f}\left(x\right).\label{eq:obs_douglas_rachford}
+\end{align}
+
+\end_inset
+
+Furthermore, for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align}
+\tilde{R}\left(x\right) & =\big(2\tilde{T}-I_{n}\big)\left(x\right)\nonumber \\
+ & =2\tilde{T}\left(x\right)-x\nonumber \\
+ & \overset{a)}{=}2\mathbf{\tilde{\Pi}}_{\mathcal{C}}\left(2\mathbf{prox}_{\gamma f}\left(x\right)-x\right)+2x-2\mathbf{prox}_{\gamma f}\left(x\right)-x\nonumber \\
+ & =2\mathbf{\tilde{\Pi}}_{\mathcal{C}}\left(2\mathbf{prox}_{\gamma f}\left(x\right)-x\right)+x-2\mathbf{prox}_{\gamma f}\left(x\right),\label{eq:obs_douglas_rachford_2}
+\end{align}
+
+\end_inset
+
+ where 
+\begin_inset Formula $a)$
+\end_inset
+
+ uses 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:obs_douglas_rachford"
+
+\end_inset
+
+.
+ Hence, for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\tilde{S}\left(x\right) & =\big(2\mathbf{\tilde{\Pi}}_{\mathcal{C}}-I_{n}\big)\big(2\mathbf{prox}_{\gamma f}-I_{n}\big)\left(x\right)\\
+ & =\big(2\mathbf{\tilde{\Pi}}_{\mathcal{C}}-I_{n}\big)\underbrace{\big(2\mathbf{prox}_{\gamma f}\left(x\right)-x\big)}_{=y\textrm{ (let)}}\\
+ & =2\mathbf{\tilde{\Pi}}_{\mathcal{C}}\left(y\right)-y\\
+ & =2\mathbf{\tilde{\Pi}}_{\mathcal{C}}\big(2\mathbf{prox}_{\gamma f}\left(x\right)-x\big)-2\mathbf{prox}_{\gamma f}\left(x\right)+x\\
+ & \overset{a)}{=}\tilde{R}x,
+\end{align*}
+
+\end_inset
+
+ where 
+\begin_inset Formula $a)$
+\end_inset
+
+ uses 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:obs_douglas_rachford_2"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+(ii): In (i), 
+\begin_inset Formula $\tilde{R}=\tilde{S}$
+\end_inset
+
+ implying 
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{R}=\mathop{{\bf fix}}\tilde{S}$
+\end_inset
+
+.
+ Now 
+\begin_inset Formula $x\in\mathop{{\bf fix}}\tilde{T}\Leftrightarrow\tilde{T}\left(x\right)=x\Leftrightarrow2\tilde{T}\left(x\right)=2x\Leftrightarrow2\tilde{T}\left(x\right)-x=x\Leftrightarrow\left(2\tilde{T}-I_{n}\right)\left(x\right)=x\Leftrightarrow x=\mathop{{\bf fix}}\tilde{R}.$
+\end_inset
+
+ So 
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{T}=\mathop{{\bf fix}}\tilde{R}=\mathop{{\bf fix}}\tilde{S}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+nonconvex Cayley operator 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ is not nonexpansive
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Cayley_is_not_nonexpansive"
+
+\end_inset
+
+ From Remark 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tilde_S_nonexpansive"
+
+\end_inset
+
+ and Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:(Relationship-between-the"
+
+\end_inset
+
+, it follows that 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ is not a nonexpansive operator in general.
+ This plays an important role in our convergence analysis; in particular,
+ the sufficient conditions for convergence of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ are dictated by the expansiveness of 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ over the iterates of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Characterization of global minimizers
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Characterization-of-global"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Minimizers of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ are characterized via the nonconvex Douglas-Rachford operator as follows.
+ 
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\emph off
+global minimizers of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:minimizer_charecterization"
+
+\end_inset
+
+
+\emph default
+ For 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+, let 
+\begin_inset Formula $\tilde{T}$
+\end_inset
+
+ be the nonconvex Douglas-Rachford operator with parameter 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ defined in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:NC-DRS-operator"
+
+\end_inset
+
+.
+ Then,
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+(i)
+\emph default
+ sum of the functions 
+\begin_inset Formula $f+\delta_{\mathcal{C}}$
+\end_inset
+
+ is proper, 
+\begin_inset Formula $\partial f\left(x\right)+\partial\delta_{\mathcal{C}}\left(x\right)\subseteq\partial\left(f+\delta_{\mathcal{C}}\right)\left(x\right)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+, and both 
+\begin_inset Formula $\partial f+\partial\delta_{\mathcal{C}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial\left(f+\delta_{\mathcal{C}}\right)$
+\end_inset
+
+ are monotone operators, 
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+(ii) 
+\begin_inset Formula $\mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)=\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}(R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f})\big)$
+\end_inset
+
+
+\emph default
+, and
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+(iii)
+\emph default
+ if 
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{T}\neq\emptyset$
+\end_inset
+
+ , then 
+\begin_inset Formula $\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}\tilde{T}\big)\subseteq\mathop{{\rm argmin}}\left(f+\delta_{\mathcal{C}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+(i): The indicator function of a closed set is closed 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Example 1.25"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, and the indicator function of a nonempty set is proper 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "pages 6-7"
+key "Rockafellar2009"
+literal "true"
+
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\delta_{\mathcal{C}}$
+\end_inset
+
+ is closed and proper.
+ Also, we have 
+\begin_inset Formula $\mathop{{\bf dom}}f\cap\mathop{{\bf dom}}\delta_{\mathcal{C}}\neq\emptyset$
+\end_inset
+
+, otherwise 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ is infeasible.
+ So, using Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:subdifferential-monotone"
+
+\end_inset
+
+, the function 
+\begin_inset Formula $f+\delta_{\mathcal{C}}$
+\end_inset
+
+ is proper, 
+\begin_inset Formula $\partial f\left(x\right)+\partial\delta_{\mathcal{C}}\left(x\right)\subseteq\partial\left(f+\delta_{\mathcal{C}}\right)\left(x\right)$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, and both 
+\begin_inset Formula $\partial f+\partial\delta_{\mathcal{C}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial\left(f+\delta_{\mathcal{C}}\right)$
+\end_inset
+
+ are monotone operators.
+\end_layout
+
+\begin_layout Proof
+(ii): This proof is based on 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 25.1 (ii)"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ For every 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{flalign}
+ & x\in\mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)\nonumber \\
+\Leftrightarrow & (\exists y\in\mathbf{R}^{n})\;x-y\in\gamma\partial\delta_{\mathcal{C}}(x)\textrm{ and }y-x\in\gamma\partial f(x)\nonumber \\
+\Leftrightarrow & \left(\exists y\in\mathbf{R}^{n}\right)\;2x-y\in(I_{n}+\gamma\partial\delta_{\mathcal{C}})(x)\textrm{ and }\nonumber \\
+ & \mbox{\qquad\qquad\quad}y\in(I_{n}+\gamma\partial f)(x)\nonumber \\
+\Leftrightarrow & \left(\exists y\in\mathbf{R}^{n}\right)\;\underbrace{(I_{n}+\gamma\partial\delta_{\mathcal{C}})^{-1}}_{=J_{\gamma\partial\delta_{\mathcal{C}}}}(2x-y)\ni x\textrm{ and }\nonumber \\
+ & \mbox{\qquad\qquad\quad}\underbrace{(I_{n}+\gamma\partial f)^{-1}}_{=J_{\gamma\partial f}}(y)\ni x\nonumber \\
+\overset{a)}{\Leftrightarrow} & \left(\exists y\in\mathbf{R}^{n}\right)\;x\in J_{\gamma\partial\delta_{\mathcal{C}}}(2x-y)\textrm{ and }x=J_{\gamma\partial f}(y),\nonumber \\
+\overset{b)}{\Leftrightarrow} & \left(\exists y\in\mathbf{R}^{n}\right)\;x\in J_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}(y)\textrm{ and }x=J_{\gamma\partial f}(y)\label{eq:shapiro}
+\end{flalign}
+
+\end_inset
+
+ where 
+\begin_inset Formula $a)$
+\end_inset
+
+ uses the facts that 
+\begin_inset Formula $J_{\gamma\partial f}$
+\end_inset
+
+ is a single-valued operator (from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:singtonness"
+
+\end_inset
+
+), and 
+\begin_inset Formula $J_{\gamma\partial\delta_{\mathcal{C}}}$
+\end_inset
+
+ is a set-valued operator (from Corollary 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Proximal-operator-of"
+
+\end_inset
+
+), and 
+\begin_inset Formula $b)$
+\end_inset
+
+ uses the observation that 
+\begin_inset Formula $x=J_{\gamma\partial f}(y)$
+\end_inset
+
+ can be expressed as
+\begin_inset Formula 
+\[
+x=J_{\gamma\partial f}(y)\Leftrightarrow2x-y=\big(2J_{\gamma\partial f}-I_{n}\big)y=R_{\gamma\partial f}(y).
+\]
+
+\end_inset
+
+Also, using the last expression, we can write the first term of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:shapiro"
+
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{align}
+ & J_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}(y)\ni x\nonumber \\
+\Leftrightarrow & 2J_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}(y)-y\ni2x-y=R_{\gamma\partial f}(y)\nonumber \\
+\Leftrightarrow & y\in2J_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}(y)-R_{\gamma\partial f}(y)\nonumber \\
+ & \;=\big(2J_{\gamma\partial\delta_{\mathcal{C}}}-I_{n}\big)\big(R_{\gamma\partial f}(y)\big)\nonumber \\
+ & \;=R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}(y)\nonumber \\
+\Leftrightarrow & y\in\mathop{{\bf fix}}\big(R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\big).\label{eq:harris}
+\end{align}
+
+\end_inset
+
+Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:shapiro"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:harris"
+
+\end_inset
+
+, and 
+\begin_inset Formula $J_{\gamma\partial f}=\mathbf{prox}_{\gamma f}$
+\end_inset
+
+ (from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:singtonness"
+
+\end_inset
+
+) we have
+\begin_inset Formula 
+\begin{align*}
+ & x\in\mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)\\
+\Leftrightarrow & \left(\exists y\in\mathbf{R}^{n}\right)\;y\in\mathop{{\bf fix}}\big(R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\big)\textrm{ and }x=\mathbf{prox}_{\gamma f}(y)\\
+\Leftrightarrow & x\in\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}(R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f})\big).
+\end{align*}
+
+\end_inset
+
+Thus, 
+\emph on
+
+\begin_inset Formula $\mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)=\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}(R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f})\big).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(iii): We have
+\begin_inset Formula 
+\begin{align*}
+ & x\in\mathop{{\bf zer}}\left(\partial f+\partial\delta_{\mathcal{C}}\right)\\
+\Leftrightarrow & 0\in\partial f\left(x\right)+\partial\delta_{\mathcal{C}}\left(x\right)\overset{a)}{\subseteq}\partial\left(f+\delta_{\mathcal{C}}\right)\left(x\right)\\
+\Rightarrow & x\in\mathop{{\bf zer}}\partial\left(f+\delta_{\mathcal{C}}\right),
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $a)$
+\end_inset
+
+ uses 
+\begin_inset Formula $\partial f\left(x\right)+\partial\delta_{\mathcal{C}}\left(x\right)\subseteq\partial\left(f+\delta_{\mathcal{C}}\right)\left(x\right)$
+\end_inset
+
+ proven in (i).
+ So, 
+\begin_inset Formula $\mathop{{\bf zer}}\left(\partial f+\partial\delta_{\mathcal{C}}\right)\subseteq\mathop{{\bf zer}}\left(\partial\left(f+\delta_{\mathcal{C}}\right)\right)$
+\end_inset
+
+.
+ Combining the last statement with 
+\begin_inset Formula $\mathop{{\bf zer}}\left(\partial\left(f+\delta_{\mathcal{C}}\right)\right)=\mathop{{\rm argmin}}\left(f+\delta_{\mathcal{C}}\right)$
+\end_inset
+
+ (from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:(Fermat's-rule)"
+
+\end_inset
+
+) and (ii), we have
+\begin_inset Formula 
+\begin{align}
+ & \mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)\nonumber \\
+= & \mathbf{prox}_{\gamma f}\Big(\mathop{{\bf fix}}\big(R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\big)\Big)\\
+\subseteq & \mathop{{\rm argmin}}\big(f+\delta_{\mathcal{C}}\big).\label{eq:nifelhaim}
+\end{align}
+
+\end_inset
+
+Recall from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:singtonness"
+
+\end_inset
+
+ that 
+\begin_inset Formula $\mathbf{prox}_{\gamma f}$
+\end_inset
+
+ is a single-valued operator.
+ Thus, 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}\tilde{S}\big) & =\big\{\mathbf{prox}_{\gamma f}\left(x\right)\mid x=\tilde{S}\left(x\right)\big\}\\
+ & =\big\{\mathbf{prox}_{\gamma f}\left(x\right)\mid x=\tilde{S}\left(x\right)\subseteq R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\left(x\right)\big\}\\
+ & \subseteq\big\{\mathbf{prox}_{\gamma f}\left(x\right)\mid x\in R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\left(x\right)\big\}\\
+ & =\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\big).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}\tilde{S}\big) & =\bigcup_{x\in\mathop{{\bf fix}}\tilde{S}}\mathbf{prox}_{\gamma f}\left(x\right)\\
+ & =\bigcup_{x:x=\tilde{S}(x)}\mathbf{prox}_{\gamma f}\left(x\right)\\
+ & \overset{a)}{\subseteq}\bigcup_{x:x\in R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\left(x\right)}\mathbf{prox}_{\gamma f}\left(x\right)\\
+ & =\bigcup_{x:x\in\mathop{{\bf fix}}R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}}\mathbf{prox}_{\gamma f}\left(x\right)\\
+ & =\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\big),
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $a)$
+\end_inset
+
+ uses 
+\begin_inset Formula $\tilde{S}\left(x\right)\subseteq R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\left(x\right)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+ (from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tilde_S_in_R_R"
+
+\end_inset
+
+).
+ But, 
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{S}=\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+ from Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:(Relationship-between-the"
+
+\end_inset
+
+.
+ So, 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}\tilde{S}\big) & =\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}\tilde{T}\big)\\
+ & \subseteq\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\big).
+\end{align*}
+
+\end_inset
+
+Combining the last equation with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:nifelhaim"
+
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}\tilde{T}\big) & \subseteq\mathbf{prox}_{\gamma f}\big(\mathop{{\bf fix}}R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}\big)\\
+ & \subseteq\mathop{{\rm argmin}}\big(f+\delta_{\mathcal{C}}\big).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Nonemptyness of 
+\begin_inset Formula $\mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ A necessary condition for nonmptiness of 
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+ is nonemptyness of 
+\begin_inset Formula $\mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)$
+\end_inset
+
+.
+ This necessary condition 
+\begin_inset Formula $\mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)\neq\emptyset$
+\end_inset
+
+ is stronger than the existence of a minimizer, because, even in a convex
+ setup, 
+\begin_inset Formula $\mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)\neq\mathop{{\bf zer}}\left(\partial\left(f+\delta_{\mathcal{C}}\right)\right)$
+\end_inset
+
+, in general 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Remark 16.7"
+key "Bauschke2017"
+literal "false"
+
+\end_inset
+
+.
+ Nevertheless, we will assume that 
+\begin_inset Formula $\mathop{{\bf zer}}\big(\partial f+\partial\delta_{\mathcal{C}}\big)\neq\emptyset$
+\end_inset
+
+ for the rest of our development, as this seems to be a standard assumption
+ even in convex optimization literature 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Davis2016"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Main convergence result
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Main-convergence-result"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We remind the reader that the nonconvex Cayley operator 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ is not nonexpansive in general (Remark 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Cayley_is_not_nonexpansive"
+
+\end_inset
+
+).
+ To characterize the deviation of 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ from being a nonexpansive operator, recalling 
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Nonexpansive,-firmly-nonexpansiv"
+
+\end_inset
+
+, we use expansiveness and squared expansiveness of 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ at each 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\varepsilon_{xy}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{xy}$
+\end_inset
+
+, respectively; here we have dropped the superscript 
+\begin_inset Formula $(\tilde{R})$
+\end_inset
+
+ to reduce notational burden.
+ So, from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:N_x_y-1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:M_x_y-1"
+
+\end_inset
+
+, for every 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align}
+\|\tilde{R}(x)-\tilde{R}(y)\| & \leq\|x-y\|+\varepsilon_{xy},\textrm{and}\label{eq:N_x_y}\\
+\|\tilde{R}(x)-\tilde{R}(y)\|^{2} & \leq\|x-y\|^{2}+\sigma_{xy}^{2}.\label{eq:M_x_y}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, the closed ball with center 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+ and finite radius 
+\begin_inset Formula $r>0$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $B(x;r)$
+\end_inset
+
+, is defined as 
+\begin_inset Formula $B(x;r)=\{y\mid\|x-y\|\leq r\}$
+\end_inset
+
+; a closed ball in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+ with finite radius is compact 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "\\S 2.4"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ Now we present our main convergence result.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+main convergence result
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "(main-convergence-result)"
+
+\end_inset
+
+ For 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+, let 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ be the sequence of vectors generated by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+.
+ Suppose that the following conditions are satisfied for the chosen initial
+ point 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+Condition 1.
+
+\series default
+ There exists a 
+\begin_inset Formula $z\in\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+, such that 
+\begin_inset Formula $\sum_{n=0}^{\infty}\sigma_{z_{n}z}^{2}$
+\end_inset
+
+ is bounded above, and 
+\begin_inset Formula $\|z_{0}-z\|^{2}$
+\end_inset
+
+ is finite.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+Condition 2.
+\series default
+\shape italic
+The sum
+\shape default
+ 
+\begin_inset Formula $\sum_{n=0}^{\infty}\varepsilon_{z_{n}z_{n+1}}$
+\end_inset
+
+ is bounded above.
+\end_layout
+
+\begin_layout Theorem
+Define 
+\begin_inset Formula $r:=\sqrt{\|z_{0}-z\|^{2}+\frac{1}{2}\sum_{n=0}^{\infty}\sigma_{z_{n}z}^{2}}$
+\end_inset
+
+.
+ Then, one of the following holds:
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+(i)
+\emph default
+ the sequence 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ converges to a point 
+\begin_inset Formula $z^{\star}\in B(z;r)$
+\end_inset
+
+.
+ In this case, suppose also that 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\sigma_{z_{n}z^{\star}}^{2}=0$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\mathbf{prox}_{\gamma f}\left(z^{\star}\right)$
+\end_inset
+
+ is an optimal solution of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+, and the sequence 
+\begin_inset Formula $(x_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ generated by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ converges to 
+\begin_inset Formula $\mathbf{prox}_{\gamma f}(z^{\star})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+(ii)
+\emph default
+ the set of cluster points of 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ forms a nontrivial continuum in 
+\begin_inset Formula $B(z;r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 1.
+
+\series default
+ First, we show that the sequence 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ stays in the compact set 
+\begin_inset Formula $B(z;r)$
+\end_inset
+
+.
+ For every 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align}
+\|z_{n+1}-z\|^{2} & \overset{a)}{=}\|z_{n}+\frac{1}{2}\big(\tilde{R}z_{n}-z_{n}\big)-z\|^{2}\nonumber \\
+ & =\|\frac{1}{2}\big(z_{n}-z\big)+\frac{1}{2}\big(\tilde{R}z_{n}-z\big)\|^{2}\nonumber \\
+ & \overset{b)}{=}\frac{1}{2}\|z_{n}-z\|^{2}+\frac{1}{2}\|\tilde{R}z_{n}-z\|^{2}\nonumber \\
+ & \quad-\frac{1}{4}\|(z_{n}-z)-(\tilde{R}z_{n}-z)\|^{2}\nonumber \\
+ & \overset{c)}{=}\frac{1}{2}\|z_{n}-z\|^{2}+\frac{1}{2}\|\tilde{R}z_{n}-\tilde{R}z\|^{2}\nonumber \\
+ & \quad-\frac{1}{4}\|z_{n}-\tilde{R}z_{n}\|^{2}\nonumber \\
+ & \overset{d)}{\leq}\frac{1}{2}\|z_{n}-z\|^{2}+\frac{1}{2}\|z_{n}-z\|^{2}\nonumber \\
+ & \quad+\frac{1}{2}\sigma_{z_{n}z}^{2}-\frac{1}{4}\|z_{n}-\tilde{R}z_{n}\|^{2}\label{eq:inequality_1-1-1}\\
+ & \leq\|z_{n}-z\|^{2}-\frac{1}{4}\|z_{n}-\tilde{R}z_{n}\|^{2}+\frac{1}{2}\sigma_{z_{n}z}^{2}\nonumber \\
+ & \overset{e)}{\leq}\|z_{n}-z\|^{2}+\frac{1}{2}\sigma_{z_{n}z}^{2},\label{eq:aha_ki_anondo}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $a)$
+\end_inset
+
+ uses 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:convenient-form-1"
+
+\end_inset
+
+, 
+\begin_inset Formula $b)$
+\end_inset
+
+ uses the identity 
+\begin_inset Formula $\|\alpha x+(1-\alpha)y\|^{2}=\alpha\|x\|^{2}+(1-\alpha)\|y\|^{2}-\alpha(1-\alpha)\|x-y\|^{2}$
+\end_inset
+
+ for every 
+\begin_inset Formula $x,y\in\mathbf{R}^{n}$
+\end_inset
+
+ and every 
+\begin_inset Formula $\alpha\in\mathbf{R}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Corollary 2.14"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, 
+\begin_inset Formula $c)$
+\end_inset
+
+ uses 
+\begin_inset Formula $z\in\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{T}=\mathop{{\bf fix}}\tilde{R}$
+\end_inset
+
+ (from Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:(Relationship-between-the"
+
+\end_inset
+
+(ii)), 
+\begin_inset Formula $d)$
+\end_inset
+
+ uses 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:M_x_y"
+
+\end_inset
+
+, and 
+\begin_inset Formula $e)$
+\end_inset
+
+ is obtained by removing the nonpositive term 
+\begin_inset Formula $-\frac{1}{4}\|z_{n}-\tilde{R}z_{n}\|^{2}$
+\end_inset
+
+.
+ From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:aha_ki_anondo"
+
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align}
+\|z_{n}-z\|^{2} & \leq\|z_{n-1}-z\|^{2}+\frac{1}{2}\sigma_{z_{n-1}z}^{2}\nonumber \\
+ & \leq\|z_{n-2}-z\|^{2}+\frac{1}{2}\sigma_{z_{n-2}z}^{2}+\frac{1}{2}\sigma_{z_{n-1}z}^{2}\nonumber \\
+ & \leq\|z_{0}-z\|^{2}+\frac{1}{2}\sum_{i=0}^{n-1}\sigma_{z_{i}z}^{2}\nonumber \\
+ & \leq\|z_{0}-z\|^{2}+\frac{1}{2}\sum_{i=0}^{\infty}\sigma_{z_{i}z}^{2},\label{eq:tyrs_temple}
+\end{align}
+
+\end_inset
+
+where the final term is bounded due to condition 1, hence the sequence 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ stays in the compact set 
+\begin_inset Formula $B(z;r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 2.
+ 
+\series default
+Next, we show that 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\|\tilde{R}z_{n}-z_{n}\|=0$
+\end_inset
+
+.
+ From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:inequality_1-1-1"
+
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\frac{1}{4}\|\tilde{R}z_{n}-z_{n}\|^{2} & \leq\big(\|z_{n}-z\|^{2}-\|z_{n+1}-z\|^{2}\big)+\frac{1}{2}\sigma_{z_{n}z}^{2}\\
+\Rightarrow\frac{1}{4}\sum_{n=0}^{m}\|\tilde{R}z_{n}-z_{n}\|^{2} & \leq\sum_{n=0}^{m}\big(\|z_{n}-z\|^{2}-\|z_{n+1}-z\|^{2}\big)\\
+ & \quad+\frac{1}{2}\sum_{n=0}^{m}\sigma_{z_{n}z}^{2}\\
+ & \overset{a)}{=}\big(\|z_{0}-z\|^{2}-\|z_{m+1}-z\|^{2}\big)\\
+ & \quad+\frac{1}{2}\sum_{n=0}^{m}\sigma_{z_{n}z}^{2}\\
+ & \overset{b)}{\leq}\|z_{0}-z\|^{2}+\frac{1}{2}\sum_{n=0}^{m}\sigma_{z_{n}z}^{2},
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $a)$
+\end_inset
+
+ uses the telescopic sum, and 
+\begin_inset Formula $b)$
+\end_inset
+
+ is obtained by removing the negative term 
+\begin_inset Formula $\|z_{m+1}-z\|^{2}$
+\end_inset
+
+.
+ As 
+\begin_inset Formula $m\to\infty$
+\end_inset
+
+, the right hand side of the last inequality is bounded due to condition
+ 1, thus using Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:(a-lemma-on"
+
+\end_inset
+
+, we have 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\|\tilde{R}z_{n}-z_{n}\|^{2}=0$
+\end_inset
+
+, 
+\emph on
+i.e.,
+\emph default
+ 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\|\tilde{R}z_{n}-z_{n}\|=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 3.
+ 
+\series default
+We show that sequence 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ either converges to a point or its set of cluster points forms a nontrivial
+ continuum.
+ For every 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align*}
+\|\tilde{R}z_{n+1}-z_{n+1}\| & \overset{a)}{=}\|\tilde{R}z_{n+1}-\frac{1}{2}z_{n}-\frac{1}{2}\tilde{R}z_{n}\|\\
+ & =\|\big(\tilde{R}z_{n+1}-\tilde{R}z_{n}\big)+\frac{1}{2}\big(\tilde{R}z_{n}-z_{n}\big)\|\\
+ & \overset{b)}{\leq}\|\tilde{R}z_{n+1}-\tilde{R}z_{n}\|+\frac{1}{2}\|\tilde{R}z_{n}-z_{n}\|\\
+ & \overset{c)}{\leq}\|z_{n+1}-z_{n}\|+\varepsilon_{z_{n}z_{n+1}}+\frac{1}{2}\|\tilde{R}z_{n}-z_{n}\|\\
+ & \overset{d)}{\leq}\|\tilde{R}z_{n}-z_{n}\|+\varepsilon_{z_{n}z_{n+1}},
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $a)$
+\end_inset
+
+ uses 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:convenient-form-1"
+
+\end_inset
+
+, 
+\begin_inset Formula $b)$
+\end_inset
+
+ uses triangular inequality, 
+\begin_inset Formula $c)$
+\end_inset
+
+ uses 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:N_x_y"
+
+\end_inset
+
+, and 
+\begin_inset Formula $d)$
+\end_inset
+
+ uses 
+\begin_inset Formula $\|z_{n+1}-z_{n}\|=\frac{1}{2}\|\tilde{R}z_{n}-z_{n}\|$
+\end_inset
+
+ that follows from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:convenient-form-1"
+
+\end_inset
+
+.
+ Furthermore, 
+\begin_inset Formula $\sum_{n=0}^{\infty}\varepsilon_{z_{n}z_{n+1}}<+\infty$
+\end_inset
+
+ due to condition 2, thus using Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Polyak Lemma"
+
+\end_inset
+
+, the sequence 
+\begin_inset Formula $(\|\tilde{R}z_{n}-z_{n}\|)_{n\in\mathbf{N}}$
+\end_inset
+
+ converges to a nonnegative number.
+ Using also the fact 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\|\tilde{R}z_{n}-z_{n}\|=0$
+\end_inset
+
+, we conclude that 
+\begin_inset Formula $\lim_{n\to\infty}\|\tilde{R}z_{n}-z_{n}\|=\underset{n\to\infty}{\underline{\lim}}\|\tilde{R}z_{n}-z_{n}\|=0.$
+\end_inset
+
+ On the other hand, 
+\begin_inset Formula $\|\tilde{R}z_{n}-z_{n}\|=2\|z_{n+1}-z_{n}\|$
+\end_inset
+
+ from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:convenient-form-1"
+
+\end_inset
+
+, so 
+\begin_inset Formula $\lim_{n\to\infty}\|z_{n+1}-z_{n}\|=0$
+\end_inset
+
+.
+ Thus, we have established that, the sequence 
+\begin_inset Formula $\left(z_{n}\right)_{n\in\mathbf{N}}$
+\end_inset
+
+ stays in a compact set 
+\begin_inset Formula $B(z;r)$
+\end_inset
+
+ and satisfies 
+\begin_inset Formula $\lim_{n\to\infty}\|z_{n+1}-z_{n}\|=0$
+\end_inset
+
+.
+ So, due to Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Combettes_Proof"
+
+\end_inset
+
+, the sequence 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ either converges to a point 
+\begin_inset Formula $z^{\star}\in B(z;r)$
+\end_inset
+
+ or the set of cluster points of 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ forms a nontrivial continuum in 
+\begin_inset Formula $B(z;r)$
+\end_inset
+
+.
+
+\emph on
+ This proves the first part of claim 
+\emph default
+(i)
+\emph on
+ and claim 
+\emph default
+(ii)
+\emph on
+.
+ 
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step 4.
+ 
+\series default
+Now we prove the second part of claim (i).
+ Under the additional condition 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\sigma_{z_{n}z^{\star}}^{2}=0$
+\end_inset
+
+, we show that 
+\begin_inset Formula $z_{n}-\tilde{R}z_{n}\to0,z_{n}\to z^{\star}$
+\end_inset
+
+ implies 
+\begin_inset Formula $z^{\star}\in\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{prox}_{\gamma f}\left(z^{\star}\right)$
+\end_inset
+
+ is an optimal solution of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+, and 
+\begin_inset Formula $x_{n}\to\mathbf{prox}_{\gamma f}\left(z^{\star}\right)$
+\end_inset
+
+.
+ For every 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align}
+\|z^{\star}-\tilde{R}z^{\star}\|^{2} & \overset{a)}{=}\|z_{n}-\tilde{R}z^{\star}\|^{2}-\|z_{n}-z^{\star}\|^{2}\nonumber \\
+ & \quad-2\langle z_{n}-z^{\star}\mid z^{\star}-\tilde{R}z^{\star}\rangle\nonumber \\
+ & =\|\big(z_{n}-\tilde{R}z_{n}\big)+\big(\tilde{R}z_{n}-\tilde{R}z^{\star}\big)\|^{2}\nonumber \\
+ & \quad-\|z_{n}-z^{\star}\|^{2}-2\langle z_{n}-z^{\star}\mid z^{\star}-\tilde{R}z^{\star}\rangle\nonumber \\
+ & =\|z_{n}-\tilde{R}z_{n}\|^{2}+\|\tilde{R}z_{n}-\tilde{R}z^{\star}\|^{2}\nonumber \\
+ & \quad+2\langle z_{n}-\tilde{R}z_{n}\mid\tilde{R}z_{n}-\tilde{R}z^{\star}\rangle\nonumber \\
+ & \quad-\|z_{n}-z^{\star}\|^{2}-2\langle z_{n}-z^{\star}\mid z^{\star}-\tilde{R}z^{\star}\rangle\nonumber \\
+ & \overset{b)}{\leq}\|z_{n}-\tilde{R}z_{n}\|^{2}+\cancel{\|z_{n}-z^{\star}\|^{2}}+\sigma_{z_{n}z^{\star}}^{2}\nonumber \\
+ & \quad+2\langle z_{n}-\tilde{R}z_{n}\mid\tilde{R}z_{n}-\tilde{R}z^{\star}\rangle-\cancel{\|z_{n}-z^{\star}\|^{2}}\nonumber \\
+ & \quad-2\langle z_{n}-z^{\star}\mid z^{\star}-\tilde{R}z^{\star}\rangle\nonumber \\
+ & =\|z_{n}-\tilde{R}z_{n}\|^{2}+2\langle z_{n}-\tilde{R}z_{n}\mid\tilde{R}z_{n}-\tilde{R}z^{\star}\rangle\nonumber \\
+ & \quad-2\langle z_{n}-z^{\star}\mid z^{\star}-\tilde{R}z^{\star}\rangle+\sigma_{z_{n}z^{\star}}^{2},\label{eq:feedback}
+\end{align}
+
+\end_inset
+
+where, 
+\begin_inset Formula $a)$
+\end_inset
+
+ uses the identity 
+\begin_inset Formula 
+\begin{align*}
+\|z_{n}-\tilde{R}z^{\star}\|^{2} & =\|(z_{n}-z^{\star})+(z^{\star}-\tilde{R}z^{\star})\|^{2}\\
+ & =\|z_{n}-z^{\star}\|^{2}+\|z^{\star}-\tilde{R}z^{\star}\|^{2}\\
+ & \quad+2\left\langle z_{n}-z^{\star}\mid z^{\star}-\tilde{R}z^{\star}\right\rangle ,
+\end{align*}
+
+\end_inset
+
+and 
+\begin_inset Formula $b)$
+\end_inset
+
+ uses 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:M_x_y"
+
+\end_inset
+
+.
+ We now compute the limit (or the limit inferior) for each of the terms
+ on the right-hand side of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:feedback"
+
+\end_inset
+
+.
+ As 
+\begin_inset Formula $z_{n}-\tilde{R}z_{n}\to0$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{n}\to z^{\star}$
+\end_inset
+
+, subtracting them we have 
+\begin_inset Formula $\tilde{R}z_{n}\to z^{\star}$
+\end_inset
+
+, hence 
+\begin_inset Formula $\tilde{R}z_{n}-\tilde{R}z^{\star}\to z^{\star}-\tilde{R}z^{\star}.$
+\end_inset
+
+ Combining the last statement with 
+\begin_inset Formula $z_{n}-\tilde{R}z_{n}\to0$
+\end_inset
+
+, we have 
+\begin_inset Formula $\langle z_{n}-\tilde{R}z_{n}\mid\tilde{R}z_{n}-\tilde{R}z^{\star}\rangle\to0$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $z_{n}-z^{\star}\to0$
+\end_inset
+
+ implies 
+\begin_inset Formula $\langle z_{n}-z^{\star}\mid z^{\star}-\tilde{R}z^{\star}\rangle\to0.$
+\end_inset
+
+ Additionally, 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\sigma_{z_{n}z^{\star}}^{2}=0$
+\end_inset
+
+.
+ So, using Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:-Let-df"
+
+\end_inset
+
+, limit inferior of the right hand side 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:feedback"
+
+\end_inset
+
+ goes to zero.
+ Hence, we conclude that 
+\begin_inset Formula $z^{\star}-\tilde{R}z^{\star}=0,$
+\end_inset
+
+ 
+\emph on
+i.e.,
+\emph default
+ 
+\begin_inset Formula $z^{\star}\in\mathop{{\bf fix}}\tilde{R}$
+\end_inset
+
+.
+ But, 
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{R}=\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+ from Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:(Relationship-between-the"
+
+\end_inset
+
+(ii).
+ So, 
+\begin_inset Formula $z^{\star}\in\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+.
+ We now recall from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:singtonness"
+
+\end_inset
+
+ that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathbf{prox}_{\gamma f}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ is continuous everywhere on 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+.
+ So, using the definition of continuity, 
+\begin_inset Formula $z_{n}\to z^{\star}\in\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+ implies 
+\begin_inset Formula $x_{n}=\mathbf{prox}_{\gamma f}(z_{n})\to\mathbf{prox}_{\gamma f}(z^{\star})\in\mathbf{prox}_{\gamma f}(\mathop{{\bf fix}}\tilde{T})$
+\end_inset
+
+.
+ But, 
+\begin_inset Formula $\mathbf{prox}_{\gamma f}(\mathop{{\bf fix}}\tilde{T})\subseteq\mathop{{\rm argmin}}(f+\delta_{\mathcal{C}})$
+\end_inset
+
+ from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:minimizer_charecterization"
+
+\end_inset
+
+(iii).
+ 
+\emph on
+Thus we have arrived at the second part of claim 
+\emph default
+(i)
+\emph on
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Notes on Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "(main-convergence-result)"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Notes-on-NC-DRS_conv"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We make the following notes on Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "(main-convergence-result)"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bullet\,$
+\end_inset
+
+
+\series bold
+Nonemptiness of 
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{T}.$
+\end_inset
+
+
+\series default
+ Note that Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "(main-convergence-result)"
+
+\end_inset
+
+ assumes that 
+\begin_inset Formula $\mathop{{\bf fix}}\tilde{T}$
+\end_inset
+
+ is nonempty.
+ This is a standard assumption in monotone operator theory even in a convex
+ setup 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "\\S 5.2"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+, , as otherwise 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ will not converge to anything.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bullet\,$
+\end_inset
+
+
+\series bold
+Relation to a convex setup.
+ 
+\series default
+In our convergence analysis, the constraint set is nonempty and compact,
+ but not necessarily convex.
+ However, our convergence analysis is also applicable to a convex setup.
+ Let 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ be convex.
+ Then, both 
+\begin_inset Formula $(2\mathbf{\tilde{\Pi}}_{\mathcal{C}}-I_{n})$
+\end_inset
+
+ and 
+\begin_inset Formula $(2\mathbf{prox}_{\gamma f}-I_{n})$
+\end_inset
+
+ are nonexpansive operators, hence, their composition 
+\begin_inset Formula $\tilde{S}=(2\mathbf{\tilde{\Pi}}_{\mathcal{C}}-I)(2\mathbf{prox}_{\gamma f}-I)$
+\end_inset
+
+ is a nonexpansive operator.
+ In such a convex setup, 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ is a nonexpansive operator, because 
+\begin_inset Formula $\tilde{S}=\tilde{R}$
+\end_inset
+
+ from Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:(Relationship-between-the"
+
+\end_inset
+
+ (where the relationship is established irrespective of convexity).
+ Then, recalling Remark 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "(further-characterization-of"
+
+\end_inset
+
+, expansiveness of 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ is zero everywhere, 
+\emph on
+i.e.,
+\emph default
+ 
+\begin_inset Formula $\sigma_{xy}=\varepsilon_{xy}=0$
+\end_inset
+
+ at every 
+\begin_inset Formula $x,y$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbf{R}^{n}$
+\end_inset
+
+.
+ As a result, 
+\begin_inset Formula $(\|\tilde{R}z_{n}-z_{n}\|)_{n\in\mathbf{N}}$
+\end_inset
+
+ is a monotonically nonincreasing sequence that is bounded below, which
+ guarantees convergence to a point for any initial point 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "page 48"
+key "Polyak1987"
+literal "true"
+
+\end_inset
+
+.
+ Also, conditions 1, 2, and the additional condition in the second part
+ of claim (i) are automatically satisfied.
+ This ensures that the point 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ converges to is an optimal solution for any initial point.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+ This guarantees the convergence of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ to an optimal solution for any initial point.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bullet\,$
+\end_inset
+
+
+\series bold
+Comments on the conditions.
+
+\series default
+ Once we move from a convex setup to a nonconvex setup, 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ is not nonexpansive anymore (recall Remark 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Cayley_is_not_nonexpansive"
+
+\end_inset
+
+).
+ Roughly speaking, convergence in such a case requires that the total expansiven
+ess of 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ stays bounded for the iterates.
+ More precisely, 
+\begin_inset Formula $\sum_{n=0}^{\infty}\sigma_{z_{n}z}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{n=0}^{\infty}\varepsilon_{z_{n}z_{n+1}}$
+\end_inset
+
+ need to be bounded, where they represent the total deviation of 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ from being a nonexpansive operator over the sequences 
+\begin_inset Formula $\left\{ \left(z_{n},z\right)\right\} _{n\in\mathbf{N}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\{ \left(z_{n},z_{n+1}\right)\right\} _{n\in\mathbf{N}}$
+\end_inset
+
+, respectively.
+ Furthermore, in a nonconvex setup, 
+\begin_inset Formula $(\|\tilde{R}z_{n}-z_{n}\|)_{n\in\mathbf{N}}$
+\end_inset
+
+ is bounded, but it is not necessarily monotonically nonincreasing; this
+ is why the cluster points of 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ may form a nontrivial continuum in 
+\begin_inset Formula $B(z;r)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Suppose now that 
+\begin_inset Formula $(z_{n})_{n\in\mathbf{N}}$
+\end_inset
+
+ converges to a point 
+\begin_inset Formula $z^{\star}$
+\end_inset
+
+.
+ Whether 
+\begin_inset Formula $z^{\star}$
+\end_inset
+
+ is related to an optimal solution of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ would depend on 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\sigma_{z_{n}z^{\star}}^{2}$
+\end_inset
+
+.
+ If it is zero, then 
+\begin_inset Formula $\mathbf{prox}_{\gamma f}\left(z^{\star}\right)$
+\end_inset
+
+ is an optimal solution, and the iterate 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ converges to this optimal solution.
+ Roughly speaking, 
+\begin_inset Formula $\mathop{\underline{\mathrm{lim}}}_{n\to\infty}\sigma_{z_{n}z^{\star}}^{2}=0$
+\end_inset
+
+ means that over 
+\begin_inset Formula $\left\{ \left(z_{n},z^{\star}\right)\right\} _{n\in\mathbf{N}}$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{R}$
+\end_inset
+
+ acts as a nonexpansive operator in the lower limit.
+ 
+\end_layout
+
+\begin_layout Section
+Construction and convergence of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section, we discuss how 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ can be constructed from the Douglas-Rachford splitting algorithm and comment
+ on how the construction influences the convergence properties of the former.
+ First, in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Preliminaries_NC_ADMM"
+
+\end_inset
+
+ we present some preliminary results to be used later.
+ Then, in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:NC-ADMM-from-Douglas-Rachford"
+
+\end_inset
+
+ we describe how 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ is constructed from the Douglas-Rachford splitting algorithm.
+ Finally, in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Convergence-properties-of-NC-ADMM"
+
+\end_inset
+
+ we comment on convergence of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+, and we compare it with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Preliminaries
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Preliminaries_NC_ADMM"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+First, we describe the Douglas-Rachford splitting algorithm for minimizing
+ sum of two CPC functions; we will use it in the first step of constructing
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+.
+ Then, we review the necessary background on conjugate and biconjugate functions
+, and we present two lemmas to be referenced in the second step of constructing
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Douglas-Rachford splitting algorithm for minimizing sum of two CPC functions
+\end_layout
+
+\begin_layout Standard
+Consider the convex optimization problem 
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\textup{minimize} & g\left(x\right)+h(x),\end{array}\label{eq:cvx-opt}
+\end{equation}
+
+\end_inset
+
+where both 
+\begin_inset Formula $g:\mathbf{R}^{n}\to\overline{\mathbf{R}}$
+\end_inset
+
+ and 
+\begin_inset Formula $h:\mathbf{R}^{n}\to\overline{\mathbf{R}}$
+\end_inset
+
+ are CPC functions, and 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+ is the optimization variable.
+ The Douglas-Rachford splitting algorithm for this problem is
+\begin_inset Formula 
+\begin{align}
+x_{n+1} & =\mathbf{prox}_{\gamma h}\left(z_{n}\right)\nonumber \\
+y_{n+1} & =\mathbf{prox}_{\gamma g}\left(2x_{n+1}-z_{n}\right)\tag{Convex-DRS}\label{eq:classic_DRS}\\
+z_{n+1} & =z_{n}+y_{n+1}-x_{n+1},\nonumber 
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $n$
+\end_inset
+
+ is the iteration counter, and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is a positive parameter.
+ In this convex setup, both 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ converge to an optimal solution of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cvx-opt"
+
+\end_inset
+
+ for any initial point 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Corollary 27.4"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Conjugate and biconjugate of a function
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Conjugate-and-biconjugate"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $g:\mathbf{R}^{n}\to\left\{ -\infty\right\} \cup\overline{\mathbf{R}}$
+\end_inset
+
+.
+ The 
+\series bold
+conjugate
+\series default
+ of 
+\begin_inset Formula $g$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $g^{\star}$
+\end_inset
+
+, is defined as 
+\begin_inset Formula $g^{\star}\left(y\right)=\sup_{x\in\mathbf{R}^{n}}\left(\left\langle x\mid y\right\rangle -g\left(x\right)\right),$
+\end_inset
+
+ which is closed and convex irrespective of the convexity of 
+\begin_inset Formula $g$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 13.11"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+ Also, the conjugate of a CPC function is CPC 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 4.3, Theorem 4.5"
+key "beck2017first"
+literal "true"
+
+\end_inset
+
+.
+ Similarly, the 
+\series bold
+biconjugate
+\series default
+ of 
+\begin_inset Formula $g$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $g^{\star\star}$
+\end_inset
+
+, is defined as 
+\begin_inset Formula $g^{\star\star}\left(y\right)=\sup_{x\in\mathbf{R}^{n}}\left(\left\langle x\mid y\right\rangle -g^{\star}\left(x\right)\right).$
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The biconjugate of any function is always a lower bound on the original
+ function 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 4.7"
+key "beck2017first"
+literal "true"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+ Additionally, if the function is CPC, then its biconjugate is equal to
+ the function itself 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 4.8"
+key "beck2017first"
+literal "true"
+
+\end_inset
+
+.
+ Finally, the relationship between the proximal operator of a CPC function
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ with the proximal operator of its conjugate is given by 
+\series bold
+Moreau's decomposition
+\series default
+: 
+\begin_inset Formula $\mathbf{prox}_{f}\left(x\right)+\mathbf{prox}_{f^{\star}}\left(x\right)=x$
+\end_inset
+
+ for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+.
+ Moreau's decomposition does not hold for a nonconvex function.
+\end_layout
+
+\begin_layout Standard
+Next, we present the following lemmas about conjugate functions in the context
+ of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+.
+ Here we use the notation 
+\begin_inset Formula $g^{\vee},$
+\end_inset
+
+ which denotes the reversal of a function 
+\begin_inset Formula $g$
+\end_inset
+
+, and it is defined as 
+\begin_inset Formula $g^{\vee}\left(x\right)=g\left(-x\right)$
+\end_inset
+
+ for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+.
+ 
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+proximal operator of 
+\begin_inset Formula $f^{\star\vee}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "prox_gamma_f_star_vee"
+
+\end_inset
+
+ Let 
+\begin_inset Formula $f:\mathbf{R}^{n}\to\overline{\mathbf{R}}$
+\end_inset
+
+ be the cost function in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+.
+ Then, for every 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ and for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\mathbf{prox}_{\gamma f^{\star\vee}}\left(x\right)=x+\gamma\,\mathbf{prox}_{\gamma^{-1}f}\left(-\gamma^{-1}x\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Recall that 
+\begin_inset Formula $f$
+\end_inset
+
+ is CPC.
+ For every 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ and for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{prox}_{\gamma f^{\star\vee}}\left(x\right) & \overset{a)}{=}\mathbf{prox}_{\gamma\left(f^{\vee}\right)^{\star}}\left(x\right)\\
+ & \overset{b)}{=}x-\gamma\,\mathbf{prox}_{\gamma^{-1}f^{\vee}}\left(\gamma^{-1}x\right)\\
+ & \overset{c)}{=}x+\gamma\,\mathbf{prox}_{\gamma^{-1}f}\left(-\gamma^{-1}x\right),
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $a)$
+\end_inset
+
+ follows from 
+\begin_inset Formula $f^{\star\vee}=f^{\vee\star}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 13.20(v)"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, 
+\begin_inset Formula $b)$
+\end_inset
+
+ follows from 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 23.29(viii)"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+ and the fact that 
+\begin_inset Formula $f^{\vee}$
+\end_inset
+
+ is CPC, and 
+\begin_inset Formula $c)$
+\end_inset
+
+ directly follows from 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 23.29(v)"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the following Lemma 
+\series bold
+convex hull
+\series default
+ of a nonempty set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, which is the smallest convex set containing 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, is denoted by 
+\begin_inset Formula $\mathop{{\bf conv}}\mathcal{C}$
+\end_inset
+
+.
+ Closure of 
+\begin_inset Formula $\mathop{{\bf conv}}\mathcal{C}$
+\end_inset
+
+ is denoted by 
+\begin_inset Formula $\overline{\mathop{{\bf conv}}}\mathcal{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+
+\emph on
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\emph off
+conjugate and biconjugate of indicator function of 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "biconjugate-of-indicator-of-C"
+
+\end_inset
+
+
+\emph default
+ Let 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ be the constraint set in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+.
+ Then, 
+\end_layout
+
+\begin_layout Lemma
+
+\emph on
+(i)
+\emph default
+ 
+\begin_inset Formula $\delta_{\mathcal{C}}^{\star\star}=\delta_{\mathop{{\bf conv}}\mathcal{C}}$
+\end_inset
+
+, and 
+\end_layout
+
+\begin_layout Lemma
+
+\emph on
+(ii)
+\emph default
+ 
+\begin_inset Formula $\mathbf{prox}_{\gamma\delta_{\mathcal{C}}^{\star}}\left(x\right)=x-\gamma\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\left(\gamma^{-1}x\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(i): From 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Example 4.2, Example 4.9"
+key "beck2017first"
+literal "true"
+
+\end_inset
+
+, we have 
+\begin_inset Formula $\delta_{\mathcal{C}}^{\star\star}=\delta_{\overline{\mathop{{\bf conv}}}\mathcal{C}}$
+\end_inset
+
+.
+ The constraint set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is compact, hence its convex hull 
+\begin_inset Formula $\mathop{{\bf conv}}\mathcal{C}$
+\end_inset
+
+ is also compact, hence closed 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Corollary 2.30"
+key "Rockafellar2009"
+literal "true"
+
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $\overline{\mathop{{\bf conv}}}\mathcal{C}=\mathop{{\bf conv}}\mathcal{C}$
+\end_inset
+
+, and we conclude that 
+\begin_inset Formula $\delta_{\mathcal{C}}^{\star\star}=\delta_{\mathop{{\bf conv}}\mathcal{C}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+(ii): As the constraint set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is nonempty and compact, its indicator function 
+\begin_inset Formula $\delta_{\mathcal{C}}$
+\end_inset
+
+ is closed 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Example 1.25"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+ and proper 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "page 7"
+key "Rockafellar2009"
+literal "true"
+
+\end_inset
+
+.
+ Hence, its conjugate 
+\begin_inset Formula $\delta_{\mathcal{C}}^{\star}$
+\end_inset
+
+, which is called the 
+\series bold
+support function
+\series default
+ of the set 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, is CPC (closed and convex due to 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 13.11"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, proper because 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is bounded).
+ As the conjugate of a CPC function is CPC 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem 4.3, Theorem 4.5"
+key "beck2017first"
+literal "true"
+
+\end_inset
+
+, the function 
+\begin_inset Formula $\delta_{\mathcal{C}}^{\star\star}$
+\end_inset
+
+ is CPC.
+ Using Moreau's decomposition for every 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+\mathbf{prox}_{\gamma\delta_{\mathcal{C}}^{\star}}\left(x\right) & =x-\mathbf{prox}_{\left(\gamma\delta_{\mathcal{C}}^{\star}\right)^{\star}}\left(x\right)\\
+ & \overset{a)}{=}x-\mathbf{prox}_{\gamma\delta_{\mathcal{C}}^{\star\star}\big(\gamma^{-1}(\cdot)\big)}\left(x\right)\\
+ & \overset{b)}{=}x-\gamma\,\mathbf{prox}_{\gamma^{-1}\delta_{\mathcal{C}}^{\star\star}}\left(\gamma^{-1}x\right)\\
+ & \overset{c)}{=}x-\gamma\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\left(\gamma^{-1}x\right),
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $a)$
+\end_inset
+
+ follows from 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 13.20(i)"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, 
+\begin_inset Formula $b)$
+\end_inset
+
+ follows from 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 23.29(iii)"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, and 
+\begin_inset Formula $c)$
+\end_inset
+
+ follows from combining 
+\begin_inset Formula $\delta_{\mathcal{C}}^{\star\star}=\delta_{\mathop{{\bf conv}}\mathcal{C}}$
+\end_inset
+
+ in (i) and Corollary 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Proximal-operator-of"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Constructing 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ from Douglas-Rachford splitting
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:NC-ADMM-from-Douglas-Rachford"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This subsection is organized as follows.
+ First, by applying 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:classic_DRS"
+
+\end_inset
+
+ to the convex dual of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ we construct a relaxed version of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+, where the projection is onto 
+\begin_inset Formula $\mathop{{\bf conv}}\mathcal{C}$
+\end_inset
+
+ rather than 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ Then, we show that the relaxed version 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ minimizes 
+\begin_inset Formula $f$
+\end_inset
+
+ over 
+\begin_inset Formula $\mathop{{\bf conv}}\mathcal{C}$
+\end_inset
+
+.
+ Next, we discuss construction of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ from the relaxed variant by restricting the latter's projection step onto
+ 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ Finally, we comment on the convergence properties of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ and relate it to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Constructing dual of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using indicator function, we write 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\textup{minimize} & f\left(x\right)+\delta_{\mathcal{C}}\left(y\right)\\
+\textup{subject to} & x-y=0,
+\end{array}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x,y\in\mathbf{R}^{n}$
+\end_inset
+
+ are the optimization variables.
+ Denote the optimal value of the problem above by 
+\begin_inset Formula $p^{\star}$
+\end_inset
+
+.
+ The dual of the reformulated problem, which is a convex optimization problem
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "\\S 5.1.6"
+key "boyd2004convex"
+literal "true"
+
+\end_inset
+
+, is 
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\textup{maximize} & -f^{\star\vee}\left(\nu\right)-\delta_{\mathcal{C}}^{\star}\left(\nu\right),\end{array}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\nu\in\mathbf{R}^{n}$
+\end_inset
+
+ is the optimization variable.
+ Denote the optimal value of the dual problem by 
+\begin_inset Formula $d^{\star}$
+\end_inset
+
+.
+ Due to weak duality, we have, 
+\begin_inset Formula $d^{\star}\leq p^{\star}$
+\end_inset
+
+, and, as the primal problem is nonconvex, the duality gap 
+\begin_inset Formula $p^{\star}-d^{\star}$
+\end_inset
+
+ is strict in general.
+ For convenience, we write the dual problem in minimization form: 
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\textup{minimize} & f^{\star\vee}\left(\nu\right)+\delta_{\mathcal{C}}^{\star}\left(\nu\right),\end{array}\tag{Dual-OPT}\label{eq:dual-opt}
+\end{equation}
+
+\end_inset
+
+with optimal value 
+\begin_inset Formula $-d^{\star}$
+\end_inset
+
+ and same set of optimal solutions as the dual problem.
+ As 
+\begin_inset Formula $f$
+\end_inset
+
+ is CPC, 
+\begin_inset Formula $f^{\star\vee}$
+\end_inset
+
+ is also CPC (follows from 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Conjugate-and-biconjugate"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 8.20"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+).
+ Furthermore, from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "biconjugate-of-indicator-of-C"
+
+\end_inset
+
+(ii), 
+\begin_inset Formula $\delta_{\mathcal{C}}^{\star}$
+\end_inset
+
+ is also CPC.
+ Thus we can apply 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:classic_DRS"
+
+\end_inset
+
+ to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dual-opt"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Applying Douglas-Rachford splitting to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dual-opt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By setting 
+\begin_inset Formula $g:=f^{\star\vee}$
+\end_inset
+
+ and 
+\begin_inset Formula $h:=\delta_{\mathcal{C}}^{\star}$
+\end_inset
+
+ In 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cvx-opt"
+
+\end_inset
+
+, we have the following Douglas-Rachford splitting algorithm for the dual
+ problem:
+\begin_inset Formula 
+\begin{align}
+\zeta_{n+1} & =\mathbf{prox}_{\gamma\delta_{\mathcal{C}}^{\star}}\left(\psi_{n}\right)\nonumber \\
+\xi_{n+1} & =\mathbf{prox}_{\gamma f^{\star\vee}}\left(2\zeta_{n+1}-\psi_{n}\right)\tag{Dual-DRS}\label{eq:dual-DRS}\\
+\psi_{n+1} & =\psi_{n}+\xi_{n+1}-\zeta_{n+1}.\nonumber 
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "biconjugate-of-indicator-of-C"
+
+\end_inset
+
+ and Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prox_gamma_f_star_vee"
+
+\end_inset
+
+, we simplify the first two iterates of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dual-DRS"
+
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{align*}
+\zeta_{n+1} & =\psi_{n}-\gamma\,\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\big(\gamma^{-1}\psi_{n}\big),\:\textrm{and}\\
+\xi_{n+1} & =2\zeta_{n+1}-\psi_{n}+\gamma\,\mathbf{prox}_{\gamma^{-1}f}\big(-\gamma^{-1}(2\zeta_{n+1}-\psi_{n})\big).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using these simplified iterates and introducing intermediate iterates 
+\begin_inset Formula $\tilde{y}_{n+1}=\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\left(\gamma^{-1}\psi_{n}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{x}_{n+1}=\mathbf{prox}_{\gamma^{-1}f}\big(-\gamma^{-1}(2\zeta_{n+1}-\psi_{n})\big)$
+\end_inset
+
+, we can write 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dual-DRS"
+
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{align*}
+\tilde{y}_{n+1} & =\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\big(\gamma^{-1}\psi_{n}\big)\\
+\zeta_{n+1} & =\psi_{n}-\gamma\tilde{y}_{n+1}\\
+\tilde{x}_{n+1} & =\mathbf{prox}_{\gamma^{-1}f}\big(-\gamma^{-1}(2\zeta_{n+1}-\psi_{n})\big)\\
+ & =\mathbf{prox}_{\gamma^{-1}f}\big(-\gamma^{-1}(\psi_{n}-2\gamma\tilde{y}_{n+1})\big)\\
+\xi_{n+1} & =2\zeta_{n+1}-\psi_{n}+\gamma\tilde{x}_{n+1}\\
+ & =\psi_{n}-2\gamma\tilde{y}_{n+1}+\gamma\tilde{x}_{n+1}\\
+\psi_{n+1} & =\psi_{n}+\xi_{n+1}-\zeta_{n+1}\\
+ & =\psi_{n}-\gamma\tilde{y}_{n+1}+\gamma\tilde{x}_{n+1}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that the iterates 
+\begin_inset Formula $\zeta_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\xi_{n}$
+\end_inset
+
+ do not have any explicit dependence, hence they can be removed.
+ Furthermore, introduce a new iterate, 
+\begin_inset Formula $z_{n}=\frac{1}{\gamma}\psi_{n}-\tilde{x}_{n}$
+\end_inset
+
+ .
+ Substituting 
+\begin_inset Formula $\psi_{n}:=\gamma\left(z_{n}+\tilde{x}_{n}\right)$
+\end_inset
+
+ in the iteration scheme above, we get
+\begin_inset Formula 
+\begin{align}
+\tilde{y}_{n+1} & =\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\left(z_{n}+\tilde{x}_{n}\right)\nonumber \\
+\tilde{x}_{n+1} & =\mathbf{prox}_{\gamma^{-1}f}\left(-\left(z_{n}+\tilde{x}_{n}-2\tilde{y}_{n+1}\right)\right)\nonumber \\
+ & \overset{a)}{=}\mathbf{prox}_{\gamma^{-1}f}\left(-\left(z_{n+1}-\tilde{y}_{n+1}\right)\right)\nonumber \\
+z_{n+1} & =z_{n}+\tilde{x}_{n}-\tilde{y}_{n+1},\label{eq:idw}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $a)$
+\end_inset
+
+ follows from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:idw"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finally, we swap the order of of 
+\begin_inset Formula $\tilde{x}_{n+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{n+1}$
+\end_inset
+
+ to obtain the correct dependency:
+\begin_inset Formula 
+\begin{align*}
+\tilde{y}_{n+1} & =\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\left(z_{n}+\tilde{x}_{n}\right)\\
+z_{n+1} & =z_{n}+\tilde{x}_{n}-\tilde{y}_{n+1},\\
+\tilde{x}_{n+1} & =\mathbf{prox}_{\gamma^{-1}f}\left(\tilde{y}_{n+1}-z_{n+1}\right).
+\end{align*}
+
+\end_inset
+
+We now substitute 
+\begin_inset Formula $\tilde{x}_{n}:=x_{n+1}$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{y}_{n}:=y_{n}$
+\end_inset
+
+, and 
+\begin_inset Formula $\frac{1}{\gamma}:=\tilde{\gamma}$
+\end_inset
+
+ in the iterates above to obtain a relaxed version 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align}
+x_{n+1} & =\mathbf{prox}_{\tilde{\gamma}f}\left(y_{n}-z_{n}\right)\nonumber \\
+y_{n+1} & =\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\left(z_{n}+x_{n+1}\right)\tag{Relaxed-NC-ADMM}\label{eq:ADMM-to-dual}\\
+z_{n+1} & =z_{n}-y_{n+1}+x_{n+1},\nonumber 
+\end{align}
+
+\end_inset
+
+which is similar to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+, except the projection is onto 
+\begin_inset Formula $\mathop{{\bf conv}}\mathcal{C}$
+\end_inset
+
+ rather than onto 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Constructing 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM-to-dual"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we discuss how we can arrive at 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM-to-dual"
+
+\end_inset
+
+.
+ The first step requires the observation that 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM-to-dual"
+
+\end_inset
+
+ finds a minimizer of 
+\begin_inset Formula $f$
+\end_inset
+
+ over 
+\begin_inset Formula $\mathop{{\bf conv}}\mathcal{C}$
+\end_inset
+
+.
+ To see that, construct the dual of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dual-opt"
+
+\end_inset
+
+, which is
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{ll}
+\textup{maximize} & -\left(f^{\star\vee}\right)^{\star\vee}\left(x\right)-\delta_{\mathcal{C}}^{\star\star}\left(x\right),\end{array}\tag{Double-Dual}\label{eq:double-dual}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+ is the optimization variable.
+ As both 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dual-opt"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:double-dual"
+
+\end_inset
+
+ are convex optimization problems, strong duality usually holds (under constrain
+t qualifications), where both problems have the same optimal value 
+\begin_inset Formula $-d^{\star}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\left(f^{\star\vee}\right)^{\star\vee}\overset{a)}{=}\left(f^{\vee\star}\right)^{\star\vee}\overset{}{=}\left(\left(f^{\vee}\right)^{\star\star}\right)^{\vee}\overset{b)}{=}f^{\vee\vee}\overset{c)}{=}f,$
+\end_inset
+
+where 
+\begin_inset Formula $a)$
+\end_inset
+
+ follows from 
+\begin_inset Formula $f^{\star\vee}=f^{\vee\star}$
+\end_inset
+
+ for CPC function 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Proposition 13.20(v)"
+key "Bauschke2017"
+literal "true"
+
+\end_inset
+
+, 
+\begin_inset Formula $b)$
+\end_inset
+
+ follows from the fact that the biconjugate of a CPC function is equal to
+ the function itself 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Lemma 4.8"
+key "beck2017first"
+literal "true"
+
+\end_inset
+
+, and 
+\begin_inset Formula $c)$
+\end_inset
+
+ follows from the fact that applying reversal operation twice on a function
+ returns the original function.
+ Furthermore, 
+\begin_inset Formula $\delta_{\mathcal{C}}^{\star\star}=\delta_{\mathop{{\bf conv}}\mathcal{C}}$
+\end_inset
+
+ from Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "biconjugate-of-indicator-of-C"
+
+\end_inset
+
+(i).
+ Hence, the dual of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:double-dual"
+
+\end_inset
+
+, written as a minimization problem, is
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\textup{minimize} & f\left(x\right)\\
+\textup{subject to} & x\in\mathop{{\bf conv}}\mathcal{C},
+\end{array}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $x\in\mathbf{R}^{n}$
+\end_inset
+
+ is the optimization variable with optimal value 
+\begin_inset Formula $d^{\star}$
+\end_inset
+
+.
+ So, under strong duality between 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dual-opt"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:double-dual"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM-to-dual"
+
+\end_inset
+
+ finds a minimizer of 
+\begin_inset Formula $f$
+\end_inset
+
+ over the set 
+\begin_inset Formula $\mathop{{\bf conv}}\mathcal{C}$
+\end_inset
+
+, which appears in the projection step of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM-to-dual"
+
+\end_inset
+
+.
+ So, to solve the original problem 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ where we seek a minimizer of 
+\begin_inset Formula $f$
+\end_inset
+
+ over 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, an intuitive modification to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM-to-dual"
+
+\end_inset
+
+ is replacing 
+\begin_inset Formula $\mathop{{\bf conv}}\mathcal{C}$
+\end_inset
+
+ with 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ (hence 
+\begin_inset Formula $\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}$
+\end_inset
+
+ with 
+\begin_inset Formula $\tilde{\mathbf{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+), which results in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+.
+ Roughly speaking, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ is constructed by first relaxing the constraint set of the original problem
+ to its convex hull, then applying the Douglas-Rachford splitting algorithm
+ for the relaxed problem and finally restricting the resultant algorithm
+ on the original constraint set.
+ 
+\end_layout
+
+\begin_layout Standard
+The construction procedure also provides an alternative explanation behind
+ why, when compared with exact solvers, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ often achieves lower objective values in many numerical experiments performed
+ in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Diamond2018,Takapoui2017a,Takapoui2017,takapoui2016simple"
+literal "true"
+
+\end_inset
+
+.
+ In these works, these lower objective values are attributed to the superior
+ performance of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ in solving nonconvex problems based on empirical evidence.
+ An alternative explanation could be that the heuristic is solving a modified
+ dual problem, which, in the absence of strong duality, is guaranteed to
+ yield an objective value that is smaller than or equal to that of the original
+ problem.
+\end_layout
+
+\begin_layout Subsection
+Convergence of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Convergence-properties-of-NC-ADMM"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we comment on convergence properties of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ in comparison with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bullet\,$
+\end_inset
+
+
+\series bold
+Convergence to an optimal solution.
+
+\series default
+ Unlike 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ does not attack the original problem directly, hence it cannot characterize
+ minimizers of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ in a similar manner.
+ For 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+, the fixed point set of 
+\begin_inset Formula $R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}$
+\end_inset
+
+ acts as a bridge between global minimizers of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ and  the fixed point set of the nonconvex Douglas-Rachford operator (Theorem
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:minimizer_charecterization"
+
+\end_inset
+
+).
+ Though 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:classic_DRS"
+
+\end_inset
+
+ is equivalent to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM-to-dual"
+
+\end_inset
+
+ under strong duality, no such equivalence exists between 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+, because there is a strict duality gap between 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dual-opt"
+
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}\neq\mathbf{\tilde{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+.
+ This lack of equivalence prevents connecting the fixed point set of the
+ underlying 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ operator to global minimizers of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:original_problem"
+
+\end_inset
+
+ through the fixed point set of 
+\begin_inset Formula $R_{\gamma\partial\delta_{\mathcal{C}}}R_{\gamma\partial f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bullet\,$
+\end_inset
+
+
+\series bold
+Convergence to a point.
+ 
+\series default
+Furthermore, the lack of equivalence between 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ makes it harder, if not impossible, to comment analogously on convergence
+ of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ to a general point (not necessarily an optimal solution) as well.
+ As shown in the proof of Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "(main-convergence-result)"
+
+\end_inset
+
+, establishing convergence to a general point for 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ depends on the interrelationship between the nonconvex Douglas-Rachford
+ operator and the nonconvex Peaceman-Rachford operator.
+ Unfortunately, such relationship breaks down for 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+, because constructing such a relationship would require Moreau's decomposition
+ to hold for nonconvex functions.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Naturally, the next question to be considered is whether it is possible
+ to characterize global minimizers and establish sufficient conditions for
+ convergence of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ without showing any equivalence between it and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+.
+ However, there are strong indications that the answer is negative, which
+ we discuss now.
+ Our convergence analysis for 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ is established for problems with nonempty, compact, but not necessarily
+ convex constraint sets, but it is equally applicable to the smaller subclass
+ of problems with convex constraint sets (recall 
+\begin_inset Formula $\S$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Notes-on-NC-DRS_conv"
+
+\end_inset
+
+).
+ If 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ is convex, then 
+\begin_inset Formula $\mathbf{\Pi}_{\mathop{{\bf conv}}\mathcal{C}}=\mathbf{\tilde{\Pi}}_{\mathcal{C}}$
+\end_inset
+
+, and both strong duality and Moreau's decomposition hold; these properties
+ make 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ a special case of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ in a convex setup, and one can establish convergence to an optimal solution
+ from Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "(main-convergence-result)"
+
+\end_inset
+
+.
+ However, when we move from a convex setup to a nonconvex one, these properties
+ do not hold in general, and the operator-theoretic equivalence between
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ breaks down.
+ So, it seems unlikely that for the class of problems that are not necessarily
+ convex, one could characterize global minimizers and establish sufficient
+ conditions for convergence of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+ completely ignoring 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+, because the algorithms are equivalent to each other for the subclass of
+ convex problems, where the equivalence is dependent on properties that
+ are exclusive to a convex setup.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Future work
+\end_layout
+
+\begin_layout Standard
+The discussion in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Main-convergence-result"
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Convergence-properties-of-NC-ADMM"
+
+\end_inset
+
+ indicates that the theoretical rationale to use 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ is stronger than that of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+.
+ Future research directions include conducting numerical experiments to
+ compare the performance of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DR_splitting_orig"
+
+\end_inset
+
+ with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ADMM_orig-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "lattice_based_ADMM_manuscript"
+options "IEEEtran"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

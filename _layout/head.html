@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{if hasmath}} {{insert head_katex.html }}     {{end}}
+    {{if hascode}} {{insert head_highlight.html }}   {{end}}
+    {{insert style.html}}
+    {{isdef title}} <title>{{fill title}}</title>  {{end}}
+	<link rel="icon" href="/assets/favicon.ico">
+	<script src="/libs/lunr/lunr.min.js"></script>
+    <script src="/libs/lunr/lunr_index.js"></script>
+    <script src="/libs/lunr/lunrclient.min.js"></script>	
+</head>
+
+<body>
+{{insert nav.html}}
+
+
+<!-- Content appended here .result-title a { text-decoration: none; }
+.result-title a:hover { text-decoration: underline; }
+.result-preview { color: #808080; }
+.resultCount { color: #808080; }
+.result-query { font-weight: bold; }
+#lunrSearchForm { margin-top: 1em; } -->

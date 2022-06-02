@@ -1,0 +1,2989 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{CambridgeUS}
+% or ...
+\mode<presentation>
+{
+\usetheme{default}
+}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[rgb={0.13,0.28,0.59}]{structure}
+\setbeamertemplate{itemize subitem}{--}
+\setbeamertemplate{frametitle} {
+	\begin{center}
+	  {\large\bf \insertframetitle}
+	\end{center}
+}
+
+\newcommand\footlineon{
+  \setbeamertemplate{footline} {
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.8cm,rightskip=.6cm]{structure}
+      \footnotesize \insertsection
+      \hfill
+      {\insertframenumber}
+    \end{beamercolorbox}
+    \vskip 0.45cm
+  }
+}
+\footlineon
+
+\AtBeginSection[] 
+{ 
+	\begin{frame}<beamer> 
+		\frametitle{Outline} 
+		\tableofcontents[currentsection,currentsubsection] 
+	\end{frame} 
+} 
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This file is a solution template for:
+\end_layout
+
+\begin_layout Itemize
+Talk at a conference/colloquium.
+ 
+\end_layout
+
+\begin_layout Itemize
+Talk length is about 20min.
+ 
+\end_layout
+
+\begin_layout Itemize
+Style is ornate.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+In principle, this file can be redistributed and/or modified under the terms
+ of the GNU Public License, version 2.
+ However, this file is supposed to be a template to be modified for your
+ own needs.
+ For this reason, if you use this file as a template and not specifically
+ distribute it as part of a another package/program, the author grants the
+ extra permission to freely copy and modify this file as you see fit and
+ even to delete this copyright notice.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Slide Template
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Template
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+optional, use only with long paper titles
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Shuvomoy Das Gutpa
+\begin_inset Flex InstituteMark
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Flex InstituteMark
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Give the names in the same order as the appear in the paper.
+ 
+\end_layout
+
+\begin_layout Itemize
+Use the 
+\begin_inset Quotes eld
+\end_inset
+
+Institute mark
+\begin_inset Quotes erd
+\end_inset
+
+ inset (
+\family sans
+Insert\SpecialChar menuseparator
+Custom Insets\SpecialChar menuseparator
+InstituteMark
+\family default
+) only if the authors have different affiliations.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+S.
+ Das Gupta
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+- optional, use only with lots of authors
+\end_layout
+
+\begin_layout Plain Layout
+- if there are really lots of authors, use 
+\begin_inset Quotes eld
+\end_inset
+
+Author et al.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Institute
+\begin_inset Flex InstituteMark
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex InstituteMark
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Department of Electrical and Computer Engineering
+\begin_inset Newline newline
+\end_inset
+
+University of Toronto
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Use the 
+\begin_inset Quotes eld
+\end_inset
+
+Institute mark
+\begin_inset Quotes erd
+\end_inset
+
+ inset (
+\family sans
+Insert\SpecialChar menuseparator
+Custom Insets\SpecialChar menuseparator
+InstituteMark
+\family default
+) only if there are several affiliations.
+\end_layout
+
+\begin_layout Itemize
+Keep it simple, no one is interested in your street address.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+UofT
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+optional, but mostly needed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+55th IEEE Conference on Decision and Control, 2016
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Either use conference name or its abbreviation.
+ 
+\end_layout
+
+\begin_layout Itemize
+Not really informative to the audience, more for people (including yourself)
+ who are reading the slides online
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+CDC 2016
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+optional, should be abbreviation of conference name
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If you have a file called "institution-logo-filename.xxx", where xxx is a
+ graphic format that can be processed by latex or pdflatex, resp., then you
+ can add a logo by uncommenting the following:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{institution-logo-filename}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The following causes the table of contents to be shown at the beginning
+ of every subsection.
+ Delete this, if you do not want it.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSubsection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If you wish to uncover everything in a step-wise fashion, uncomment the
+ following command:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+First section
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Bulleted list
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+XXX
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+XXX
+\end_layout
+
+\begin_layout Itemize
+XXX
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+XXX
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+XXX
+\end_layout
+
+\begin_layout Itemize
+XXX
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+XXX
+\end_layout
+
+\end_deeper
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pictures
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename Generic_Min_Cost_Flow.png
+	lyxscale 25
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Minimum Cost Flow Problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\color black
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\color black
+\begin_inset Formula 
+\begin{align}
+ & \begin{aligned} & \text{minimize}_{x} &  & \sum_{i\in\{1,\ldots,n\}}c_{i}f_{i}(x_{i})\qquad\texttt{\textbackslash*Default Case: \ensuremath{f_{i}(x_{i})=x_{i}}*\textbackslash}\\
+ & \text{subject to} &  & Ax=b\\
+ &  &  & 0\preceq x\preceq u\\
+ &  &  & x\in\mathbf{\mathbf{\mathbf{Z}}}^{n}.
+\end{aligned}
+\label{eq:game_in_consideration-0}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Here, the network has 
+\begin_inset Formula $n$
+\end_inset
+
+ arcs, 
+\begin_inset Formula $m+1$
+\end_inset
+
+ nodes.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ : reduced node-arc incidence matrix, dimension 
+\begin_inset Formula $m\times n$
+\end_inset
+
+, full row rank.
+ 
+\end_layout
+
+\begin_layout Itemize
+We re-index the 
+\begin_inset Formula $m$
+\end_inset
+
+ linearly independent columns of 
+\begin_inset Formula $A$
+\end_inset
+
+ as the first 
+\begin_inset Formula $m$
+\end_inset
+
+ columns.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b$
+\end_inset
+
+ : represents supplies to the nodes at different points.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u$
+\end_inset
+
+ : upper bound vector for the flow.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Extension of Min.
+ Cost Flow to a Multi-player Setup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+With 
+\color blue
+each arc
+\color inherit
+ of the network graph we associate 
+\color blue
+one player
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Each of the players is trying to minimize its 
+\color blue
+nonconvex cost function
+\color inherit
+, subject to the network flow constraints.
+\end_layout
+
+\begin_layout Itemize
+Our goal is to seek an 
+\color blue
+efficient solution concept
+\color inherit
+ in this multi-player problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Generic_Min_Cost_Flow.png
+	lyxscale 40
+	scale 25
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Multi-player Extension
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color black
+The goal of the 
+\begin_inset Formula $i$
+\end_inset
+
+th player for 
+\begin_inset Formula $i\in[n]=\{1,\ldots,n\}$
+\end_inset
+
+, given other players' strategies 
+\begin_inset Formula $x_{-i}\in\mathbf{Z}^{n-1}$
+\end_inset
+
+, is to solve:
+\end_layout
+
+\begin_layout Standard
+
+\color black
+\begin_inset Formula 
+\begin{align}
+ & \begin{aligned} & \text{minimize}_{x_{i}} &  & f_{i}\left(x_{i}\right)\;\texttt{\textbackslash*proper: practically can be anything*\textbackslash}\\
+ & \text{subject to} &  & A(x_{i},x_{-i})=b\;\texttt{\textbackslash*The constraints }\\
+ &  &  & 0\preceq(x_{i},x_{-i})\preceq u\texttt{ \quad couple the players*\textbackslash}\\
+ &  &  & x\in\mathbf{Z}^{n}.
+\end{aligned}
+\label{eq:game_in_consideration-1}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solution Concepts in Consideration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color black
+A 
+\emph on
+\color red
+vector optimal solution
+\emph default
+\color black
+ that minimizes all the objectives simultaneously is unlikely to exist.
+\end_layout
+
+\begin_layout Itemize
+
+\color black
+The celebrated 
+\emph on
+\color red
+Nash equilibrium
+\emph default
+\color black
+ is also not very efficient in our setup because:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color black
+the constraint set of the problem has equality constraints, thus making
+ any feasible point a Nash equilibrium, and
+\end_layout
+
+\begin_layout Itemize
+
+\color black
+posteriori some of the players may decide to deviate from the Nash equilibrium
+ in order to reduce their costs even more at the expense of the rest of
+ the players.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+A more effective solution concept is the 
+\emph on
+\color red
+Pareto optimal point
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pareto Optimal Point
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\color black
+A 
+\emph on
+\color red
+Pareto optimal point
+\emph default
+\color black
+ is a solution concept where none of the objective functions can be improved
+ without worsening some of the other objective values.
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Definition
+
+\color black
+(
+\series bold
+Pareto Optimal Point
+\series default
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "def:Pareto-optimal-point"
+
+\end_inset
+
+ In problem 
+\color inherit
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:game_in_consideration-1"
+
+\end_inset
+
+
+\color black
+, a point 
+\begin_inset Formula $x^{*}\in P$
+\end_inset
+
+ is Pareto optimal if it satisfies the following: there 
+\emph on
+does not 
+\emph default
+exist another point 
+\begin_inset Formula $\tilde{x}\in P$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\left(\forall i\in[n]\right)\quad f_{i}(\tilde{x}_{i})\leq f_{i}(x_{i}^{*}),
+\]
+
+\end_inset
+
+ 
+\color inherit
+with at least one index 
+\begin_inset Formula $j\in[n]$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $f_{j}(\tilde{x}_{j})<f_{j}(x_{j}^{*})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Related Work
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Our problem setup does not seem to be investigated in existing literature.
+\end_layout
+
+\begin_layout Itemize
+Nonconvex network flow problems for very specific cost functions (Magnanti1984,
+ Graves1985, Daskin2011, He2015).
+\end_layout
+
+\begin_layout Itemize
+Integer multi-commodity flow problems (Brunetta2000, Ozdaglar2004).
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Algorithm construction
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Decoupling the Last 
+\begin_inset Formula $n-m$
+\end_inset
+
+ Players
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+
+\series bold
+(Existence of a decoupling variable)
+\series default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:transform-x-to-z"
+
+\end_inset
+
+ Denote 
+\begin_inset Formula $B=[A_{1}|A_{2}|\cdots|A_{m}]$
+\end_inset
+
+.
+ The equality constraint set 
+\begin_inset Formula $Q=\left\{ x\in\mathbf{Z}^{n}\mid Ax=b\right\} $
+\end_inset
+
+ is nonempty and for any vector 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $x\in Q$
+\end_inset
+
+ is equivalent to saying that there exists a 
+\begin_inset Formula $z\in\mathbf{Z}^{n-m}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\begin{equation}
+x=(d_{1}-h_{1}^{T}z,\ldots,d_{m}-h_{m}^{T}z,z_{1},\ldots,z_{n-m}),\label{eq:x-in-z}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $i$
+\end_inset
+
+th component of 
+\begin_inset Formula $d=B^{-1}b$
+\end_inset
+
+, and 
+\begin_inset Formula $h_{i}^{T}\in\mathbf{Z}^{n-m}$
+\end_inset
+
+ is the 
+\begin_inset Formula $i$
+\end_inset
+
+th row of 
+\begin_inset Formula $B^{-1}A_{[1:m,m+1:n]}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Decoupled Problems for the 
+\begin_inset Formula $n-m$
+\end_inset
+
+ Players
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In 
+\begin_inset Formula $z$
+\end_inset
+
+ we can decouple the optimization problems for players 
+\begin_inset Formula $m+1,m+2,\ldots,n$
+\end_inset
+
+ as follows
+\begin_inset Formula 
+\begin{align}
+ & \begin{aligned} & \text{minimize}_{z_{i}} &  & f_{i}(z_{i})\\
+ & \text{subject to} &  & 0\leq z_{i}\leq u_{i}\\
+ &  &  & z_{i}\in\mathbf{Z}.
+\end{aligned}
+\label{eq:decoupled-opt}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Set of different optimal solutions for player 
+\begin_inset Formula $m+i$
+\end_inset
+
+ for 
+\begin_inset Formula $i\in[n-m]$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+D_{i}=\left\{ z_{i,1},z_{i,2},\ldots,z_{i,p_{i}}\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Define, 
+\begin_inset Formula $D=\times{}_{i=1}^{n-m}D_{i}\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Consensus Reformulation for the First 
+\begin_inset Formula $m$
+\end_inset
+
+ players
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We provide each player 
+\begin_inset Formula $i\in[m]$
+\end_inset
+
+ with its 
+\emph on
+\color red
+own local copy
+\emph default
+\color inherit
+ of 
+\begin_inset Formula $z$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $z^{(i)}\in\mathbf{Z}^{n-m}$
+\end_inset
+
+, which acts as its decision variable.
+\end_layout
+
+\begin_layout Itemize
+For any 
+\begin_inset Formula $i\in[m]$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}=d_{i}-h_{i}^{T}z^{(i)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The copy 
+\begin_inset Formula $z^{(i)}$
+\end_inset
+
+ has to be in 
+\emph on
+\color red
+consensus
+\emph default
+\color inherit
+ with the rest of the first 
+\begin_inset Formula $m$
+\end_inset
+
+ players: 
+\begin_inset Formula 
+\begin{align*}
+ & z^{(i)}=z^{(j)}\quad\forall j\in[m]\setminus\{i\}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The copy 
+\begin_inset Formula $z^{(i)}$
+\end_inset
+
+ has to satisfy the 
+\emph on
+\color red
+flow bound constraints
+\emph default
+\color inherit
+, 
+\emph on
+i.e., 
+\emph default
+
+\begin_inset Formula $0\leq d_{i}-h_{i}^{T}z^{(i)}\leq u_{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\in[m]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+For the last 
+\begin_inset Formula $n-m$
+\end_inset
+
+ players 
+\color red
+
+\begin_inset Formula $z_{i}\in D_{i}$
+\end_inset
+
+
+\color inherit
+, so: 
+\begin_inset Formula 
+\[
+z^{(i)}\in D
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Consensus Reformulation for the First 
+\begin_inset Formula $m$
+\end_inset
+
+ players
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+For all 
+\begin_inset Formula $i\in[m]$
+\end_inset
+
+, the 
+\begin_inset Formula $i$
+\end_inset
+
+th player's optimization problem in variable 
+\begin_inset Formula $z^{(i)}$
+\end_inset
+
+ can be written as: 
+\begin_inset Formula 
+\begin{align}
+ & \begin{aligned} & \text{minimize}_{z^{(i)}} &  & \bar{f}_{i}\left(z^{(i)}\right)=f_{i}(d_{i}-h_{i}^{T}z^{(i)})\\
+ & \text{subject to} &  & z^{(i)}=z^{(j)},\quad j\in[m]\setminus\{i\}\\
+ &  &  & 0\leq d_{i}-h_{i}^{T}z^{(i)}\leq u_{i}\\
+ &  &  & z^{(i)}\in D.
+\end{aligned}
+\label{eq:intermediate-in-m}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color black
+\begin_inset Formula 
+\begin{align}
+ & q_{i}(z^{(i)})=(d_{i}-h_{i}^{T}z^{(i)})(d_{i}-h_{i}^{T}z^{(i)}-1)\cdots(d_{i}-h_{i}^{T}z^{(i)}-u_{i})=0,\label{eq:Hilbert_system}\\
+ & r_{j}(z^{(i)})=(z_{j}^{(i)}-z_{j,1})(z_{j}^{(i)}-z_{j,2})\ldots(z_{j}^{(i)}-z_{j,p_{i}})=0,\quad\quad j\in[n-m].\label{eq:Hilbert_system_2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color brown
+\begin_inset Flex Bold
+status open
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathcal{F} & = & \{z\in\mathbf{Z}^{n-m}\mid\left(\forall k\in[m]\right)\;q_{k}(z)=0,\left(\forall j\in[n-m]\right)\;r_{j}(z)=0\}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Consensus Reformulation for First 
+\begin_inset Formula $m$
+\end_inset
+
+ players
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+For 
+\begin_inset Formula $i\in[m]$
+\end_inset
+
+, 
+\emph on
+i.e.,
+\emph default
+ each of these players are optimizing over a 
+\emph on
+common constraint set
+\emph default
+ 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+ & \begin{aligned} & \text{minimize}_{z^{(i)}} &  & \bar{f}_{i}\left(z^{(i)}\right)\\
+ & \text{subject to} &  & z^{(i)}\in\mathcal{F}.
+\end{aligned}
+\label{eq:final-optimization-model-3}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+When 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ is nonempty? How to find the points in it?
+\end_layout
+
+\begin_layout Itemize
+A little algebraic geometry will take us a long way...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+A Little Algebraic Geometry
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The 
+\emph on
+\color blue
+ideal
+\emph default
+\color inherit
+ generated by polynomials 
+\begin_inset Formula $f_{1},f_{2},\ldots,f_{m}\in\mathbf{\mathbf{C}}[x]$
+\end_inset
+
+ is the set 
+\begin_inset Formula 
+\[
+\mathbf{ideal}\left\{ f_{1},\ldots,f_{m}\right\} =\left\{ \sum_{i=1}^{m}h_{i}f_{i}\mid\left(\forall i\in[m]\right)\;h_{i}\in\mathbf{C}[x]\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+\color red
+
+\backslash
+* analogous to span of vectors *
+\backslash
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+\color blue
+A Groebner basis
+\emph default
+\color inherit
+ 
+\begin_inset Formula $G_{\succ}$
+\end_inset
+
+ is particular kind of generating set of an ideal 
+\begin_inset Formula $I$
+\end_inset
+
+ over a field 
+\begin_inset Formula $C[x]$
+\end_inset
+
+ 
+\family typewriter
+\color red
+
+\backslash
+* analogous to basis set of a span*
+\backslash
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Reduced Groebner basis
+\emph default
+\color inherit
+ 
+\begin_inset Formula $G_{\textrm{reduced},\succ}$
+\end_inset
+
+ is the most compact Groebner basis for an ideal 
+\begin_inset Formula $I$
+\end_inset
+
+.
+ 
+\family typewriter
+\color red
+
+\backslash
+* analogous to orthonormal basis of a span *
+\backslash
+
+\end_layout
+
+\begin_layout Itemize
+There are many computer algebra packages to compute reduced Groebner basis
+ such as Macaulry2, SINGULAR, FGb, Maple, Mathematica 
+\emph on
+etc.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+When is 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ Nonempty?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:poly_sys_ideal_lemma"
+
+\end_inset
+
+ The set 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ is nonempty if and only 
+\begin_inset Formula 
+\[
+G_{\textrm{reduced},\succ}\ne\{1\},
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $G_{\textrm{reduced},\succ}$
+\end_inset
+
+ is the reduced Groebner basis of 
+\begin_inset Formula $\mathbf{ideal}\left\{ q_{1},\ldots,q_{m},r_{1},\ldots,r_{n-m}\right\} $
+\end_inset
+
+ with respect to any ordering.
+\end_layout
+
+\begin_layout Theorem
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Computing Points in 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+For 
+\begin_inset Formula $i=[n-m]$
+\end_inset
+
+ calculate 
+\begin_inset Formula 
+\[
+G_{n-m-i}=G_{\textrm{reduced},\succ_{\textrm{lex}}}\cap\mathbf{C}\left[z_{n-m-i+1},z_{n-m-i+2},\ldots,z_{n-m}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $G_{0}=\mathcal{F}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Algorithm description
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Finding the Pareto optimal points from 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+\size scriptsize
+\color blue
+for
+\series default
+ 
+\begin_inset Formula $i\in[m]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\color blue
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Formula $X_{i}:=d_{i}-h_{i}^{T}\mathcal{F}$
+\end_inset
+
+
+\begin_inset Formula $\text{\qquad}$
+\end_inset
+
+
+\family typewriter
+
+\backslash
+* The inverse operator is denoted 
+\begin_inset Formula $X_{i}^{-1}$
+\end_inset
+
+ *
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size scriptsize
+\color blue
+end for
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\color brown
+\begin_inset Formula $\quad$
+\end_inset
+
+Sort the elements of the 
+\begin_inset Formula $\{X_{i}\}_{i=1}^{m}$
+\end_inset
+
+s with respect to cardinality of the elements in a descending order.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\color brown
+\begin_inset Formula $\quad$
+\end_inset
+
+Denote the index set of the sorted set by 
+\begin_inset Formula $\{s_{1},\ldots,s_{m}\}$
+\end_inset
+
+ such that 
+\begin_inset Formula $|X|_{s_{1}}\geq\cdots\geq|X|_{s_{m}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size scriptsize
+\color teal
+for 
+\series default
+
+\begin_inset Formula $i\in[m]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\color teal
+\begin_inset Formula $\quad$
+\end_inset
+
+ 
+\begin_inset Formula $X_{s_{i}}^{*}:=\text{argmin}_{x_{s_{i}}\in X_{s_{i}}}f_{s_{i}}(x_{s_{i}})$
+\end_inset
+
+ 
+\begin_inset Formula $\qquad$
+\end_inset
+
+
+\family typewriter
+
+\backslash
+* Univariate optimization problem *
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\color teal
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\begin_inset Formula $\mathcal{F}_{s_{i}}^{*}:=\bigcup_{x_{s_{i}}\in X_{s_{i}}^{*}}(X_{s_{i}}^{*})^{-1}(x_{s_{i}})$
+\end_inset
+
+ 
+\begin_inset Formula $\qquad$
+\end_inset
+
+
+\family typewriter
+
+\backslash
+* 
+\series bold
+Lemma.
+
+\series default
+ The set 
+\begin_inset Formula $\mathcal{F}_{s_{i}}^{*}$
+\end_inset
+
+ is nonempty *
+\backslash
+
+\family default
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\color teal
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\series bold
+if 
+\series default
+
+\begin_inset Formula $i\leq m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\color teal
+\begin_inset Formula $\quad\quad$
+\end_inset
+
+
+\begin_inset Formula $X_{s_{i+1}}:=\left\{ d_{s_{i+1}}-h_{s_{i+1}}^{T}z\mid z\in\mbox{\mathcal{F}}_{s_{i}}^{*}\right\} .$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\color teal
+\begin_inset Formula $\quad$
+\end_inset
+
+
+\series bold
+end if
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size scriptsize
+\color teal
+end for
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size scriptsize
+\color teal
+return
+\series default
+ 
+\begin_inset Formula $\mathcal{F}_{s_{m}}^{*}$
+\end_inset
+
+
+\begin_inset Formula $\qquad$
+\end_inset
+
+ 
+\family typewriter
+
+\backslash
+* 
+\series bold
+Theorem.
+
+\series default
+ Any member of 
+\begin_inset Formula $\mathcal{F}_{s_{m}}^{*}$
+\end_inset
+
+ is a Pareto optimal point *
+\backslash
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Numerical example
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Numerical Example: 16 Players
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename transportation_setup.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\color brown
+\begin_inset Formula 
+\[
+A=\left(\begin{array}{cccccccccccccccc}
+1 & 0 & 0 & 0 & -1 & -1 & -1 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 1 & 0 & 0 & -1 & -1 & -1 & 0 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & -1 & -1 & -1 & 0 & 0 & 1\\
+0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & -1 & -1 & -1
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\color brown
+\begin_inset Formula 
+\[
+b=(9,-13,15,-11),\;u=(5,6,6,10,10,7,11,13,16,12,4,5,6,14,13,15)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pareto Optimal Solutions
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename transportation_setup.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Pareto optimal points are
+\begin_inset Formula 
+\[
+(1,3,5,4,11,10,2,1,3,7,7,5)
+\]
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+(1,3,5,6,11,10,2,1,3,7,7,6).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Concluding Remarks
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Methodology is numerically efficient when 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $m<\frac{n}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Calculating Groebner basis can be numerically challenging for very large
+ system.
+\end_layout
+
+\begin_layout Itemize
+Based on structure of the network it may happen that 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ is empty 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ penalty based approach.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size giant
+\color brown
+Thank You!
+\end_layout
+
+\begin_layout Standard
+
+\size giant
+\color brown
+Questions?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Cost Functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size tiny
+\color brown
+\begin_inset Tabular
+<lyxtabular version="3" rows="15" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+Player
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+Cost function
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $-\frac{x_{1}^{4}}{30}-\frac{13x_{1}^{3}}{15}+\frac{259x_{1}^{2}}{30}-\frac{263x_{1}}{15}+1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $\frac{77x_{2}^{5}}{120}-\frac{247x_{2}^{4}}{24}+\frac{471x_{2}^{3}}{8}-\frac{3365x_{2}^{2}}{24}+\frac{6779x_{2}}{60}+1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $\frac{47x_{3}^{4}}{24}-\frac{133x_{3}^{3}}{4}+\frac{4897x_{3}^{2}}{24}-\frac{2123x_{3}}{4}+485$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $\frac{323x_{4}^{5}}{3360}-\frac{2179x_{4}^{4}}{1120}+\frac{47393x_{4}^{3}}{3360}-\frac{48709x_{4}^{2}}{1120}+\frac{7885x_{4}}{168}+5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $(x_{5}-1)^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $-\frac{x_{6}^{4}}{8}+\frac{25x_{6}^{3}}{12}-\frac{71x_{6}^{2}}{8}+\frac{95x_{6}}{12}+10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $|x_{7}-5|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $\frac{11x_{8}^{7}}{1260}-\frac{7x_{8}^{6}}{36}+\frac{119x_{8}^{5}}{72}-\frac{479x_{8}^{4}}{72}+\frac{4609x_{8}^{3}}{360}-\frac{803x_{8}^{2}}{72}+\frac{155x_{8}}{28}+1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $-\frac{15}{16}x_{9}^{3}+\frac{365x_{9}^{2}}{16}-\frac{2865x_{9}}{16}+\frac{7315}{16}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $(x_{10}-10)^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $\frac{5x_{11}^{4}}{6}-\frac{35x_{11}^{3}}{3}+\frac{355x_{11}^{2}}{6}-\frac{370x_{11}}{3}+90$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $\frac{5x_{12}^{4}}{6}-\frac{25x_{12}^{3}}{3}+\frac{175x_{12}^{2}}{6}-\frac{110x_{12}}{3}+15$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $\frac{5x_{13}^{4}}{6}-15x_{13}^{3}+\frac{595x_{13}^{2}}{6}-280x_{13}+285$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $\frac{5x_{14}^{4}}{6}-\frac{85x_{14}^{3}}{3}+\frac{2155x_{14}^{2}}{6}-\frac{6020x_{14}}{3}+4165$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Cost Functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size tiny
+\color brown
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+Player
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+Cost function
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $|x_{15}-7|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+\color brown
+\begin_inset Formula $\begin{cases}
+x_{16}+1, & \text{if }0\leq x_{16}\le3\\
+0, & \textrm{if }4\leq x_{16}\leq6\\
+(x_{16}+1)^{3}, & \textrm{if }7\leq x_{16}\leq9\\
+-\frac{x_{16}^{3}}{6}+\frac{13x_{16}^{2}}{2}-\frac{244x_{16}}{3}+330, & \textrm{else}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout PlainFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+A Generic Network
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename Generic_Min_Cost_Flow.png
+	lyxscale 40
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The Minimum Cost Flow Problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There is a 
+\emph on
+\color blue
+directed connected graph
+\emph default
+\color inherit
+ that represents the network.
+\end_layout
+
+\begin_layout Itemize
+There is 
+\emph on
+\color blue
+flow
+\emph default
+\color inherit
+ of some commodity along the arcs of the graphs.
+ 
+\end_layout
+
+\begin_layout Itemize
+Each arc incurs a 
+\emph on
+\color blue
+cost
+\emph default
+\color inherit
+ depending on the amount of flow.
+ 
+\end_layout
+
+\begin_layout Itemize
+The flow is often taken to be 
+\emph on
+\color blue
+integral
+\emph default
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+The goal is to 
+\emph on
+\color blue
+minimize the total cost
+\emph default
+\color inherit
+ of all flows subject to the 
+\emph on
+\color blue
+network constraints
+\emph default
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
