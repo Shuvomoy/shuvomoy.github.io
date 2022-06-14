@@ -51,7 +51,8 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 * BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods 
   * ORC Student Seminar, April 2022
-
+  * [MIT Data Science Lab Seminar, June 10, 2022](https://dsl.mit.edu/branch-and-bound-performance-estimation-programming-unified-methodology-constructing-optimal)
+  
 * `NExOS.jl`  for Nonconvex Exterior-point Optimization [[Youtube video](https://www.youtube.com/watch?v=SWQnAQmeVUg&ab_channel=TheJuliaProgrammingLanguage)]
   *  [Juliacon 2021](https://juliacon.org/2021/) 
 
@@ -76,6 +77,8 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
   - American Control Conference, July 2015
 
 ## Teaching
+
+* 15.066: System Optimization (Summer 2022)
 
 - [15.S08: Optimization of Energy Systems](https://shuvomoy.github.io/Teaching/15.S08_Optimization_of_Energy_Systems_Syllabus_2022.pdf) (Spring 2022)
   * Teaching assistant for a course that aims to aims to lead PhD or advanced master students to the forefront of energy system research.
