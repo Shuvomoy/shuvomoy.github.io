@@ -13,9 +13,14 @@
         <a href="https://orc.mit.edu/">Operations Research Center</a><br />
         <a href="http://www.mit.edu/">MIT</a><br />
         Email:<a href="mailto:sdgupta@mit.edu"> sdgupta@mit.edu</a><br />
-            <a
-        href="https://scholar.google.com/citations?user=SOrTYXsAAAAJ&hl=en&oi=ao">Google
-Scholar</a></p>
+        
+<a href="https://scholar.google.com/citations?user=SOrTYXsAAAAJ&hl=en&oi=ao" rel="nofollow noopener noreferrer"> <i class="ai ai-google-scholar-square ai-3x" style="font-size:35px"></i> </a>
+
+<a href="https://github.com/Shuvomoy" rel="nofollow noopener noreferrer"> <i class="fa fa-github-square" style="font-size:36px"></i> </a>
+
+<a href="https://twitter.com/shuvo_das_gupta" rel="nofollow noopener noreferrer"> <i class="fa fa-twitter-square" style="font-size:36px"></i>  </a>
+
+              
     <div style="clear: both"></div>      
   </div>
 </div>
