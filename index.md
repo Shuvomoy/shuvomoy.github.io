@@ -54,7 +54,7 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## Talks
 
-* BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods  [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](https://shuvomoy.github.io/Presentations/DSL_2022_seminar/bnb_pep_dsl_seminar_2022 2.sozi.html)]
+* BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods  [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](https://shuvomoy.github.io/Presentations/DSL_2022_seminar/bnb_pep_2022_presentation.html)]
   * ORC Student Seminar, April 2022
   * [MIT Data Science Lab Seminar, June 10, 2022](https://dsl.mit.edu/branch-and-bound-performance-estimation-programming-unified-methodology-constructing-optimal)
   * [ICCOPT, July 2022](https://iccopt2022.lehigh.edu/)
