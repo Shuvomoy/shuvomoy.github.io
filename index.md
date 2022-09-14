@@ -28,7 +28,7 @@
 
 ## About Me
 
-Hello world! I am a third year Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) co-advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun).
+Hello world! I am a fourth year Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) co-advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun).
 
 My research focuses on developing efficient algorithms for large-scale optimization and machine learning. I have recently worked on [BnB-PEP](https://arxiv.org/abs/2203.07305), which is the first unified methodology to construct optimal first-order algorithms for convex and nonconvex optimization.
 
