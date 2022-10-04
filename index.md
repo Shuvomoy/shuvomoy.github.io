@@ -36,7 +36,7 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## Papers
 
-- **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://arxiv.org/abs/2203.07305)”, 2022. [[pdf](https://optimization-online.org/wp-content/uploads/2022/03/8819.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)]
+- **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://arxiv.org/abs/2203.07305)”, 2022. [[pdf](https://optimization-online.org/wp-content/uploads/2022/03/8819.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](https://shuvomoy.github.io/Presentations/Cornell_Young_Researchers_Workshop/BnB_PEP_poster_final.pdf)]
 
 - **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Nonconvex Learning](https://arxiv.org/abs/2011.04552)”, 2021. [[pdf](https://optimization-online.org/wp-content/uploads/2020/11/8099-1.pdf)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[INFORMS 2020 Presentation](/assets/Sozi_presentations/INFORMS_Annual_Meeting_2020_presentation.html)]
 
@@ -54,10 +54,11 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## Talks
 
-* BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods  [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)]
+* BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods  [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](https://shuvomoy.github.io/Presentations/Cornell_Young_Researchers_Workshop/BnB_PEP_poster_final.pdf)]
   * ORC Student Seminar, April 2022
   * [MIT Data Science Lab Seminar, June 10, 2022](https://dsl.mit.edu/branch-and-bound-performance-estimation-programming-unified-methodology-constructing-optimal)
   * [ICCOPT, July 2022](https://iccopt2022.lehigh.edu/)
+  * (Poster) [Cornell Young Researcher's Workshop, October 6-8, 2022](https://www.orie.cornell.edu/orie-events/young-researchers-workshop) 
   
 * `NExOS.jl`  for Nonconvex Exterior-point Optimization [[Youtube video](https://www.youtube.com/watch?v=SWQnAQmeVUg&ab_channel=TheJuliaProgrammingLanguage)]
   *  [Juliacon 2021](https://juliacon.org/2021/) 
