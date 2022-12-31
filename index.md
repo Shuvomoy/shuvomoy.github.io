@@ -59,7 +59,7 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
   * [MIT Data Science Lab Seminar, June 10, 2022](https://dsl.mit.edu/branch-and-bound-performance-estimation-programming-unified-methodology-constructing-optimal)
   * [ICCOPT, July 2022](https://iccopt2022.lehigh.edu/)
   * (Poster) [Cornell Young Researcher's Workshop, October 6-8, 2022](https://www.orie.cornell.edu/orie-events/young-researchers-workshop) 
-  * 2022 INFORMS Annual Meeting in Indianapolis, IN, October 16-19, 2022
+  * [2022 INFORMS Annual Meeting in Indianapolis, IN, October 16-19, 2022](https://meetings.informs.org/wordpress/indianapolis2022/)
   
 * `NExOS.jl`  for Nonconvex Exterior-point Optimization [[Youtube video](https://www.youtube.com/watch?v=SWQnAQmeVUg&ab_channel=TheJuliaProgrammingLanguage)]
   *  [Juliacon 2021](https://juliacon.org/2021/) 
