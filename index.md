@@ -36,6 +36,8 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## Papers
 
+- **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear conjugate gradient methods: worst-case convergence rates via computer-assisted analyses](https://arxiv.org/abs/2301.01530)”, 2023. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] 
+
 - **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://arxiv.org/abs/2203.07305)”, 2022. (Major revision in Mathematical Programming) [[pdf](https://optimization-online.org/wp-content/uploads/2022/03/8819.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)]
 
 - **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Nonconvex Learning](https://arxiv.org/abs/2011.04552)”, 2021. [[pdf](https://optimization-online.org/2020/11/8099/)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[INFORMS 2020 Presentation](/assets/Sozi_presentations/INFORMS_Annual_Meeting_2020_presentation.html)]
