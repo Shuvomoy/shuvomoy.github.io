@@ -88,7 +88,9 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## Teaching
 
-* 15.066: System Optimization (Summer 2022)
+- 15.066: System Optimization (Summer 2022)
+    * Teaching assistant for a course that aims to provide LGO students with a unified overview of the main application areas of linear and integer optimization.
+    * Duties: Assisting students, leading recitations, writing and marking assignments and exams.
 
 - [15.S08: Optimization of Energy Systems](https://shuvomoy.github.io/Teaching/15.S08_Optimization_of_Energy_Systems_Syllabus_2022.pdf) (Spring 2022)
   * Teaching assistant for a course that aims to aims to lead PhD or advanced master students to the forefront of energy system research.
