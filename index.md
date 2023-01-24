@@ -113,6 +113,7 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 * [9.521] Mathematical Statistics
 * [6.860] Statistical Learning Theory
 * [18.456] Algebraic Techniques and Semidefinite Optimization
+* [18.0651] Matrix Methods In Data Analysis, Signal Processing, And Machine Learning
 
 ## Software
 
