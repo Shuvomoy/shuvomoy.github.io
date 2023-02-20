@@ -36,7 +36,7 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## News
 
-A video recording of my presentation at the [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023  titled “Design and analysis of first-order methods via nonconvex QCQP frameworks” is available at https://youtu.be/unDornjkpRU!
+A video recording of my presentation at the [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023  titled “Design and analysis of first-order methods via nonconvex QCQP frameworks” is available at this [YouTube link](https://youtu.be/unDornjkpRU)!
 
 ## Papers
 
