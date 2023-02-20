@@ -34,13 +34,13 @@ My research focuses on developing efficient algorithms for large-scale optimizat
 
 I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Canada](https://www.thalesgroup.com/en/americas/canada) for almost three years. My [M.A.Sc. research work](https://www.sciencedirect.com/science/article/pii/S0191261516304830) on optimization models to compute energy-efficient railway timetables has been integrated with the largest installed base of communication based train control systems worldwide. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
-## Upcoming
+## News
 
-I will be giving a long talk on “Design and analysis of first-order methods via nonconvex QCQP frameworks” at the [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html)  taking place from February 13-14, 2023 at UCLouvain, Belgium.
+A video recording of my presentation at the [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023  titled “Design and analysis of first-order methods via nonconvex QCQP frameworks” is available at https://youtu.be/unDornjkpRU!
 
 ## Papers
 
-- **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear conjugate gradient methods: worst-case convergence rates via computer-assisted analyses](https://arxiv.org/abs/2301.01530)”, 2023. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] 
+- **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear conjugate gradient methods: worst-case convergence rates via computer-assisted analyses](https://arxiv.org/abs/2301.01530)”, 2023. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)]
 
 - **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://arxiv.org/abs/2203.07305)”, 2022. (Major revision in Mathematical Programming) [[pdf](https://optimization-online.org/wp-content/uploads/2022/03/BnB_PEP_paper.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)]
 
@@ -59,6 +59,9 @@ I will be giving a long talk on “Design and analysis of first-order methods vi
 - **Shuvomoy Das Gupta**, Lacra Pavel, and J. Kevin Tobin, “[An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7172268)”, in the *proceedings of 2015 American Control Conference (ACC)*, Chicago, IL, USA, July 2015. [[pdf](https://shuvomoy.github.io/Papers/An_Optimization_Model_to_Utilize_Regenerative_Braking_Energy_in_a_Railway_Network.pdf)] [[presentation](https://shuvomoy.github.io/Papers/ACC_presentation.svg)] 
 
 ## Talks
+
+* Design and analysis of first-order methods via nonconvex QCQP frameworks 
+  * [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023.
 
 * BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods  [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)]
   * ORC Student Seminar, April 2022
@@ -91,6 +94,12 @@ I will be giving a long talk on “Design and analysis of first-order methods vi
   - American Control Conference, July 2015
 
 ## Teaching
+
+* 6.7220: Nonlinear Optimization (Spring, 2023)
+
+* 15.S60: Computing in Optimization and Statistics (2023) 
+
+* Instructor for the advanced optimization session. [[Jupyter notebook 1](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%201%20Convex.ipynb)] [[Jupyter notebook 2](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%202%20MILP.ipynb)] [[Student feedback](https://shuvomoy.github.io/Teaching/IAP_2022_Teaching_Feedback_Shuvo.pdf)]
 
 - 15.066: System Optimization (Summer 2022)
     * Teaching assistant for a course that aims to provide LGO students with a unified overview of the main application areas of linear and integer optimization.
