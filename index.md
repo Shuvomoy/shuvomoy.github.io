@@ -5,8 +5,8 @@
 ~~~
 <div class="row">
   <div class="container">
-    <img class="left" <img style="width: 300px; height: 376px;"
- src="/assets/image_2022.jpg" alt="sdg">
+    <img class="left" <img style="width: 350px; height: 350px;"
+ src="/assets/photo-2023.jpeg" alt="sdg">
     <p> <br /> <br /> <br /> <br /> <br />  
         Shuvomoy Das Gupta  <br />
         Ph.D. Student<br />
