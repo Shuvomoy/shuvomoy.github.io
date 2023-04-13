@@ -36,18 +36,17 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## News
 
-A video recording of my presentation at the [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023  titled “Design and analysis of first-order methods via nonconvex QCQP frameworks” is available at this [YouTube link](https://youtu.be/unDornjkpRU)!
+* Our [BnB-PEP](https://arxiv.org/abs/2203.07305) paper is now accepted for publication in *Mathematical Programming Series A*!
+
+* A video recording of my presentation at the [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023  titled “Design and analysis of first-order methods via nonconvex QCQP frameworks” is available at this [YouTube link](https://youtu.be/unDornjkpRU)!
 
 ## Papers
 
+* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://arxiv.org/abs/2203.07305)”, in *Mathematical Programming Series A*, 2023. [[pdf](https://optimization-online.org/wp-content/uploads/2022/03/BnB_PEP_paper.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
+
 - **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear conjugate gradient methods: worst-case convergence rates via computer-assisted analyses](https://arxiv.org/abs/2301.01530)”, 2023. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
-
-- **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://arxiv.org/abs/2203.07305)”, 2022. (Major revision in Mathematical Programming) [[pdf](https://optimization-online.org/wp-content/uploads/2022/03/BnB_PEP_paper.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
-
 - **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Nonconvex Learning](https://arxiv.org/abs/2011.04552)”, 2021. [[pdf](https://optimization-online.org/2020/11/8099/)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[INFORMS 2020 Presentation](/assets/Sozi_presentations/INFORMS_Annual_Meeting_2020_presentation.html)] [[bib](assets/bibtex_citations/NExOS.bib)]
-
 - **Shuvomoy Das Gupta** and Lacra Pavel, “[On seeking efficient Pareto optimal points in multi-player minimum cost flow problems with application to transportation systems](https://link.springer.com/article/10.1007/s10898-019-00750-9)”, in the *Journal of Global Optimization* 74 (2019): 523-548. [[pdf](https://shuvomoy.github.io/Papers/Journal_of_Global_Optimization_19.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/LIDS_2020_student_conference/LIDS_2020_student_conference.pdf)] [[bib](assets/bibtex_citations/JOGO2019.bib)]
-
 - **Shuvomoy Das Gupta**, “[On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets](https://ieeexplore.ieee.org/document/8636076)”, in the *proceedings of the 56th Allerton Conference on Communication, Control, and Computing*, University of Illinois at Urbana-Champaign, IL, USA, October 2018. [[pdf](https://shuvomoy.github.io/Papers/Allerton_2018.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/Allerton_2018_Presentation/Allerton_2018_presentation_final.pdf)] [[bib](assets/bibtex_citations/Allerton2018.bib)]
 
 
