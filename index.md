@@ -76,21 +76,9 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
   - Seoul National University, November 17, 2020 (talk given to Professor [Ernest Ryu](http://www.math.snu.ac.kr/~ernestryu/)'s research group)
   - INFORMS Annual Meeting, November 10, 2020
   - MIT LIDS student conference, January 2021
-  
 - On seeking efficient Pareto optimal points in multi-player minimum cost flow problems [[Slides](https://shuvomoy.github.io/Presentations/LIDS_2020_student_conference/LIDS_2020_student_conference.pdf)]
 
   - MIT LIDS student conference, January 2020
-
-- On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets [[Slides](https://shuvomoy.github.io/Presentations/Allerton_2018_Presentation/Allerton_2018_presentation_final.pdf)]
-
-  - Allerton Conference on Communication, Control, and Computing, October 2018
-
-- Multi-player minimum cost flow problems with nonconvex costs and integer flows [[Slides](https://shuvomoy.github.io/Papers/CDC_2016_presentation.pdf)]
-
-  - IEEE Conference on Decision and Control, December 2016
-
-- An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network [[Slides](https://shuvomoy.github.io/Papers/ACC_presentation.svg)]
-  - American Control Conference, July 2015
 
 ## Teaching
 
@@ -134,5 +122,5 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## MASc Thesis
 
-[Optimization Models for Energy-efficient Railway Timetables.](https://tspace.library.utoronto.ca/handle/1807/74584) (Grade: A+) [[pdf](https://shuvomoy.github.io/Papers/Optimization_Models_for_Energy_efficient_Railway_Timetables_MASc_Shuvo.pdf)] [[html presentation](/assets/Sozi_presentations/MASc_Presentation.html)]
+[Optimization Models for Energy-efficient Railway Timetables.](https://tspace.library.utoronto.ca/handle/1807/74584) (Grade: A+) [[pdf](https://shuvomoy.github.io/Papers/Optimization_Models_for_Energy_efficient_Railway_Timetables_MASc_Shuvo.pdf)] 
 
