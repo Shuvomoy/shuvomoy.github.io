@@ -8,7 +8,7 @@
     <img class="left" <img style="width: 300px; height: 350px;"
  src="/assets/photo-2023.jpeg" alt="sdg">
     <p> <br /> <br /> <br /> <br /> <br />  
-        Shuvomoy Das Gupta  <br />
+        Shuvo Das Gupta  <br />
         Ph.D. Student<br />
         <a href="https://orc.mit.edu/">Operations Research Center</a><br />
         <a href="http://www.mit.edu/">MIT</a><br />
@@ -28,11 +28,11 @@
 
 ## About Me
 
-Hello world! I am a fourth year Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) co-advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). 
+Hello world! I am a fourth year Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). 
 
 I use computer-assisted design methodologies to find provably fastest algorithms for large-scale optimization and machine learning. In particular, I have demonstrated that the problem of finding the fastest algorithm is itself equivalent to solving another [practically tractable optimization problem](https://arxiv.org/abs/2203.07305). I have proposed and implemented an efficient algorithm (open source implementation [here](https://github.com/Shuvomoy/BnB-PEP-code)) to solve this optimization problem to certifiable global optimality, with its optimal solution representing the fastest algorithm. This computer-assisted approach is highly versatile and can be applied across a wide range of disparate domains, ranging from the discovery of [novel mathematical convergence proofs](https://arxiv.org/abs/2301.01530) to the development of sustainable and energy-efficient transportation systems (ongoing industry project).
 
-I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Canada](https://www.thalesgroup.com/en/americas/canada) for almost three years. My [M.A.Sc. research work](https://www.sciencedirect.com/science/article/pii/S0191261516304830) on optimization models to compute energy-efficient railway timetables has been integrated with the largest installed base of communication based train control systems worldwide. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
+I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Canada](https://www.thalesgroup.com/en/americas/canada) for almost three years. My [research on sustainable railway transportation](https://www.sciencedirect.com/science/article/pii/S0191261516304830) has been integrated with the largest installed base of communication based train control systems worldwide. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
 ## News
 
@@ -70,7 +70,7 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 * A Robust Data-driven Linear Programming Model for Minimizing Energy Consumption in Metro Railway Networks
   * [33rd Annual POMS Conference](https://pomsmeetings.org/conf-2023/), Orlando, FL, May 21 - 25, 2023.
 
-* Design and analysis of first-order methods via nonconvex QCQP frameworks 
+* Design and Analysis of First-order Methods via Nonconvex QCQP Frameworks [[video](https://youtu.be/unDornjkpRU)]
   * [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023.
 
 * BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods  [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)]
