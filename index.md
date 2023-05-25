@@ -36,11 +36,15 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## News
 
+* I gave a talk on my work on “A Robust Data-driven Linear Programming Model for Minimizing Energy Consumption in Metro Railway Networks” at [POMS 2023](https://pomsmeetings.org/conf-2023/).
+
 * Our [BnB-PEP](https://arxiv.org/abs/2203.07305) paper is now accepted for publication in *Mathematical Programming Series A*!
 
 * A video recording of my presentation at the [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023  titled “Design and analysis of first-order methods via nonconvex QCQP frameworks” is available at this [YouTube link](https://youtu.be/unDornjkpRU)!
 
 ## Papers
+
+* Uijeong Jang, **Shuvomoy Das Gupta**, and Ernest K. Ryu, “Computer-Assisted Design of Accelerated Composite Optimization Methods: $\textsf{OptISTA}$”, 2023.
 
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://arxiv.org/abs/2203.07305)”, accepted in *Mathematical Programming Series A*, 2023.  [[pdf](https://optimization-online.org/wp-content/uploads/2022/03/BnB_PEP_paper.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
 
@@ -53,11 +57,18 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 - **Shuvomoy Das Gupta** and Lacra Pavel, “[Multi-player minimum cost flow problems with nonconvex costs and integer flows](http://ieeexplore.ieee.org/document/7799446/)”, in the *proceedings of the 55th IEEE Conference on Decision and Control*, Las Vegas, USA, December 12-14, 2016. [[pdf](https://shuvomoy.github.io/Papers/Multi-player_minimum_cost_flow_problems_with_nonconvex_costs_and_integer_flows.pdf)] [[longer version with proofs](https://shuvomoy.github.io/Papers/CDC_2016_manuscript_Pareto_opt_with_proofs.pdf)] [[presentation](https://shuvomoy.github.io/Papers/CDC_2016_presentation.pdf)] [[bib](assets/bibtex_citations/CDC2016.bib)]
 
 
-- **Shuvomoy Das Gupta**, J. Kevin Tobin, and Lacra Pavel, “[A two-step linear programming model for energy-efficient timetables in metro railway networks](http://www.sciencedirect.com/science/article/pii/S0191261516304830)”, in *Transportation Research Part B: Methodological* 93 (2016): 57–74. [[pdf](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf)] [[bib](assets/bibtex_citations/TRB2016.bib)]
+- **Shuvomoy Das Gupta**, J. Kevin Tobin, and Lacra Pavel,ç[A two-step linear programming model for energy-efficient timetables in metro railway networks](http://www.sciencedirect.com/science/article/pii/S0191261516304830)”, in *Transportation Research Part B: Methodological* 93 (2016): 57–74. [[pdf](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf)] [[bib](assets/bibtex_citations/TRB2016.bib)]
 
 - **Shuvomoy Das Gupta**, Lacra Pavel, and J. Kevin Tobin, “[An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7172268)”, in the *proceedings of 2015 American Control Conference (ACC)*, Chicago, IL, USA, July 2015. [[pdf](https://shuvomoy.github.io/Papers/An_Optimization_Model_to_Utilize_Regenerative_Braking_Energy_in_a_Railway_Network.pdf)] [[presentation](https://shuvomoy.github.io/Papers/ACC_presentation.svg)] [[bib](assets/bibtex_citations/ACC2015.bib)] 
 
+## Ongoing project
+
+* **Shuvomoy Das Gupta**, J. Kevin Tobin, “A Robust Data-driven Linear Programming Model to Minimize Energy Consumption in Metro Railway Networks”.
+
 ## Talks
+
+* A Robust Data-driven Linear Programming Model for Minimizing Energy Consumption in Metro Railway Networks
+  * [33rd Annual POMS Conference](https://pomsmeetings.org/conf-2023/), Orlando, FL, May 21 - 25, 2023.
 
 * Design and analysis of first-order methods via nonconvex QCQP frameworks 
   * [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023.
