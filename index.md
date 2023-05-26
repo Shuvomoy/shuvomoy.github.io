@@ -36,7 +36,7 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## News
 
-* I gave a talk on my work on “A Robust Data-driven Linear Programming Model for Minimizing Energy Consumption in Metro Railway Networks” at [POMS 2023](https://pomsmeetings.org/conf-2023/).
+* I gave a talk about my work on “A Robust Data-driven Linear Programming Model for Minimizing Energy Consumption in Metro Railway Networks” at [POMS 2023](https://pomsmeetings.org/conf-2023/).
 
 * Our [BnB-PEP](https://arxiv.org/abs/2203.07305) paper is now accepted for publication in *Mathematical Programming Series A*!
 
@@ -44,7 +44,7 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## Papers
 
-* Uijeong Jang, **Shuvomoy Das Gupta**, and Ernest K. Ryu, “Computer-Assisted Design of Accelerated Composite Optimization Methods: $\textsf{OptISTA}$”, 2023.
+* Uijeong Jang, **Shuvomoy Das Gupta**, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, 2023. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
 
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://arxiv.org/abs/2203.07305)”, accepted in *Mathematical Programming Series A*, 2023.  [[pdf](https://optimization-online.org/wp-content/uploads/2022/03/BnB_PEP_paper.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
 
