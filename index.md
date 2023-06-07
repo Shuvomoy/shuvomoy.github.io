@@ -37,11 +37,11 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 ## News
 
 * I gave a talk about my work on “A Robust Data-driven Linear Programming Model for Minimizing Energy Consumption in Metro Railway Networks” at [POMS 2023](https://pomsmeetings.org/conf-2023/).
-* Our [BnB-PEP](https://arxiv.org/abs/2203.07305) paper is now accepted for publication in *Mathematical Programming Series A*!
+* Our [BnB-PEP](https://doi.org/10.1007/s10107-023-01973-1) paper is now accepted for publication in *Mathematical Programming Series A*!
 
 ## Papers
 
-* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://arxiv.org/abs/2203.07305)”, accepted in *Mathematical Programming Series A*, 2023.  [[pdf](https://optimization-online.org/wp-content/uploads/2022/03/BnB_PEP_paper.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
+* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://doi.org/10.1007/s10107-023-01973-1)”, *Mathematical Programming Series A*, 2023.  [[pdf](https://arxiv.org/pdf/2203.07305.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
 * Uijeong Jang, **Shuvomoy Das Gupta**, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, 2023. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
 
 - **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear conjugate gradient methods: worst-case convergence rates via computer-assisted analyses](https://arxiv.org/abs/2301.01530)”, 2023. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
