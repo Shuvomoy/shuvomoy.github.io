@@ -67,8 +67,11 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
   * [33rd Annual POMS Conference](https://pomsmeetings.org/conf-2023/), Orlando, FL, May 21 - 25, 2023.
 
 * Design and Analysis of First-order Methods via Nonconvex QCQP Frameworks [[video](https://youtu.be/unDornjkpRU)]
-  * [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023.
 
+  * [SIAM Conference on Optimization (OP23)](https://www.siam.org/conferences/cm/conference/op23), May 31 - June 3, 2023, Seattle, Washington, U.S.
+  
+  * [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023.
+  
 * BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods  [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)]
   * ORC Student Seminar, April 2022
   * [MIT Data Science Lab Seminar, June 10, 2022](https://dsl.mit.edu/branch-and-bound-performance-estimation-programming-unified-methodology-constructing-optimal)
@@ -76,6 +79,7 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
   * (Poster) [Cornell Young Researcher's Workshop, October 6-8, 2022](https://www.orie.cornell.edu/orie-events/young-researchers-workshop) 
   * [2022 INFORMS Annual Meeting in Indianapolis, IN, October 16-19, 2022](https://meetings.informs.org/wordpress/indianapolis2022/)
   * [UTORG Seminar, University of Toronto, January 09, 2023](https://org.mie.utoronto.ca/student-seminar-with-shuvomoy-das-gupta/)
+  
 * `NExOS.jl`  for Nonconvex Exterior-point Optimization [[Youtube video](https://www.youtube.com/watch?v=SWQnAQmeVUg&ab_channel=TheJuliaProgrammingLanguage)]
   *  [Juliacon 2021](https://juliacon.org/2021/) 
 
