@@ -93,28 +93,16 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## Teaching
 
-* 6.7220: Nonlinear Optimization (Spring, 2023)
-
+* 6.7220: Nonlinear Optimization (Spring, 2023) [Teaching score: 6.9/7]
   * Teaching assistant for a course that aims to provide PhD students with a unified overview of convex optimization.
-
+  
   * Duties: Assisting students, leading recitations, writing and marking assignments and exams.
+  
+* 15.S60: Computing in Optimization and Statistics (2023)  [Teaching score: 7/7]
+   * Instructor for the advanced optimization session. [[Jupyter notebook 1](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%201%20Convex.ipynb)] [[Jupyter notebook 2](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%202%20MILP.ipynb)] [[Student feedback](https://shuvomoy.github.io/Teaching/15_S60_feedback_2023.pdf)]
 
-* 15.S60: Computing in Optimization and Statistics (2023) 
-
-* Instructor for the advanced optimization session. [[Jupyter notebook 1](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%201%20Convex.ipynb)] [[Jupyter notebook 2](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%202%20MILP.ipynb)] [[Student feedback](https://shuvomoy.github.io/Teaching/IAP_2022_Teaching_Feedback_Shuvo.pdf)]
-
-- 15.066: System Optimization (Summer 2022)
-    * Teaching assistant for a course that aims to provide LGO students with a unified overview of the main application areas of linear and integer optimization.
-    * Duties: Assisting students, leading recitations, writing and marking assignments and exams.
-
-- [15.S08: Optimization of Energy Systems](https://shuvomoy.github.io/Teaching/15.S08_Optimization_of_Energy_Systems_Syllabus_2022.pdf) (Spring 2022)
-  * Teaching assistant for a course that aims to aims to lead PhD or advanced master students to the forefront of energy system research.
-  * Duties: Developing `Julia` implementations of next generation power system models, assisting students, leading recitations, writing and marking assignments and exams.
-- 15.S60: Computing in Optimization and Statistics (2022) 
+- 15.S60: Computing in Optimization and Statistics (2022) [Teaching score 6.8/7]
   * Instructor for the advanced optimization session. [[Jupyter notebook 1](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%201%20Convex.ipynb)] [[Jupyter notebook 2](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%202%20MILP.ipynb)] [[Student feedback](https://shuvomoy.github.io/Teaching/IAP_2022_Teaching_Feedback_Shuvo.pdf)]
-- [15.093: Optimization Methods](https://shuvomoy.github.io/Teaching/optimization_methods_syllabus2020.pdf) (Fall 2020)
-  - Teaching assistant for a course that aims to provide masters students with a unified overview of the main algorithms and areas of application in optimization.
-  - Duties: Assisting students, leading recitations, writing and marking assignments and exams.
 
 ## Cumulative GPA
 
