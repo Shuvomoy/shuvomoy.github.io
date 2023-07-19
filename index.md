@@ -20,6 +20,11 @@
 
 <a href="https://twitter.com/shuvo_das_gupta" rel="nofollow noopener noreferrer"> <i class="fa fa-twitter-square" style="font-size:36px"></i>  </a>
 
+<a> </a><br />
+
+<a style="color:blue; font-style:italic;">I will be on the Fall 2023 academic job market.</a><br />
+
+
               
     <div style="clear: both"></div>      
   </div>
@@ -30,9 +35,9 @@
 
 Hello world! I am a fourth year Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). 
 
-I use computer-assisted design methodologies to find provably fastest algorithms for large-scale optimization and machine learning. In particular, I have demonstrated that the problem of finding the fastest algorithm is itself equivalent to solving another [practically tractable optimization problem](https://arxiv.org/abs/2203.07305). I have proposed and implemented an efficient algorithm (open source implementation [here](https://github.com/Shuvomoy/BnB-PEP-code)) to solve this optimization problem to certifiable global optimality, with its optimal solution representing the fastest algorithm. This computer-assisted approach is highly versatile and can be applied across a wide range of disparate domains, ranging from the discovery of [novel mathematical convergence proofs](https://arxiv.org/abs/2301.01530) to the development of sustainable and energy-efficient transportation systems (ongoing industry project).
+I am broadly interested in developing efficient algorithms for large-scale optimization and machine learning problems. In particular, I have proposed  [a unified methodology](https://link.springer.com/article/10.1007/s10107-023-01973-1) to construct provably optimal algorithms for optimization and machine learning, where I have demonstrated that the problem of finding the fastest algorithm is itself equivalent to solving another practically tractable optimization problem. I have proposed and implemented an efficient algorithm (open source implementation [here](https://github.com/Shuvomoy/BnB-PEP-code)) to solve this optimization problem to certifiable global optimality, with its optimal solution representing the fastest algorithm. I have found applications of this methodology in discovering [provably fastest algorithms for large-scale optimization](https://arxiv.org/abs/2305.15704), constructing [novel mathematical proofs for widely used algorithms lacking such results](https://arxiv.org/pdf/2301.01530.pdf), and finally promoting sustainable transportation systems in an ongoing industry project. In terms of industry impact, my [research on energy-efficient transportation](https://www.sciencedirect.com/science/article/pii/S0191261516304830) has been implemented in the largest installed base of communication based train control systems worldwide. 
 
-I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Canada](https://www.thalesgroup.com/en/americas/canada) for almost three years. My [research on sustainable railway transportation](https://www.sciencedirect.com/science/article/pii/S0191261516304830) has been integrated with the largest installed base of communication based train control systems worldwide. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
+I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Canada](https://www.thalesgroup.com/en/americas/canada) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
 ## News
 
@@ -109,6 +114,8 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 5.00/5.00
 
 ## Courses taken
+* [1.142] Robust Modeling, Optimization and Computation
+* [1.267] Statistical Learning in Operations
 * [6.251] Introduction to Mathematical Programming	
 * [6.436] Fundamentals of Probability
 * [6.252] Nonlinear Optimization
@@ -125,5 +132,4 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
 
 ## MASc Thesis
 
-[Optimization Models for Energy-efficient Railway Timetables.](https://tspace.library.utoronto.ca/handle/1807/74584) (Grade: A+) [[pdf](https://shuvomoy.github.io/Papers/Optimization_Models_for_Energy_efficient_Railway_Timetables_MASc_Shuvo.pdf)] 
-
+[Optimization Models for Energy-efficient Railway Timetables.](https://tspace.library.utoronto.ca/handle/1807/74584) (Grade: A+) [[pdf](https://shuvomoy.github.io/Papers/Optimization_Models_for_Energy_efficient_Railway_Timetables_MASc_Shuvo.pdf)]
