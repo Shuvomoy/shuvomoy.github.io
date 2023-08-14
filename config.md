@@ -12,7 +12,6 @@ The website_* must be defined for the RSS to work
 
 @def mintoclevel = 2
 
-@def robots_disallow = ["/"]
 
 <!--
 Add here files or directories that should be ignored by Franklin, otherwise
