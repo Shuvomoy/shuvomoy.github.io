@@ -20,6 +20,8 @@ you might not want. Indicate directories by ending the name with a `/`.
 -->
 @def ignore = ["node_modules/", "INFORMS_2020_presentation_sozi.html", "MASC-thesis-presentation_sozi.html", "franklin", "franklin.pub"]
 
+@def keep_path = ["google0e64b2a3e84af1d4.html"]
+
 <!--
 Add here global latex commands to use throughout your
 pages. It can be math commands but does not need to be.
