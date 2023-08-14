@@ -1,7 +1,7 @@
 @def title = "Home"
 
 +++
-sitemap_changefreq = "weekly"
+sitemap_changefreq = "daily"
 sitemap_priority = 1.0
 +++
 
