@@ -1,5 +1,9 @@
 @def title = "Home"
 
+@sitemap_changefreq = "weekly"
+
+@sitemap_priority = 1.0
+
 # Shuvomoy Das Gupta 
 
 ~~~
