@@ -39,11 +39,11 @@ sitemap_priority = 1.0
 
 ## About Me
 
-Hello world! I am a fourth year Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). 
+I am a Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). 
 
-I am broadly interested in developing efficient algorithms for large-scale optimization and machine learning problems. In particular, I have proposed  [a unified methodology for constructing provably fastest algorithms](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf) for optimization and machine learning, where I have demonstrated that the problem of finding the fastest algorithm is itself equivalent to solving another practically tractable optimization problem. I have proposed and implemented an efficient algorithm (open source implementation [here](https://github.com/Shuvomoy/BnB-PEP-code)) to solve this optimization problem to certifiable global optimality, with its optimal solution representing the fastest algorithm. I have found applications of this methodology in constructing [novel mathematical proofs for widely used algorithms lacking such results](https://arxiv.org/abs/2301.01530) and discovering [provably optimal algorithms for constrained optimization](https://arxiv.org/abs/2305.15704). Currently, I am applying ideas from this methodology to an ongoing industry project aimed at developing sustainable transportation systems. This project builds on my research on energy-efficient railway timetabling, which has already been [implemented in the largest installed base of communication-based train control systems worldwide](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf).
+I am interested in developing efficient algorithms for operations research, machine learning, and business analytics. I have proposed [a unified methodology to construct the fastest algorithms](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf) for large-scale optimization and machine learning, where I have shown that finding the fastest algorithm is equivalent to solving a practically tractable optimization problem. I have proposed and implemented an efficient algorithm (open source implementation [here](https://github.com/Shuvomoy/BnB-PEP-code)) to solve this optimization problem, with its solution representing the fastest algorithm. My approach has found applications in [discovering faster algorithms](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/), [constructing novel mathematical proofs](https://arxiv.org/pdf/2301.01530.pdf), and developing sustainable transportation systems, building on my research in energy-efficient railway scheduling, [implemented in the largest installed base of communication-based train control systems worldwide](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf).
 
-I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Canada](https://www.thalesgroup.com/en/americas/canada) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
+I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Group](https://www.thalesgroup.com/en) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
 ## News
 
@@ -117,27 +117,13 @@ I obtained my M.A.Sc. (GPA 4.00/4.00) from the [ECE Department,](https://www.ece
   
 - [15.S08: Optimization of Energy Systems](https://shuvomoy.github.io/Teaching/15.S08_Optimization_of_Energy_Systems_Syllabus_2022.pdf) (Spring 2022) [Teaching score 6.0/7]
   * Teaching assistant for a course that aims to aims to lead PhD or advanced master students to the forefront of energy system research.
-  * Duties: Developing `Julia` implementations of next generation power system models, assisting students, leading recitations, writing and marking assignments and exams.  
-
-## Cumulative GPA
-
-5.00/5.00
-
-## Courses taken
-* [1.142] Robust Modeling, Optimization and Computation
-* [1.267] Statistical Learning in Operations
-* [6.251] Introduction to Mathematical Programming	
-* [6.436] Fundamentals of Probability
-* [6.252] Nonlinear Optimization
-* [6.881] Optimization for Machine Learning
-* [9.521] Mathematical Statistics
-* [6.860] Statistical Learning Theory
-* [18.456] Algebraic Techniques and Semidefinite Optimization
-* [18.0651] Matrix Methods In Data Analysis, Signal Processing, And Machine Learning
+  * Duties: Developing implementations of next generation power system models, assisting students, leading recitations, writing and marking assignments and exams.  
 
 ## Software
 
 * `NExOS.jl` [[github repo](https://github.com/Shuvomoy/NExOS.jl)]
+* `BnB-PEP code` [[github repo](https://github.com/Shuvomoy/BnB-PEP-code)]
+* `NCG-PEP code` [[github repo](https://github.com/Shuvomoy/NCG-PEP-code)]
 
 
 ## MASc Thesis
