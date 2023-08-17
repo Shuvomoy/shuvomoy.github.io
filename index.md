@@ -41,19 +41,22 @@ sitemap_priority = 1.0
 
 I am a Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). 
 
-I am interested in developing efficient algorithms for operations research, machine learning, and business analytics. I have proposed [a unified methodology to construct the fastest algorithms](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf) for large-scale optimization and machine learning, where I have shown that finding the fastest algorithm is equivalent to solving a practically tractable optimization problem. I have proposed and implemented an efficient algorithm (open source implementation [here](https://github.com/Shuvomoy/BnB-PEP-code)) to solve this optimization problem, with its solution representing the fastest algorithm. My approach has found applications in [discovering faster algorithms](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/), [constructing novel mathematical proofs](https://arxiv.org/pdf/2301.01530.pdf), and developing sustainable transportation systems, building on my research in energy-efficient railway scheduling, [implemented in the largest installed base of communication-based train control systems worldwide](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf).
+I am interested in developing efficient algorithms for operations research, machine learning, and business analytics. I have proposed [a unified methodology to construct the fastest algorithms](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf) for large-scale optimization and machine learning, where I have shown that finding the fastest algorithm is equivalent to solving a practically tractable optimization problem. I have proposed and implemented an efficient algorithm (open-source implementation [here](https://github.com/Shuvomoy/BnB-PEP-code)) to solve this optimization problem, with its solution representing the fastest algorithm. My approach has found applications in [discovering faster algorithms](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/), [constructing novel mathematical proofs](https://arxiv.org/pdf/2301.01530.pdf), and developing sustainable transportation systems, building on my research in energy-efficient railway scheduling [implemented in industry](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf).
 
 I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Group](https://www.thalesgroup.com/en) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
 ## News
 
+* In a recent article (available [here](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)), [Quanta Magazine](https://www.quantamagazine.org/about/) interviewed and quoted me about our [BnB-PEP](https://link.springer.com/article/10.1007/s10107-023-01973-1) paper, which inspired the discovery of [long step gradient descent](https://arxiv.org/pdf/2307.06324.pdf) by [Prof. Ben Grimmer](https://www.ams.jhu.edu/~grimmer/)! 
+
 * I gave a talk about my work on “A Robust Data-driven Linear Programming Model for Minimizing Energy Consumption in Metro Railway Networks” at [POMS 2023](https://pomsmeetings.org/conf-2023/).
-* Our [BnB-PEP](https://arxiv.org/abs/2203.07305) paper is now accepted for publication in *Mathematical Programming Series A*!
 
 ## Papers
 
-* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf)”, *Mathematical Programming Series A*, 2023.  [[pdf](https://arxiv.org/pdf/2203.07305.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
-* Uijeong Jang, **Shuvomoy Das Gupta**, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, 2023. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
+### Papers as the Main Author
+
+* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, *Mathematical Programming Series A*, 2023.  [[pdf](https://arxiv.org/pdf/2203.07305.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
+* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and J. Kevin Tobin, “A Robust Real-time Linear Programming Model for Minimizing Energy Consumption in Metro Railway Networks”, in preparation for *Manufacturing & Service Operations Management*, 2023.
 
 - **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://arxiv.org/abs/2301.01530)”, 2023. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
 - **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Nonconvex Learning](https://arxiv.org/abs/2011.04552)”, 2022. [[pdf](https://optimization-online.org/2020/11/8099/)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[INFORMS 2020 Presentation](/assets/Sozi_presentations/INFORMS_Annual_Meeting_2020_presentation.html)] [[bib](assets/bibtex_citations/NExOS.bib)]
@@ -68,9 +71,9 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 - **Shuvomoy Das Gupta**, Lacra Pavel, and J. Kevin Tobin, “[An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7172268)”, in the *proceedings of 2015 American Control Conference (ACC)*, Chicago, IL, USA, July 2015. [[pdf](https://shuvomoy.github.io/Papers/An_Optimization_Model_to_Utilize_Regenerative_Braking_Energy_in_a_Railway_Network.pdf)] [[presentation](https://shuvomoy.github.io/Papers/ACC_presentation.svg)] [[bib](assets/bibtex_citations/ACC2015.bib)] 
 
-## Ongoing project
+### Other Papers
 
-* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and J. Kevin Tobin, “A Robust Data-driven Linear Programming Model to Minimize Energy Consumption in Metro Railway Networks”.
+* Uijeong Jang, **Shuvomoy Das Gupta**, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, 2023. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
 
 ## Talks
 
@@ -127,6 +130,24 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 * `NExOS.jl` [[github repo](https://github.com/Shuvomoy/NExOS.jl)]
 * `BnB-PEP code` [[github repo](https://github.com/Shuvomoy/BnB-PEP-code)]
 * `NCG-PEP code` [[github repo](https://github.com/Shuvomoy/NCG-PEP-code)]
+
+## Media Coverage
+
+* **Risky Giant Steps Can Solve Optimization Problems Faster** by Allison Parshall, Quanta Magazine, August 2023. [[Full Article](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)]
+
+## Service
+
+* Reviewer for:
+  - Mathematical Programming
+  - Transportation Research Part B: Methodological
+  - IEEE Transactions on Control of Network Systems
+  - American Control Conference
+  - IEEE Transactions on Intelligent Transportation Systems
+  - IEEE Transactions on Automatic Control
+
+* Session Chair,  INFORMS Annual Meeting,  2022
+
+* Session Chair,  INFORMS Annual Meeting,  2023
 
 
 ## MASc Thesis
