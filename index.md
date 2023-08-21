@@ -125,7 +125,7 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
   * Instructor for the advanced optimization session. [[Jupyter notebook 1](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%201%20Convex.ipynb)] [[Jupyter notebook 2](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%202%20MILP.ipynb)] [[Student feedback](https://shuvomoy.github.io/Teaching/IAP_2022_Teaching_Feedback_Shuvo.pdf)]
   
 - [15.S08: Optimization of Energy Systems](https://shuvomoy.github.io/Teaching/15.S08_Optimization_of_Energy_Systems_Syllabus_2022.pdf) (Spring 2022) [Teaching score 6.0/7]
-  * Teaching assistant for a course that aims to aims to lead PhD or advanced master students to the forefront of energy system research.
+  * Teaching assistant for a course that aims to lead PhD or advanced master students to the forefront of energy system research.
   * Duties: Developing implementations of next generation power system models, assisting students, leading recitations, writing and marking assignments and exams.  
 
 ## Software
