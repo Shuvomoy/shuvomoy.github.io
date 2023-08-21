@@ -59,13 +59,14 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and J. Kevin Tobin, “A Robust Real-time Linear Programming Model for Minimizing Energy Consumption in Metro Railway Networks”, in preparation for *Manufacturing & Service Operations Management*, 2023.
 
 - **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://arxiv.org/abs/2301.01530)”, 2023. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
+
 - **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Nonconvex Learning](https://arxiv.org/abs/2011.04552)”, 2022. [[pdf](https://optimization-online.org/2020/11/8099/)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[INFORMS 2020 Presentation](/assets/Sozi_presentations/INFORMS_Annual_Meeting_2020_presentation.html)] [[bib](assets/bibtex_citations/NExOS.bib)]
+
 - **Shuvomoy Das Gupta** and Lacra Pavel, “[On Seeking Efficient Pareto Optimal Points in Multi-Player Minimum Cost Flow Problems with Application to Transportation Systems](https://link.springer.com/article/10.1007/s10898-019-00750-9)”, in the *Journal of Global Optimization* 74 (2019): 523-548. [[pdf](https://shuvomoy.github.io/Papers/Journal_of_Global_Optimization_19.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/LIDS_2020_student_conference/LIDS_2020_student_conference.pdf)] [[bib](assets/bibtex_citations/JOGO2019.bib)]
+
 - **Shuvomoy Das Gupta**, “[On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets](https://ieeexplore.ieee.org/document/8636076)”, in the *proceedings of the 56th Allerton Conference on Communication, Control, and Computing*, University of Illinois at Urbana-Champaign, IL, USA, October 2018. [[pdf](https://shuvomoy.github.io/Papers/Allerton_2018.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/Allerton_2018_Presentation/Allerton_2018_presentation_final.pdf)] [[bib](assets/bibtex_citations/Allerton2018.bib)]
 
-
 - **Shuvomoy Das Gupta** and Lacra Pavel, “[Multi-player Minimum Cost Flow Problems with Nonconvex Costs and Integer Flows](http://ieeexplore.ieee.org/document/7799446/)”, in the *proceedings of the 55th IEEE Conference on Decision and Control*, Las Vegas, USA, December 12-14, 2016. [[pdf](https://shuvomoy.github.io/Papers/Multi-player_minimum_cost_flow_problems_with_nonconvex_costs_and_integer_flows.pdf)] [[longer version with proofs](https://shuvomoy.github.io/Papers/CDC_2016_manuscript_Pareto_opt_with_proofs.pdf)] [[presentation](https://shuvomoy.github.io/Papers/CDC_2016_presentation.pdf)] [[bib](assets/bibtex_citations/CDC2016.bib)]
-
 
 - **Shuvomoy Das Gupta**, J. Kevin Tobin, and Lacra Pavel, “[A Two-Step Linear Programming Model for Energy-Efficient Timetables in Metro Railway Networks](http://www.sciencedirect.com/science/article/pii/S0191261516304830)”, in *Transportation Research Part B: Methodological* 93 (2016): 57–74. [[pdf](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf)] [[bib](assets/bibtex_citations/TRB2016.bib)]
 
@@ -114,6 +115,8 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
   * Teaching assistant for a course that aims to provide PhD students with a unified overview of convex optimization.
   
   * Duties: Assisting students, leading recitations, writing and marking assignments and exams.
+  
+  * Pdf of my recitation lectures: [[pdf](https://shuvomoy.github.io/Teaching/Shuvo_Recitations_MITNonlinearOpt_2023.pdf)]
   
 * 15.S60: Computing in Optimization and Statistics (2023)  [Teaching score: 7/7]
    * Instructor for the advanced optimization session. [[Jupyter notebook 1](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%201%20Convex.ipynb)] [[Jupyter notebook 2](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2022_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202022%20Advanced%20Optimization%20Session%202%20MILP.ipynb)] [[Student feedback](https://shuvomoy.github.io/Teaching/15_S60_feedback_2023.pdf)]
