@@ -41,7 +41,7 @@ sitemap_priority = 1.0
 
 I am a Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). 
 
-I am interested in developing efficient algorithms for operations research, machine learning, and business analytics. I have proposed [a unified methodology to construct the fastest algorithms](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf) for large-scale optimization and machine learning, where I have shown that finding the fastest algorithm is equivalent to solving a practically tractable optimization problem. I have proposed and implemented an efficient algorithm (open-source implementation [here](https://github.com/Shuvomoy/BnB-PEP-code)) to solve this optimization problem, with its solution representing the fastest algorithm. My approach has found applications in [discovering faster algorithms](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/), [constructing novel mathematical proofs](https://arxiv.org/pdf/2301.01530.pdf), and developing sustainable transportation systems, building on my research in energy-efficient railway scheduling [implemented in industry](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf).
+My research is primarily in optimization—both theory and computation—and often both simultaneously. I am interested in developing efficient algorithms for operations research, machine learning, and business analytics. I have been developing [methodologies](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf) that automate the construction of *provably fastest* algorithms for classes of optimization problems, including many of those arising in machine learning, business analytics, and data science more broadly. These methodologies formulate algorithm design and analysis as solvable optimization problems in and of themselves, which has led to several significant and impactful applications, such as  [discovering optimal algorithms](https://arxiv.org/abs/2305.15704) and  [constructing novel mathematical proofs](https://arxiv.org/pdf/2301.01530.pdf). In addition to my research in theory and computational tools in optimization, I have been working on developing sustainable transportation systems, and my research in this area has been [implemented](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf) in the largest installed base of communication-based train control systems worldwide.
 
 I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Group](https://www.thalesgroup.com/en) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
@@ -53,20 +53,21 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 ## Papers
 
-### Papers as the Main Author
+### Papers as the Primary Contributor
 
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, *Mathematical Programming Series A*, 2023.  [[pdf](https://arxiv.org/pdf/2203.07305.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
+ 
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and J. Kevin Tobin, “A Robust Real-time Linear Programming Model for Minimizing Energy Consumption in Metro Railway Networks”, in preparation for *Manufacturing & Service Operations Management*, 2023.
 
 - **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://arxiv.org/abs/2301.01530)”, 2023. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
 
-- **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Nonconvex Learning](https://arxiv.org/abs/2011.04552)”, 2022. [[pdf](https://optimization-online.org/2020/11/8099/)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[INFORMS 2020 Presentation](/assets/Sozi_presentations/INFORMS_Annual_Meeting_2020_presentation.html)] [[bib](assets/bibtex_citations/NExOS.bib)]
+- **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Sparse and Low-rank Optimization](https://arxiv.org/abs/2011.04552)”, 2022. [[pdf](https://arxiv.org/abs/2011.04552)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[INFORMS 2020 Presentation](/assets/Sozi_presentations/INFORMS_Annual_Meeting_2020_presentation.html)] [[bib](assets/bibtex_citations/NExOS.bib)]
 
 - **Shuvomoy Das Gupta** and Lacra Pavel, “[On Seeking Efficient Pareto Optimal Points in Multi-Player Minimum Cost Flow Problems with Application to Transportation Systems](https://link.springer.com/article/10.1007/s10898-019-00750-9)”, in the *Journal of Global Optimization* 74 (2019): 523-548. [[pdf](https://shuvomoy.github.io/Papers/Journal_of_Global_Optimization_19.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/LIDS_2020_student_conference/LIDS_2020_student_conference.pdf)] [[bib](assets/bibtex_citations/JOGO2019.bib)]
 
 - **Shuvomoy Das Gupta**, “[On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets](https://ieeexplore.ieee.org/document/8636076)”, in the *proceedings of the 56th Allerton Conference on Communication, Control, and Computing*, University of Illinois at Urbana-Champaign, IL, USA, October 2018. [[pdf](https://shuvomoy.github.io/Papers/Allerton_2018.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/Allerton_2018_Presentation/Allerton_2018_presentation_final.pdf)] [[bib](assets/bibtex_citations/Allerton2018.bib)]
 
-- **Shuvomoy Das Gupta** and Lacra Pavel, “[Multi-player Minimum Cost Flow Problems with Nonconvex Costs and Integer Flows](http://ieeexplore.ieee.org/document/7799446/)”, in the *proceedings of the 55th IEEE Conference on Decision and Control*, Las Vegas, USA, December 12-14, 2016. [[pdf](https://shuvomoy.github.io/Papers/Multi-player_minimum_cost_flow_problems_with_nonconvex_costs_and_integer_flows.pdf)] [[longer version with proofs](https://shuvomoy.github.io/Papers/CDC_2016_manuscript_Pareto_opt_with_proofs.pdf)] [[presentation](https://shuvomoy.github.io/Papers/CDC_2016_presentation.pdf)] [[bib](assets/bibtex_citations/CDC2016.bib)]
+- **Shuvomoy Das Gupta** and Lacra Pavel, “[Multi-player Minimum Cost Flow Problems with Nonconvex Costs and Integer Flows](http://ieeexplore.ieee.org/document/7799446/)”, in the *proceedings of the 55th IEEE Conference on Decision and Control*, Las Vegas, NV, USA, December 12-14, 2016. [[pdf](https://shuvomoy.github.io/Papers/Multi-player_minimum_cost_flow_problems_with_nonconvex_costs_and_integer_flows.pdf)] [[longer version with proofs](https://shuvomoy.github.io/Papers/CDC_2016_manuscript_Pareto_opt_with_proofs.pdf)] [[presentation](https://shuvomoy.github.io/Papers/CDC_2016_presentation.pdf)] [[bib](assets/bibtex_citations/CDC2016.bib)]
 
 - **Shuvomoy Das Gupta**, J. Kevin Tobin, and Lacra Pavel, “[A Two-Step Linear Programming Model for Energy-Efficient Timetables in Metro Railway Networks](http://www.sciencedirect.com/science/article/pii/S0191261516304830)”, in *Transportation Research Part B: Methodological* 93 (2016): 57–74. [[pdf](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf)] [[bib](assets/bibtex_citations/TRB2016.bib)]
 
@@ -101,13 +102,20 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 * `NExOS.jl`  for Nonconvex Exterior-point Optimization [[Youtube video](https://www.youtube.com/watch?v=SWQnAQmeVUg&ab_channel=TheJuliaProgrammingLanguage)]
   *  [Juliacon 2021](https://juliacon.org/2021/) 
 
-- Exterior-point Optimization for Nonconvex Learning [[Slides](/assets/Sozi_presentations/INFORMS_Annual_Meeting_2020_presentation.html)]
+- Exterior-point Optimization for Sparse and Low-rank Optimization [[Slides](/assets/Sozi_presentations/INFORMS_Annual_Meeting_2020_presentation.html)]
   - Seoul National University, November 17, 2020 (talk given to Professor [Ernest Ryu](http://www.math.snu.ac.kr/~ernestryu/)'s research group)
   - INFORMS Annual Meeting, November 10, 2020
   - MIT LIDS student conference, January 2021
+  
 - On seeking efficient Pareto optimal points in multi-player minimum cost flow problems [[Slides](https://shuvomoy.github.io/Presentations/LIDS_2020_student_conference/LIDS_2020_student_conference.pdf)]
 
   - MIT LIDS student conference, January 2020
+
+- On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets
+  - 56th Allerton Conference on Communication, Control, and Computing, October, 2018
+
+
+     
 
 ## Teaching
 
