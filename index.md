@@ -47,9 +47,9 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 ## News
 
-* In a recent article (available [here](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)), [Quanta Magazine](https://www.quantamagazine.org/about/) interviewed and quoted me about our [BnB-PEP](https://link.springer.com/article/10.1007/s10107-023-01973-1) paper, which inspired the discovery of [long step gradient descent](https://arxiv.org/pdf/2307.06324.pdf) by [Prof. Ben Grimmer](https://www.ams.jhu.edu/~grimmer/)! 
+* In a recent article (available [here](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)), [Quanta Magazine](https://www.quantamagazine.org/about/) interviewed and quoted me about our [BnB-PEP](https://link.springer.com/article/10.1007/s10107-023-01973-1) paper, which inspired the discovery of [long step gradient descent](https://arxiv.org/pdf/2307.06324.pdf) by [Prof. Ben Grimmer](https://www.ams.jhu.edu/~grimmer/)! Also publicized in [WeChat/Weixin](https://mp.weixin.qq.com/s/KEXZDZhMSO7p0GC5CCvQ0g?from=singlemessage&isappinstalled=0&scene=1&clicktime=1692548891&enterid=1692548891). 
 
-* I gave a talk about my work on “Energy-optimal Timetable Design for Sustainable Metro Railway Networks” at [POMS 2023](https://pomsmeetings.org/conf-2023/).
+* I gave a talk about my work on “[Energy-optimal Timetable Design for Sustainable Metro Railway Networks](https://arxiv.org/pdf/2309.05489.pdf)” at [POMS 2023](https://pomsmeetings.org/conf-2023/).
 
 ## Papers
 
@@ -57,7 +57,7 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2023. [[pdf](https://arxiv.org/pdf/2203.07305.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
 
-* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and J. Kevin Tobin, “Energy-optimal Timetable Design for Sustainable Metro Railway Networks”, to be submitted to *Manufacturing & Service Operations Management*, 2023. [[pdf](https://shuvomoy.github.io/Papers/DasGupta2023SustainableRailway.pdf)] [[bib](assets/bibtex_citations/CBTC2023.bib)] 
+* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and J. Kevin Tobin, “[Energy-optimal Timetable Design for Sustainable Metro Railway Networks](https://arxiv.org/abs/2309.05489)”, to be submitted to *Manufacturing & Service Operations Management*, 2023. [[pdf](https://arxiv.org/pdf/2309.05489.pdf)] [[bib](assets/bibtex_citations/CBTC2023.bib)] 
 
 - **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://arxiv.org/abs/2301.01530)”, under review in *Mathematical Programming Series A*, 2023. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
 
@@ -81,7 +81,8 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 * Energy-optimal Timetable Design for Sustainable Metro Railway Networks
   * [33rd Annual POMS Conference](https://pomsmeetings.org/conf-2023/), Orlando, FL, May 21 - 25, 2023.
-
+  * (Poster) [2023 MIT Energy Initiative Annual Research Conference](https://energy.mit.edu/arc/)
+  
 * BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods  [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)]
   * [SIAM Conference on Optimization (OP23)](https://www.siam.org/conferences/cm/conference/op23), May 31 - June 3, 2023, Seattle, Washington, U.S.
   * [UTORG Seminar, University of Toronto, January 09, 2023](https://org.mie.utoronto.ca/student-seminar-with-shuvomoy-das-gupta/)
@@ -144,7 +145,9 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 ## Media Coverage
 
-* **Risky Giant Steps Can Solve Optimization Problems Faster** by Allison Parshall, Quanta Magazine, August 2023. [[Full Article](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)]
+* **Risky Giant Steps Can Solve Optimization Problems Faster** by Allison Parshall, Quanta Magazine, August 2023. [[Quanta Article](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)]  [[WeChat/Weixin version](https://tinyurl.com/WeChatGD)] 
+
+  
 
 ## Service
 
