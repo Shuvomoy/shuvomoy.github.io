@@ -146,7 +146,7 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 ## Media Coverage
 
 * **Risky Giant Steps Can Solve Optimization Problems Faster** by Allison Parshall, Quanta Magazine, August 2023. [[Quanta Article](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)]  
-* Also publicized in the Chinese magazine [机器之心 (Heart of the Machine)](https://mp.weixin.qq.com/s/KEXZDZhMSO7p0GC5CCvQ0g?from=singlemessage&isappinstalled=0&scene=1&clicktime=1692548891&enterid=1692548891),  which is a well-known outlet in China for staying updated on advancements in AI, machine learning, data science, and related fields.
+   * Also publicized in the Chinese magazine [机器之心 (Heart of the Machine)](https://tinyurl.com/HeartOfTheMachine),  which is a well-known outlet in China for staying updated on advancements in AI, machine learning, data science, and related fields.
 
   
 
