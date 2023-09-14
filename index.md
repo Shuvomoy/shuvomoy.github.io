@@ -47,6 +47,8 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 ## News
 
+* I presented a poster (available [here](https://shuvomoy.github.io/Papers/MITEI_conference_2023_final_poster.pdf)) on  my work on “[Energy-optimal Timetable Design for Sustainable Metro Railway Networks](https://arxiv.org/pdf/2309.05489.pdf)” at [2023 MIT Energy Initiative Annual Research Conference](https://energy.mit.edu/arc/)! 
+
 * In a recent article (available [here](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)), [Quanta Magazine](https://www.quantamagazine.org/about/) interviewed and quoted me about our [BnB-PEP](https://link.springer.com/article/10.1007/s10107-023-01973-1) paper, which inspired the discovery of [long step gradient descent](https://arxiv.org/pdf/2307.06324.pdf) by [Prof. Ben Grimmer](https://www.ams.jhu.edu/~grimmer/)! Also publicized in the Chinese magazine  [机器之心 (Heart of the Machine)](https://mp.weixin.qq.com/s/KEXZDZhMSO7p0GC5CCvQ0g?from=singlemessage&isappinstalled=0&scene=1&clicktime=1692548891&enterid=1692548891). 
 
 * I gave a talk about my work on “[Energy-optimal Timetable Design for Sustainable Metro Railway Networks](https://arxiv.org/pdf/2309.05489.pdf)” at [POMS 2023](https://pomsmeetings.org/conf-2023/).
