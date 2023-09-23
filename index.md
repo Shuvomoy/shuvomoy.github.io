@@ -41,14 +41,14 @@ sitemap_priority = 1.0
 
 I am a Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). 
 
-My research is primarily in optimization—both theory and computation—and often both simultaneously. I have been developing [methodologies](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf) that automate the construction of *provably fastest* algorithms for classes of optimization problems, including many of those arising in machine learning, business analytics, and data science more broadly. These methodologies formulate algorithm design and analysis as solvable optimization problems in and of themselves, which has led to several significant and impactful applications, such as  [discovering optimal algorithms](https://arxiv.org/abs/2305.15704) and  [constructing novel mathematical proofs](https://arxiv.org/pdf/2301.01530.pdf). In addition to my research in theory and computational tools in optimization, I have been working on developing sustainable transportation systems, and my research in this area has been [implemented](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf) in the largest installed base of communication-based train control systems worldwide.
+My research is primarily in optimization—both theory and computation—and often both simultaneously. I have been developing [methodologies](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf) that automate the construction of *provably fastest* algorithms for classes of optimization problems, including many of those arising in machine learning, business analytics, and data science more broadly. These methodologies formulate algorithm design and analysis as solvable optimization problems in and of themselves, which has led to several significant and impactful applications, such as  [discovering optimal algorithms](https://arxiv.org/abs/2305.15704) and [constructing novel mathematical proofs](https://arxiv.org/pdf/2301.01530.pdf). In addition to my research in theory and computational tools in optimization, I have been working on developing sustainable transportation systems, and my research in this area has been [implemented](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf) in the largest installed base of communication-based train control systems worldwide.
 
 I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Group](https://www.thalesgroup.com/en) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
 ## News
 
 * I presented a poster (available [here](https://shuvomoy.github.io/Papers/MITEI_conference_2023_final_poster.pdf)) on  my work on “[Energy-optimal Timetable Design for Sustainable Metro Railway Networks](https://arxiv.org/pdf/2309.05489.pdf)” at [2023 MIT Energy Initiative Annual Research Conference](https://energy.mit.edu/arc/)! 
-* In a recent article (available [here](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)), [Quanta Magazine](https://www.quantamagazine.org/about/) interviewed and quoted me about our [BnB-PEP](https://link.springer.com/article/10.1007/s10107-023-01973-1) paper, which inspired the discovery of [long step gradient descent](https://arxiv.org/pdf/2307.06324.pdf) by [Prof. Ben Grimmer](https://www.ams.jhu.edu/~grimmer/)! Also publicized in the Chinese magazine  [机器之心 (Heart of the Machine)](https://mp.weixin.qq.com/s/KEXZDZhMSO7p0GC5CCvQ0g?from=singlemessage&isappinstalled=0&scene=1&clicktime=1692548891&enterid=1692548891). 
+* In a recent article (available [here](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)), [Quanta Magazine](https://www.quantamagazine.org/about/) interviewed and quoted me about our [BnB-PEP](https://link.springer.com/article/10.1007/s10107-023-01973-1) paper, which inspired the discovery of [long step gradient descent](https://arxiv.org/pdf/2307.06324.pdf) by [Prof. Ben Grimmer](https://www.ams.jhu.edu/~grimmer/)! Also publicized in the [Nautilus Quarterly](https://nautil.us/risky-giant-steps-can-solve-optimization-problems-faster-375562/) and the Chinese magazine  [机器之心 (Heart of the Machine)](https://mp.weixin.qq.com/s/KEXZDZhMSO7p0GC5CCvQ0g?from=singlemessage&isappinstalled=0&scene=1&clicktime=1692548891&enterid=1692548891). 
 
 ## Papers
 
@@ -90,10 +90,8 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
   * [ICCOPT, July 2022](https://iccopt2022.lehigh.edu/)
   * [MIT Data Science Lab Seminar, June 10, 2022](https://dsl.mit.edu/branch-and-bound-performance-estimation-programming-unified-methodology-constructing-optimal)
 
-
 * Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses
    * ORC Student Seminar, February,  2022
-
 
 * Design and Analysis of First-order Methods via Nonconvex QCQP Frameworks [[video](https://youtu.be/unDornjkpRU)]
 
@@ -143,6 +141,7 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 * **Risky Giant Steps Can Solve Optimization Problems Faster** by Allison Parshall, Quanta Magazine, August 2023. [[Quanta Article](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)]  
    * Also publicized in the Chinese magazine [机器之心 (Heart of the Machine)](https://tinyurl.com/HeartOfTheMachine),  which is a well-known outlet in China for staying updated on advancements in AI, machine learning, data science, and related fields.
+   * Also publicized in the [Nautilus Magazine](https://nautil.us/risky-giant-steps-can-solve-optimization-problems-faster-375562/) on September 5, 2023. 
 
   
 
