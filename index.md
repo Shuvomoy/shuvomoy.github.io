@@ -46,14 +46,6 @@ My research is primarily in optimization—both theory and computation—and oft
 
 I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Group](https://www.thalesgroup.com/en) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
-## News
-
-* At INFORMS Annual Meeting 2023: 
-  *  I will be presenting “[BnB-PEP: A Unified Methodology for Constructing Provably Fastest Optimization Methods](https://arxiv.org/pdf/2203.07305.pdf)” in *TB79. First Order Methods, Machine Learning and Beyond*, October 17, Tuesday, 2023, 10:45 AM - 12:00 PM, **Room: CC-West 211B** (1st talk out of 3)  [[Abstract](https://www.abstractsonline.com/pp8/#!/10856/presentation/6108)]
-  * My collaborator J. Kevin Tobin will be presenting our joint work  “[A Robust Data-driven Linear Programming Approach for Minimizing Energy Consumption in Railway Networks](https://arxiv.org/pdf/2309.05489.pdf)” in *ME32. Efficiency of Transportation and Transportation-Enabled Services*, October 16, Monday, 2023, 4:00 PM - 5:15 PM, **Room: CC-North 221B** (2nd talk out of 4) [[Abstract](https://www.abstractsonline.com/pp8/#!/10856/presentation/7501)]
-  * My collaborator Ernest K. Ryu will be presenting our joint work “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/pdf/2305.15704.pdf)” in  *TB79. First Order Methods, Machine Learning and Beyond*,   October 17, Tuesday, 2023, 10:45 AM - 12:00 PM, **Room: CC-West 211B** (2nd talk out of 3) [[Abstract](https://www.abstractsonline.com/pp8/#!/10856/presentation/6278)]
-* In a recent article (available [here](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)), [Quanta Magazine](https://www.quantamagazine.org/about/) interviewed and quoted me about our [BnB-PEP](https://link.springer.com/article/10.1007/s10107-023-01973-1) paper, which inspired the discovery of [long step gradient descent](https://arxiv.org/pdf/2307.06324.pdf) by [Prof. Ben Grimmer](https://www.ams.jhu.edu/~grimmer/)! Also publicized in the [Nautilus Quarterly](https://nautil.us/risky-giant-steps-can-solve-optimization-problems-faster-375562/) and the Chinese magazine  [机器之心 (Heart of the Machine)](https://mp.weixin.qq.com/s/KEXZDZhMSO7p0GC5CCvQ0g?from=singlemessage&isappinstalled=0&scene=1&clicktime=1692548891&enterid=1692548891). 
-
 ## Papers
 
 ### Papers as the Primary Contributor
@@ -82,15 +74,16 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 ## Talks
 
-* Energy-optimal Timetable Design for Sustainable Metro Railway Networks
-  * [33rd Annual POMS Conference](https://pomsmeetings.org/conf-2023/), Orlando, FL, May 21 - 25, 2023.
+* Energy-optimal Timetable Design for Sustainable Metro Railway Networks [[slides](/assets/slides/Transport_2023.html)]
+  * [2023 INFORMS Annual Meeting in Phoenix, AZ,  October 16, 2023](https://www.abstractsonline.com/pp8/#!/10856/presentation/7501)
+  * [33rd Annual POMS Conference](https://pomsmeetings.org/conf-2023/), Orlando, FL, May 21 - 25, 2023
   * (Poster) [2023 MIT Energy Initiative Annual Research Conference](https://energy.mit.edu/arc/)
   
-* BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods  [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/Sozi_presentations/bnb_pep_2022_presentation.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)]
+* BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods  [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[poster](/assets/Sozi_presentations/BnB_PEP_poster_final.pdf)]
+   * [2023 INFORMS Annual Meeting in Phoenix, AZ,  October 17, 2023](https://www.abstractsonline.com/pp8/#!/10856/presentation/6108)
   * [SIAM Conference on Optimization (OP23)](https://www.siam.org/conferences/cm/conference/op23), May 31 - June 3, 2023, Seattle, Washington, U.S.
   * [UTORG Seminar, University of Toronto, January 09, 2023](https://org.mie.utoronto.ca/student-seminar-with-shuvomoy-das-gupta/)
   * (Poster) [Cornell Young Researcher's Workshop, October 6-8, 2022](https://www.orie.cornell.edu/orie-events/young-researchers-workshop) 
-  * [2022 INFORMS Annual Meeting in Indianapolis, IN, October 16-19, 2022](https://meetings.informs.org/wordpress/indianapolis2022/)
   * [ICCOPT, July 2022](https://iccopt2022.lehigh.edu/)
   * [MIT Data Science Lab Seminar, June 10, 2022](https://dsl.mit.edu/branch-and-bound-performance-estimation-programming-unified-methodology-constructing-optimal)
 
@@ -146,8 +139,6 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 * **Risky Giant Steps Can Solve Optimization Problems Faster** by Allison Parshall, Quanta Magazine, August 2023. [[Quanta Article](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)]  
    * Also publicized in the Chinese magazine [机器之心 (Heart of the Machine)](https://tinyurl.com/HeartOfTheMachine),  which is a well-known outlet in China for staying updated on advancements in AI, machine learning, data science, and related fields.
    * Also publicized in the [Nautilus Magazine](https://nautil.us/risky-giant-steps-can-solve-optimization-problems-faster-375562/) on September 5, 2023. 
-
-  
 
 ## Service
 
