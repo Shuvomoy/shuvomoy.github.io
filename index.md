@@ -50,7 +50,7 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 ### Papers as the Primary Contributor
 
-* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2023. [[pdf](https://arxiv.org/pdf/2203.07305.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)]
+* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2023. [[pdf](https://arxiv.org/pdf/2203.07305.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)] (*<span style="color:teal">job market paper</span>*)
 
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and J. Kevin Tobin, “[Energy-optimal Timetable Design for Sustainable Metro Railway Networks](https://arxiv.org/abs/2309.05489)”, under review in *Manufacturing & Service Operations Management*, 2023. [[pdf](https://arxiv.org/pdf/2309.05489.pdf)] [[slides](/assets/slides/Transport_2023.html)] [[poster](https://shuvomoy.github.io/Papers/MITEI_conference_2023_final_poster.pdf)] [[bib](assets/bibtex_citations/CBTC2023.bib)] 
 
