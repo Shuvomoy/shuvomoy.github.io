@@ -29,7 +29,7 @@ sitemap_priority = 1.0
 <a> </a><br />
 <a> </a><br />
 
-<a style="color:CadetBlue">I will be on the Fall 2023 academic job market.</a> <a href="https://shuvomoy.github.io/Miscellaneous/Shuvo_CV.pdf"> [CV]</a> <br /> 
+<a style="color:CadetBlue">I am on the Fall 2023 academic job market.</a> <a href="https://shuvomoy.github.io/Miscellaneous/Shuvo_CV.pdf"> [CV]</a> <br /> 
 
 
 
