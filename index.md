@@ -18,6 +18,7 @@ sitemap_priority = 1.0
         <a href="https://orc.mit.edu/">Operations Research Center</a><br />
         <a href="http://www.mit.edu/">MIT</a><br />
         Email:<a href="mailto:sdgupta@mit.edu"> sdgupta@mit.edu</a><br />
+        CV: <a href="https://shuvomoy.github.io/Miscellaneous/Shuvo_CV.pdf">[pdf]</a><br />
         
 <a href="https://scholar.google.com/citations?user=SOrTYXsAAAAJ&hl=en&oi=ao" rel="nofollow noopener noreferrer"> <i class="ai ai-google-scholar-square ai-3x" style="font-size:35px"></i> </a>
 
