@@ -71,7 +71,7 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 ### Other Papers
 
-* Uijeong Jang, **Shuvomoy Das Gupta**, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, 2023. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
+* Uijeong Jang, **Shuvomoy Das Gupta**, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, under review in *Mathematical Programming Series A*, 2023. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
 
 ## Talks
 
