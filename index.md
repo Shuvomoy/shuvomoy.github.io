@@ -27,9 +27,8 @@ sitemap_priority = 1.0
 <a href="https://twitter.com/shuvo_das_gupta" rel="nofollow noopener noreferrer"> <i class="fa fa-twitter-square" style="font-size:36px"></i>  </a>
 
 <a> </a><br />
-<a> </a><br />
 
-<a style="color:CadetBlue">I am on the Fall 2023 academic job market.</a> <a href="https://shuvomoy.github.io/Miscellaneous/Shuvo_CV.pdf"> [CV]</a> <br /> 
+<a href="https://shuvomoy.github.io/Miscellaneous/Shuvo_CV.pdf"> [CV]</a> <br /> 
 
 
 
