@@ -44,7 +44,7 @@ I am a final-year Ph.D. student at the [Operations Research Center](https://orc.
 
  I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Group](https://www.thalesgroup.com/en) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
-I will join the [Department of Computational Applied Mathematics & Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/) as an Assistant Professor starting July 2025. 
+I will join the [Department of Computational Applied Mathematics & Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/) as an Assistant Professor starting July 2025. During 2024-25, I will do a postdoc at the [Department of Industrial Engineering and Operations Research](https://ieor.columbia.edu/), [Columbia University](https://www.columbia.edu/), hosted by Professor [Christian Kroer](https://www.columbia.edu/~ck2945/) and Professor [Garud Iyengar](https://www.columbia.edu/~gi10/). 
 
 ## Papers
 
