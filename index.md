@@ -27,12 +27,7 @@ sitemap_priority = 1.0
 <a href="https://twitter.com/shuvo_das_gupta" rel="nofollow noopener noreferrer"> <i class="fa fa-twitter-square" style="font-size:36px"></i>  </a>
 
 <a> </a><br />
-
-<a href="https://shuvomoy.github.io/Miscellaneous/Shuvo_CV.pdf"> [CV]</a> <br /> 
-
-
-
-              
+           
     <div style="clear: both"></div>      
   </div>
 </div>
@@ -48,7 +43,7 @@ I will join the [Department of Computational Applied Mathematics & Operations Re
 
 ## Papers
 
-* **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Sparse and Low-rank Optimization](https://arxiv.org/abs/2011.04552)”, accepted in the  *Journal of Optimization Theory and Applications*, 2024. [[pdf](https://arxiv.org/abs/2011.04552)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[bib](assets/bibtex_citations/NExOS.bib)]
+* **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Sparse and Low-rank Optimization](https://link.springer.com/article/10.1007/s10957-024-02448-9)”, published in the  *Journal of Optimization Theory and Applications*, 2024. [[pdf](https://arxiv.org/abs/2011.04552)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[bib](assets/bibtex_citations/NExOS.bib)]
 
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2023. [[pdf](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[tutorial video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)] 
 
