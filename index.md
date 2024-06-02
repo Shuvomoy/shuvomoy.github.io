@@ -14,10 +14,8 @@ sitemap_priority = 1.0
  src="/assets/photo-2023.jpeg" alt="sdg">
     <p> <br /> <br /> <br /> <br /> <br />  
         Shuvo Das Gupta  <br />
-        Ph.D. Student<br />
-        <a href="https://orc.mit.edu/">Operations Research Center</a><br />
-        <a href="http://www.mit.edu/">MIT</a><br />
-        Email:<a href="mailto:sdgupta@mit.edu"> sdgupta@mit.edu</a><br />
+        Ph.D. from <a href="https://orc.mit.edu/">Operations Research Center, <a href="http://www.mit.edu/">MIT</a><br />
+        Email:<a href="mailto:shuvomoy.dasgupta@gmail.com"> shuvomoy.dasgupta@gmail.com</a><br />
         
         
 <a href="https://scholar.google.com/citations?user=SOrTYXsAAAAJ&hl=en&oi=ao" rel="nofollow noopener noreferrer"> <i class="ai ai-google-scholar-square ai-3x" style="font-size:35px"></i> </a>
@@ -35,17 +33,17 @@ sitemap_priority = 1.0
 
 ## About Me
 
-I am a final-year Ph.D. student at the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). My research is primarily in optimization—both theory and application—and often both simultaneously.
+I recently obtained my Ph.D. from the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) in May 2024. I was advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). My research is primarily in optimization—both theory and application—and often both simultaneously. 
 
-I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After that, I worked as a researcher at the Research & Technology Department of [Thales Group](https://www.thalesgroup.com/en) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
+I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After completing my M.A.Sc. and before starting my Ph.D., I worked as a researcher at the Research & Technology Department of [Thales Group](https://www.thalesgroup.com/en) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
-I will join the [Department of Computational Applied Mathematics & Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/) as an Assistant Professor starting July 2025. During 2024-25, I will do a postdoc at the [Department of Industrial Engineering and Operations Research](https://ieor.columbia.edu/), [Columbia University](https://www.columbia.edu/), hosted by Professor [Christian Kroer](https://www.columbia.edu/~ck2945/) and Professor [Garud Iyengar](https://www.columbia.edu/~gi10/). 
+I will join the [Department of Computational Applied Mathematics & Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/) as an Assistant Professor starting July 2025. During 2024-25, I will be a Postdoctoral Research Scientist at the [Department of Industrial Engineering and Operations Research](https://ieor.columbia.edu/), [Columbia University](https://www.columbia.edu/), hosted by Professor [Christian Kroer](https://www.columbia.edu/~ck2945/) and Professor [Garud Iyengar](https://www.columbia.edu/~gi10/). 
 
 ## Papers
 
 * **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Sparse and Low-rank Optimization](https://link.springer.com/article/10.1007/s10957-024-02448-9)”, published in the  *Journal of Optimization Theory and Applications*, 2024. [[pdf](https://arxiv.org/abs/2011.04552)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[bib](assets/bibtex_citations/NExOS.bib)]
 
-* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2023. [[pdf](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[tutorial video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)] 
+* **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[tutorial video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)] 
 
 - **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://arxiv.org/abs/2301.01530)”, major revision in *Mathematical Programming Series A*, 2023. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
 
