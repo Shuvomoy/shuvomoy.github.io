@@ -14,7 +14,9 @@ sitemap_priority = 1.0
  src="/assets/photo-2023.jpeg" alt="sdg">
     <p> <br /> <br /> <br /> <br /> <br />  
         Shuvo Das Gupta  <br />
-        Ph.D. from <a href="https://orc.mit.edu/">Operations Research Center, <a href="http://www.mit.edu/">MIT</a><br />
+        Ph.D., <a href="https://orc.mit.edu/">Operations Research Center, <a href="http://www.mit.edu/">MIT</a><br />
+        Incoming  Postdoc, <a href="https://ieor.columbia.edu/">Columbia IEOR</a> (2024-25) <br />
+        Incoming  Assistant Professor, <a href="https://cmor.rice.edu/">Rice CMOR</a> (July 2025-)<br />
         Email:<a href="mailto:shuvomoy.dasgupta@gmail.com"> shuvomoy.dasgupta@gmail.com</a><br />
         
         
@@ -37,7 +39,7 @@ I recently obtained my Ph.D. from the [Operations Research Center](https://orc.m
 
 I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After completing my M.A.Sc. and before starting my Ph.D., I worked as a researcher at the Research & Technology Department of [Thales Group](https://www.thalesgroup.com/en) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
 
-I will join the [Department of Computational Applied Mathematics & Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/) as an Assistant Professor starting July 2025. During 2024-25, I will be a Postdoctoral Research Scientist at the [Department of Industrial Engineering and Operations Research](https://ieor.columbia.edu/), [Columbia University](https://www.columbia.edu/), hosted by Professor [Christian Kroer](https://www.columbia.edu/~ck2945/) and Professor [Garud Iyengar](https://www.columbia.edu/~gi10/). 
+**Update.** I will join the [Department of Computational Applied Mathematics & Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/) as an Assistant Professor starting July 2025. During 2024-25, I will be a Postdoctoral Research Scientist at the [Department of Industrial Engineering and Operations Research](https://ieor.columbia.edu/), [Columbia University](https://www.columbia.edu/), hosted by Professor [Christian Kroer](https://www.columbia.edu/~ck2945/) and Professor [Garud Iyengar](https://www.columbia.edu/~gi10/). 
 
 ## Papers
 
@@ -49,7 +51,7 @@ I will join the [Department of Computational Applied Mathematics & Operations Re
 
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and J. Kevin Tobin, “[Energy-optimal Timetable Design for Sustainable Metro Railway Networks](https://arxiv.org/abs/2309.05489)”, R&R in *Transportation Research Part B: Methodological*, 2023. [[pdf](https://arxiv.org/pdf/2309.05489.pdf)] [[slides](/assets/slides/Transport_2023.html)] [[poster](https://shuvomoy.github.io/Papers/MITEI_conference_2023_final_poster.pdf)] [[bib](assets/bibtex_citations/CBTC2023.bib)] 
 
-- **Uijeong Jang**, Shuvomoy Das Gupta, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, under review in *Mathematical Programming Series A*, 2023. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
+- **Uijeong Jang**, Shuvomoy Das Gupta, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, major revision in *Mathematical Programming Series A*, 2023. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
 
 - **Shuvomoy Das Gupta** and Lacra Pavel, “[On Seeking Efficient Pareto Optimal Points in Multi-Player Minimum Cost Flow Problems with Application to Transportation Systems](https://link.springer.com/article/10.1007/s10898-019-00750-9)”, published in the *Journal of Global Optimization* 74 (2019): 523-548. [[pdf](https://shuvomoy.github.io/Papers/Journal_of_Global_Optimization_19.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/LIDS_2020_student_conference/LIDS_2020_student_conference.pdf)] [[bib](assets/bibtex_citations/JOGO2019.bib)]
 - **Shuvomoy Das Gupta**, “[On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets](https://ieeexplore.ieee.org/document/8636076)”, published in the *proceedings of the 56th Allerton Conference on Communication, Control, and Computing*, University of Illinois at Urbana-Champaign, IL, USA, October 2018. [[pdf](https://shuvomoy.github.io/Papers/Allerton_2018.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/Allerton_2018_Presentation/Allerton_2018_presentation_final.pdf)] [[bib](assets/bibtex_citations/Allerton2018.bib)]
