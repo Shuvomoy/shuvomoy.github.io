@@ -43,7 +43,7 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 
 ## Papers
 
-* **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://arxiv.org/abs/2301.01530)”, accepted in *Mathematical Programming Series A*, 2024. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
+* **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://link.springer.com/article/10.1007/s10107-024-02127-7)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
 
 * **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Sparse and Low-rank Optimization](https://link.springer.com/article/10.1007/s10957-024-02448-9)”, published in the  *Journal of Optimization Theory and Applications*, 2024. [[pdf](https://arxiv.org/abs/2011.04552)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[bib](assets/bibtex_citations/NExOS.bib)]
 
