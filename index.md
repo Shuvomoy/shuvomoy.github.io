@@ -17,9 +17,11 @@ sitemap_priority = 1.0
         Ph.D., <a href="https://orc.mit.edu/">Operations Research Center, <a href="http://www.mit.edu/">MIT</a><br />
         Incoming  Postdoc, <a href="https://ieor.columbia.edu/">Columbia IEOR</a> (2024-25) <br />
         Incoming  Assistant Professor, <a href="https://cmor.rice.edu/">Rice CMOR</a> (July 2025-)<br />
-        Email:<a href="mailto:shuvomoy.dasgupta@gmail.com"> shuvomoy.dasgupta@gmail.com</a><br />
-        
-        
+        Email(s):<br />
+        <a href="mailto:sd3871@columbia.edu"> sd3871@columbia.edu</a><br />
+        <a href="mailto:shuvomoy.dasgupta@gmail.com"> shuvomoy.dasgupta@gmail.com</a><br />
+       
+                
 <a href="https://scholar.google.com/citations?user=SOrTYXsAAAAJ&hl=en&oi=ao" rel="nofollow noopener noreferrer"> <i class="ai ai-google-scholar-square ai-3x" style="font-size:35px"></i> </a>
 
 <a href="https://github.com/Shuvomoy" rel="nofollow noopener noreferrer"> <i class="fa fa-github-square" style="font-size:36px"></i> </a>
@@ -35,11 +37,16 @@ sitemap_priority = 1.0
 
 ## About Me
 
-I recently obtained my Ph.D. from the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) in May 2024. I was advised by Professor [Robert M. Freund](https://mitmgmtfaculty.mit.edu/rfreund/) and Professor [Bart Van Parys](https://www.vanparys.xyz/). My research is primarily in optimization—both theory and application—and often both simultaneously. 
+I am a Postdoctoral Research Scientist at the [Department of Industrial Engineering and Operations Research](https://ieor.columbia.edu/), [Columbia University](https://www.columbia.edu/), hosted by Professor [Christian Kroer](https://www.columbia.edu/~ck2945/) and Professor [Garud Iyengar](https://www.columbia.edu/~gi10/). I recently obtained my Ph.D. from the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) in May 2024. My research is primarily in optimization—both theory and application—and often both simultaneously. 
 
-I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [University of Toronto](https://www.utoronto.ca/) in 2016. After completing my M.A.Sc. and before starting my Ph.D., I worked as a researcher at the Research & Technology Department of [Thales Group](https://www.thalesgroup.com/en) for almost three years. Previously, I obtained my B.Sc. in Electrical and Electronic Engineering from [Bangladesh University of Engineering and Technology](http://www.buet.ac.bd/).
+**Update.** I will join the [Department of Computational Applied Mathematics & Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/) as an Assistant Professor starting July 2025. 
 
-**Update.** I will join the [Department of Computational Applied Mathematics & Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/) as an Assistant Professor starting July 2025. During 2024-25, I will be a Postdoctoral Research Scientist at the [Department of Industrial Engineering and Operations Research](https://ieor.columbia.edu/), [Columbia University](https://www.columbia.edu/), hosted by Professor [Christian Kroer](https://www.columbia.edu/~ck2945/) and Professor [Garud Iyengar](https://www.columbia.edu/~gi10/). 
+## News
+
+* I have received the 2024 Informs Computing Society Student Paper Award for the [BnB-PEP](https://arxiv.org/pdf/2203.07305) paper! [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
+
+* Recently our [OptISTA](https://arxiv.org/pdf/2305.15704) algorithm, discovered using [BnB-PEP](https://arxiv.org/pdf/2203.07305), has been successfully applied to solve large-scale magnetization transfer imaging problems by a group at [NYU School of Medicine](https://med.nyu.edu/) (see the [Imaging Neuroscience paper by Assländer et al](https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00177/120855)) and has been incorporated into their [open-source software package](https://github.com/JakobAsslaender/MRIgeneralizedBloch.jl)!
+
 
 ## Papers
 
@@ -58,6 +65,12 @@ I obtained my M.A.Sc. from the [ECE Department,](https://www.ece.utoronto.ca/) [
 - **Shuvomoy Das Gupta** and Lacra Pavel, “[Multi-player Minimum Cost Flow Problems with Nonconvex Costs and Integer Flows](http://ieeexplore.ieee.org/document/7799446/)”, published in the *proceedings of the 55th IEEE Conference on Decision and Control*, Las Vegas, NV, USA, December 12-14, 2016. [[pdf](https://shuvomoy.github.io/Papers/Multi-player_minimum_cost_flow_problems_with_nonconvex_costs_and_integer_flows.pdf)] [[longer version with proofs](https://shuvomoy.github.io/Papers/CDC_2016_manuscript_Pareto_opt_with_proofs.pdf)] [[presentation](https://shuvomoy.github.io/Papers/CDC_2016_presentation.pdf)] [[bib](assets/bibtex_citations/CDC2016.bib)]
 - **Shuvomoy Das Gupta**, J. Kevin Tobin, and Lacra Pavel, “[A Two-Step Linear Programming Model for Energy-Efficient Timetables in Metro Railway Networks](http://www.sciencedirect.com/science/article/pii/S0191261516304830)”, published in *Transportation Research Part B: Methodological* 93 (2016): 57–74. [[pdf](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf)] [[bib](assets/bibtex_citations/TRB2016.bib)]
 - **Shuvomoy Das Gupta**, Lacra Pavel, and J. Kevin Tobin, “[An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7172268)”, published in the *proceedings of 2015 American Control Conference (ACC)*, Chicago, IL, USA, July 2015. [[pdf](https://shuvomoy.github.io/Papers/An_Optimization_Model_to_Utilize_Regenerative_Braking_Energy_in_a_Railway_Network.pdf)] [[presentation](https://shuvomoy.github.io/Papers/ACC_presentation.svg)] [[bib](assets/bibtex_citations/ACC2015.bib)] 
+
+## Awards
+
+* Honorable Mention, MIT Operations Research Center Best Student Paper Award, 2024
+* Winner, Informs Computing Society Student Paper Award, 2024
+* Finalist, George Nicholson Student Paper Competition, 2024
 
 ## Talks
 
