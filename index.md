@@ -13,11 +13,11 @@ sitemap_priority = 1.0
     <img class="left" <img style="width: 300px; height: 350px;"
  src="/assets/photo-2023.jpeg" alt="sdg">
     <p> <br /> <br /> <br /> <br /> <br />  
-        Shuvo Das Gupta  <br />
-        Ph.D., <a href="https://orc.mit.edu/">Operations Research Center, <a href="http://www.mit.edu/">MIT</a><br />
-        Incoming  Postdoc, <a href="https://ieor.columbia.edu/">Columbia IEOR</a> (2024-25) <br />
-        Incoming  Assistant Professor, <a href="https://cmor.rice.edu/">Rice CMOR</a> (July 2025-)<br />
-        Email(s):<br />
+        <strong>Shuvo Das Gupta</strong>  <br />
+                ● Postdoc at <a href="https://ieor.columbia.edu/">Columbia IEOR</a> <br />
+        ● Ph.D. from <a href="http://www.mit.edu/">MIT</a> <a href="https://orc.mit.edu/">Operations Research Center</a>, 2024<br />
+        ● Incoming  Assistant Professor at <a href="https://cmor.rice.edu/">Rice CMOR</a> (July 2025-)<br />
+        ● Email(s):<br />
         <a href="mailto:sd3871@columbia.edu"> sd3871@columbia.edu</a><br />
         <a href="mailto:shuvomoy.dasgupta@gmail.com"> shuvomoy.dasgupta@gmail.com</a><br />
        
