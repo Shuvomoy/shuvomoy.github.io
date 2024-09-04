@@ -43,10 +43,11 @@ I am a Postdoctoral Research Scientist at the [Department of Industrial Engineer
 
 ## News
 
+* Our [BnB-PEP](https://arxiv.org/pdf/2203.07305) paper is a finalist for the 2024 George Nicholson Student Paper Competition!
+
 * I have received the 2024 Informs Computing Society Student Paper Award for the [BnB-PEP](https://arxiv.org/pdf/2203.07305) paper! [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
 
 * Recently our [OptISTA](https://arxiv.org/pdf/2305.15704) algorithm, discovered using [BnB-PEP](https://arxiv.org/pdf/2203.07305), has been successfully applied to solve large-scale magnetization transfer imaging problems by a group at [NYU School of Medicine](https://med.nyu.edu/) (see the [Imaging Neuroscience paper by Assländer et al](https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00177/120855)) and has been incorporated into their [open-source software package](https://github.com/JakobAsslaender/MRIgeneralizedBloch.jl)!
-
 
 ## Papers
 
@@ -69,7 +70,7 @@ I am a Postdoctoral Research Scientist at the [Department of Industrial Engineer
 ## Awards
 
 * Honorable Mention, MIT Operations Research Center Best Student Paper Award, 2024
-* Winner, Informs Computing Society Student Paper Award, 2024
+* Winner, Informs Computing Society Student Paper Award, 2024  [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
 * Finalist, George Nicholson Student Paper Competition, 2024
 
 ## Talks
