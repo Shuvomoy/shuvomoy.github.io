@@ -73,6 +73,12 @@ I am a Postdoctoral Research Scientist at the [Department of Industrial Engineer
 * Winner, Informs Computing Society Student Paper Award, 2024  [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
 * Finalist, George Nicholson Student Paper Competition, 2024
 
+## Media Coverage
+
+* **Risky Giant Steps Can Solve Optimization Problems Faster** by Allison Parshall, Quanta Magazine, August 2023. [[Quanta Article](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)]  
+  * Also publicized in the Chinese magazine [机器之心 (Heart of the Machine)](https://tinyurl.com/HeartOfTheMachine),  which is a well-known outlet in China for staying updated on advancements in AI, machine learning, data science, and related fields.
+  * Also publicized in the [Nautilus Magazine](https://nautil.us/risky-giant-steps-can-solve-optimization-problems-faster-375562/) on September 5, 2023. 
+
 ## Talks
 
 * Energy-optimal Timetable Design for Sustainable Metro Railway Networks [[slides](/assets/slides/Transport_2023.html)]
@@ -135,12 +141,6 @@ I am a Postdoctoral Research Scientist at the [Department of Industrial Engineer
 * `BnB-PEP code` [[github repo](https://github.com/Shuvomoy/BnB-PEP-code)]
 * `NCG-PEP code` [[github repo](https://github.com/Shuvomoy/NCG-PEP-code)]
 
-## Media Coverage
-
-* **Risky Giant Steps Can Solve Optimization Problems Faster** by Allison Parshall, Quanta Magazine, August 2023. [[Quanta Article](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)]  
-   * Also publicized in the Chinese magazine [机器之心 (Heart of the Machine)](https://tinyurl.com/HeartOfTheMachine),  which is a well-known outlet in China for staying updated on advancements in AI, machine learning, data science, and related fields.
-   * Also publicized in the [Nautilus Magazine](https://nautil.us/risky-giant-steps-can-solve-optimization-problems-faster-375562/) on September 5, 2023. 
-
 ## Service
 
 * Reviewer for:
@@ -155,7 +155,11 @@ I am a Postdoctoral Research Scientist at the [Department of Industrial Engineer
 
 * Session Chair,  INFORMS Annual Meeting,  2023
 
+## PhD Thesis
+
+[Advances in Computer-Assisted Design and Analysis of First-Order Optimization Methods and Related Problems](https://dspace.mit.edu/handle/1721.1/155495) [[pdf](https://dspace.mit.edu/bitstream/handle/1721.1/155495/DasGupta-sdgupta-phd-orc-2024-thesis.pdf?sequence=1&isAllowed=y)]
+
 
 ## MASc Thesis
 
-[Optimization Models for Energy-efficient Railway Timetables.](https://tspace.library.utoronto.ca/handle/1807/74584) (Grade: A+) [[pdf](https://shuvomoy.github.io/Papers/Optimization_Models_for_Energy_efficient_Railway_Timetables_MASc_Shuvo.pdf)]
+[Optimization Models for Energy-efficient Railway Timetables.](https://tspace.library.utoronto.ca/handle/1807/74584) [[pdf](https://shuvomoy.github.io/Papers/Optimization_Models_for_Energy_efficient_Railway_Timetables_MASc_Shuvo.pdf)]
