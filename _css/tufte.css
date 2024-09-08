@@ -95,6 +95,37 @@
   font-style: italic;
 }
 
+/* Literata fonts */
+
+@font-face {
+  font-family: "literata";
+  src: url("../assets/literata/Literata-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "literata";
+  src: url("../assets/literata/Literata-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "literata";
+  src: url("../assets/literata/Literata-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "literata";
+  src: url("../assets/literata/Literata-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+
 /* Tex-Gyre-Pagella fonts */
 
 @font-face {
@@ -188,7 +219,7 @@ body {
   margin-right: auto;
 
   /* padding-left: 12.5%; */
-  font-family:   bookerly, ETBembo, et-book, TexGyrePagella, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family:  literata, bookerly, ETBembo, et-book, TexGyrePagella, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   background-color: #ffffff;/* #fffff8; */
   color: #111;
   max-width: 1400px;
