@@ -17,9 +17,8 @@ sitemap_priority = 1.0
                 ● Postdoc at <a href="https://ieor.columbia.edu/">Columbia IEOR</a> <br />
         ● Ph.D. from <a href="http://www.mit.edu/">MIT</a> <a href="https://orc.mit.edu/">Operations Research Center</a>, 2024<br />
         ● Incoming  Assistant Professor at <a href="https://cmor.rice.edu/">Rice CMOR</a> (July 2025-)<br />
-        ● Email(s):<br />
-        <a href="mailto:sd3871@columbia.edu"> sd3871@columbia.edu</a><br />
-        <a href="mailto:shuvomoy.dasgupta@gmail.com"> shuvomoy.dasgupta@gmail.com</a><br />
+        ● Email: <a href="mailto:sd3871@columbia.edu"> sd3871@columbia.edu</a><br />
+       
        
                 
 <a href="https://scholar.google.com/citations?user=SOrTYXsAAAAJ&hl=en&oi=ao" rel="nofollow noopener noreferrer"> <i class="ai ai-google-scholar-square ai-3x" style="font-size:35px"></i> </a>
