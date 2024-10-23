@@ -42,20 +42,18 @@ I am a Postdoctoral Research Scientist at the [Department of Industrial Engineer
 
 ## News
 
-* Our [BnB-PEP](https://arxiv.org/pdf/2203.07305) paper is a finalist for the 2024 George Nicholson Student Paper Competition!
-
-* I have received the 2024 Informs Computing Society Student Paper Award for the [BnB-PEP](https://arxiv.org/pdf/2203.07305) paper! [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
-
-* Recently our [OptISTA](https://arxiv.org/pdf/2305.15704) algorithm, discovered using [BnB-PEP](https://arxiv.org/pdf/2203.07305), has been successfully applied to solve large-scale magnetization transfer imaging problems by a group at [NYU School of Medicine](https://med.nyu.edu/) (see the [Imaging Neuroscience paper by Assländer et al](https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00177/120855)) and has been incorporated into their [open-source software package](https://github.com/JakobAsslaender/MRIgeneralizedBloch.jl)!
+* Thrilled to receive an Honorable Mention for our [BnB-PEP](https://arxiv.org/pdf/2203.07305) paper in the 2024 George Nicholson Student Paper Competition!
+* I have received the 2024 INFORMS Computing Society Student Paper Award for the [BnB-PEP](https://arxiv.org/pdf/2203.07305) paper! [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
 
 ## Papers
 
-* **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://link.springer.com/article/10.1007/s10107-024-02127-7)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
-
-* **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Sparse and Low-rank Optimization](https://link.springer.com/article/10.1007/s10957-024-02448-9)”, published in the  *Journal of Optimization Theory and Applications*, 2024. [[pdf](https://arxiv.org/abs/2011.04552)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[bib](assets/bibtex_citations/NExOS.bib)]
-
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[tutorial video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)] 
+  * Winner, INFORMS Computing Society Student Paper Award, 2024  
 
+  * Honorable Mention,  INFORMS George Nicholson Student Paper Competition, 2024
+  * Honorable Mention, MIT Operations Research Center Best Student Paper Award, 2024
+* **Shuvomoy Das Gupta**, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://link.springer.com/article/10.1007/s10107-024-02127-7)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
+* **Shuvomoy Das Gupta**, [Bartolomeo Stellato](https://stellato.io/), and Bart P.G. Van Parys, “[Exterior-point Optimization for Sparse and Low-rank Optimization](https://link.springer.com/article/10.1007/s10957-024-02448-9)”, published in the  *Journal of Optimization Theory and Applications*, 2024. [[pdf](https://arxiv.org/abs/2011.04552)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[bib](assets/bibtex_citations/NExOS.bib)]
 * **Shuvomoy Das Gupta**, Bart P.G. Van Parys, and J. Kevin Tobin, “[Energy-optimal Timetable Design for Sustainable Metro Railway Networks](https://arxiv.org/abs/2309.05489)”, R&R in *Transportation Research Part B: Methodological*, 2023. [[pdf](https://arxiv.org/pdf/2309.05489.pdf)] [[slides](/assets/slides/Transport_2023.html)] [[poster](https://shuvomoy.github.io/Papers/MITEI_conference_2023_final_poster.pdf)] [[bib](assets/bibtex_citations/CBTC2023.bib)] 
 
 - **Uijeong Jang**, Shuvomoy Das Gupta, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, major revision in *Mathematical Programming Series A*, 2023. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
@@ -68,12 +66,17 @@ I am a Postdoctoral Research Scientist at the [Department of Industrial Engineer
 
 ## Awards
 
+* Winner, INFORMS Computing Society Student Paper Award, 2024  [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
+
+* Honorable Mention, George Nicholson Student Paper Competition, 2024
+
 * Honorable Mention, MIT Operations Research Center Best Student Paper Award, 2024
-* Winner, Informs Computing Society Student Paper Award, 2024  [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
-* Finalist, George Nicholson Student Paper Competition, 2024
+
+  
 
 ## Media Coverage
 
+* Rice Engineering News, October 2024. [[Link](https://engineering.rice.edu/news/shuvomoy-das-gupta-wins-informs-computing-society-student-paper-award)]
 * **Risky Giant Steps Can Solve Optimization Problems Faster** by Allison Parshall, Quanta Magazine, August 2023. [[Quanta Article](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)]  
   * Also publicized in the Chinese magazine [机器之心 (Heart of the Machine)](https://tinyurl.com/HeartOfTheMachine),  which is a well-known outlet in China for staying updated on advancements in AI, machine learning, data science, and related fields.
   * Also publicized in the [Nautilus Magazine](https://nautil.us/risky-giant-steps-can-solve-optimization-problems-faster-375562/) on September 5, 2023. 
