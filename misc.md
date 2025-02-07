@@ -6,7 +6,7 @@
 
 \begin{dropdown}{Notes on monotone operator theory}
 
-These are my handwritten notes on monotone operator theory and operator splitting based on [Convex Analysis and Monotone Operator Theory in Hilbert Spaces by  Bauschke and Combettes](https://link.springer.com/book/10.1007/978-1-4419-9467-7)
+These are my handwritten notes that I took during my graduate studies on the topic of monotone operator theory and operator splitting based on [Convex Analysis and Monotone Operator Theory in Hilbert Spaces by  Bauschke and Combettes](https://link.springer.com/book/10.1007/978-1-4419-9467-7). I hosted the notes on my website but did not provide any external link on the menu for some time as I assumed that no one other than me would read these notes. But during INFORMS annual meeting 2024, [Anh Duc Nguyen](https://www.informs.org/Recognizing-Excellence/Award-Recipients/Anh-Duc-Nguyen), who is a brilliant undergraduate student at the National University of Singapore approached me and told me that he read those notes and found those very useful!  Hence, I am putting an external link to those notes here, in case someone find them useful in the future.
 
 
 - [Chapter 1. Background](https://shuvomoy.github.io/Miscellaneous/Notes_Monotone_Operator_Splitting/Chapter_1._Background.pdf)
