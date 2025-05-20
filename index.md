@@ -18,6 +18,7 @@ sitemap_priority = 1.0
         ● Ph.D. from <a href="http://www.mit.edu/">MIT</a> <a href="https://orc.mit.edu/">Operations Research Center</a>, 2024<br />
         ● Incoming  Assistant Professor at <a href="https://cmor.rice.edu/">Rice CMOR</a> (July 2025-)<br />
         ● Email: <a href="mailto:sd3871@columbia.edu"> sd3871@columbia.edu</a><br />
+        ● <a href="https://shuvomoy.github.io/Miscellaneous/Shuvomoy_CV.pdf"> [CV]</a> <br />
        
        
                 
