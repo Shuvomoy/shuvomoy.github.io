@@ -1,12 +1,10 @@
-\enabletheorems
-
 @def title = "Miscellaneous"
 
 # Shuvomoy Das Gupta 
 
-\begin{dropdown}{Notes on monotone operator theory}
-
 These are my handwritten notes that I took during my graduate studies on the topic of monotone operator theory and operator splitting based on [Convex Analysis and Monotone Operator Theory in Hilbert Spaces by  Bauschke and Combettes](https://link.springer.com/book/10.1007/978-1-4419-9467-7). I hosted the notes on my website but did not provide any external link on the menu for some time as I assumed that no one other than me would read these notes. But during INFORMS annual meeting 2024, [Anh Duc Nguyen](https://www.informs.org/Recognizing-Excellence/Award-Recipients/Anh-Duc-Nguyen), who is a brilliant undergraduate student at the National University of Singapore approached me and told me that he read those notes and found those very useful!  Hence, I am putting an external link to those notes here, in case someone find them useful in the future.
+
+### Notes on monotone operator theory
 
 
 - [Chapter 1. Background](https://shuvomoy.github.io/Miscellaneous/Notes_Monotone_Operator_Splitting/Chapter_1._Background.pdf)
@@ -65,11 +63,11 @@ These are my handwritten notes that I took during my graduate studies on the top
 
 - [Chapter 29. Best Approximation Algorithms](https://shuvomoy.github.io/Miscellaneous/Notes_Monotone_Operator_Splitting/Chapter_29._Best_Approximation_Algorithms.pdf)
 
-\end{dropdown}
 
 
 
-\begin{dropdown}{Notes on convex optimization}
+
+### Notes on convex optimization
 
 These notes are based on the course [EE364b](https://web.stanford.edu/class/ee364b/index.html)
 
@@ -123,7 +121,7 @@ These notes are based on the course [EE364b](https://web.stanford.edu/class/ee36
 
 - [24. ADMM classical derivation](https://shuvomoy.github.io/Miscellaneous/Notes_Convex_Optimization_Study_Group/24. ADMM Classical Derivation.pdf)
 
-\end{dropdown}
 
-\theoremscripts
+
+
 
