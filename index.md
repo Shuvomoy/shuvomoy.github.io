@@ -14,10 +14,9 @@ sitemap_priority = 1.0
  src="/assets/photo-2023.jpeg" alt="sdg">
     <p> <br /> <br /> <br /> <br /> <br />  
         <strong>Shuvo Das Gupta</strong>  <br />
-                ● Postdoc at <a href="https://ieor.columbia.edu/">Columbia IEOR</a> <br />
-        ● Ph.D. from <a href="http://www.mit.edu/">MIT</a> <a href="https://orc.mit.edu/">Operations Research Center</a>, 2024<br />
-        ● Incoming  Assistant Professor at <a href="https://cmor.rice.edu/">Rice CMOR</a> (July 2025-)<br />
-        ● Email: <a href="mailto:sd3871@columbia.edu"> sd3871@columbia.edu</a><br />
+        ● Assistant Professor, <a href="https://cmor.rice.edu/">Department of Computational Applied Mathematics & Operations Research</a> <br />
+        ● <a href="https://orc.mit.edu/">Rice University</a>, Houston, TX <br />      
+        ● Email: <a href="mailto:sd158@rice.edu"> sd158@rice.edu</a><br />
         ● <a href="https://shuvomoy.github.io/Miscellaneous/Shuvomoy_CV.pdf"> [CV]</a> <br />
        
        
@@ -37,14 +36,7 @@ sitemap_priority = 1.0
 
 ## About Me
 
-I am a Postdoctoral Research Scientist at the [Department of Industrial Engineering and Operations Research](https://ieor.columbia.edu/), [Columbia University](https://www.columbia.edu/), hosted by Professor [Christian Kroer](https://www.columbia.edu/~ck2945/) and Professor [Garud Iyengar](https://www.columbia.edu/~gi10/). I recently obtained my Ph.D. from the [Operations Research Center](https://orc.mit.edu/) at [MIT](http://www.mit.edu/) in May 2024. My research is primarily in optimization—both theory and application—and often both simultaneously. 
-
-**Update.** I will join the [Department of Computational Applied Mathematics & Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/) as an Assistant Professor starting July 2025. 
-
-## News
-
-* Thrilled to receive an Honorable Mention for our [BnB-PEP](https://arxiv.org/pdf/2203.07305) paper in the 2024 George Nicholson Student Paper Competition!
-* I have received the 2024 INFORMS Computing Society Student Paper Award for the [BnB-PEP](https://arxiv.org/pdf/2203.07305) paper! [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
+I am an assistant professor in the [Department of Computational Applied Mathematics and Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/). My research interests lie at the intersection of optimization, operations research, and computation. I obtained my Ph.D. from the [Operations Research Center](https://orc.mit.edu/) at [MIT](https://www.mit.edu/) in 2024. My work on computer-assisted algorithm design received the 2024 INFORMS Computing Society Student Paper Award and honorable mentions in both the 2024 INFORMS George Nicholson Student Paper Competition and the 2024 MIT Operations Research Center Best Student Paper Competition. My industry collaboration on [energy-efficient railway timetabling](https://www.sciencedirect.com/science/article/pii/S0191261516304830) has been implemented in the largest installed base of communication-based train control systems worldwide.
 
 ## Papers
 
