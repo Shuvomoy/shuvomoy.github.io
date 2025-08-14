@@ -40,6 +40,8 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Papers
 
+* [Jakub Černý](https://www.cernyjakub.com/), Shuvomoy Das Gupta, and [Christian Kroer](https://www.columbia.edu/~ck2945/), “Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium”, 2025. 
+
 * Uijeong Jang, Shuvomoy Das Gupta, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, accepted in *Mathematical Programming Series A*, 2025. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
 * Shuvomoy Das Gupta, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[tutorial video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)] 
   * Winner, INFORMS Computing Society Student Paper Award, 2024  
