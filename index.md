@@ -60,7 +60,7 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Grant
 
-* AFOSR Grant: *Computer-Assisted Design of Provably Fastest Algorithms*. Co-PI. $600,000. (my share: 50%)  *2025-2028*
+* Co-PI in AFOSR Grant: *Computer-Assisted Design of Provably Fastest Algorithms*, Total Grant Amount: \$600,000 (My Share: 50%), *2025-2028*.
 
 ## Awards 
 
