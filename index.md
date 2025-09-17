@@ -58,11 +58,9 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 - Shuvomoy Das Gupta, J. Kevin Tobin, and Lacra Pavel, “[A Two-Step Linear Programming Model for Energy-Efficient Timetables in Metro Railway Networks](http://www.sciencedirect.com/science/article/pii/S0191261516304830)”, published in *Transportation Research Part B: Methodological* 93 (2016): 57–74. [[pdf](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf)] [[bib](assets/bibtex_citations/TRB2016.bib)]
 - Shuvomoy Das Gupta, Lacra Pavel, and J. Kevin Tobin, “[An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7172268)”, published in the *proceedings of 2015 American Control Conference (ACC)*, Chicago, IL, USA, July 2015. [[pdf](https://shuvomoy.github.io/Papers/An_Optimization_Model_to_Utilize_Regenerative_Braking_Energy_in_a_Railway_Network.pdf)] [[presentation](https://shuvomoy.github.io/Papers/ACC_presentation.svg)] [[bib](assets/bibtex_citations/ACC2015.bib)] 
 
-## Grant
+## Grants and Awards
 
-* Co-PI in AFOSR Grant: *Computer-Assisted Design of Provably Fastest Algorithms*, Total Grant Amount: \$600,000 (My Share: 50%), *2025-2028*.
-
-## Awards 
+* Co-PI in AFOSR Grant: *Computer-Assisted Design of Provably Fastest Algorithms*, \$600,000 (My Share: 50%), *2025-2028*.
 
 * Winner, INFORMS Computing Society Student Paper Award, 2024  [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
 
