@@ -124,7 +124,12 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Teaching
 
-* **Upcoming:** CMOR 467/567: Optimization for Energy Systems (Fall, 2025)
+* **Current.** CMOR 467/567: Optimization for Energy Systems (Fall, 2025)
+  
+  * Instructor. 
+  * Designed the new course at Rice from scratch. 
+  
+* **Upcoming.** CMOR 537: Computer-assisted Algorithm Design for Optimization and Machine Learning  (Spring, 2026)
   
 * 6.7220: Nonlinear Optimization, MIT (Spring, 2023) [Teaching score: 6.9/7]
   * Teaching assistant for a course that aims to provide PhD students with a unified overview of convex optimization.
