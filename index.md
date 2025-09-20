@@ -36,16 +36,15 @@ sitemap_priority = 1.0
 
 ## About Me
 
-I am an assistant professor in the [Department of Computational Applied Mathematics and Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/). My research interests lie at the intersection of optimization, operations research, and computation. I obtained my Ph.D. from the [Operations Research Center](https://orc.mit.edu/) at [MIT](https://www.mit.edu/) in 2024. My work on computer-assisted algorithm design received the 2024 INFORMS Computing Society Student Paper Award and honorable mentions in both the 2024 INFORMS George Nicholson Student Paper Competition and the 2024 MIT Operations Research Center Best Student Paper Competition. My industry collaboration on [energy-efficient railway timetabling](https://www.sciencedirect.com/science/article/pii/S0191261516304830) has been implemented in the largest installed base of communication-based train control systems worldwide.
+I am an assistant professor in the [Department of Computational Applied Mathematics and Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/). My research interests lie at the intersection of optimization, operations research, and computation. I obtained my Ph.D. from the [Operations Research Center](https://orc.mit.edu/) at [MIT](https://www.mit.edu/) in 2024. My work on computer-assisted algorithm design received the 2024 INFORMS Computing Society Student Paper Award and honorable mentions in both the 2024 INFORMS George Nicholson Student Paper Competition and the 2024 MIT Operations Research Center Best Student Paper Award. My industry collaboration on [energy-efficient railway timetabling](https://www.sciencedirect.com/science/article/pii/S0191261516304830) has been implemented in the largest installed base of communication-based train control systems worldwide.
 
 ## Papers
 
 * [Jakub Černý](https://www.cernyjakub.com/), Shuvomoy Das Gupta, and [Christian Kroer](https://www.columbia.edu/~ck2945/), “[Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium](https://arxiv.org/abs/2508.10204)”, 2025. [[pdf](https://arxiv.org/pdf/2508.10204)]
-
 * Uijeong Jang, Shuvomoy Das Gupta, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://arxiv.org/abs/2305.15704)”, accepted in *Mathematical Programming Series A*, 2025. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
+   * `OptISTA` has been successfully  applied in solving large-scale magnetization transfer imaging (MTI) problems, for details, please see the paper by [Assländer et al.](https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00177/120855)  and the accompanying software [MRIgeneralizedBloch](https://github.com/JakobAsslaender/MRIgeneralizedBloch.jl). 
 * Shuvomoy Das Gupta, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://shuvomoy.github.io/Papers/Das_Gupta_et_al_BnB_PEP.pdf)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[tutorial video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)] 
   * Winner, INFORMS Computing Society Student Paper Award, 2024  
-
   * Honorable Mention,  INFORMS George Nicholson Student Paper Competition, 2024
   * Honorable Mention, MIT Operations Research Center Best Student Paper Award, 2024
 * Shuvomoy Das Gupta, Robert M. Freund, [Xu Andy Sun](https://mitsloan.mit.edu/faculty/directory/andy-sun), [Adrien B. Taylor](https://adrientaylor.github.io/), “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://link.springer.com/article/10.1007/s10107-024-02127-7)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
@@ -53,16 +52,20 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 * Shuvomoy Das Gupta, Bart P.G. Van Parys, and J. Kevin Tobin, “[Energy-optimal Timetable Design for Sustainable Metro Railway Networks](https://arxiv.org/abs/2309.05489)”, R&R in *Transportation Research Part B: Methodological*, 2023. [[pdf](https://arxiv.org/pdf/2309.05489.pdf)] [[slides](/assets/slides/Transport_2023.html)] [[poster](https://shuvomoy.github.io/Papers/MITEI_conference_2023_final_poster.pdf)] [[bib](assets/bibtex_citations/CBTC2023.bib)] 
 
 - Shuvomoy Das Gupta and Lacra Pavel, “[On Seeking Efficient Pareto Optimal Points in Multi-Player Minimum Cost Flow Problems with Application to Transportation Systems](https://link.springer.com/article/10.1007/s10898-019-00750-9)”, published in the *Journal of Global Optimization* 74 (2019): 523-548. [[pdf](https://shuvomoy.github.io/Papers/Journal_of_Global_Optimization_19.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/LIDS_2020_student_conference/LIDS_2020_student_conference.pdf)] [[bib](assets/bibtex_citations/JOGO2019.bib)]
+
 - Shuvomoy Das Gupta, “[On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets](https://ieeexplore.ieee.org/document/8636076)”, published in the *proceedings of the 56th Allerton Conference on Communication, Control, and Computing*, University of Illinois at Urbana-Champaign, IL, USA, October 2018. [[pdf](https://shuvomoy.github.io/Papers/Allerton_2018.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/Allerton_2018_Presentation/Allerton_2018_presentation_final.pdf)] [[bib](assets/bibtex_citations/Allerton2018.bib)]
+
 - Shuvomoy Das Gupta and Lacra Pavel, “[Multi-player Minimum Cost Flow Problems with Nonconvex Costs and Integer Flows](http://ieeexplore.ieee.org/document/7799446/)”, published in the *proceedings of the 55th IEEE Conference on Decision and Control*, Las Vegas, NV, USA, December 12-14, 2016. [[pdf](https://shuvomoy.github.io/Papers/Multi-player_minimum_cost_flow_problems_with_nonconvex_costs_and_integer_flows.pdf)] [[longer version with proofs](https://shuvomoy.github.io/Papers/CDC_2016_manuscript_Pareto_opt_with_proofs.pdf)] [[presentation](https://shuvomoy.github.io/Papers/CDC_2016_presentation.pdf)] [[bib](assets/bibtex_citations/CDC2016.bib)]
+
 - Shuvomoy Das Gupta, J. Kevin Tobin, and Lacra Pavel, “[A Two-Step Linear Programming Model for Energy-Efficient Timetables in Metro Railway Networks](http://www.sciencedirect.com/science/article/pii/S0191261516304830)”, published in *Transportation Research Part B: Methodological* 93 (2016): 57–74. [[pdf](https://shuvomoy.github.io/Papers/A_two_step_linear_programming_model_for_energy_efficient_timetables_in_metro_railway_networks.pdf)] [[bib](assets/bibtex_citations/TRB2016.bib)]
+
 - Shuvomoy Das Gupta, Lacra Pavel, and J. Kevin Tobin, “[An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7172268)”, published in the *proceedings of 2015 American Control Conference (ACC)*, Chicago, IL, USA, July 2015. [[pdf](https://shuvomoy.github.io/Papers/An_Optimization_Model_to_Utilize_Regenerative_Braking_Energy_in_a_Railway_Network.pdf)] [[presentation](https://shuvomoy.github.io/Papers/ACC_presentation.svg)] [[bib](assets/bibtex_citations/ACC2015.bib)] 
 
-## Grants
+  
 
-* Co-PI in AFOSR Grant: *Computer-Assisted Design of Provably Fastest Algorithms*, \$600,000 (My Share: 50%), *2025-2028*.
+## Grants & Awards
 
-## Awards
+* Co-PI in joint AFOSR Grant: *Computer-Assisted Design of Provably Fastest Algorithms*, \$600,000 (My Share:  \$300,000), *2025-2028*.
 
 * Winner, INFORMS Computing Society Student Paper Award, 2024  [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
 
@@ -74,7 +77,6 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Media Coverage
 
-* Rice Engineering News, October 2024. [[Link](https://engineering.rice.edu/news/shuvomoy-das-gupta-wins-informs-computing-society-student-paper-award)]
 * **Risky Giant Steps Can Solve Optimization Problems Faster** by Allison Parshall, Quanta Magazine, August 2023. [[Quanta Article](https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/)]  
   * Also publicized in the Chinese magazine [机器之心 (Heart of the Machine)](https://tinyurl.com/HeartOfTheMachine),  which is a well-known outlet in China for staying updated on advancements in AI, machine learning, data science, and related fields.
   * Also publicized in the [Nautilus Magazine](https://nautil.us/risky-giant-steps-can-solve-optimization-problems-faster-375562/) on September 5, 2023. 
@@ -101,8 +103,6 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
   * [ICCOPT, July 2022](https://iccopt2022.lehigh.edu/)
   * [MIT Data Science Lab Seminar, June 10, 2022](https://dsl.mit.edu/branch-and-bound-performance-estimation-programming-unified-methodology-constructing-optimal)
 
-   
-  
 * Design and Analysis of First-order Methods via Nonconvex QCQP Frameworks [[video](https://youtu.be/unDornjkpRU)]
 
   * [$1^\text{st}$ Workshop on Performance Estimation Problems](https://performanceestimation.github.io/PEP-talks/february_2023/program.html), UCLouvain, Belgium, February 13-14, 2023.
