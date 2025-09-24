@@ -69,7 +69,7 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 * Winner, INFORMS Computing Society Student Paper Award, 2024  [[citation](/assets/Awards/Shuvomoy_INFORMS_Computing_Society_ICS_student_paper_prize_citation.pdf)]
 
-* Honorable Mention, George Nicholson Student Paper Competition, 2024
+* Honorable Mention & Finalist, George Nicholson Student Paper Competition, 2024
 
 * Honorable Mention, MIT Operations Research Center Best Student Paper Award, 2024
 
