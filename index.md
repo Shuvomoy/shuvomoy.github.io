@@ -40,7 +40,7 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Papers
 
-* Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, “On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games”, 2025.
+* Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, “[On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games](https://arxiv.org/pdf/2510.03855)”, 2025. [[pdf](https://arxiv.org/pdf/2510.03855)]
 
 * Jakub Černý, Shuvomoy Das Gupta, and Christian Kroer, “[Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium](https://arxiv.org/abs/2508.10204)”, 2025. [[pdf](https://arxiv.org/pdf/2508.10204)]
 * Uijeong Jang, Shuvomoy Das Gupta, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://link.springer.com/article/10.1007/s10107-025-02258-5)”, published in *Mathematical Programming Series A*, 2025. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
