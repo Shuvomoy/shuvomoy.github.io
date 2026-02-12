@@ -38,6 +38,10 @@ sitemap_priority = 1.0
 
 I am an assistant professor in the [Department of Computational Applied Mathematics and Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/). My research interests lie at the intersection of optimization, operations research, and computation. I obtained my Ph.D. from the [Operations Research Center](https://orc.mit.edu/) at [MIT](https://www.mit.edu/) in 2024. My work on computer-assisted algorithm design received the 2024 INFORMS Computing Society Student Paper Award and honorable mentions in both the 2024 INFORMS George Nicholson Student Paper Competition and the 2024 MIT Operations Research Center Best Student Paper Award. My industry collaboration on [energy-efficient railway timetabling](https://www.sciencedirect.com/science/article/pii/S0191261516304830) has been implemented in the largest installed base of communication-based train control systems worldwide.
 
+## News
+
+* Our package [`PEPit.jl`](https://github.com/PerformanceEstimation/PEPit.jl) is out and will be presented at [JuMP-dev 2026](https://jump.dev/meetings/jumpdev2026/)! `PEPit.jl` is a native Julia implementation of *Performance Estimation Programming (PEP) methodology* for computer-assisted worst-case analysis of first-order optimization algorithms in `Julia`.
+
 ## Papers
 
 * Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, “[On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games](https://arxiv.org/abs/2510.03855)”, accepted in *ICLR*, 2026. [[pdf](https://arxiv.org/pdf/2510.03855)] [[bib](assets/bibtex_citations/AltGDA25.bib)]
@@ -154,6 +158,7 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Software
 
+* `PEPit.jl` [github repo](https://github.com/PerformanceEstimation/PEPit.jl)
 * `NExOS.jl` [[github repo](https://github.com/Shuvomoy/NExOS.jl)]
 * `BnB-PEP code` [[github repo](https://github.com/Shuvomoy/BnB-PEP-code)]
 * `NCG-PEP code` [[github repo](https://github.com/Shuvomoy/NCG-PEP-code)]
