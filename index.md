@@ -40,7 +40,7 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## News
 
-* Our package [`PEPit.jl`](https://github.com/PerformanceEstimation/PEPit.jl) is out and will be presented at [JuMP-dev 2026](https://jump.dev/meetings/jumpdev2026/)! `PEPit.jl` is a native Julia implementation of *Performance Estimation Programming (PEP) methodology* for computer-assisted worst-case analysis of first-order optimization algorithms in `Julia`.
+* Our open-source Julia package [`PEPit.jl`](https://github.com/PerformanceEstimation/PEPit.jl) is out and will be presented at [JuMP-dev 2026](https://jump.dev/meetings/jumpdev2026/)! `PEPit.jl` is a native Julia implementation of *Performance Estimation Programming (PEP) methodology* for computer-assisted worst-case analysis of first-order optimization algorithms in `Julia`.
 
 ## Papers
 
@@ -130,22 +130,23 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Teaching
 
-* **Current.** CMOR 467/567: Optimization for Energy Systems (Fall, 2025)
-  * Instructor. 
-  * Designed and launched this new course for advanced undergraduate and graduate students.
-  
 * **Upcoming.** CMOR 537: Computer-assisted Algorithm Design for Optimization and Machine Learning  (Spring, 2026)
 
    * Instructor.
    * Developing this new graduate course for its inaugural offering.
-  
+
+* CMOR 467/567: Optimization for Energy Systems (Fall, 2025)
+
+   * Instructor. 
+   * Designed and launched this new course for advanced undergraduate and graduate students.
+
 * 6.7220: Nonlinear Optimization, MIT (Spring, 2023) [Teaching score: 6.9/7]
   * Teaching assistant for a course that aims to provide PhD students with a unified overview of convex optimization.
-  
+
   * Duties: Assisting students, leading recitations, writing and marking assignments and exams.
-  
+
   * Pdf of my recitation lectures: [[pdf](https://shuvomoy.github.io/Teaching/Shuvo_Recitations_MITNonlinearOpt_2023.pdf)]
-  
+
 * 15.S60: Computing in Optimization and Statistics (2023), MIT  [Teaching score: 7/7]
    * Instructor for the advanced optimization session. [[Jupyter notebook 1](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2023_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202023%20Advanced%20Optimization%20Session%201%20Convex.ipynb)] [[Jupyter notebook 2](https://nbviewer.org/github/Shuvomoy/MIT_IAP_2023_15_S60_Advanced_Optimization_Session_Shuvo/blob/main/IAP%202023%20Advanced%20Optimization%20Session%202%20MILP.ipynb)] [[Student feedback](https://shuvomoy.github.io/Teaching/15_S60_feedback_2023.pdf)]
 
