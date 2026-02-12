@@ -159,7 +159,7 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Software
 
-* `PEPit.jl` [github repo](https://github.com/PerformanceEstimation/PEPit.jl)
+* `PEPit.jl` [[github repo](https://github.com/PerformanceEstimation/PEPit.jl)]
 * `NExOS.jl` [[github repo](https://github.com/Shuvomoy/NExOS.jl)]
 * `BnB-PEP code` [[github repo](https://github.com/Shuvomoy/BnB-PEP-code)]
 * `NCG-PEP code` [[github repo](https://github.com/Shuvomoy/NCG-PEP-code)]
