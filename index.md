@@ -185,3 +185,7 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 ## MASc Thesis
 
 [Optimization Models for Energy-efficient Railway Timetables.](https://tspace.library.utoronto.ca/handle/1807/74584) [[pdf](https://shuvomoy.github.io/Papers/Optimization_Models_for_Energy_efficient_Railway_Timetables_MASc_Shuvo.pdf)]
+
+## Miscellaneous 
+
+Research Highlight (Tutorial Article) for INFORMS Computing Society Student Paper Award, 2025 [[pdf](/assets/Awards/ICS_NewsLetter_Research_Highlight_BnB_PEP.pdf)]
