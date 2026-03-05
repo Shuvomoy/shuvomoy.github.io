@@ -44,6 +44,8 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Papers
 
+* Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B. Taylor, Sebastian Banert, and Pontus Giselsson, “[The AutoLyap software suite for computer-assisted Lyapunov analyses of first-order methods](https://arxiv.org/abs/2506.24076)”, arXiv preprint, 2026. [[pdf](https://arxiv.org/pdf/2506.24076)] [[bib](assets/bibtex_citations/upadhyaya2026autolyap.bib)]
+
 * Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, “[On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games](https://arxiv.org/abs/2510.03855)”, accepted in *ICLR*, 2026. [[pdf](https://arxiv.org/pdf/2510.03855)] [[bib](assets/bibtex_citations/AltGDA25.bib)]
 
 * Jakub Černý, Shuvomoy Das Gupta, and Christian Kroer, “[Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium](https://arxiv.org/abs/2508.10204)”, accepted in *AAAI*, 2026. [[pdf](https://arxiv.org/pdf/2508.10204)] [[bib](assets/bibtex_citations/CernyDasguptaKroer2025Spatial.bib)]
