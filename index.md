@@ -15,9 +15,9 @@ sitemap_priority = 1.0
     <p> <br /> <br /> <br /> <br /> <br />  
         <strong>Shuvo Das Gupta</strong>  <br />
         ● Assistant Professor, <a href="https://cmor.rice.edu/">Department of Computational Applied Mathematics & Operations Research</a> <br />
-        ● <a href="https://orc.mit.edu/">Rice University</a>, Houston, TX <br />      
+        ● <a href="https://www.rice.edu/">Rice University</a>, Houston, TX <br />      
         ● Email: <a href="mailto:sd158@rice.edu"> sd158@rice.edu</a><br />
-        ● <a href="https://shuvomoy.github.io/Miscellaneous/Shuvomoy_CV.pdf"> [CV]</a> <br />
+        ● <a href="/Miscellaneous/Shuvomoy_CV/CV.pdf"> [CV]</a> <br />
        
        
                 
@@ -36,7 +36,9 @@ sitemap_priority = 1.0
 
 ## About Me
 
-I am an assistant professor in the [Department of Computational Applied Mathematics and Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/). My research interests lie at the intersection of optimization, operations research, and computation. I obtained my Ph.D. from the [Operations Research Center](https://orc.mit.edu/) at [MIT](https://www.mit.edu/) in 2024. My work on computer-assisted algorithm design received the 2024 INFORMS Computing Society Student Paper Award and honorable mentions in both the 2024 INFORMS George Nicholson Student Paper Competition and the 2024 MIT Operations Research Center Best Student Paper Award. My industry collaboration on [energy-efficient railway timetabling](https://www.sciencedirect.com/science/article/pii/S0191261516304830) has been implemented in the largest installed base of communication-based train control systems worldwide.
+I am an assistant professor in the [Department of Computational Applied Mathematics and Operations Research](https://cmor.rice.edu/) at [Rice University](https://www.rice.edu/). I joined Rice in Fall 2025. I obtained my Ph.D. from the [Operations Research Center](https://orc.mit.edu/) at [MIT](https://www.mit.edu/) in 2024 and was a postdoc at [Columbia IEOR](https://ieor.columbia.edu/) during 2024-25. 
+
+My research interests lie at the intersection of optimization, operations research, and computation. My work on computer-assisted algorithm design received the 2024 INFORMS Computing Society Student Paper Award and honorable mentions in both the 2024 INFORMS George Nicholson Student Paper Competition and the 2024 MIT Operations Research Center Best Student Paper Award. My industry collaboration on [energy-efficient railway timetabling](https://www.sciencedirect.com/science/article/pii/S0191261516304830) has been implemented in the largest installed base of communication-based train control systems worldwide.
 
 ## News
 
@@ -44,11 +46,11 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Papers
 
-* Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B. Taylor, Sebastian Banert, and Pontus Giselsson, “[The AutoLyap software suite for computer-assisted Lyapunov analyses of first-order methods](https://arxiv.org/abs/2506.24076)”, arXiv preprint, 2026. [[pdf](https://arxiv.org/pdf/2506.24076)] [[bib](assets/bibtex_citations/upadhyaya2026autolyap.bib)]
+* Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B. Taylor, Sebastian Banert, and Pontus Giselsson, “[The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods](https://arxiv.org/abs/2506.24076)”, arXiv preprint, 2026. [[pdf](https://arxiv.org/pdf/2506.24076)] [[bib](assets/bibtex_citations/upadhyaya2026autolyap.bib)]
 
 * Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, “[On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games](https://arxiv.org/abs/2510.03855)”, accepted in *ICLR*, 2026. [[pdf](https://arxiv.org/pdf/2510.03855)] [[bib](assets/bibtex_citations/AltGDA25.bib)]
 
-* Jakub Černý, Shuvomoy Das Gupta, and Christian Kroer, “[Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium](https://arxiv.org/abs/2508.10204)”, accepted in *AAAI*, 2026. [[pdf](https://arxiv.org/pdf/2508.10204)] [[bib](assets/bibtex_citations/CernyDasguptaKroer2025Spatial.bib)]
+* Jakub Černý, Shuvomoy Das Gupta, and Christian Kroer, “[Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium](https://arxiv.org/abs/2508.10204)”, published in *AAAI*, 2026. [[pdf](https://arxiv.org/pdf/2508.10204)] [[bib](assets/bibtex_citations/CernyDasguptaKroer2025Spatial.bib)]
 * Uijeong Jang, Shuvomoy Das Gupta, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://link.springer.com/article/10.1007/s10107-025-02258-5)”, published in *Mathematical Programming Series A*, 2025. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
    * `OptISTA` has been successfully  applied in solving large-scale magnetization transfer imaging (MTI) problems, for details, please see the paper by [Assländer et al.](https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00177/120855)  and the accompanying software [MRIgeneralizedBloch](https://github.com/JakobAsslaender/MRIgeneralizedBloch.jl). 
 * Shuvomoy Das Gupta, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://arxiv.org/pdf/2203.07305)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[tutorial video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)] 
@@ -93,6 +95,9 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 * Computer-Assisted Design of Provably Fastest Algorithms
   *  Invited talk, New Jersey Institute of Technology, New York, NY, March 2025
+
+* On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games
+  * INFORMS Annual Meeting, Atlanta, GA, 2025
 
 * Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses
   * ICCOPT, Los Angeles, CA, 2025
@@ -161,6 +166,8 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Software
 
+* `AutoLyap.jl`[[github repo](https://github.com/AutoLyap/AutoLyap.jl)]
+
 * `PEPit.jl` [[github repo](https://github.com/PerformanceEstimation/PEPit.jl)]
 * `NExOS.jl` [[github repo](https://github.com/Shuvomoy/NExOS.jl)]
 * `BnB-PEP code` [[github repo](https://github.com/Shuvomoy/BnB-PEP-code)]
@@ -168,6 +175,7 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 ## Service
 
+* Organizer, [Friends of Optimization Seminar Series](https://sites.google.com/view/friends-of-optimization), 2024-present
 * Reviewer for:
   - Mathematical Programming
   - Management Science
@@ -178,6 +186,8 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
   - IEEE Transactions on Automatic Control
 * Session Chair,  INFORMS Annual Meeting,  2022
 * Session Chair,  INFORMS Annual Meeting,  2023
+* Session Chair,  INFORMS Annual Meeting,  2024
+* Session Chair,  INFORMS Annual Meeting,  2025
 
 ## PhD Thesis
 

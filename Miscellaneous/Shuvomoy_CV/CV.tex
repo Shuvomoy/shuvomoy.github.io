@@ -1,0 +1,507 @@
+\documentclass[margin,line,pifont]{./FontsAndCls/custom_res}
+
+\usepackage{pifont}
+\usepackage{textcomp}
+\usepackage[hypertexnames=false,hyperfootnotes=false, hidelinks, breaklinks=true]{hyperref}
+%\usepackage[latin1] { inputenc}
+\usepackage{fontspec}
+%\usepackage{url}
+%\usepackage{breakurl}
+\usepackage{fontawesome}
+\usepackage{xurl}
+%\usepackage{fullpage}
+%\usepackage[pass, showframe]{geometry}
+
+%
+%\oddsidemargin -.5in
+%\evensidemargin -.5in
+%\textwidth=6.0in
+ \textheight=9.0in
+%\itemsep=0in
+%\parsep=0in
+\usepackage{fancyhdr}
+\topmargin=0in
+%\textheight=8.5in
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+%\cfoot{\thepage}
+%\lfoot{\textit{\footnotesize Research Statement}}
+%\topmargin 5mm
+
+% Import the 'titling' package for title customization
+\usepackage{titling}
+%\usepackage[UTF8]{ctex}
+\usepackage{xeCJK}
+
+% \tolerance=1
+% \emergencystretch=\maxdimen
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+% Customize the styling of the title
+\pretitle{\LARGE \bfseries\sffamily}
+\posttitle{\par\vskip 0.5em}
+
+% Customize the styling of the author
+\preauthor{\large \lineskip 0.5em}%
+%\begin{tabular}[t]{c}}
+\postauthor{\par}
+
+% Customize the styling of the date
+\predate{\large}
+\postdate{\par}
+
+
+
+% \renewcommand{\sectionfont}{\sffamily\bfseries} % Redefining the section font here
+
+\defaultfontfeatures{Mapping=tex-text}
+% Fontin font
+% ===========
+
+% \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin.otf}
+% %% modified for Karol Kozioł for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+% \usepackage{titlesec}
+% \titleformat*{\section}{\large\sffamily}
+% \titleformat*{\subsection}{\large\sffamily}
+% \titleformat*{\subsubsection}{\sffamily}
+
+% Texgyerpagella font
+% ===================
+
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = texgyrepagella-bold.otf,
+% ItalicFont = texgyrepagella-italic.otf
+% ]
+% {texgyrepagella-regular.otf}
+
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold,
+% ItalicFont = Fontin-Italic
+% ]
+% {Fontin.otf}
+
+%% ET-bembo font
+% ===============
+\setmainfont[
+Path=./FontsAndCls/,
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = et-bembo-bold.ttf,
+ItalicFont = et-bembo-italic.ttf,
+Scale = 1.2 % scale font size
+]
+{et-bembo-roman.ttf}
+\newfontfamily{\fallbacklatin}{Latin Modern Roman}
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\begin{document}
+
+\name{Shuvomoy Das Gupta\vspace*{.05in}}
+
+\begin{resume}
+
+\section{\sc Contact}
+%\faHome \quad Apt.\ 3129, 4300 Dunlavy St, Houston, TX 77006, USA \\
+\faHome \quad 6100 Main St MS-134, Houston, TX 77005, USA \\
+\faGlobe \quad  \url{https://shuvomoy.github.io/}\\
+\faEnvelope \quad \texttt{\href{mailto:sd158@rice.edu}{sd158@rice.edu}} \\
+% \faPhone \quad  (857) 999-6308 
+% {\sc Citizenship:} Canada
+
+\section{ \bfseries\scshape Citizenship}
+Canada
+
+\section{\sc Research \\ Interests}
+
+Optimization, Game Theory, Computation, Transportation \\
+
+\section{\sc Current \\ Position}
+
+{\textbf{Rice University, Houston, TX, USA}}\hfill 2025-Present  \\
+\textit{Assistant Professor, Computational Applied Mathematics \& Operations Research} 
+%Worked on designing optimal algorithms for large-scale game solving.
+
+\section{\sc Academic \\ Experience}
+
+
+{\textbf{Columbia University, New York, NY, USA}}\hfill 2024-2025  \\
+\textit{ Postdoctoral Research Scientist, Industrial Engineering \& Operations Research} \\\textsc{Hosts:} Garud Iyengar \& Christian Kroer  \\
+Worked on designing optimal algorithms for large-scale game solving.
+
+% \textbf{Massachusetts Institute of Technology, Cambridge, USA}\hfill 2019 - 2024 \\
+% \textit{Graduate Research Assistant, MIT Operations Research Center} \\
+% Worked on computer-assisted algorithm design for large-scale optimization.
+
+\section{\sc Industry \\ Experience}
+
+{\textbf{Thales Canada Inc., Toronto, Canada}}\hfill 2016-2018  \\
+\textit{Researcher,  Research \& Technology Department} \\
+Worked on real-time embedded optimization and sensor fusion algorithms in autonomous transportation systems. 
+
+\section{\sc Education}
+
+ \textbf{Massachusetts Institute of Technology, Cambridge, USA}\hfill 2019 - 2024 \\
+Ph.D.\ in Operations Research \\ 
+%\textsc{GPA:} 5.0/5.0\\
+\textsc{Thesis:} Advances in Computer-Assisted Design and Analysis of First-Order Optimization Methods and Related Problems \\
+{\sc{PDF:}}  \url{https://dspace.mit.edu/handle/1721.1/155495}\\
+\textsc{Advisors:}   Robert M.\ Freund \&   Bart P.G.\ Van Parys 
+%\textsc{Expected degree conferral date:} May 29, 2024
+
+\textbf{University of Toronto, Toronto, Canada} \hfill 2016\\
+Master of Applied Science in Electrical and Computer Engineering \\
+%\textsc{GPA:} 4.0/4.0 \\
+\textsc{Thesis:} Optimization Models for Energy-Efficient Railway Timetables \\
+{\sc{PDF:}}  \url{https://utoronto.scholaris.ca/items/b89b9f6b-f9db-4757-8971-6d1563f779fd}\\
+\textsc{Advisor:}   Lacra Pavel
+
+% \textbf{Bangladesh University of Engineering and Technology} \hfill 2012\\
+% \textsc{GPA:} 3.86/4.0 \\
+% Bachelor of Science in Electrical and Electronic Engineering\\
+% \textsc{Major:} Photonics
+
+
+
+
+  % I have a side interest in sustainability issues.
+%optimization, machine learning, data-driven analytics, sustainability, transportation
+
+% \section{\sc Upcoming \\ Work Appointment}
+% {\textbf{Rice University, Houston, TX}}\hfill July 1, 2025 -   \\
+% \textit{Tenure-Track Assistant Professor} \\
+% \textit{Department of Computational Applied Mathematics 
+% \& Operations Research (CMOR)} 
+
+
+\section{ \bfseries\scshape Grants, Awards and Honors}
+
+{\textbf{AFOSR Grant: ``Computer-Assisted Design of Provably Fastest Algorithms". Co-PI. \$600,000. (my share: \$300,000)}   }  \hfill 2025-2028 
+
+
+{\textbf{Winner, INFORMS Computing Society Student Paper Award} }  \hfill 2024  
+
+
+{\textbf{Honorable Mention \& Finalist, INFORMS Nicholson Student Paper Competition} } \hfill 2024
+
+
+{\textbf{Honorable Mention, MIT Operations Research Center Best Student Paper Award}} \hfill 2024  
+
+% {\textbf{Danforth Math and Reading Center, Toronto, Canada}} \hfill 2012-2014  \\
+% \textit{Science Teacher}\\
+% Taught underserved high school students mathematics and physics at an after school program
+
+\newpage
+
+\section{\sc Published Journal \\ Papers}
+
+\noindent \begin{minipage}{\textwidth}
+Uijeong Jang, Shuvomoy Das Gupta, and Ernest K.\ Ryu, ``\textbf{Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA},'' published in \textit{Mathematical Programming Series A}, 2025. \\
+{\sc{PDF:}} \url{https://arxiv.org/pdf/2305.15704.pdf}
+\end{minipage}
+
+\noindent \begin{minipage}{\textwidth}
+Shuvomoy Das Gupta, Bart P.G.\ Van Parys, and Ernest K.\ Ryu, ``\textbf{Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods},'' published in \textit{Mathematical Programming Series A}, 2024. \\
+{\sc{PDF:}} \url{https://arxiv.org/pdf/2203.07305.pdf}
+\end{minipage}
+
+\noindent \begin{minipage}{\textwidth}
+Shuvomoy Das Gupta, Robert M.\ Freund, Xu Andy Sun, Adrien B.\ Taylor, ``\textbf{Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses},'' published in \textit{Mathematical Programming Series A}, 2024. \\
+{\sc{PDF:}} \url{https://arxiv.org/pdf/2301.01530.pdf}
+\end{minipage}
+
+\noindent \begin{minipage}{\textwidth}
+Shuvomoy Das Gupta, Bartolomeo Stellato, and Bart P.G.\ Van Parys, ``\textbf{Exterior-point Optimization for Sparse and Low-rank Optimization},'' published in the \textit{Journal of Optimization Theory and Applications}, 2024. \\
+{\sc{PDF:}} \url{https://arxiv.org/pdf/2011.04552.pdf}
+\end{minipage}
+
+\noindent \begin{minipage}{\textwidth}
+Shuvomoy Das Gupta and Lacra Pavel, ``\textbf{On Seeking Efficient Pareto Optimal Points in Multi-Player Minimum Cost Flow Problems with Application to Transportation Systems},'' published in the \textit{Journal of Global Optimization} 74 (2019): 523--548. \\
+{\sc{PDF:}} \url{https://arxiv.org/pdf/1805.11750.pdf}
+\end{minipage}
+
+\noindent \begin{minipage}{\textwidth}
+Shuvomoy Das Gupta, J.\ Kevin Tobin, and Lacra Pavel, ``\textbf{A Two-Step Linear Programming Model for Energy-Efficient Timetables in Metro Railway Networks},'' published in \textit{Transportation Research Part B: Methodological} 93 (2016): 57--74. \\
+{\sc{PDF:}} \url{https://arxiv.org/pdf/1506.08243.pdf}
+\end{minipage}
+
+
+
+\section{\sc Published Conference \\  Papers}
+
+\noindent \begin{minipage} {\textwidth}
+Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, ``\textbf{On the $O(1/T)$ Convergence of Alternating Gradient Descent--Ascent in Bilinear Games},'' accepted in \textit{ICLR}, 2026. \\
+{\sc{PDF:}} \url{https://arxiv.org/pdf/2510.03855}
+\end{minipage}
+
+\noindent\begin{minipage}{\textwidth}
+Jakub Cerny, Shuvomoy Das Gupta, and Christian Kroer, ``\textbf{Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium},'' published in \textit{AAAI}, 2026. \\
+{\sc{PDF:}} \url{https://arxiv.org/pdf/2508.10204}
+\end{minipage}
+
+\noindent\begin{minipage}{\textwidth}
+Shuvomoy Das Gupta, ``\textbf{On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets},'' published in the \textit{proceedings of the 56th Allerton Conference on Communication, Control, and Computing}, University of Illinois at Urbana-Champaign, IL, USA, October 2018. \\
+{\sc{PDF:}} \url{https://shuvomoy.github.io/Papers/Allerton_2018.pdf}
+\end{minipage}
+
+\noindent\begin{minipage}{\textwidth}
+Shuvomoy Das Gupta and Lacra Pavel, ``\textbf{Multi-player Minimum Cost Flow Problems with Nonconvex Costs and Integer Flows},'' published in the \textit{proceedings of the 55th IEEE Conference on Decision and Control}, Las Vegas, NV, USA, December 12--14, 2016. \\
+{\sc{PDF:}} \url{https://shuvomoy.github.io/Papers/Multi-player_minimum_cost_flow_problems_with_nonconvex_costs_and_integer_flows.pdf}
+\end{minipage}
+
+\noindent\begin{minipage}{\textwidth}
+Shuvomoy Das Gupta, Lacra Pavel, and J.\ Kevin Tobin, ``\textbf{An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network},'' published in the \textit{proceedings of 2015 American Control Conference (ACC)}, Chicago, IL, USA, July 2015. \\
+{\sc{PDF:}} \url{https://shuvomoy.github.io/Papers/An_Optimization_Model_to_Utilize_Regenerative_Braking_Energy_in_a_Railway_Network.pdf}
+\end{minipage}
+
+\section{\sc Preprints}
+
+\noindent \begin{minipage} {\textwidth}
+	Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B.\ Taylor, Sebastian Banert, and Pontus Giselsson, ``\textbf{The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods},'' arXiv preprint, 2026. \\
+	{\sc{PDF:}} \url{https://arxiv.org/pdf/2506.24076}
+\end{minipage}
+
+%\noindent \begin{minipage} {\textwidth}
+	%Shuvomoy Das Gupta, Bart P.G.\ Van Parys, and J.\ Kevin Tobin, ``Energy-optimal Timetable Design for Sustainable Metro Railway Networks,'' R\&R in \textit{Transportation Research Part B: Methodological}, 2023. \\
+	%{\sc{PDF:}} \url{https://arxiv.org/pdf/2309.05489.pdf}
+	%\end{minipage}
+
+
+\section{ \bfseries\scshape Teaching}
+{\textbf{CMOR 537: Computer-assisted Algorithm Design for Optimization and Machine Learning, Rice} }  \hfill Spring 2026  \\
+\textit{Instructor.} New graduate course for its inaugural offering.
+
+
+{\textbf{CMOR 467/567: Optimization for Energy Systems, Rice} }  \hfill Fall 2025  \\
+\textit{Instructor.} I have designed and launched this new course for advanced undergraduate and graduate students.
+
+% {\textbf{Danforth Math and Reading Center, Toronto, Canada}} \hfill 2012-2014  \\
+% \textit{Science Teacher} at an after school program. Taught and tutored immigrant high school students mathematics and physics.
+
+{\textbf{6.7220: Nonlinear Optimization, MIT} }  \hfill Spring 2023  \\
+\textit{ Teaching Assistant.} This is MIT's main doctoral course in optimization.\\
+{\sc Rating:} 6.9/7.0
+
+{\textbf{15.S60: Computing in Optimization and Statistics, MIT} } \hfill Winter 2023\\
+\textit{Instructor.} I taught the ORC's required three-hour module on advanced methods in computational optimization. \\
+{\sc Rating:} 7/7
+
+{\textbf{15.S60: Computing in Optimization and Statistics, MIT} } \hfill Winter 2022\\
+\textit{Instructor.} I taught the ORC's required three-hour module on advanced methods in computational optimization. \\
+{\sc Rating:} 6.8/7
+
+{\textbf{15.S08: Optimization of Energy Systems, MIT} }  \hfill Spring 2022 \\
+\textit{Teaching Assistant.} This is a graduate course in power systems modeling and optimization. \\
+{\sc Rating:} 6.0/7.0
+
+
+
+
+
+
+%\noindent \begin{minipage} {\textwidth}
+\section{ \bfseries\scshape Talks}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{On the $O(1/T)$ Convergence of Alternating Gradient Descent–Ascent in Bilinear Games} \\
+INFORMS Annual Meeting, Atlanta, GA  \hfill 2025
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{Computer-Assisted Design of Provably Fastest Algorithms} \\
+Invited talk, New Jersey Institute of Technology, New York, NY \hfill 2025
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses} \\
+ICCOPT, Los Angeles, CA  \hfill 2025 \\
+INFORMS Annual Meeting, Seattle, WA  \hfill 2024
+\end{minipage}
+
+
+
+\noindent \begin{minipage} {\textwidth}
+\textit{BnB-PEP: A Unified Methodology for Constructing Optimal Optimization Methods} \\
+INFORMS Annual Meeting, Phoenix, AZ \hfill  2023 \\
+SIAM Conference on Optimization (OP23), Seattle, Washington \hfill 2023 \\
+UTORG Seminar, University of Toronto, Toronto, Canada \hfill 2023 \\
+International Conference on Continuous Optimization, Bethlehem, PA \hfill 2022 \\
+MIT Data Science Lab Seminar \hfill  2022 
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{Design and Analysis of First-Order Methods via Nonconvex QCQP Frameworks} \\
+One of just four invited ``long talks'' at the $1^\textrm{st}$ Workshop on Performance Estimation, UCLouvain, Belgium \hfill 2023 
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{Energy-Optimal Timetable Design for Sustainable Metro Railway Networks}\\
+INFORMS Annual Meeting, Phoenix, AZ \hfill  2023 \\
+33rd Annual POMS Conference, Orlando, FL \hfill 2023 \\
+2023 MIT Energy Initiative Annual Research Conference  \hfill 2023 
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{NExOS.jl for Nonconvex Exterior-point Optimization} \\
+JuliaCon \hfill 2021
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{Exterior-point Optimization for Sparse and Low-rank Optimization} \\
+Seoul National University \hfill 2020 \\
+INFORMS Annual Meeting (virtual) \hfill 2020 \\
+MIT LIDS student conference \hfill 2021
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets}\\
+56th Allerton Conference on Communication, Control, and Computing,  Monticello, IL \hfill 2018
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{Multi-Player Minimum Cost Flow Problems with Nonconvex Costs and Integer Flows}\\
+55th IEEE Conference on Decision and Control, Las Vegas, NV \hfill 2016
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{On seeking efficient Pareto optimal points in multi-player minimum cost flow problems} \\
+MIT LIDS student conference \hfill 2020
+\end{minipage}
+
+
+
+\noindent\begin{minipage}{\textwidth}
+\section{ \bfseries\scshape Service}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{Organizer, } Friends of Optimization Seminar Series \hfill 2024- \\
+{\sc{LINK:}} \url{https://sites.google.com/view/friends-of-optimization} \\
+\end{minipage}
+
+
+
+Reviewer for \textit{Mathematical Programming, Management Science, Transportation Research Part B: Methodological, IEEE Transactions on Control of Network Systems, American Control Conference, IEEE Transactions on Intelligent Transportation Systems, IEEE Transactions on Automatic Control}  \\
+
+\textit{Session Chair}, INFORMS Annual Meeting \hfill 2022-2025 \\
+
+%\textit{Session Chair}, INFORMS Annual Meeting \hfill 2022 
+
+\end{minipage}
+
+
+
+
+\section{\sc Software}
+
+\noindent \begin{minipage} {\textwidth}
+\textbf{[1] PEPit.jl} \\
+ Native Julia implementation of the Performance Estimation Programming (PEP) methodology. \\
+{\sc{LINK:}} \url{https://github.com/PerformanceEstimation/PEPit.jl}
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+	\textbf{[2] AutoLyap.jl} \\
+	Native Julia implementation of the AutoLyap methodology. \\
+	{\sc{LINK:}} \url{https://github.com/AutoLyap/AutoLyap.jl}
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textbf{[3] BnB-PEP} \\
+Computes optimal first-order algorithms for different convex and nonconvex setups \\
+{\sc{LINK:}} \url{https://github.com/Shuvomoy/BnB-PEP-code}
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textbf{[4] NCG-PEP} \\
+Computes worst-case convergence rates of nonlinear conjugate gradient methods \\
+{\sc{LINK:}} \url{https://github.com/Shuvomoy/NCG-PEP-code}
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textbf{[5] NExOS} \\
+Implements the Nonconvex Exterior-point Optimization Solver (NExOS) algorithm for solving low-rank and sparse optimization problems \\
+{\sc{LINK:}} \url{https://github.com/Shuvomoy/NExOS.jl}
+\end{minipage}
+
+\noindent\begin{minipage}{\textwidth}
+\section{ \bfseries\scshape Languages}
+{\textbf{Fluent in}}  \\
+English, Bengali, Hindi, Urdu
+
+{\textbf{Proficient in}}  \\
+\texttt{Julia, C, C++, MATLAB, Mathematica}
+\end{minipage}
+
+\noindent\begin{minipage}{\textwidth}
+\section{ \bfseries\scshape Other}
+I enjoy playing cricket, reading novels, cooking, and blogging at \url{https://shuvomoy.github.io/blogs/}.
+
+
+\end{minipage}
+
+\section{\sc Media \\ Coverage}
+
+\textbf{``Risky Giant Steps Can Solve Optimization Problems Faster''} \hfill August, 2023 \\
+by Allison Parshall in \textit{Quanta Magazine} \\
+I was interviewed and quoted in the article along with my paper being cited as the main inspiration for the discovery of long step gradient descent by   Ben Grimmer. Also publicized in the \textit{Nautilus Quarterly Magazine} and in the Chinese magazine 
+%机器之心 
+\textit{Heart of the Machine}.\\
+{\sc{URL:}} \url{https://www.quantamagazine.org/risky-giant-steps-can-solve-optimization-problems-faster-20230811/} \\
+
+ 
+
+% \noindent\begin{minipage}{\textwidth}
+% \section{ \bfseries\scshape References}
+% \begin{tabular}{@{} l l @{}}
+% \raggedright
+% \textbf{Robert M. Freund } & \hspace{0.9cm} \textbf{Ernest K. Ryu} \\
+% {Professor}  &  \hspace{0.9cm} {Assistant Professor} \\
+% {Sloan School of Management}  &  \hspace{0.9cm} {Department of Mathematics} \\
+% {Massachusetts Institute of Technology}  &  \hspace{0.9cm} {University of California, Los Angeles} \\
+% {Room  567, Building 62}  & \hspace{0.9cm} {MS 7619B} \\
+% {100 Main Street}  & \hspace{0.9cm} {520 Portola Plaza}  \\
+% {Cambridge, MA 02142, USA} & \hspace{0.9cm} {Los Angeles, CA 90095, USA}  \\
+% \faEnvelope \quad \texttt{\href{mailto:rfreund@mit.edu}{rfreund@mit.edu}}   & \hspace{0.9cm}  
+% \faEnvelope \quad \texttt{\href{mailto:eryu@math.ucla.edu }{eryu@math.ucla.edu }}\\
+% \faPhone \quad  (612) 624-0624 & \hspace{0.9cm}  \faPhone \quad (310) 794-6646
+% \end{tabular}
+% \vspace{13pt}
+
+% \begin{tabular}{@{} l l @{}}
+% \raggedright
+% \textbf{Garud N. Iyengar} & \hspace{1cm} \textbf{J. Kevin Tobin} \\
+% {Professor}  &  \hspace{1cm} {Chief Researcher} \\
+% {Department of Industrial Eng.\ \& OR} & \hspace{1cm} {Research \& Technology}\\
+% {Columbia University} & \hspace{1cm} {Thales Canada Inc.}\\
+% Room 535B, S.W. Mudd Building & \hspace{1cm} {Room 4114} \\
+% {500 W 120th St}  & \hspace{1cm} {105 Moatfield Drive} \\
+% {New York, NY 10027, USA} & \hspace{1cm} {Toronto,  ON, M3B 04A, Canada }  \\
+% \faEnvelope \quad \texttt{\href{mailtogarud@ieor.columbia.edu}{garud@ieor.columbia.edu }}   & \hspace{1cm}  \faEnvelope \quad \texttt{\href{mailto:Kevin.Tobin@thalesgroup.com}{Kevin.Tobin@thalesgroup.com}}\\
+% \faPhone \quad (212) 854-4594 & \hspace{1cm}  \faPhone \quad (647) 274-5101
+% \end{tabular}
+% %\vspace{13pt}
+% \end{minipage}
+
+\end{resume}
+\end{document}
