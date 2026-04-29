@@ -48,7 +48,7 @@ My research interests lie at the intersection of optimization, operations resear
 
 * Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B. Taylor, Sebastian Banert, and Pontus Giselsson, “[The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods](https://arxiv.org/abs/2506.24076)”, arXiv preprint, 2026. [[pdf](https://arxiv.org/pdf/2506.24076)] [[bib](assets/bibtex_citations/upadhyaya2026autolyap.bib)]
 
-* Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, “[On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games](https://arxiv.org/abs/2510.03855)”, accepted in *ICLR*, 2026. [[pdf](https://arxiv.org/pdf/2510.03855)] [[bib](assets/bibtex_citations/AltGDA25.bib)]
+* Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, “[On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games](https://arxiv.org/abs/2510.03855)”, published in *ICLR*, 2026. [[pdf](https://arxiv.org/pdf/2510.03855)] [[bib](assets/bibtex_citations/AltGDA25.bib)]
 
 * Jakub Černý, Shuvomoy Das Gupta, and Christian Kroer, “[Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium](https://arxiv.org/abs/2508.10204)”, published in *AAAI*, 2026. [[pdf](https://arxiv.org/pdf/2508.10204)] [[bib](assets/bibtex_citations/CernyDasguptaKroer2025Spatial.bib)]
 * Uijeong Jang, Shuvomoy Das Gupta, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://link.springer.com/article/10.1007/s10107-025-02258-5)”, published in *Mathematical Programming Series A*, 2025. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
@@ -137,7 +137,7 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Teaching
 
-* **Upcoming.** CMOR 537: Computer-assisted Algorithm Design for Optimization and Machine Learning  (Spring, 2026)
+* **Current** CMOR 537: Computer-assisted Algorithm Design for Optimization and Machine Learning  (Spring, 2026)
 
    * Instructor.
    * Developing this new graduate course for its inaugural offering.
