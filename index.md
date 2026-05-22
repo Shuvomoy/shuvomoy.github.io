@@ -200,4 +200,4 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Miscellaneous 
 
-Research Highlight (Tutorial Article) for INFORMS Computing Society Student Paper Award, 2025 [[pdf](/assets/Awards/ICS_NewsLetter_Research_Highlight_BnB_PEP.pdf)]
+Research Highlight (Tutorial Article) for INFORMS Computing Society Student Paper Award, 2025 [[pdf](/Awards/ICS_NewsLetter_Research_Highlight_BnB_PEP.pdf)]
