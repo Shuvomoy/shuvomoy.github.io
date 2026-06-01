@@ -40,10 +40,6 @@ I am an assistant professor in the [Department of Computational Applied Mathemat
 
 My research interests lie at the intersection of optimization, operations research, and computation. My work on computer-assisted algorithm design received the 2024 INFORMS Computing Society Student Paper Award and honorable mentions in both the 2024 INFORMS George Nicholson Student Paper Competition and the 2024 MIT Operations Research Center Best Student Paper Award. My industry collaboration on [energy-efficient railway timetabling](https://www.sciencedirect.com/science/article/pii/S0191261516304830) has been implemented in the largest installed base of communication-based train control systems worldwide.
 
-## News
-
-* Our open-source Julia package [`PEPit.jl`](https://github.com/PerformanceEstimation/PEPit.jl) is out and will be presented at [JuMP-dev 2026](https://jump.dev/meetings/jumpdev2026/)! `PEPit.jl` is a native Julia implementation of *Performance Estimation Programming (PEP) methodology* for computer-assisted worst-case analysis of first-order optimization algorithms in `Julia`.
-
 ## Papers
 
 * Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B. Taylor, Sebastian Banert, and Pontus Giselsson, “[The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods](https://arxiv.org/abs/2506.24076)”, arXiv preprint, 2026. [[pdf](https://arxiv.org/pdf/2506.24076)] [[bib](assets/bibtex_citations/upadhyaya2026autolyap.bib)]
@@ -73,6 +69,34 @@ My research interests lie at the intersection of optimization, operations resear
 
   
 
+## Advising & Mentoring
+
+### PhD students
+
+~~~
+<div class="advising-list">
+  <div class="advising-row">
+    <span><a href="https://qiuyufan05.github.io/#">Qiuyu Fan</a> (Rice University)</span>
+    <span class="advising-date">2025-</span>
+  </div>
+</div>
+~~~
+
+### Undergraduate students
+
+~~~
+<div class="advising-list">
+  <div class="advising-row">
+    <span>Heechang Kim (Seoul National University)</span>
+    <span class="advising-date">2025-</span>
+  </div>
+  <div class="advising-row">
+    <span>Uijeong Jang (Seoul National University; current: Ph.D. student at UCLA)</span>
+    <span class="advising-date">2022-23</span>
+  </div>
+</div>
+~~~
+
 ## Grants & Awards
 
 * Co-PI in joint AFOSR Grant: *Computer-Assisted Design of Provably Fastest Algorithms*, \$600,000 (My Share:  \$300,000), *2025-2028*.
@@ -93,10 +117,14 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Talks
 
+* PEPit.jl: Computer-Assisted Worst-Case Analysis of First-Order Optimization Algorithms in Julia [[slides](/Presentations/JuMP-dev-2026/JuMP_dev_2026_PEPit/)]
+  * [JuMP-dev 2026](https://jump.dev/meetings/jumpdev2026/), Edinburgh, Scotland, June 1, 2026
+
 * Computer-Assisted Design of Provably Fastest Algorithms
   *  Invited talk, New Jersey Institute of Technology, New York, NY, March 2025
 
 * On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games
+  * [Mixed Integer Programming Workshop 2026](https://www.mixedinteger.org/2026/schedule.html), University of Connecticut - Stamford Campus, May 19, 2026
   * INFORMS Annual Meeting, Atlanta, GA, 2025
 
 * Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses

@@ -1,4 +1,4 @@
-image: julia:1.5
+image: julia:1.12
 
 before_script:
   - apt-get -qq update; apt-get -y install git python3-dev python3-pip
@@ -17,4 +17,3 @@ pages:
       - public
   only:
     - master
-

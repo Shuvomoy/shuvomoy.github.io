@@ -54,6 +54,31 @@
 .franklin-content { padding-left: 10%; }
 .franklin-content { padding-right: 5%; }
 
+.advising-list {
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.advising-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin: 0.35rem 0;
+}
+
+.advising-date {
+  white-space: nowrap;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .advising-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+}
+
 @media (max-width: 940px) {
   /* narrow display: menu is at the top */
   #menu {
