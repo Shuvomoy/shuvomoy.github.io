@@ -102,7 +102,7 @@ ItalicFont = et-bembo-italic.ttf,
 Scale = 1.2 % scale font size
 ]
 {et-bembo-roman.ttf}
-\newfontfamily{\fallbacklatin}{Latin Modern Roman}
+\newfontfamily{\fallbacklatin}{lmroman10-regular.otf}
 \definecolor{MITRed}{HTML}{750014}
 \renewcommand{\sectionfont}{\bfseries\leavevmode\color{MITRed}}
 
@@ -281,6 +281,12 @@ Shuvomoy Das Gupta, Lacra Pavel, and J.\ Kevin Tobin, ``\textbf{An Optimization 
 \section{\sc Preprints}
 
 \noindent \begin{minipage} {\textwidth}
+	Heechang Kim, Ernest K.\ Ryu, and Shuvomoy Das Gupta, ``\textbf{A Domain-Specific Harness for End-to-End Automation of Optimization Research},'' Optimization Online preprint, 2026. \\
+	{\sc{PDF:}} \url{https://optimization-online.org/?p=36085} \\
+	{\sc{CODE:}} \url{https://github.com/Shuvomoy/AutoOPT}
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
 	Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B.\ Taylor, Sebastian Banert, and Pontus Giselsson, ``\textbf{The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods},'' arXiv preprint, 2026. \\
 	{\sc{PDF:}} \url{https://arxiv.org/pdf/2506.24076}
 \end{minipage}
@@ -296,7 +302,7 @@ Shuvomoy Das Gupta, Lacra Pavel, and J.\ Kevin Tobin, ``\textbf{An Optimization 
 \textit{Instructor.} New graduate course for its inaugural offering.
 
 
-{\textbf{CMOR 467/567: Optimization for Energy Systems, Rice} }  \hfill Fall 2025  \\
+{\textbf{CMOR 467/567: Optimization for Energy Systems, Rice} }  \hfill Fall 2025, 2026  \\
 \textit{Instructor.} I have designed and launched this new course for advanced undergraduate and graduate students.
 
 % {\textbf{Danforth Math and Reading Center, Toronto, Canada}} \hfill 2012-2014  \\
@@ -422,19 +428,24 @@ MIT LIDS student conference \hfill 2020
 \section{ \bfseries\scshape Service}
 
 \noindent \begin{minipage} {\textwidth}
-\textit{Chair, Colloquium Committee,} Rice University \hfill 2026-2027 \\
+\textit{Chair, Rice CMOR Colloquium Organization Committee} \hfill 2026--2027 \\
 Coordinating the departmental colloquium program, including speaker invitations, scheduling, hosts, and seminar logistics.
 \end{minipage}
 \vspace{0.4em}
 
 \noindent \begin{minipage} {\textwidth}
-\textit{Undergraduate Committee Member,} Rice University \hfill 2026-2027 \\
+\textit{Member, INFORMS George Nicholson Student Paper Competition} \hfill 2026--2027
+\end{minipage}
+\vspace{0.4em}
+
+\noindent \begin{minipage} {\textwidth}
+\textit{Member, Rice CMOR Undergraduate Committee} \hfill 2026--2027 \\
 Supporting undergraduate curriculum, advising, major/minor requirements, and student-facing program resources.
 \end{minipage}
 \vspace{0.4em}
 
 \noindent \begin{minipage} {\textwidth}
-\textit{Graduate Committee Member,} Rice University \hfill 2025-2026 \\
+\textit{Member, Rice CMOR Graduate Committee} \hfill 2025--2026 \\
 Supported graduate program administration, including student advising, degree requirements, qualifying exams, and academic progress.
 \end{minipage}
 \vspace{0.4em}
@@ -460,31 +471,37 @@ Reviewer for \textit{Mathematical Programming, Management Science, Transportatio
 \section{\sc Software}
 
 \noindent \begin{minipage} {\textwidth}
-\textbf{[1] PEPit.jl} \\
+\textbf{[1] AutoOPT} \\
+Domain-specific harness for end-to-end automation of optimization research through numerical algorithm design, symbolic discovery, and Lean verification. \\
+{\sc{LINK:}} \url{https://github.com/Shuvomoy/AutoOPT}
+\end{minipage}
+
+\noindent \begin{minipage} {\textwidth}
+\textbf{[2] PEPit.jl} \\
  Native Julia implementation of the Performance Estimation Programming (PEP) methodology. \\
 {\sc{LINK:}} \url{https://github.com/PerformanceEstimation/PEPit.jl}
 \end{minipage}
 
 \noindent \begin{minipage} {\textwidth}
-	\textbf{[2] AutoLyap.jl} \\
+	\textbf{[3] AutoLyap.jl} \\
 	Native Julia implementation of the AutoLyap methodology. \\
 	{\sc{LINK:}} \url{https://github.com/AutoLyap/AutoLyap.jl}
 \end{minipage}
 
 \noindent \begin{minipage} {\textwidth}
-\textbf{[3] BnB-PEP} \\
+\textbf{[4] BnB-PEP} \\
 Computes optimal first-order algorithms for different convex and nonconvex setups \\
 {\sc{LINK:}} \url{https://github.com/Shuvomoy/BnB-PEP-code}
 \end{minipage}
 
 \noindent \begin{minipage} {\textwidth}
-\textbf{[4] NCG-PEP} \\
+\textbf{[5] NCG-PEP} \\
 Computes worst-case convergence rates of nonlinear conjugate gradient methods \\
 {\sc{LINK:}} \url{https://github.com/Shuvomoy/NCG-PEP-code}
 \end{minipage}
 
 \noindent \begin{minipage} {\textwidth}
-\textbf{[5] NExOS} \\
+\textbf{[6] NExOS} \\
 Implements the Nonconvex Exterior-point Optimization Solver (NExOS) algorithm for solving low-rank and sparse optimization problems \\
 {\sc{LINK:}} \url{https://github.com/Shuvomoy/NExOS.jl}
 \end{minipage}

@@ -42,6 +42,8 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Papers
 
+* Heechang Kim, Ernest K. Ryu, and Shuvomoy Das Gupta, “[A Domain-Specific Harness for End-to-End Automation of Optimization Research](https://optimization-online.org/2026/08/a-domain-specific-harness-for-end-to-end-automation-of-optimization-research/)”, Optimization Online preprint, 2026. [[pdf](https://optimization-online.org/wp-content/uploads/2026/08/main.pdf)] [[code](https://github.com/Shuvomoy/AutoOPT)] [[bib](assets/bibtex_citations/KimRyuDasGupta2026AutoOPT.bib)]
+
 * Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B. Taylor, Sebastian Banert, and Pontus Giselsson, “[The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods](https://arxiv.org/abs/2506.24076)”, arXiv preprint, 2026. [[pdf](https://arxiv.org/pdf/2506.24076)] [[bib](assets/bibtex_citations/upadhyaya2026autolyap.bib)]
 
 * Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, “[On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games](https://arxiv.org/abs/2510.03855)”, published in *ICLR*, 2026. [[pdf](https://arxiv.org/pdf/2510.03855)] [[bib](assets/bibtex_citations/AltGDA25.bib)]
@@ -165,15 +167,15 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Teaching
 
-* **Current** CMOR 537: Computer-assisted Algorithm Design for Optimization and Machine Learning  (Spring, 2026)
-
-   * Instructor.
-   * Developing this new graduate course for its inaugural offering.
-
-* CMOR 467/567: Optimization for Energy Systems (Fall, 2025)
+* CMOR 467/567: Optimization for Energy Systems (Fall 2025, 2026)
 
    * Instructor. 
    * Designed and launched this new course for advanced undergraduate and graduate students.
+
+* CMOR 537: Computer-assisted Algorithm Design for Optimization and Machine Learning  (Spring 2026)
+
+   * Instructor.
+   * Developing this new graduate course for its inaugural offering.
 
 * 6.7220: Nonlinear Optimization, MIT (Spring, 2023) [Teaching score: 6.9/7]
   * Teaching assistant for a course that aims to provide PhD students with a unified overview of convex optimization.
@@ -194,6 +196,8 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Software
 
+* `AutoOPT` [[github repo](https://github.com/Shuvomoy/AutoOPT)]
+
 * `AutoLyap.jl`[[github repo](https://github.com/AutoLyap/AutoLyap.jl)]
 
 * `PEPit.jl` [[github repo](https://github.com/PerformanceEstimation/PEPit.jl)]
@@ -203,6 +207,10 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Service
 
+* Chair, Rice CMOR Colloquium Organization Committee, 2026-2027
+* Committee Member, INFORMS George Nicholson Student Paper Competition, 2026-2027
+* Member, Rice CMOR Undergraduate Committee, 2026-2027
+* Member, Rice CMOR Graduate Committee, 2025-2026
 * Organizer, [Friends of Optimization Seminar Series](https://sites.google.com/view/friends-of-optimization), 2024-present
 * Reviewer for:
   - Mathematical Programming
