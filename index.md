@@ -42,9 +42,9 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Papers
 
-* Heechang Kim, Ernest K. Ryu, and Shuvomoy Das Gupta, “[A Domain-Specific Harness for End-to-End Automation of Optimization Research](https://optimization-online.org/2026/08/a-domain-specific-harness-for-end-to-end-automation-of-optimization-research/)”, Optimization Online preprint, 2026. [[pdf](https://optimization-online.org/wp-content/uploads/2026/08/main.pdf)] [[code](https://github.com/Shuvomoy/AutoOPT)] [[bib](assets/bibtex_citations/KimRyuDasGupta2026AutoOPT.bib)]
+* Heechang Kim, Ernest K. Ryu, and Shuvomoy Das Gupta, “[A Domain-Specific Harness for End-to-End Automation of Optimization Research](https://optimization-online.org/2026/08/a-domain-specific-harness-for-end-to-end-automation-of-optimization-research/)”, 2026. [[pdf](https://optimization-online.org/wp-content/uploads/2026/08/main.pdf)] [[code](https://github.com/Shuvomoy/AutoOPT)] [[bib](assets/bibtex_citations/KimRyuDasGupta2026AutoOPT.bib)]
 
-* Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B. Taylor, Sebastian Banert, and Pontus Giselsson, “[The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods](https://arxiv.org/abs/2506.24076)”, arXiv preprint, 2026. [[pdf](https://arxiv.org/pdf/2506.24076)] [[bib](assets/bibtex_citations/upadhyaya2026autolyap.bib)]
+* Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B. Taylor, Sebastian Banert, and Pontus Giselsson, “[The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods](https://arxiv.org/abs/2506.24076)”, 2026. [[pdf](https://arxiv.org/pdf/2506.24076)] [[bib](assets/bibtex_citations/upadhyaya2026autolyap.bib)]
 
 * Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, “[On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games](https://arxiv.org/abs/2510.03855)”, published in *ICLR*, 2026. [[pdf](https://arxiv.org/pdf/2510.03855)] [[bib](assets/bibtex_citations/AltGDA25.bib)]
 
