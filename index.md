@@ -42,6 +42,8 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Papers
 
+* Tianlong Nan, Garud Iyengar, Christian Kroer, and Shuvomoy Das Gupta, “[AltGDA Achieves Global O(1/T) Ergodic Convergence in Matrix Games](https://arxiv.org/abs/2609.32995)”, 2026. [[pdf](https://arxiv.org/pdf/2609.32995)] [[code](https://github.com/Shuvomoy/AltGDA-code)] [[bib](assets/bibtex_citations/NanIyengarKroerDasGupta2026AltGDA.bib)]
+
 * Heechang Kim, Ernest K. Ryu, and Shuvomoy Das Gupta, “[A Domain-Specific Harness for End-to-End Automation of Optimization Research](https://arxiv.org/abs/2608.07407)”, 2026. [[pdf](https://arxiv.org/pdf/2608.07407)] [[code](https://github.com/Shuvomoy/AutoOPT)] [[bib](assets/bibtex_citations/KimRyuDasGupta2026AutoOPT.bib)]
 
 * Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B. Taylor, Sebastian Banert, and Pontus Giselsson, “[The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods](https://arxiv.org/abs/2506.24076)”, 2026. [[pdf](https://arxiv.org/pdf/2506.24076)] [[bib](assets/bibtex_citations/upadhyaya2026autolyap.bib)]
@@ -49,7 +51,7 @@ My research interests lie at the intersection of optimization, operations resear
 * Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, “[On the O(1/T) Convergence of Alternating Gradient Descent–Ascent in Bilinear Games](https://arxiv.org/abs/2510.03855)”, published in *ICLR*, 2026. [[pdf](https://arxiv.org/pdf/2510.03855)] [[bib](assets/bibtex_citations/AltGDA25.bib)]
 
 * Jakub Černý, Shuvomoy Das Gupta, and Christian Kroer, “[Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium](https://arxiv.org/abs/2508.10204)”, published in *AAAI*, 2026. [[pdf](https://arxiv.org/pdf/2508.10204)] [[bib](assets/bibtex_citations/CernyDasguptaKroer2025Spatial.bib)]
-* Uijeong Jang, Shuvomoy Das Gupta, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://link.springer.com/article/10.1007/s10107-025-02258-5)”, published in *Mathematical Programming Series A*, 2025. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
+* Uijeong Jang, Shuvomoy Das Gupta, and Ernest K. Ryu, “[Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA](https://link.springer.com/article/10.1007/s10107-025-02258-5)”, published in *Mathematical Programming Series A* 219 (2026): 391–499. [[pdf](https://arxiv.org/pdf/2305.15704.pdf)] [[bib](assets/bibtex_citations/OptISTA.bib)]
    * `OptISTA` has been successfully  applied in solving large-scale magnetization transfer imaging (MTI) problems, for details, please see the paper by [Assländer et al.](https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00177/120855)  and the accompanying software [MRIgeneralizedBloch](https://github.com/JakobAsslaender/MRIgeneralizedBloch.jl). 
 * Shuvomoy Das Gupta, Bart P.G. Van Parys, and Ernest K. Ryu, “[Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods](https://link.springer.com/article/10.1007/s10107-023-01973-1)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://arxiv.org/pdf/2203.07305)] [[code](https://github.com/Shuvomoy/BnB-PEP-code)] [[tutorial video](https://youtu.be/sdYYFRxqbKQ)] [[slides](/assets/slides/BnBPEP_2023.html)] [[bib](assets/bibtex_citations/BnBPEP.bib)] 
   * Winner, INFORMS Computing Society Student Paper Award, 2024  
@@ -118,6 +120,9 @@ My research interests lie at the intersection of optimization, operations resear
   * Also publicized in the [Nautilus Magazine](https://nautil.us/risky-giant-steps-can-solve-optimization-problems-faster-375562/) on September 5, 2023. 
 
 ## Talks
+
+* A Domain-Specific Harness for End-to-End Automation of Optimization Research
+  * [MOPTA 2026](https://coral.ise.lehigh.edu/mopta2026/), Lehigh University, Bethlehem, PA, August 19, 2026
 
 * PEPit.jl: Computer-Assisted Worst-Case Analysis of First-Order Optimization Algorithms in Julia [[slides](/Presentations/JuMP-dev-2026/JuMP_dev_2026_PEPit/)]
   * [JuMP-dev 2026](https://jump.dev/meetings/jumpdev2026/), Edinburgh, Scotland, June 1, 2026
@@ -195,6 +200,8 @@ My research interests lie at the intersection of optimization, operations resear
   * Duties: Developing implementations of next generation power system models, assisting students, leading recitations, writing and marking assignments and exams.  
 
 ## Software
+
+* `AltGDA-code` [[github repo](https://github.com/Shuvomoy/AltGDA-code)]
 
 * `AutoOPT` [[github repo](https://github.com/Shuvomoy/AutoOPT)]
 
