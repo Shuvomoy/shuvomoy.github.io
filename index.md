@@ -42,6 +42,8 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Papers
 
+* Qiuyu Fan, J. Kevin Tobin, Bart P.G. Van Parys, and Shuvomoy Das Gupta, “[A Data-Driven Linear Programming Model for Energy-Optimal Metro Timetables](https://arxiv.org/abs/2309.05489)”, arXiv preprint, 2026. [[pdf](https://arxiv.org/pdf/2309.05489)] [[bib](assets/bibtex_citations/FanTobinVanParysDasGupta2026MetroTimetables.bib)]
+
 * Tianlong Nan, Garud Iyengar, Christian Kroer, and Shuvomoy Das Gupta, “[AltGDA Achieves Global O(1/T) Ergodic Convergence in Matrix Games](https://arxiv.org/abs/2609.32995)”, 2026. [[pdf](https://arxiv.org/pdf/2609.32995)] [[code](https://github.com/Shuvomoy/AltGDA-code)] [[bib](assets/bibtex_citations/NanIyengarKroerDasGupta2026AltGDA.bib)]
 
 * Heechang Kim, Ernest K. Ryu, and Shuvomoy Das Gupta, “[A Domain-Specific Harness for End-to-End Automation of Optimization Research](https://arxiv.org/abs/2608.07407)”, 2026. [[pdf](https://arxiv.org/pdf/2608.07407)] [[code](https://github.com/Shuvomoy/AutoOPT)] [[bib](assets/bibtex_citations/KimRyuDasGupta2026AutoOPT.bib)]
@@ -59,7 +61,6 @@ My research interests lie at the intersection of optimization, operations resear
   * Honorable Mention, MIT Operations Research Center Best Student Paper Award, 2024
 * Shuvomoy Das Gupta, Robert M. Freund, Xu Andy Sun, Adrien B. Taylor, “[Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses](https://link.springer.com/article/10.1007/s10107-024-02127-7)”, published in *Mathematical Programming Series A*, 2024. [[pdf](https://arxiv.org/pdf/2301.01530.pdf)] [[code](https://github.com/Shuvomoy/NCG-PEP-code)] [[video](https://youtu.be/unDornjkpRU)] [[bib](assets/bibtex_citations/NCGPEP.bib)]
 * Shuvomoy Das Gupta, Bartolomeo Stellato, and Bart P.G. Van Parys, “[Exterior-point Optimization for Sparse and Low-rank Optimization](https://link.springer.com/article/10.1007/s10957-024-02448-9)”, published in the  *Journal of Optimization Theory and Applications*, 2024. [[pdf](https://arxiv.org/abs/2011.04552)] [[NExOS.jl Julia package](https://github.com/Shuvomoy/NExOS.jl)] [[bib](assets/bibtex_citations/NExOS.bib)]
-* Shuvomoy Das Gupta, Bart P.G. Van Parys, and J. Kevin Tobin, “[Energy-optimal Timetable Design for Sustainable Metro Railway Networks](https://arxiv.org/abs/2309.05489)”, R&R in *Transportation Research Part B: Methodological*, 2023. [[pdf](https://arxiv.org/pdf/2309.05489.pdf)] [[slides](/assets/slides/Transport_2023.html)] [[poster](https://shuvomoy.github.io/Papers/MITEI_conference_2023_final_poster.pdf)] [[bib](assets/bibtex_citations/CBTC2023.bib)] 
 
 - Shuvomoy Das Gupta and Lacra Pavel, “[On Seeking Efficient Pareto Optimal Points in Multi-Player Minimum Cost Flow Problems with Application to Transportation Systems](https://link.springer.com/article/10.1007/s10898-019-00750-9)”, published in the *Journal of Global Optimization* 74 (2019): 523-548. [[pdf](https://shuvomoy.github.io/Papers/Journal_of_Global_Optimization_19.pdf)] [[presentation](https://shuvomoy.github.io/Presentations/LIDS_2020_student_conference/LIDS_2020_student_conference.pdf)] [[bib](assets/bibtex_citations/JOGO2019.bib)]
 
