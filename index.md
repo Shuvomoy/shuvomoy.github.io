@@ -123,6 +123,7 @@ My research interests lie at the intersection of optimization, operations resear
 ## Talks
 
 * A Domain-Specific Harness for End-to-End Automation of Optimization Research
+  * Decision Intelligence Talks Series, NVIDIA (virtual), October 7, 2026
   * [MOPTA 2026](https://coral.ise.lehigh.edu/mopta2026/), Lehigh University, Bethlehem, PA, August 19, 2026
 
 * PEPit.jl: Computer-Assisted Worst-Case Analysis of First-Order Optimization Algorithms in Julia [[slides](/Presentations/JuMP-dev-2026/JuMP_dev_2026_PEPit/)]
