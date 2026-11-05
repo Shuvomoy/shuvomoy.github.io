@@ -119,6 +119,27 @@ Scale = 1.2 % scale font size
       \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
       \setlength{\leftmargin}{0.2in}}}{\end{list}}
 
+% Number publications independently within each category, preserving paragraph spacing.
+\newcounter{publication}
+\newlength{\publicationitemsep}
+\newenvironment{publicationlist}[1]{%
+  \setlength{\publicationitemsep}{\parskip}%
+  \begin{list}{[#1\arabic{publication}]}{%
+    \usecounter{publication}%
+    \setlength{\labelwidth}{2.5em}%
+    \setlength{\labelsep}{0.5em}%
+    \setlength{\leftmargin}{\dimexpr\labelwidth+\labelsep\relax}%
+    \setlength{\rightmargin}{0pt}%
+    \setlength{\itemindent}{0pt}%
+    \setlength{\listparindent}{0pt}%
+    \setlength{\itemsep}{\publicationitemsep}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+    \renewcommand{\makelabel}[1]{\hfil\normalfont ##1}%
+  }%
+}{\end{list}}
+
 \begin{document}
 
 \name{Shuvomoy Das Gupta\vspace*{.05in}}
@@ -215,95 +236,107 @@ Master of Applied Science in Electrical and Computer Engineering \\
 % \textit{Science Teacher}\\
 % Taught underserved high school students mathematics and physics at an after school program
 
-\newpage
+%\newpage
 
-\section{\sc Published Journal \\ Papers}
-
-\noindent \begin{minipage}{\textwidth}
-Uijeong Jang, Shuvomoy Das Gupta, and Ernest K.\ Ryu, ``\textbf{Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA},'' published in \textit{Mathematical Programming Series A} 219 (2026): 391--499. \\
-{\sc{PDF:}} \url{https://arxiv.org/pdf/2305.15704.pdf}
-\end{minipage}
-
-\noindent \begin{minipage}{\textwidth}
-Shuvomoy Das Gupta, Bart P.G.\ Van Parys, and Ernest K.\ Ryu, ``\textbf{Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods},'' published in \textit{Mathematical Programming Series A}, 2024. \\
-{\sc{PDF:}} \url{https://arxiv.org/pdf/2203.07305.pdf}
-\end{minipage}
-
-\noindent \begin{minipage}{\textwidth}
-Shuvomoy Das Gupta, Robert M.\ Freund, Xu Andy Sun, Adrien B.\ Taylor, ``\textbf{Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses},'' published in \textit{Mathematical Programming Series A}, 2024. \\
-{\sc{PDF:}} \url{https://arxiv.org/pdf/2301.01530.pdf}
-\end{minipage}
-
-\noindent \begin{minipage}{\textwidth}
-Shuvomoy Das Gupta, Bartolomeo Stellato, and Bart P.G.\ Van Parys, ``\textbf{Exterior-point Optimization for Sparse and Low-rank Optimization},'' published in the \textit{Journal of Optimization Theory and Applications}, 2024. \\
-{\sc{PDF:}} \url{https://arxiv.org/pdf/2011.04552.pdf}
-\end{minipage}
-
-\noindent \begin{minipage}{\textwidth}
-Shuvomoy Das Gupta and Lacra Pavel, ``\textbf{On Seeking Efficient Pareto Optimal Points in Multi-Player Minimum Cost Flow Problems with Application to Transportation Systems},'' published in the \textit{Journal of Global Optimization} 74 (2019): 523--548. \\
-{\sc{PDF:}} \url{https://arxiv.org/pdf/1805.11750.pdf}
-\end{minipage}
-
-\noindent \begin{minipage}{\textwidth}
-Shuvomoy Das Gupta, J.\ Kevin Tobin, and Lacra Pavel, ``\textbf{A Two-Step Linear Programming Model for Energy-Efficient Timetables in Metro Railway Networks},'' published in \textit{Transportation Research Part B: Methodological} 93 (2016): 57--74. \\
-{\sc{PDF:}} \url{https://arxiv.org/pdf/1506.08243.pdf}
-\end{minipage}
-
-
-
-\section{\sc Published Conference \\  Papers}
-
-\noindent \begin{minipage} {\textwidth}
-Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, ``\textbf{On the $O(1/T)$ Convergence of Alternating Gradient Descent--Ascent in Bilinear Games},'' published in \textit{ICLR}, 2026. \\
-{\sc{PDF:}} \url{https://arxiv.org/pdf/2510.03855}
-\end{minipage}
-
-\noindent\begin{minipage}{\textwidth}
-Jakub Cerny, Shuvomoy Das Gupta, and Christian Kroer, ``\textbf{Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium},'' published in \textit{AAAI}, 2026. \\
-{\sc{PDF:}} \url{https://arxiv.org/pdf/2508.10204}
-\end{minipage}
-
-\noindent\begin{minipage}{\textwidth}
-Shuvomoy Das Gupta, ``\textbf{On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets},'' published in the \textit{proceedings of the 56th Allerton Conference on Communication, Control, and Computing}, University of Illinois at Urbana-Champaign, IL, USA, October 2018. \\
-{\sc{PDF:}} \url{https://shuvomoy.github.io/Papers/Allerton_2018.pdf}
-\end{minipage}
-
-\noindent\begin{minipage}{\textwidth}
-Shuvomoy Das Gupta and Lacra Pavel, ``\textbf{Multi-player Minimum Cost Flow Problems with Nonconvex Costs and Integer Flows},'' published in the \textit{proceedings of the 55th IEEE Conference on Decision and Control}, Las Vegas, NV, USA, December 12--14, 2016. \\
-{\sc{PDF:}} \url{https://shuvomoy.github.io/Papers/Multi-player_minimum_cost_flow_problems_with_nonconvex_costs_and_integer_flows.pdf}
-\end{minipage}
-
-\noindent\begin{minipage}{\textwidth}
-Shuvomoy Das Gupta, Lacra Pavel, and J.\ Kevin Tobin, ``\textbf{An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network},'' published in the \textit{proceedings of 2015 American Control Conference (ACC)}, Chicago, IL, USA, July 2015. \\
-{\sc{PDF:}} \url{https://shuvomoy.github.io/Papers/An_Optimization_Model_to_Utilize_Regenerative_Braking_Energy_in_a_Railway_Network.pdf}
-\end{minipage}
 
 \begingroup
 \setlength{\parskip}{8pt}
 \section{\sc Preprints}
 
-\noindent \begin{minipage} {\textwidth}
-	Qiuyu Fan, J.\ Kevin Tobin, Bart P.G.\ Van Parys, and Shuvomoy Das Gupta, ``\textbf{A Data-Driven Linear Programming Model for Energy-Optimal Metro Timetables},'' preprint, 2026. \\
-	{\sc{PDF:}} \url{https://optimization-online.org/wp-content/uploads/2026/10/Train_Optimization_Paper_2026-1.pdf}
-\end{minipage}
+\begin{publicationlist}{P}
+	
+	\item \begin{minipage}[t]{\linewidth}
+		Heechang Kim, Ernest K.\ Ryu, and Shuvomoy Das Gupta, ``\textbf{A Domain-Specific Harness for End-to-End Automation of Optimization Research},'' arXiv preprint arXiv:2608.07407, 2026. \\
+		%	{\sc{PDF:}} \url{https://arxiv.org/pdf/2608.07407} \\
+		%	{\sc{CODE:}} \url{https://github.com/Shuvomoy/AutoOPT}
+	\end{minipage}
+	
+	
+	\item \begin{minipage}[t]{\linewidth}
+		Tianlong Nan, Garud Iyengar, Christian Kroer, and Shuvomoy Das Gupta, ``\textbf{AltGDA Achieves Global $O(1/T)$ Ergodic Convergence in Matrix Games},''  arXiv preprint arXiv:2609.32995, 2026. \\
+		%	{\sc{PDF:}} \url{https://arxiv.org/pdf/2609.32995} \\
+		%	{\sc{CODE:}} \url{https://github.com/Shuvomoy/AltGDA-code}
+	\end{minipage}
+	
+	
+	\item \begin{minipage}[t]{\linewidth}
+		Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B.\ Taylor, Sebastian Banert, and Pontus Giselsson, ``\textbf{The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods},'' arXiv preprint arXiv:2506.24076, 2026. \\
+		%	{\sc{PDF:}} \url{https://arxiv.org/pdf/2506.24076}
+	\end{minipage}
+	
+	\item \begin{minipage}[t]{\linewidth}
+		Qiuyu Fan, J.\ Kevin Tobin, Bart P.G.\ Van Parys, and Shuvomoy Das Gupta, ``\textbf{A Data-Driven Linear Programming Model for Energy-Optimal Metro Timetables},'' arXiv preprint arXiv:2309.05489, 2026. \\
+		%	{\sc{URL:}} \url{https://optimization-online.org/wp-content/uploads/2026/10/Train_Optimization_Paper_2026-1.pdf}
+	\end{minipage}
+\end{publicationlist}
 
-\noindent \begin{minipage} {\textwidth}
-	Tianlong Nan, Garud Iyengar, Christian Kroer, and Shuvomoy Das Gupta, ``\textbf{AltGDA Achieves Global $O(1/T)$ Ergodic Convergence in Matrix Games},'' preprint, 2026. \\
-	{\sc{PDF:}} \url{https://arxiv.org/pdf/2609.32995} \\
-	{\sc{CODE:}} \url{https://github.com/Shuvomoy/AltGDA-code}
-\end{minipage}
-
-\noindent \begin{minipage} {\textwidth}
-	Heechang Kim, Ernest K.\ Ryu, and Shuvomoy Das Gupta, ``\textbf{A Domain-Specific Harness for End-to-End Automation of Optimization Research},'' preprint, 2026. \\
-	{\sc{PDF:}} \url{https://arxiv.org/pdf/2608.07407} \\
-	{\sc{CODE:}} \url{https://github.com/Shuvomoy/AutoOPT}
-\end{minipage}
-
-\noindent \begin{minipage} {\textwidth}
-	Manu Upadhyaya, Shuvomoy Das Gupta, Adrien B.\ Taylor, Sebastian Banert, and Pontus Giselsson, ``\textbf{The AutoLyap Software Suite for Computer-Assisted Lyapunov Analyses of First-Order Methods},'' preprint, 2026. \\
-	{\sc{PDF:}} \url{https://arxiv.org/pdf/2506.24076}
-\end{minipage}
 \par\endgroup
+
+\section{\sc Published Journal \\ Papers}
+
+\begin{publicationlist}{J}
+
+\item \begin{minipage}[t]{\linewidth}
+Uijeong Jang, Shuvomoy Das Gupta, and Ernest K.\ Ryu, ``\textbf{Computer-Assisted Design of Accelerated Composite Optimization Methods: OptISTA},'' \textit{Mathematical Programming}, 2026. \\
+%{\sc{PDF:}} \url{https://arxiv.org/pdf/2305.15704.pdf}
+\end{minipage}
+
+\item \begin{minipage}[t]{\linewidth}
+Shuvomoy Das Gupta, Bart P.G.\ Van Parys, and Ernest K.\ Ryu, ``\textbf{Branch-and-Bound Performance Estimation Programming: A Unified Methodology for Constructing Optimal Optimization Methods},'' \textit{Mathematical Programming}, 2024. \\
+%{\sc{PDF:}} \url{https://arxiv.org/pdf/2203.07305.pdf}
+\end{minipage}
+
+\item \begin{minipage}[t]{\linewidth}
+Shuvomoy Das Gupta, Robert M.\ Freund, Xu Andy Sun, Adrien B.\ Taylor, ``\textbf{Nonlinear Conjugate Gradient Methods: Worst-case Convergence Rates via Computer-assisted Analyses},'' \textit{Mathematical Programming}, 2024. \\
+%{\sc{PDF:}} \url{https://arxiv.org/pdf/2301.01530.pdf}
+\end{minipage}
+
+\item \begin{minipage}[t]{\linewidth}
+Shuvomoy Das Gupta, Bartolomeo Stellato, and Bart P.G.\ Van Parys, ``\textbf{Exterior-point Optimization for Sparse and Low-rank Optimization},'' \textit{Journal of Optimization Theory and Applications}, 2024. \\
+%{\sc{PDF:}} \url{https://arxiv.org/pdf/2011.04552.pdf}
+\end{minipage}
+
+\item \begin{minipage}[t]{\linewidth}
+Shuvomoy Das Gupta and Lacra Pavel, ``\textbf{On Seeking Efficient Pareto Optimal Points in Multi-Player Minimum Cost Flow Problems with Application to Transportation Systems},'' \textit{Journal of Global Optimization}, 2019. \\
+%{\sc{PDF:}} \url{https://arxiv.org/pdf/1805.11750.pdf}
+\end{minipage}
+
+\item \begin{minipage}[t]{\linewidth}
+Shuvomoy Das Gupta, J.\ Kevin Tobin, and Lacra Pavel, ``\textbf{A Two-Step Linear Programming Model for Energy-Efficient Timetables in Metro Railway Networks},'' \textit{Transportation Research Part B: Methodological}, 2016. \\
+%{\sc{PDF:}} \url{https://arxiv.org/pdf/1506.08243.pdf}
+\end{minipage}
+\end{publicationlist}
+
+\section{\sc Published Conference \\  Papers}
+
+\begin{publicationlist}{C}
+
+\item \begin{minipage}[t]{\linewidth}
+Tianlong Nan, Shuvomoy Das Gupta, Garud Iyengar, Christian Kroer, ``\textbf{On the $O(1/T)$ Convergence of Alternating Gradient Descent--Ascent in Bilinear Games},'' \textit{International Conference on Learning Representations (ICLR)}, 2026. \\
+%{\sc{PDF:}} \url{https://arxiv.org/pdf/2510.03855}
+\end{minipage}
+
+\item \begin{minipage}[t]{\linewidth}
+Jakub Cerny, Shuvomoy Das Gupta, and Christian Kroer, ``\textbf{Spatial Branch-and-Bound for Computing Multiplayer Nash Equilibrium},'' \textit{AAAI Conference on Artificial Intelligence (AAAI)}, 2026. \\
+%{\sc{PDF:}} \url{https://arxiv.org/pdf/2508.10204}
+\end{minipage}
+
+\item \begin{minipage}[t]{\linewidth}
+Shuvomoy Das Gupta, ``\textbf{On Convergence of Heuristics Based on Douglas-Rachford Splitting and ADMM to Minimize Convex Functions over Nonconvex Sets},'' \textit{Allerton Conference on Communication, Control, and Computing}, 2018. \\
+%{\sc{PDF:}} \url{https://shuvomoy.github.io/Papers/Allerton_2018.pdf}
+\end{minipage}
+
+\item \begin{minipage}[t]{\linewidth}
+Shuvomoy Das Gupta and Lacra Pavel, ``\textbf{Multi-player Minimum Cost Flow Problems with Nonconvex Costs and Integer Flows},'' \textit{IEEE Conference on Decision and Control (CDC)}, 2016. \\
+%{\sc{PDF:}} \url{https://shuvomoy.github.io/Papers/Multi-player_minimum_cost_flow_problems_with_nonconvex_costs_and_integer_flows.pdf}
+\end{minipage}
+
+\item \begin{minipage}[t]{\linewidth}
+Shuvomoy Das Gupta, Lacra Pavel, and J.\ Kevin Tobin, ``\textbf{An Optimization Model to Utilize Regenerative Braking Energy in a Railway Network},'' \textit{American Control Conference (ACC)}, 2015. \\
+%{\sc{PDF:}} \url{https://shuvomoy.github.io/Papers/An_Optimization_Model_to_Utilize_Regenerative_Braking_Energy_in_a_Railway_Network.pdf}
+\end{minipage}
+\end{publicationlist}
+
 
 \section{ \bfseries\scshape Teaching}
 {\textbf{CMOR 537: Computer-assisted Algorithm Design for Optimization and Machine Learning, Rice} }  \hfill Spring 2026  \\
@@ -359,6 +392,7 @@ Shuvomoy Das Gupta, Lacra Pavel, and J.\ Kevin Tobin, ``\textbf{An Optimization 
 
 \noindent \begin{minipage} {\textwidth}
 \textit{A Domain-Specific Harness for End-to-End Automation of Optimization Research} \\
+INFORMS Annual Meeting, San Francisco, CA \hfill 2026 \\
 Decision Intelligence Talks Series, NVIDIA (virtual) \hfill 2026 \\
 MOPTA 2026, Lehigh University, Bethlehem, PA \hfill 2026
 \end{minipage}
@@ -442,6 +476,16 @@ MIT LIDS student conference \hfill 2020
 \section{ \bfseries\scshape Service}
 
 \noindent \begin{minipage} {\textwidth}
+\textit{Member, Mixed Integer Programming Workshop Program Committee} \hfill 2027 \\
+\end{minipage}
+\vspace{0.4em}
+
+\noindent \begin{minipage} {\textwidth}
+	\textit{Member, Land--Doig MIP Competition Organizing Committee} \hfill 2027
+\end{minipage}
+\vspace{0.4em}
+
+\noindent \begin{minipage} {\textwidth}
 \textit{Chair, Rice CMOR Colloquium Organization Committee} \hfill 2026--2027 \\
 Coordinating the departmental colloquium program, including speaker invitations, scheduling, hosts, and seminar logistics.
 \end{minipage}
@@ -473,7 +517,7 @@ Supported graduate program administration, including student advising, degree re
 
 Reviewer for \textit{Mathematical Programming, Management Science, Transportation Research Part B: Methodological, IEEE Transactions on Control of Network Systems, American Control Conference, IEEE Transactions on Intelligent Transportation Systems, IEEE Transactions on Automatic Control}  \\
 
-\textit{Session Chair}, INFORMS Annual Meeting \hfill 2022-2025 \\
+\textit{Session Chair}, INFORMS Annual Meeting \hfill 2022-2025
 
 %\textit{Session Chair}, INFORMS Annual Meeting \hfill 2022 
 
@@ -482,50 +526,53 @@ Reviewer for \textit{Mathematical Programming, Management Science, Transportatio
 
 
 
-\newpage
+%\newpage
 \section{\sc Software}
 
-\noindent \begin{minipage} {\textwidth}
-\textbf{[1] AltGDA-code} \\
+\begin{publicationlist}{S}
+
+\item \begin{minipage}[t]{\linewidth}
+\textbf{AltGDA-code} \\
 Julia experiments and Lean 4 formalization for the global ergodic convergence of AltGDA in matrix games. \\
 {\sc{LINK:}} \url{https://github.com/Shuvomoy/AltGDA-code}
 \end{minipage}
 
-\noindent \begin{minipage} {\textwidth}
-\textbf{[2] AutoOPT} \\
+\item \begin{minipage}[t]{\linewidth}
+\textbf{AutoOPT} \\
 Domain-specific harness for end-to-end automation of optimization research through numerical algorithm design, symbolic discovery, and Lean verification. \\
 {\sc{LINK:}} \url{https://github.com/Shuvomoy/AutoOPT}
 \end{minipage}
 
-\noindent \begin{minipage} {\textwidth}
-\textbf{[3] PEPit.jl} \\
+\item \begin{minipage}[t]{\linewidth}
+\textbf{PEPit.jl} \\
  Native Julia implementation of the Performance Estimation Programming (PEP) methodology. \\
 {\sc{LINK:}} \url{https://github.com/PerformanceEstimation/PEPit.jl}
 \end{minipage}
 
-\noindent \begin{minipage} {\textwidth}
-	\textbf{[4] AutoLyap.jl} \\
+\item \begin{minipage}[t]{\linewidth}
+	\textbf{AutoLyap.jl} \\
 	Native Julia implementation of the AutoLyap methodology. \\
 	{\sc{LINK:}} \url{https://github.com/AutoLyap/AutoLyap.jl}
 \end{minipage}
 
-\noindent \begin{minipage} {\textwidth}
-\textbf{[5] BnB-PEP} \\
+\item \begin{minipage}[t]{\linewidth}
+\textbf{BnB-PEP} \\
 Computes optimal first-order algorithms for different convex and nonconvex setups \\
 {\sc{LINK:}} \url{https://github.com/Shuvomoy/BnB-PEP-code}
 \end{minipage}
 
-\noindent \begin{minipage} {\textwidth}
-\textbf{[6] NCG-PEP} \\
+\item \begin{minipage}[t]{\linewidth}
+\textbf{NCG-PEP} \\
 Computes worst-case convergence rates of nonlinear conjugate gradient methods \\
 {\sc{LINK:}} \url{https://github.com/Shuvomoy/NCG-PEP-code}
 \end{minipage}
 
-\noindent \begin{minipage} {\textwidth}
-\textbf{[7] NExOS} \\
+\item \begin{minipage}[t]{\linewidth}
+\textbf{NExOS} \\
 Implements the Nonconvex Exterior-point Optimization Solver (NExOS) algorithm for solving low-rank and sparse optimization problems \\
 {\sc{LINK:}} \url{https://github.com/Shuvomoy/NExOS.jl}
 \end{minipage}
+\end{publicationlist}
 
 \noindent\begin{minipage}{\textwidth}
 \section{ \bfseries\scshape Languages}
