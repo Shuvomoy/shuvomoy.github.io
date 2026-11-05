@@ -123,6 +123,7 @@ My research interests lie at the intersection of optimization, operations resear
 ## Talks
 
 * A Domain-Specific Harness for End-to-End Automation of Optimization Research
+  * INFORMS Annual Meeting, San Francisco, CA, November 4, 2026
   * Decision Intelligence Talks Series, NVIDIA (virtual), October 7, 2026
   * [MOPTA 2026](https://coral.ise.lehigh.edu/mopta2026/), Lehigh University, Bethlehem, PA, August 19, 2026
 
@@ -216,6 +217,8 @@ My research interests lie at the intersection of optimization, operations resear
 
 ## Service
 
+* Member, [Mixed Integer Programming Workshop](https://www.mixedinteger.org/2027/) Program Committee, 2027
+* Member, [Land–Doig MIP Competition](https://www.mixedinteger.org/2027/competition/) Organizing Committee, 2027
 * Chair, Rice CMOR Colloquium Organization Committee, 2026-2027
 * Committee Member, INFORMS George Nicholson Student Paper Competition, 2026-2027
 * Member, Rice CMOR Undergraduate Committee, 2026-2027
